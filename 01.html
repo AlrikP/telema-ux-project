@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Telema UI</title>
+  <meta name="author" content="Fraktal">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="all">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+</head>
+  
+<body>
+    
+  <div class="page-holder">
+    <div class="page-header">
+      <a href="#" class="main-logo"></a>
+    </div>
+      
+    <div class="page-wrap">
+        
+      <div class="page-sidebar">
+        sidebar
+      </div> <!-- //page-sidebar -->
+      
+      <div class="page-container">
+          
+        <div class="page-topbar">
+          
+          <div class="page-topbar-inner">
+            topbar
+          </div> <!-- //page-topbar-inner -->
+          
+        </div> <!-- //page-topbar -->
+              
+        <div class="page-main">
+          
+          <div class="proto-comments">
+            <b>EXAMPLES OF GRID BOXES</b>
+          </div>
+          
+          <div class="color-box"></div>  
+            
+          <div class="grid">
+            <div class="grid-col">
+              <div class="color-box margin-box"></div>
+            </div> <!-- //grid-col -->
+            
+            <div class="grid-col">
+              <div class="color-box margin-box"></div>
+            </div> <!-- //grid-col -->
+          </div> <!-- //grid -->
+          
+          <div class="grid">
+            <div class="grid-col grid-col-type-1">
+              <div class="color-box margin-box"></div>
+            </div> <!-- //grid-col -->
+            
+            <div class="grid-col">
+              <div class="color-box margin-box"></div>
+              <div class="color-box margin-box"></div>
+            </div> <!-- //grid-col -->
+          </div> <!-- //grid -->
+          
+          <div class="grid">
+            <div class="grid-col">
+              <div class="color-box margin-box"></div>
+            </div> <!-- //grid-col -->
+            
+            <div class="grid-col grid-col-type-1">
+              <div class="color-box margin-box"></div>
+            </div> <!-- //grid-col -->
+          </div> <!-- //grid -->
+          
+          
+          <div class="proto-comments">
+            <b>ELEMENTS OF VISUAL STYLE</b>
+          </div>
+          
+          <div class="color-box pad-box margin-box">
+            
+            <div class="proto-comments proto-comments-no-top-margin">
+              Examples of different font styles, sizes and colors.<br />Instead of using heading tags we can use CSS classes .h1, .h2, .h3, .h4
+            </div>
+            <h1>Roboto Condensed Bold 36</h1>
+            <h1 class="uppercase">Roboto Condensed Bold 36</h1>
+            <h1 class="uppercase color-type-1">Roboto Condensed Bold 36</h1>
+            <h1 class="uppercase color-type-2">Roboto Condensed Bold 36</h1><br />
+            
+            <h2>Roboto Condensed Bold 24</h2>
+            <h2 class="uppercase">Roboto Condensed Bold 24</h2>
+            <h2 class="uppercase color-type-1">Roboto Condensed Bold 24</h2>
+            <h2 class="uppercase color-type-2">Roboto Condensed Bold 24</h2><br />
+            
+            <h3>Roboto Condensed Bold 18</h3>
+            <h3 class="uppercase">Roboto Condensed Bold 18</h3>
+            <h3 class="uppercase color-type-1">Roboto Condensed Bold 18</h3>
+            <h3 class="uppercase color-type-2">Roboto Condensed Bold 18</h3><br />
+            
+            <h4>Roboto Bold 18</h4>
+            <h4 class="uppercase">Roboto Bold 18</h4>
+            <h4 class="uppercase color-type-1">Roboto Bold 18</h4>
+            <h4 class="uppercase color-type-2">Roboto Bold 18</h4><br />
+            
+            Normal body text (Roboto 14)<br />
+            <span class="color-type-1">Normal body text (Roboto 14)</span><br />
+            <span class="color-type-2">Normal body text (Roboto 14)</span><br /><br />
+            
+            <span class="font-size-small">Small subsidiary text (Roboto 12)</span><br />
+            <span class="font-size-small color-type-1">Small subsidiary text (Roboto 12)</span><br />
+            <span class="font-size-small color-type-2">Small subsidiary text (Roboto 12)</span><br /><br />
+            
+            <span class="font-size-xsmall">Extra Small subsidiary text (Roboto 11)</span><br />
+            <span class="font-size-xsmall color-type-1">Extra Small subsidiary text (Roboto 11)</span><br />
+            <span class="font-size-xsmall color-type-2">Extra Small subsidiary text (Roboto 11)</span><br />
+          
+          </div>
+          
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              Examples of different button styles: Classes can be use for &lt;a&gt;, &lt;button&gt;, &lt;input&gt;
+            </div>
+            
+
+            <button class="btn">Primary action</button>
+            <button class="btn btn-color-type-1">Less important</button>
+            <button class="btn btn-color-type-2" disabled>Inactive</button>
+            
+            
+            <br /><br />
+            <button class="btn btn-size-large">Large button</button>
+            <button class="btn btn-color-type-1 btn-size-large">Large button</button>
+            <button class="btn btn-color-type-2 btn-size-large" disabled>Large button</button>
+            
+            <div class="proto-comments">
+              Square buttons
+            </div>
+            
+            <button class="btn btn-size-square">Yes</button>
+            <button class="btn btn-color-type-1 btn-size-square">No</button>
+            
+            <br /><br />
+            
+            <button class="btn btn-size-large btn-size-square">YES</button>
+            <button class="btn btn-color-type-1 btn-size-large btn-size-square">NO</button>
+            
+            <div class="proto-comments">
+              Block buttons (100% available width)
+            </div>
+            
+            <button class="btn btn-size-block">Primary action</button><br />
+            <button class="btn btn-color-type-1 btn-size-block">Less important</button><br />
+            <button class="btn btn-color-type-2 btn-size-block" disabled>Inactive</button>
+            
+            
+            <div class="proto-comments">
+              Buttons with icons
+            </div>
+            
+            <button class="btn btn-size-square btn-type-icon btn-icon-1"></button> 
+            <button class="btn btn-size-square btn-type-icon btn-icon-2"></button>
+            <button class="btn btn-size-small btn-size-square btn-type-icon btn-icon-2"></button>
+            <br /><br />
+            <button class="btn btn-color-type-3 btn-size-large btn-size-square btn-type-icon btn-icon-3"></button>
+            <button class="btn btn-color-type-4 btn-size-large btn-size-square btn-type-icon btn-icon-3"></button>
+            
+          </div>
+          
+          
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              Functional icons and buttons
+            </div>    
+            
+            <span class="ico ico-type-1"></span>
+            <span class="ico ico-type-2"></span>
+            <span class="ico ico-type-3"></span>
+            <span class="ico ico-type-4"></span>
+            <span class="ico ico-type-5"></span>
+            <span class="ico ico-type-6"></span>
+            <span class="ico ico-type-7"></span>
+            <span class="ico ico-type-8"></span>
+            <span class="ico ico-type-9"></span>
+            <span class="ico ico-type-10"></span>
+            <span class="ico ico-type-11"></span>
+            
+            <br /><br />
+            
+            <span class="ico ico-type-12 ico-color-type-1"></span>
+            <span class="ico ico-type-13 ico-color-type-1"></span>
+            <span class="ico ico-type-14 ico-color-type-1"></span>
+            <span class="ico ico-type-15 ico-color-type-1"></span>
+            
+            <br /><br />
+            
+            <span class="ico ico-type-16 ico-color-type-2 cursor-pointer"></span>
+            <span class="ico ico-type-16 ico-color-type-3 cursor-pointer"></span>
+            <span class="ico ico-type-16 ico-color-type-4 cursor-pointer"></span>
+            <span class="ico ico-type-16 ico-color-type-5 cursor-pointer"></span>
+            <span class="ico ico-type-17 ico-color-type-1 cursor-pointer"></span>
+            <span class="ico ico-type-18 ico-color-type-1 cursor-pointer"></span>
+            
+          </div>
+            
+            
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              Bullets and numbering
+            </div>
+            
+
+            <ul class="nr-list">
+              <li>
+                <b>Cant find a document</b><br />
+                A few lines to explain, what to do, when this problem emerges. 
+              </li>
+              <li>
+                <b>Can not connect</b><br />
+                A few lines to explain, what to do, when this problem emerges. 
+              </li>
+              <li>
+                <b>Another problem</b><br />
+                A few lines to explain, what to do, when this problem emerges.
+              </li>
+            </ul>
+            
+            <br />
+            
+            <ul class="bullet-list">
+              <li>Some kind of text, some kind of text</li>
+              <li>A few lines to explain, what to do, when this problem emerges.</li>
+              <li>Did you know you can manage the users yourself, without having to notify Telma?</li>
+              <li>You have service A.</li>
+            </ul>
+            
+            <br />
+            
+            <span class="bullet"></span> &nbsp; <span class="bullet bullet-color-type-1"></span> &nbsp; <span class="bullet bullet-color-type-2"></span>
+            
+          </div>
+          
+          
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              Emoticons
+            </div>
+            
+            <span class="emoticon emoticon-type-1"></span> &nbsp; 
+            <span class="emoticon emoticon-type-2"></span> &nbsp; 
+            <span class="emoticon emoticon-type-3"></span> &nbsp; 
+            <span class="emoticon emoticon-type-4"></span> &nbsp; 
+            <span class="emoticon emoticon-type-5"></span> &nbsp; 
+            <span class="emoticon emoticon-type-6"></span> &nbsp; 
+            <span class="emoticon emoticon-type-7"></span> &nbsp; 
+            <span class="emoticon emoticon-type-8"></span> &nbsp; 
+            <span class="emoticon emoticon-type-9"></span>
+            
+            <br /><br /><br />
+            
+            <ul class="emoticon-list">
+              <li>
+                <span class="emoticon emoticon-type-1"></span>
+                You have service A. If you want to expand<br />
+                your options, take service B or even<br />
+                service C. <a href="#" class="color-type-2">Read more »</a>
+              </li>
+              
+              <li>
+                <span class="emoticon emoticon-type-2"></span>
+                You have service A. If you want to expand<br />
+                your options, take service B or even<br />
+                service C. <a href="#" class="color-type-2">Read more »</a>
+              </li>
+            </ul>
+          </div>
+          
+          
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              Notifications
+            </div>
+            
+            <div class="in-blk valign-top">
+              <div class="notification notification-visible">
+                <a href="#" class="notification-close ico ico-type-16 ico-color-type-1 js-notification-close"></a>
+                <div class="notification-content">
+                  <b>Gateway connection problem</b>
+                  <p>
+                    Info about gateway connection  problem. Info about gateway connection  problem.
+                  </p>
+                  <a href="#"><b>Read more »</b></a>
+                </div>
+              </div>
+            </div>
+            <div class="in-blk valign-top">
+              <div class="notification notification-type-1 notification-visible">
+                <a href="#" class="notification-close ico ico-type-16 ico-color-type-1 js-notification-close"></a>
+                <div class="notification-content">
+                  <b>NPS questionaire</b>
+                  <p>
+                    Info about NPS questionaire. Info about NPS questionaire. Info about questionaire.
+                  </p>
+                  <a href="#"><b>Fill in the questionnaire »</b></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="in-blk valign-top">
+              <div class="notification notification-type-2 notification-visible">
+                <a href="#" class="notification-close ico ico-type-16 ico-color-type-1 js-notification-close"></a>
+                <div class="notification-content">
+                  <b>Great success!</b>
+                  <p>
+                    Your upload was successful and you can see the information you 
+                    uploaded on the left below.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          
+          <div class="grid">
+            <div class="grid-col grid-col-type-1">
+              
+              
+              
+              <div class="color-box pad-box margin-box">
+                
+                <div class="proto-comments proto-comments-no-top-margin">
+                  Fields and select
+                </div>
+                
+                
+                <input type="text" class="textbox textbox-inline" placeholder="12345" />
+                <input type="text" class="textbox textbox-inline textbox-border-type-1" placeholder="12345" />
+                
+                <div class="form">
+              
+                  <div class="form-row">
+                    <b>Name</b>
+                    <input type="text" class="textbox" value="Burkhardt">
+                  </div>
+                  
+                  <div class="form-row">
+                    <b>Surname</b>
+                    <input type="text" class="textbox" value="von Bürgermeister">
+                  </div>
+                  
+                  <div class="form-row">
+                    <b>Name</b>
+                    <select>
+                      <option>Accountant</option>
+                    </select>
+                  </div>
+                </div>
+                
+              </div>
+            </div> <!-- //grid-col -->
+          </div> <!-- //grid -->
+          
+          
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              Checkboxes and radio buttons
+            </div>
+            
+          
+            <label class="custom-radio"><input type="radio" checked="checked" name="radio-group-1"><span>Valik 1</span></label>
+            
+            <label class="custom-radio custom-radio-inline"><input type="radio" name="radio-group-1"><span>Valik 2</span></label> &nbsp; 
+            
+            <label class="custom-radio custom-radio-inline"><input type="radio" name="radio-group-1"><span>Valik 3</span></label>
+            
+            <div style="margin-top: 20px;">
+              
+              <label class="custom-checkbox"><input type="checkbox"><span>Valik 3</span></label>
+            </div>
+            
+          </div>
+          
+        </div> <!-- //page-main -->
+        
+      </div> <!-- //page-container -->  
+    </div> <!-- //page-wrap -->
+  </div> <!-- //page-holder -->
+    
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/scripts.js"></script>
+    
+</body>
+</html>

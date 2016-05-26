@@ -1,0 +1,150 @@
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+     -moz-box-sizing: $box-model;
+          box-sizing: $box-model;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin color($color, $opacity: 1) {
+  @if $opacity == 1 {
+    color: rgba($color, $opacity);
+  } @else {
+    color: $color;
+    color: rgba($color, $opacity);
+  }
+}
+
+@mixin box-shadow($top, $left:"", $blur:"", $color:"", $inset:"") {
+  
+  @if $top == none {
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color #{$inset};
+       -moz-box-shadow: $top $left $blur $color #{$inset};
+            box-shadow: $top $left $blur $color #{$inset};
+  }
+}
+
+@mixin bg($color, $opacity: 1) {
+  @if $opacity == 1 {
+    background-color: rgba($color, $opacity);
+  } @else {
+    background-color: $color;
+    background-color: rgba($color, $opacity);
+  }
+}
+
+@mixin rotate($value) {
+  -webkit-transform: rotate($value); 
+     -moz-transform: rotate($value);
+          transform: rotate($value);
+}
+
+@mixin query($value: $tablet-1) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin align-items($value: stretch) {
+  @if $value == flex-start {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+  } @else if $value == flex-end {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $value;
+    -ms-flex-align: $value;
+  }
+  -webkit-align-items: $value;
+  -moz-align-items: $value;
+  align-items: $value;
+}
+
+@mixin justify-content($value: center) {
+  -webkit-justify-content: $value;
+  -moz-justify-content: $value;
+  -ms-justify-content: $value;
+  justify-content: $value;
+}
+
+@mixin flex($value: 1) {
+  -webkit-flex: $value;
+  -moz-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}
+
+@mixin flex-direction($value: row) {
+  -webkit-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+
+@mixin flex-wrap($value: wrap) {
+  -webkit-flex-wrap: $value;
+  -ms-flex-wrap: $value;
+  flex-wrap: $value;
+}
+
+@mixin flex-grow($value: 1) {
+  -webkit-flex-grow: $value;
+  -ms-flex-positive: $value;
+  -ms-flex-grow: $value;
+  flex-grow: $value;
+}
+
+@mixin flex-shrink($value: 0) {
+  -webkit-flex-shrink: $value;
+  -ms-flex-negative: $value;
+  -ms-flex-shrink: $value;
+  flex-shrink: $value;
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
