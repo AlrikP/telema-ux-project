@@ -193,45 +193,102 @@ ul, ol, li { @extend %nulling; }
 //   ========================================
 //
 
-.custom-radio {
-  display: block; margin: 3px 0;
-  position: relative;
-  padding-left: 18px;
+.radio {
+  display: block; margin: 2px 0;
+  position: relative; cursor: pointer;
   cursor: pointer;
-  &:before {
-    content: ""; display: inline-block;
-  }
+  
   
   &-inline {
     display: inline-block; vertical-align: baseline;
+    padding-right: 5px;
   }
   input[type=radio] {
     position: absolute; left: -9999px;
     
-    $radio-top: 6px;
-    
-    + span {
-       
-      display: inline-block; cursor: pointer;
-      padding: 0 0 0 5px;
-  
+    + em {
+      display: inline-block; vertical-align: baseline;
+      height: 16px; width: 16px; line-height: 1.2;
+      border: 1px solid $color-12; background: $color-3;
+      @include border-radius(16px);
+      @include box-sizing(border-box);
+      margin-right: 3px;
+      
       &:before {
-        content: ""; display: block; height: 16px; width: 16px;
-        position: absolute; left: 0px; top: 0;
-        border: 1px solid $color-12; background: white;
-        @include border-radius(16px);
-        @include box-sizing(border-box);
+        content: ""; display: inline-block;
       }
     }
-  
     &:checked {
-      + span {
+      + em {
+        background: $color-3 url('../images/radio.png') no-repeat center center;
+      }
+    }
+  }
+  
+  &-no-text {
+    padding-right: 0px; 
+    input[type=radio] + em { margin-right: 0;}
+  }
+}
+
+
+.checkbox {
+  display: block; margin: 2px 0;
+  position: relative; cursor: pointer;
+  cursor: pointer;
+  
+  
+  &-inline {
+    display: inline-block; vertical-align: baseline;
+    padding-right: 5px;
+  }
+  input[type=checkbox] {
+    position: absolute; left: -9999px;
+    
+    + em {
+      display: inline-block; vertical-align: baseline;
+      height: 16px; width: 16px; line-height: 15px;
+      border: 1px solid $color-12; background: $color-3;
+      @include box-sizing(border-box);
+      margin-right: 3px;
       
-        &:after {
-          content: ""; display: block; height: 8px; width: 8px;
-          position: absolute; left: 4px; top: 4px;
-          background: $color-4;
-          @include border-radius(8px);
+      &:before {
+        content: ""; display: inline-block;
+      }
+    }
+    &:checked {
+      + em {
+        background: $color-3 url('../images/check.png') no-repeat 1px 1px;
+      }
+    }
+  }
+  
+  &-no-text {
+    padding-right: 0px; 
+    input[type=checkbox] + em { margin-right: 0;}
+  }
+  
+  &-type-1 {
+    input[type=checkbox] {
+      + em {
+        width: 12px; height: 12px;
+        border: none; line-height: 14px;
+      }
+      &:checked {
+        + em {
+          background: $color-3 url('../images/check1.png') no-repeat 2px 2px;
+        }
+      }
+    }
+  }
+  &-type-2 {
+    input[type=checkbox] {
+      + em {
+        width: 22px; height: 22px; line-height: 21px;
+      }
+      &:checked {
+        + em {
+          background: $color-3 url('../images/check2.png') no-repeat 2px 2px;
         }
       }
     }
