@@ -373,6 +373,7 @@ textarea {
   color: #808080;
   margin-top: -1px;
   z-index: 0;
+  font-size: 14px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -468,6 +469,30 @@ textarea {
 .custom-select-color-type-2 .custom-select-content ul a:hover {
   background: #cc1626;
 }
+.custom-select-color-type-3 .custom-select-toggler {
+  background: #cc1626;
+  color: #ffffff;
+  border: 1px solid #cc1626;
+}
+.custom-select-color-type-3 .custom-select-toggler:after {
+  background-image: url("../images/select1.png");
+}
+.custom-select-color-type-3 .custom-select-content {
+  background: #808080;
+  color: #ffffff;
+  border: none;
+  border-top: none;
+  margin-top: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.custom-select-color-type-3 .custom-select-content ul a {
+  color: #ffffff;
+}
+.custom-select-color-type-3 .custom-select-content ul a:hover {
+  background: #9c9c9c;
+}
 .custom-select-size-type-1 .custom-select-toggler {
   padding: 5px 30px 0 10px;
   height: 30px;
@@ -486,6 +511,16 @@ textarea {
 }
 .custom-select-size-type-1 .custom-select-content ul a {
   padding: 6px 10px;
+}
+.custom-select-font-size-1 .custom-select-toggler {
+  font-size: 12px;
+  padding-top: 9px;
+}
+.custom-select-font-size-1 .custom-select-content {
+  font-size: 12px;
+}
+.custom-select-font-size-1.custom-select-size-type-1 .custom-select-toggler {
+  padding-top: 6px;
 }
 
 .menu-dropdown {
@@ -658,6 +693,54 @@ p {
   background: url("../images/main-logo.png") no-repeat center center;
   width: 81px;
   height: 20px;
+}
+
+.page-sidebar .inner {
+  border-bottom: 1px solid #f35765;
+}
+.page-sidebar .list {
+  padding: 15px 0;
+}
+.page-sidebar .list li {
+  padding: 4px 0;
+}
+.page-sidebar .list a {
+  color: #ffffff;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px 0 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.page-sidebar .list a:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+.page-sidebar .list a.active {
+  position: relative;
+  background: #000810;
+}
+.page-sidebar .list a.active:hover {
+  background: rgba(0, 8, 16, 0.9);
+}
+.page-sidebar .list a.active:after {
+  display: block;
+  content: "";
+  height: 0;
+  width: 0;
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(0, 8, 16, 0);
+  border-left-color: #000810;
+  border-width: 15px;
+  margin-top: -15px;
+}
+.page-sidebar .selector-holder {
+  padding: 25px 20px 28px 20px;
 }
 
 .grid {

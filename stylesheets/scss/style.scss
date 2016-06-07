@@ -381,7 +381,7 @@ hr {
     position: absolute; top: 100%; left: 0;
     background: $color-3; min-width: 100%;
     border: 1px solid $color-11; color: $color-13;
-    margin-top: -1px; z-index: 0;
+    margin-top: -1px; z-index: 0; font-size: #{$font-size};
     
     @include box-sizing(border-box);
     @include box-shadow(2px, 0px, 7px, rgba($color-1,0.17));
@@ -464,6 +464,32 @@ hr {
     }
   }
   
+  &-color-type-3 {
+    .custom-select-toggler {
+      background: $color-6; color: $color-3;
+      border: 1px solid $color-6;
+      
+      &:after {
+        background-image: url('../images/select1.png')
+      }
+    }
+    .custom-select-content {
+      background: $color-13; color: $color-3;
+      border: none; border-top: none;
+      margin-top: 0;
+      @include box-shadow(none);
+      
+      ul {
+        a {
+          color: $color-3;
+          &:hover {
+            background: $color-12;
+          }
+        }
+      }
+    }
+  }
+  
   &-size-type-1 {
     .custom-select-toggler {
       padding: 5px 30px 0 10px; height: 30px; 
@@ -488,6 +514,21 @@ hr {
         a {
           padding: 6px 10px;
         }
+      }
+    }
+  }
+  
+  &-font-size-1 {
+    .custom-select-toggler {
+      font-size: 12px; padding-top: 9px;
+    }
+    .custom-select-content {
+      font-size: 12px;
+    }
+    
+    &.custom-select-size-type-1 {
+      .custom-select-toggler {
+        padding-top: 6px;
       }
     }
   }
@@ -630,6 +671,62 @@ p { margin: 5px 0; }
   display: block; outline: 0;
   background: url('../images/main-logo.png') no-repeat center center;
   width: 81px; height: 20px;
+}
+
+
+//
+//   SIDEBAR
+//   ========================================
+//
+
+
+.page-sidebar {
+  
+  .inner {
+    border-bottom: 1px solid $color-5;
+  }
+  .list {
+    padding: 15px 0;
+    
+    li {
+      padding: 4px 0;
+    }
+    
+    a {
+      color: #ffffff;
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 10px 0 20px;
+      @include box-sizing(border-box);  
+      
+      &:hover {
+        color: rgba($color-3, 0.9);
+      }
+      &.active {
+        position: relative;
+        background: $color-1;
+        
+        &:hover {
+          background: rgba($color-1, 0.9);
+        }
+        
+        &:after {
+        	display: block; content: "";
+        	height: 0; width: 0; left: 100%; top: 50%;
+          border: solid transparent;
+          position: absolute; pointer-events: none;
+          border-color: rgba($color-1, 0);
+          border-left-color: $color-1;
+          border-width: 15px; margin-top: -15px;
+        }
+      }
+    }
+  }
+  
+  .selector-holder {
+    padding: 25px 20px 28px 20px;
+  }
 }
 
 
@@ -848,6 +945,7 @@ table {
 //   TABLE MENU STRIP
 //   ========================================
 //
+
 .table-menu-strip {
   vertical-align: middle;
   background: $color-22;
