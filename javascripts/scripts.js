@@ -16,7 +16,7 @@ var App = {
         
         
         // Toggle elements visibility
-        $(document).on('click','.js-visibility-toggler', function(e) {
+        $(document).on('click','[data-visibility-toggler]', function(e) {
             e.preventDefault();
             var $parent = $(e.target).closest('[data-visibility-parent]'),
                 $elements = $parent.find('[data-visible]'),
@@ -121,27 +121,6 @@ var App = {
                 val = $target.val();
                 
             
-            
-            //if (val.length > 2) {
-            //    $options.each()
-            //        var $branch = $(this),
-            //            toggler = $branch.text().toLowerCase().indexOf($this.val().toLowerCase()) != -1;
-            //
-            //        $branch.toggle(toggler);
-            //
-            //        if (toggler) {
-            //            visible++ ;
-            //        }
-            //    });
-            //} else {
-            //    $dl.find('dd:not(.empty)').show();
-            //    visible++;
-            //}
-            //
-            //if (visible === 0) {
-            //    $dl.find('.empty').show();
-            //}
-            
             $items.each(function(i, el) {
                 if ($(el).data('listFilterId').toLowerCase().indexOf(val.toLowerCase()) != -1) {
                     $(el).show();
@@ -157,8 +136,6 @@ var App = {
                 
             });
         }, this));
-        
-        
     }
 };
 

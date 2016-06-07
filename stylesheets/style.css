@@ -606,7 +606,7 @@ textarea {
   overflow-y: auto;
 }
 .regular-dropdown .inner {
-  padding-bottom: 3px;
+  padding-bottom: 4px;
 }
 .regular-dropdown .inner-type-1 {
   padding-top: 2px;
@@ -826,6 +826,7 @@ p {
 }
 .role-dropdown-toggler {
   color: #ffffff;
+  outline: 0;
   padding: 0 25px;
   display: -webkit-box;
   display: -webkit-flex;

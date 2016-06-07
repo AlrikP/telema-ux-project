@@ -92,7 +92,6 @@ ul, ol { list-style-type: none; }
 ul, ol, li { @extend %nulling; }
 
 
-
 //
 //   LINES
 //   ========================================
@@ -127,7 +126,6 @@ hr {
           background-color: $color-13;
         }
       }
-      
       &-color-type-2 {
         &, &:hover {
           background-color: $color-11; cursor: default;
@@ -167,6 +165,7 @@ hr {
       &-icon-2 { background-image: url('../images/search.png'); }
       &-icon-3 { background-image: url('../images/edit.png'); }
     }
+    
     a#{&} {
       padding-top: 9px;
       &-size-small {
@@ -213,6 +212,7 @@ hr {
     }
   }
 }
+
 
 //
 //   RADIO BUTTONS
@@ -283,6 +283,7 @@ hr {
     display: inline-block; vertical-align: baseline;
     padding-right: 5px;
   }
+  
   input[type=checkbox] {
     position: absolute; left: -9999px;
     
@@ -322,6 +323,7 @@ hr {
       }
     }
   }
+  
   &-type-2 {
     input[type=checkbox] {
       + em {
@@ -499,6 +501,7 @@ hr {
         height: 100%; width: 30px; top: 0; right: 0;
       }
     }
+    
     &.custom-select-color-type-1,
     &.custom-select-color-type-2 {
       
@@ -626,7 +629,7 @@ hr {
   }
   
   .inner {
-    padding-bottom: 3px;
+    padding-bottom: 4px;
     
     &-type-1 {
       padding-top: 2px;
@@ -802,7 +805,7 @@ p { margin: 5px 0; }
   float: left; 
   
   &-toggler {
-    color: $color-3;
+    color: $color-3; outline: 0;
     padding: 0 25px;
     
     @include flexbox();
@@ -920,6 +923,7 @@ p { margin: 5px 0; }
     }
   }
 }
+
 
 //
 //   TABLES
@@ -1100,6 +1104,7 @@ table {
   }
 }
 
+
 //
 //   TABLE MENU STRIP
 //   ========================================
@@ -1110,6 +1115,7 @@ table {
   background: $color-22;
   padding: 8px 25px; margin-bottom: 25px;
 }
+
 
 //
 //   BOXES
@@ -1264,7 +1270,6 @@ table {
   &-type-9 { background-image: url('../images/emoticon9.png'); }
 }
 
-
 .emoticon-list {
   margin: 0;padding: 0; list-style-type: none;
   
@@ -1278,6 +1283,7 @@ table {
     position: absolute; top: 8px; left: 0;
   }
 }
+
 
 //
 //   NOTIFICATIONS
@@ -1321,6 +1327,7 @@ table {
   }
 }
 
+
 //
 //   FORM
 //   ========================================
@@ -1352,6 +1359,7 @@ table {
     }
   }
 }
+
 
 //
 //   BUBBLE
@@ -1482,7 +1490,6 @@ table {
 [data-list-filter-empty] {
   display: none;
 }
-
 
 
 //
