@@ -112,6 +112,52 @@ var App = {
             }
         }, this));
         
+        // List filter
+        $(document).on('keyup', '[data-list-filter-opt]', $.proxy(function(e) {
+            var $target = $(e.target),
+                $filter = $target.closest('[data-list-filter]'),
+                $items = $filter.find('[data-list-filter-id]'),
+                $empty = $filter.find('[data-list-filter-empty]'),
+                val = $target.val();
+                
+            
+            
+            //if (val.length > 2) {
+            //    $options.each()
+            //        var $branch = $(this),
+            //            toggler = $branch.text().toLowerCase().indexOf($this.val().toLowerCase()) != -1;
+            //
+            //        $branch.toggle(toggler);
+            //
+            //        if (toggler) {
+            //            visible++ ;
+            //        }
+            //    });
+            //} else {
+            //    $dl.find('dd:not(.empty)').show();
+            //    visible++;
+            //}
+            //
+            //if (visible === 0) {
+            //    $dl.find('.empty').show();
+            //}
+            
+            $items.each(function(i, el) {
+                if ($(el).data('listFilterId').toLowerCase().indexOf(val.toLowerCase()) != -1) {
+                    $(el).show();
+                    $empty.hide();
+                }
+                else {
+                    $(el).hide();
+                }
+                
+                if(!$items.filter(':visible').length) {
+                    $empty.show();
+                }
+                
+            });
+        }, this));
+        
         
     }
 };
