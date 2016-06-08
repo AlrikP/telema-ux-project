@@ -115,7 +115,6 @@ hr {
 }
 
 
-
 //
 //   BUTTONS
 //   ========================================
@@ -678,6 +677,97 @@ hr {
 
 
 //
+//  AUTOCOMPLETE 
+//  =========================================
+//
+
+.ui-menu {
+  .ui-menu-item {
+    margin: 0; padding: 0;
+  }
+}
+
+.ui-autocomplete {
+  background: $color-3; display: none;
+  border: 1px solid $color-11;
+  min-width: 100%;
+  max-width: 289px;
+  max-height: 440px; overflow: auto;
+  @include box-sizing(border-box);
+  
+  
+  /*
+  .ui-autocomplete-has-bottom & {
+    padding: 5px 0 0;
+  }
+  */
+
+  .ui-menu-item {
+    margin: 0; padding: 0;
+    padding: 6px 10px; color: $color-13;
+    background: $color-3;
+    cursor: default;
+
+    span.desc { display: block; font-size: 12px;  }
+
+    .meta {
+      font-size: 11px;
+      color: $color-4;
+
+      a {
+        color: inherit;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    /*
+    &.has-link {
+      padding: 0;
+      a {
+        display: block; outline: 0; color: $color-9; background: $color-11;
+        padding: 6px 10px;
+        &:hover { color: $color-9; }
+      }
+    }
+    */
+
+    /*
+    &.menu-bottom {
+      margin-top: 5px;
+    }
+    */
+
+    &.ui-autocomplete-top-link {
+      color: $color-4;
+      font-weight: bold;
+    }
+    &.ui-autocomplete-category {
+      font-weight: bold;
+      color: $color-1;
+      background: $color-9;
+      pointer-events: none;
+    }
+    &.ui-state-focus {
+      background: $color-9;
+    }
+    &.ui-autocomplete-more-link {
+      color: $color-9;
+      background: $color-11;
+    }
+    
+
+    /*
+    .solutions-search & {
+      padding: 10px;
+    }
+    */
+  }
+}
+
+
+//
 //   TEXT STYLES
 //   ========================================
 //
@@ -794,6 +884,9 @@ p { margin: 5px 0; }
   .search {
     float: left; padding: 5px 24px 0 0;
     
+    .textbox-holder {
+      float: left; position: relative;
+    }
     .textbox {
       float: left; width: 235px;
     }

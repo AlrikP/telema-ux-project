@@ -2,6 +2,146 @@ var App = {
     init: function() {
         
         
+        // Main search
+        $('[data-search-main]').autocomplete({
+            source: function(request, response) {
+                var data = [
+                    {
+                        value: 'Kuke pood',
+                        category: 'Companies',
+                        url: 'http://google.com'
+                    },
+                    {
+                        value: 'Kuke pagariäri',
+                        category: 'Companies',
+                        url: 'http://google.com'
+                    },
+                    {
+                        value: 'Kuke pood Põlva branch',
+                        category: 'Branches',
+                        url: 'http://google.com'
+                    },
+                    {
+                        value: 'Kuke pood Pärnu branch',
+                        category: 'Branches',
+                        url: 'http://google.com'
+                    },
+                    {
+                        value: 'Kuke pagariäri Viinistu branch',
+                        category: 'Branches',
+                        url: 'http://google.com'
+                    },
+                    {
+                        value: 'Kuke pagariäri Haapsalu branch',
+                        category: 'Branches',
+                        url: 'http://google.com'
+                    },
+                    {
+                        value: 'Kuke pagariäri Puhja branch',
+                        category: 'Branches',
+                        url: 'http://google.com'
+                    },
+                    {
+                        value: 'Kuke pagariäri Puka branch',
+                        category: 'Branches',
+                        url: 'http://google.com'
+                    },
+                    {
+                        value: 'Kuke pood Tartu branch',
+                        category: 'Branches',
+                        url: 'http://google.com'
+                    },
+                    {
+                        value: 'Kuke pood Tallinn branch',
+                        category: 'Branches',
+                        url: 'http://google.com'
+                    },
+                    {
+                        value: 'Kuke pood Elva branch',
+                        category: 'Branches',
+                        url: 'http://google.com'
+                    }
+                ];
+
+                var results = $.ui.autocomplete.filter(data, request.term),
+                    lang_noResults = this.element.data('langNoResults') || 'No matches found';
+                
+                if (!results.length) {
+                    response([{ category: 'Branches', value: lang_noResults, empty: true }, { category: 'Companies', value: lang_noResults, empty: true}]);
+                } else {
+                    response(results);
+                }
+            },
+            select: function(e, ui) {
+                // redirect ?
+                window.location = ui.item.url;
+            },
+            create: function(e, ui) {
+                
+                
+                var lang_documents = $(e.target).data('langDocuments') || 'Documents',
+                    lang_company_page = $(e.target).data('langCompanyPage') || 'Company page',
+                    documents_url = $(e.target).data('documentsUrl') || '#',
+                    lang_search_documents = $(e.target).data('langSearchDocuments') || 'Search from documents',
+                    isAdvanced = $(e.target).data('searchMainAdvanced') !== undefined;
+                
+                $(e.target).data('ui-autocomplete')._renderItem = function( ul, item ) {
+                    if (item.empty) {
+                        return $( "<li>" )
+                            .append( item.value )
+                            .appendTo( ul );
+                    }
+                    else {
+                        var item_content = item.value;
+                        if (isAdvanced) {
+                            item_content += '<div class="meta"><a href="'+ documents_url+ '">'+ lang_documents +'</a> | <a href="'+ item.url +'">' + lang_company_page +'</a></div>';
+
+                        }
+                        return $( "<li>" )
+                            .append( item_content ).on('click', 'a', function(e) { e.stopPropagation(); })
+                            .appendTo( ul );
+                    }
+                };
+                
+                
+                $(e.target).data('ui-autocomplete')._renderMenu = function(ul, items) {
+                    var currentCategory = '';
+                
+                    $('<li class="ui-autocomplete-top-link"><a href="#">'+ lang_search_documents+'</li>')
+                        .data("ui-autocomplete-item", { value:"" })
+                        .appendTo(ul);
+                    
+                    $.each(items, $.proxy(function(index, item) {
+                        var li;
+
+                        if (item.category != currentCategory) {
+                           currentCategory = item.category;
+                            
+                            $('<li class="ui-autocomplete-category">'+ item.category+'</li>')
+                                .data("ui-autocomplete-item", { value:"" })
+                                .appendTo(ul);
+                        }
+                        li = this._renderItemData(ul, item);
+
+                        if (item.category) {
+                            li.attr('aria-label', item.category + ' : '+ item.value);
+                        }
+                    }, this));
+                    
+                    /*
+                    if (!items[0].empty) {
+                        $('<li class="ui-autocomplete-more-link"><a href="#">Show more</li>')
+                            .data("ui-autocomplete-item", { value:"" })
+                            .appendTo(ul);
+                    }
+                    */
+                    
+                };
+                
+            }
+        });
+        
+        
         // Bubble widget
         $('[data-bubble]').bubble();
         
@@ -65,7 +205,7 @@ var App = {
             }
             else {
                 
-                // Make ajax send here !
+                // Make ajax send  here !
                 
                 $success.show();
                 $success.find('.btn').one('click', function(e) { 
