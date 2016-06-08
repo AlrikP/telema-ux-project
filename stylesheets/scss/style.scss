@@ -82,10 +82,6 @@ input[type=text], input[type=submit], input[type=button], input[type=email], inp
     @include color($color-12, 1);
     opacity: 1 !important;
   }
-  &::-moz-focus-inner {
-     padding: 0;
-     border: none;
-   }
 }
 
 ul, ol { list-style-type: none; }
@@ -101,6 +97,23 @@ hr {
   margin: 10px 0px; border: none;
   height: 1px; background: $color-11;
 }
+
+
+//
+//   FILE INPUT
+//   ========================================
+//
+
+.file-input {
+  position: relative;
+  
+  input[type=file] {
+    -webkit-border-radius: 0; -webkit-appearance: none;
+    border: 0; background: none; position: absolute; height: 100%;width: 100%; font-size: 80px;line-height: 100%;
+    right: 0; top: 0;  filter: alpha(opacity=0);-ms-filter: "alpha(opacity=0)"; opacity: 0; cursor: pointer; z-index: 6;
+  }
+}
+
 
 
 //
@@ -140,6 +153,10 @@ hr {
         &, &:hover {
           background-color: $color-9;
         }
+      }
+      
+      &-padding-type-1 {
+        padding-left: 20px; padding-right: 20px;
       }
       
       &-size-block {
@@ -206,8 +223,24 @@ hr {
       &-size-type-1 {
         height: 30px;
       }
+      
+      &-bg-type-1 {
+        background: $color-11;
+        border-color: $color-11;
+        color: $color-1;
+        
+        &::-webkit-input-placeholder {
+          color: $color-1;
+        }
+        &::-moz-placeholder {
+          color: $color-1;
+        }
+        &:-ms-input-placeholder {
+          color: $color-1;
+        }
+      }
     }
-    textarea {
+    textarea#{&} {
       resize: none; padding: 9px 12px; height: auto;
     }
   }
@@ -582,8 +615,8 @@ hr {
   &-content {
     background: $color-13; min-width: 100%;
     position: absolute; top: 100%; left: 0;
-    color: $color-3; white-space: nowrap;
-    @include box-shadow(1px, 2px, 4px, rgba($color-1, 0.5));
+    color: $color-3;
+    @include box-shadow(2px, 2px, 4px, rgba($color-1, 0.4));
     
     &:after {
       display: block; content: ""; height: 1px;
@@ -592,7 +625,7 @@ hr {
     
     .sub-title {
       color: $color-9; background: $color-12;
-      padding: 4px 25px;
+      padding: 4px 25px; white-space: nowrap;
     }
   }
   
@@ -604,6 +637,7 @@ hr {
   
   ul {
     margin: 0; padding: 5px 0; list-style-type: none;
+    white-space: nowrap;
     li {
       margin: 0; padding: 2px 0;
       
@@ -633,6 +667,10 @@ hr {
     
     &-type-1 {
       padding-top: 2px;
+      padding-bottom: 10px;
+    }
+    &-type-2 {
+      padding-top: 6px;
       padding-bottom: 10px;
     }
   }
@@ -750,7 +788,66 @@ p { margin: 5px 0; }
   
   &-inner {
     width: $page-width - $sidebar-width;
-    @include box-sizing(border-box);
+    @include box-sizing(border-box); height: 100%;
+  }
+  
+  .search {
+    float: left; padding: 5px 24px 0 0;
+    
+    .textbox {
+      float: left; width: 235px;
+    }
+    [type=submit] {
+      float: left;
+    }
+  }
+  
+  .messages {
+    float: left; position: relative;
+    display: block; outline: 0;
+    width: 50px; height: 40px;
+    background: url("../images/messages.png") no-repeat center center;
+    
+    span {
+      position: absolute; top: 5px; right: 5px;
+      display: block; padding: 2px 2px 0;
+      min-width: 15px; height: 15px; text-align: center;
+      line-height: 1; font-size: 10px;
+      background: $color-4; color: $color-3;
+      @include box-sizing(border-box);
+      @include border-radius(15px);
+    }
+  }
+  
+  .support-dropdown {
+    float: left;
+    
+    &-toggler {
+      display: block; outline: 0;
+      width: 50px; height: 40px;
+      background: url("../images/support.png") no-repeat center center;
+    }
+    
+    &[data-dropdown-visible=true] {
+      .support-dropdown-toggler {
+        background-color: $color-13;
+      }
+    }
+  }
+  
+  .settings-dropdown {
+    float: left;
+    
+    &-toggler {
+      display: block; outline: 0;
+      width: 50px; height: 40px;
+      background: url("../images/settings.png") no-repeat center center;
+    }
+    &[data-dropdown-visible=true] {
+      .settings-dropdown-toggler {
+        background-color: $color-13;
+      }
+    }
   }
 }
 
@@ -835,6 +932,99 @@ p { margin: 5px 0; }
     padding: 15px 25px 5px;
   }
 }
+
+//
+//   SUPPORT
+//   ========================================
+//
+
+.support {
+  width: 370px;
+  position: relative;
+  
+  &-content {
+    padding: 30px;
+  }
+  
+  &-success {
+    display: none; 
+    position: absolute; z-index: 1;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    
+    &-inner {
+      position: absolute; text-align: center;
+      top: 0; left: 0; right: 0; bottom: 0;
+      overflow: auto; padding: 30px;
+      background: $color-13;
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+    
+    div {
+      padding-bottom: 20px;
+    }
+  }
+  
+  &-error {
+    display: none; 
+    position: absolute; z-index: 1;
+    top: 0; left: 0; right: 0; bottom: 0;
+    
+    
+    &-inner {
+      position: absolute; text-align: center;
+      top: 0; left: 0; right: 0; bottom: 0;
+      overflow: auto; padding: 30px;
+      background: rgba($color-13, 0.95);
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+    
+    div {
+      padding-bottom: 20px;
+    }
+  }
+  
+  .row {
+    padding-bottom: 20px;
+    .label {
+      padding-bottom: 4px;
+    }
+    
+    &-submit {
+      padding-bottom: 10px;
+    }
+    
+    &-flex {
+      @include flexbox();
+      @include align-items(center);
+    }
+  }
+  
+  .file-input {
+    margin-right: 6px;
+  }
+  
+  .attached-file {
+    display: none; position: relative; padding-top: 10px;
+    padding-right: 25px;
+    
+    .item {
+      display: block; overflow: hidden; word-break: break-all;
+    }
+    .remove {
+      height: 10px; width: 10px; display: block; outline: 0;
+      position: absolute; top: 14px; right: 0;
+      background: url('../images/close3.png') no-repeat center center;
+    }
+  }
+}
+
 
 
 //

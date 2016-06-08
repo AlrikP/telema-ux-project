@@ -135,7 +135,89 @@
         <div class="page-topbar">
           
           <div class="page-topbar-inner">
-            topbar
+            
+            <div class="float-right">
+              
+              <div class="search">
+                <input type="text" class="textbox textbox-size-type-1 textbox-bg-type-1" />
+                <input type="submit" class="btn btn-size-small btn-size-square btn-type-icon btn-icon-2" value="" /> 
+              </div>
+              
+              <a href="#" class="messages"><span>2</span></a>     
+              
+              <div class="support-dropdown regular-dropdown regular-dropdown-type-1" data-dropdown>
+                <a href="#" class="support-dropdown-toggler" data-dropdown-toggler></a>
+                <div class="regular-dropdown-content" data-dropdown-content>
+                  
+                  <div class="support">
+                    
+                    <div class="support-content">
+                      
+                      <form>
+              
+                        <div class="row">
+                          <div class="label">Subject</div>
+                          <input type="text" class="textbox textbox-border-type-1">
+                        </div>
+                        
+                        <div class="row">
+                          <div class="label">Message to customer support</div>
+                          <textarea class="textbox textbox-border-type-1" cols="30" rows="4"></textarea>
+                          <div class="attached-file">
+                            <a href="#" class="remove" data-support-attachment-clear></a>
+                            <span class="item"></span>
+                          </div>
+                        </div>
+                        
+                        <div class="row row-submit row-flex">
+                          <div class="file-input">
+                            <input type="file" name="file" data-support-attachment />
+                            <span class="btn btn-size-square btn-type-icon btn-icon-1"></span>
+                          </div>
+                          <input type="submit" class="btn btn-size-block" value="Send" />
+                        </div>
+                      </form>
+                    </div>
+                    
+                    <div class="support-success">
+                      <div class="support-success-inner">
+                        <div>
+                          Thank you!<br />
+                          Your message is sent.<br />
+                          We will contact you in 24h.
+                        </div>
+                        <a href="#" class="btn btn-padding-type-1" data-dropdown-close>OK</a>
+                      </div>
+                    </div>
+                    
+                    <div class="support-error">
+                      <div class="support-error-inner">
+                        <div>
+                          Attachment is not in the right format.<br />Allowed formats are jpg, <br />gif, png. .doc and .xls. 
+                        </div>
+                        <a href="#" class="btn btn-padding-type-1">OK</a>
+                      </div>
+                    </div>
+                    
+                  </div> <!-- //support -->
+                  
+                </div>
+              </div>
+              
+              <div class="settings-dropdown regular-dropdown regular-dropdown-type-1" data-dropdown>
+                <a href="#" class="settings-dropdown-toggler" data-dropdown-toggler></a>
+                <div class="regular-dropdown-content" data-dropdown-content>
+                  <div class="inner inner-type-2">
+                    <ul>
+                      <li><a href="#">My settings  »</a></li>
+                      <li><a href="#">User settings »</a></li>
+                      <li><a href="#">Company and branch settings »</a></li>
+                      <li><a href="#">Products and services »</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div> <!-- //page-topbar-inner -->
           
         </div> <!-- //page-topbar -->
@@ -746,6 +828,10 @@
                 
                 <div style="padding-top: 10px;">
                   <input type="text" class="textbox" placeholder="12345" />
+                </div>
+                
+                <div style="padding-top: 10px;">
+                  <input type="text" class="textbox textbox-bg-type-1" placeholder="12345" />
                 </div>
                 
                 <br /><br />

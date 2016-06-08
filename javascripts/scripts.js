@@ -14,6 +14,66 @@ var App = {
             $(el).prop('checked', $(el).attr('checked') === 'checked' ? true : false);
         });
         
+        // Support attachment input change
+        $('[data-support-attachment]').change(function(e) {
+            var $target = $(this),
+                value = $target.val(),
+                $list = $target.closest('form').find('.attached-file');
+            
+            if (value.length) {
+                $list.find('.item').text(value);
+                $list.show();
+            } 
+        });
+        
+        // Support attachment clear
+        $('[data-support-attachment-clear]').on('click', function(e) {
+            e.preventDefault();
+            
+            var $form = $(e.target).closest('form'),
+                $list = $form.find('.attached-file'),
+                $input = $form.find('[data-support-attachment]');
+                
+            if ($input.length) {
+                $input.wrap('<form>').closest('form').get(0).reset();
+                $input.unwrap();
+                $list.hide();
+            }
+        });
+        
+        // Support form submit
+        $('.support form').submit(function(e) {
+            
+            e.preventDefault();
+            var $support = $(this).closest('.support'),
+                $error = $support.find('.support-error'),
+                $success = $support.find('.support-success'),
+                $attachment = $support.find('input[type=file]'),
+                show_error = false;
+            
+            
+            if ($attachment.val() && (!/(\.gif|\.jpg|\.jpeg|\.doc|\.xls)$/i.test($attachment.val()))) {
+                show_error = true;
+            }
+            
+            if (show_error) {
+                $error.show();
+                $error.find('.btn').one('click', function(e) { 
+                    e.preventDefault(); 
+                    $error.hide(); 
+                });
+            }
+            else {
+                
+                // Make ajax send here !
+                
+                $success.show();
+                $success.find('.btn').one('click', function(e) { 
+                    e.preventDefault(); 
+                    $success.hide(); 
+                });
+            }
+        });
         
         // Toggle elements visibility
         $(document).on('click','[data-visibility-toggler]', function(e) {

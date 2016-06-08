@@ -60,10 +60,6 @@ input[type=text]:-ms-input-placeholder, input[type=submit]:-ms-input-placeholder
   color: #9c9c9c;
   opacity: 1 !important;
 }
-input[type=text]::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=button]::-moz-focus-inner, input[type=email]::-moz-focus-inner, input[type=search]::-moz-focus-inner, textarea::-moz-focus-inner, button::-moz-focus-inner, select::-moz-focus-inner {
-  padding: 0;
-  border: none;
-}
 
 ul, ol {
   list-style-type: none;
@@ -74,6 +70,28 @@ hr {
   border: none;
   height: 1px;
   background: #c3c3c3;
+}
+
+.file-input {
+  position: relative;
+}
+.file-input input[type=file] {
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-size: 80px;
+  line-height: 100%;
+  right: 0;
+  top: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "alpha(opacity=0)";
+  opacity: 0;
+  cursor: pointer;
+  z-index: 6;
 }
 
 input[type=submit].btn, input[type=button].btn button.btn, .btn {
@@ -107,6 +125,10 @@ input[type=submit].btn-color-type-3, input[type=submit].btn-color-type-3:hover, 
 }
 input[type=submit].btn-color-type-4, input[type=submit].btn-color-type-4:hover, input[type=button].btn button.btn-color-type-4, input[type=button].btn button.btn-color-type-4:hover, .btn-color-type-4, .btn-color-type-4:hover {
   background-color: #f1f1f1;
+}
+input[type=submit].btn-padding-type-1, input[type=button].btn button.btn-padding-type-1, .btn-padding-type-1 {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 input[type=submit].btn-size-block, input[type=button].btn button.btn-size-block, .btn-size-block {
   display: block;
@@ -179,8 +201,22 @@ input[type=text].textbox-inline, input[type=email].textbox-inline, input[type=se
 input[type=text].textbox-size-type-1, input[type=email].textbox-size-type-1, input[type=search].textbox-size-type-1, textarea.textbox-size-type-1 {
   height: 30px;
 }
+input[type=text].textbox-bg-type-1, input[type=email].textbox-bg-type-1, input[type=search].textbox-bg-type-1, textarea.textbox-bg-type-1 {
+  background: #c3c3c3;
+  border-color: #c3c3c3;
+  color: #000810;
+}
+input[type=text].textbox-bg-type-1::-webkit-input-placeholder, input[type=email].textbox-bg-type-1::-webkit-input-placeholder, input[type=search].textbox-bg-type-1::-webkit-input-placeholder, textarea.textbox-bg-type-1::-webkit-input-placeholder {
+  color: #000810;
+}
+input[type=text].textbox-bg-type-1::-moz-placeholder, input[type=email].textbox-bg-type-1::-moz-placeholder, input[type=search].textbox-bg-type-1::-moz-placeholder, textarea.textbox-bg-type-1::-moz-placeholder {
+  color: #000810;
+}
+input[type=text].textbox-bg-type-1:-ms-input-placeholder, input[type=email].textbox-bg-type-1:-ms-input-placeholder, input[type=search].textbox-bg-type-1:-ms-input-placeholder, textarea.textbox-bg-type-1:-ms-input-placeholder {
+  color: #000810;
+}
 
-textarea {
+textarea.textbox {
   resize: none;
   padding: 9px 12px;
   height: auto;
@@ -560,10 +596,9 @@ textarea {
   top: 100%;
   left: 0;
   color: #ffffff;
-  white-space: nowrap;
-  -webkit-box-shadow: 1px 2px 4px rgba(0, 8, 16, 0.5) ;
-  -moz-box-shadow: 1px 2px 4px rgba(0, 8, 16, 0.5) ;
-  box-shadow: 1px 2px 4px rgba(0, 8, 16, 0.5) ;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 8, 16, 0.4) ;
+  -moz-box-shadow: 2px 2px 4px rgba(0, 8, 16, 0.4) ;
+  box-shadow: 2px 2px 4px rgba(0, 8, 16, 0.4) ;
 }
 .regular-dropdown-content:after {
   display: block;
@@ -575,6 +610,7 @@ textarea {
   color: #f1f1f1;
   background: #9c9c9c;
   padding: 4px 25px;
+  white-space: nowrap;
 }
 .regular-dropdown-type-1 .regular-dropdown-content {
   left: auto;
@@ -584,6 +620,7 @@ textarea {
   margin: 0;
   padding: 5px 0;
   list-style-type: none;
+  white-space: nowrap;
 }
 .regular-dropdown ul li {
   margin: 0;
@@ -610,6 +647,10 @@ textarea {
 }
 .regular-dropdown .inner-type-1 {
   padding-top: 2px;
+  padding-bottom: 10px;
+}
+.regular-dropdown .inner-type-2 {
+  padding-top: 6px;
   padding-bottom: 10px;
 }
 
@@ -771,6 +812,73 @@ p {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  height: 100%;
+}
+.page-topbar .search {
+  float: left;
+  padding: 5px 24px 0 0;
+}
+.page-topbar .search .textbox {
+  float: left;
+  width: 235px;
+}
+.page-topbar .search [type=submit] {
+  float: left;
+}
+.page-topbar .messages {
+  float: left;
+  position: relative;
+  display: block;
+  outline: 0;
+  width: 50px;
+  height: 40px;
+  background: url("../images/messages.png") no-repeat center center;
+}
+.page-topbar .messages span {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: block;
+  padding: 2px 2px 0;
+  min-width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 1;
+  font-size: 10px;
+  background: #ed1b2e;
+  color: #ffffff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+.page-topbar .support-dropdown {
+  float: left;
+}
+.page-topbar .support-dropdown-toggler {
+  display: block;
+  outline: 0;
+  width: 50px;
+  height: 40px;
+  background: url("../images/support.png") no-repeat center center;
+}
+.page-topbar .support-dropdown[data-dropdown-visible=true] .support-dropdown-toggler {
+  background-color: #808080;
+}
+.page-topbar .settings-dropdown {
+  float: left;
+}
+.page-topbar .settings-dropdown-toggler {
+  display: block;
+  outline: 0;
+  width: 50px;
+  height: 40px;
+  background: url("../images/settings.png") no-repeat center center;
+}
+.page-topbar .settings-dropdown[data-dropdown-visible=true] .settings-dropdown-toggler {
+  background-color: #808080;
 }
 
 .page-main {
@@ -867,6 +975,139 @@ p {
 }
 .role-dropdown .textbox-holder {
   padding: 15px 25px 5px;
+}
+
+.support {
+  width: 370px;
+  position: relative;
+}
+.support-content {
+  padding: 30px;
+}
+.support-success {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.support-success-inner {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  padding: 30px;
+  background: #808080;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+.support-success div {
+  padding-bottom: 20px;
+}
+.support-error {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.support-error-inner {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  padding: 30px;
+  background: rgba(128, 128, 128, 0.95);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+.support-error div {
+  padding-bottom: 20px;
+}
+.support .row {
+  padding-bottom: 20px;
+}
+.support .row .label {
+  padding-bottom: 4px;
+}
+.support .row-submit {
+  padding-bottom: 10px;
+}
+.support .row-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+.support .file-input {
+  margin-right: 6px;
+}
+.support .attached-file {
+  display: none;
+  position: relative;
+  padding-top: 10px;
+  padding-right: 25px;
+}
+.support .attached-file .item {
+  display: block;
+  overflow: hidden;
+  word-break: break-all;
+}
+.support .attached-file .remove {
+  height: 10px;
+  width: 10px;
+  display: block;
+  outline: 0;
+  position: absolute;
+  top: 14px;
+  right: 0;
+  background: url("../images/close3.png") no-repeat center center;
 }
 
 .page-sidebar .inner {
