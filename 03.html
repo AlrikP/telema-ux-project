@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Telema UI</title>
+  <meta name="author" content="Fraktal">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+  <link href="stylesheets/jquery-ui.structure.css" type="text/css" rel="stylesheet" media="all">
+  <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="all">
+</head>
+  
+<body>
+    
+  <div class="page-holder">
+    <div class="page-header">
+      
+      <a href="#" class="logo"></a>
+      
+      <div class="header-menu">
+        <a href="#" class="btn-header active">EDI</a>
+        <a href="#" class="btn-header">E-invoice</a>
+        <a href="#" class="btn-header">VMI</a>
+        <a href="#" class="btn-header">MMT</a>
+        
+        <div class="regular-dropdown float-left" data-dropdown>
+          <a href="#" class="btn-header btn-header-type-1" data-dropdown-toggler>More</a>
+          <div class="regular-dropdown-content " data-dropdown-content>
+            <div class="inner">
+              <ul>
+                <li><a href="#">WebShop »</a></li>
+                <li><a href="#">TeleSales »</a></li>
+                <li><a href="#">eFactoring »</a></li>
+                <li><a href="#">eAuction »</a></li>
+                <li><a href="#">Archive »</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="header-inner">
+        <div class="float-right">
+          
+          <div class="role-dropdown regular-dropdown regular-dropdown-type-1 max-height-315" data-dropdown>
+            <a href="#" class="role-dropdown-toggler" data-dropdown-toggler>
+              <strong>Burkhardt von Bürgermeter</strong>
+              <span class="company">Bürgermeister Pagar ja Koogimeister  AS Ltd</span>
+            </a>
+            
+            <div class="regular-dropdown-content" data-dropdown-content>
+              
+              <div class="sub-title">Companies</div>
+              <ul>
+                <li><a href="#" data-dropdown-close>Bürgermeister Pagar ja Koogimeister  AS Ltd</a></li>
+                <li><a href="#" data-dropdown-close>Kuke meierei</a></li>
+              </ul>
+              
+              <div class="sub-title">Branches</div>
+              
+              <div data-list-filter>
+                <div class="textbox-holder">
+                  <input type="text" class="textbox textbox-size-type-1 textbox-border-type-1" data-list-filter-opt placeholder="Start writing to filter..." />
+                </div>
+                <div class="inner inner-type-1">
+                  <ul data-list-filter-content>
+                    <li data-list-filter-id="Kuke meierei Valga branch"><a href="#" data-dropdown-close>Kuke meierei Valga branch »</a></li>
+                    <li data-list-filter-id="Kuke meierei Võru branch"><a href="#" data-dropdown-close>Kuke meierei Võru branch »</a></li>
+                    <li data-list-filter-id="Kuke meierei Tartu branch"><a href="#" data-dropdown-close>Kuke meierei Tartu branch »</a></li>
+                    <li data-list-filter-id="Tibu Talu ökopood Elva branch"><a href="#" data-dropdown-close>Tibu Talu ökopood Elva branch »</a></li>
+                    <li class="text" data-list-filter-empty>No matches found</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <a href="#" class="btn-login">Log out</a>
+          
+        </div>
+      </div>
+    </div>
+      
+    <div class="page-wrap">
+        
+      <div class="page-sidebar">
+        
+        <div class="inner selector-holder">
+          <div class="custom-select custom-select-block custom-select-size-type-1 custom-select-color-type-3 custom-select-font-size-1" data-dropdown>
+            <a href="#" class="custom-select-toggler" style="max-width: 120px;" data-dropdown-toggler><span data-dropdown-indicator>Purchase</span></a>
+            <div class="custom-select-content" data-dropdown-content>
+              <ul>
+                <li><a href="#" data-dropdown-option>Sales</a></li>
+                <li><a href="#" data-dropdown-option>Purchase</a></li>
+                <li><a href="#" data-dropdown-option>Something third</a></li>
+                <li><a href="#" data-dropdown-option>Something fourth</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="inner">
+          <ul class="list">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Overview</a></li>
+          </ul>
+        </div>
+        
+        <div class="inner">
+          <ul class="list">
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Despatch Advice</a></li>
+            <li><a href="#">Receiving Advice</a></li>
+            <li><a href="#">Invoice</a></li>
+            <li><a href="#">All Documents</a></li>
+          </ul>
+        </div>
+        
+        <div class="inner">
+          <ul class="list">
+            <li><a href="#">Products &amp; Prices</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        
+      </div> <!-- //page-sidebar -->
+      
+      <div class="page-container">
+          
+        <div class="page-topbar">
+          
+          <div class="page-topbar-inner">
+            
+            <div class="float-right">
+              
+              <div class="search">
+                <div class="textbox-holder ui-front">
+                  <input type="text" class="textbox textbox-size-type-1 textbox-bg-type-1" data-search-main />
+                </div>
+                <input type="submit" class="btn btn-size-small btn-size-square btn-type-icon btn-icon-2" value="" /> 
+              </div>
+              
+              <a href="#" class="messages"><span>2</span></a>     
+              
+              <div class="support-dropdown regular-dropdown regular-dropdown-type-1" data-dropdown>
+                <a href="#" class="support-dropdown-toggler" data-dropdown-toggler></a>
+                <div class="regular-dropdown-content" data-dropdown-content>
+                  
+                  <div class="support">
+                    
+                    <div class="support-content">
+                      
+                      <form>
+              
+                        <div class="row">
+                          <div class="label">Subject</div>
+                          <input type="text" class="textbox textbox-border-type-1">
+                        </div>
+                        
+                        <div class="row">
+                          <div class="label">Message to customer support</div>
+                          <textarea class="textbox textbox-border-type-1" cols="30" rows="4"></textarea>
+                          <div class="attached-file">
+                            <a href="#" class="remove" data-support-attachment-clear></a>
+                            <span class="item"></span>
+                          </div>
+                        </div>
+                        
+                        <div class="row row-submit row-flex">
+                          <div class="file-input">
+                            <input type="file" name="file" data-support-attachment />
+                            <span class="btn btn-size-square btn-type-icon btn-icon-1"></span>
+                          </div>
+                          <input type="submit" class="btn btn-size-block" value="Send" />
+                        </div>
+                      </form>
+                    </div>
+                    
+                    <div class="support-success">
+                      <div class="support-success-inner">
+                        <div>
+                          Thank you!<br />
+                          Your message is sent.<br />
+                          We will contact you in 24h.
+                        </div>
+                        <a href="#" class="btn btn-padding-type-1" data-dropdown-close>OK</a>
+                      </div>
+                    </div>
+                    
+                    <div class="support-error">
+                      <div class="support-error-inner">
+                        <div>
+                          Attachment is not in the right format.<br />Allowed formats are jpg, <br />gif, png. .doc and .xls. 
+                        </div>
+                        <a href="#" class="btn btn-padding-type-1">OK</a>
+                      </div>
+                    </div>
+                    
+                  </div> <!-- //support -->
+                  
+                </div>
+              </div>
+              
+              <div class="settings-dropdown regular-dropdown regular-dropdown-type-1" data-dropdown>
+                <a href="#" class="settings-dropdown-toggler" data-dropdown-toggler></a>
+                <div class="regular-dropdown-content" data-dropdown-content>
+                  <div class="inner inner-type-2">
+                    <ul>
+                      <li><a href="#">My settings  »</a></li>
+                      <li><a href="#">User settings »</a></li>
+                      <li><a href="#">Company and branch settings »</a></li>
+                      <li><a href="#">Products and services »</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- //page-topbar-inner -->
+          
+        </div> <!-- //page-topbar -->
+              
+        <div class="page-main">
+          
+            
+           
+          
+        </div> <!-- //page-main -->
+        
+      </div> <!-- //page-container -->  
+    </div> <!-- //page-wrap -->
+  </div> <!-- //page-holder -->
+  
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="javascripts/jquery-ui.js"></script>
+  <script src="javascripts/underscore-min.js"></script>
+  <script src="javascripts/scripts.js"></script>
+    
+</body>
+</html>
