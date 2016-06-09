@@ -4,24 +4,128 @@
   <title>Telema UI</title>
   <meta name="author" content="Fraktal">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="all">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+  <link href="stylesheets/jquery-ui.structure.css" type="text/css" rel="stylesheet" media="all">
+  <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="all">
 </head>
   
 <body>
     
   <div class="page-holder">
     <div class="page-header">
-      <a href="#" class="main-logo"></a>
+      
+      <a href="#" class="logo"></a>
+      
+      <div class="header-menu">
+        <a href="#" class="btn-header active">EDI</a>
+        <a href="#" class="btn-header">E-invoice</a>
+        <a href="#" class="btn-header">VMI</a>
+        <a href="#" class="btn-header">MMT</a>
+        
+        <div class="regular-dropdown float-left" data-dropdown>
+          <a href="#" class="btn-header btn-header-type-1" data-dropdown-toggler>More</a>
+          <div class="regular-dropdown-content " data-dropdown-content>
+            <div class="inner">
+              <ul>
+                <li><a href="#">WebShop »</a></li>
+                <li><a href="#">TeleSales »</a></li>
+                <li><a href="#">eFactoring »</a></li>
+                <li><a href="#">eAuction »</a></li>
+                <li><a href="#">Archive »</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="header-inner">
+        <div class="float-right">
+          
+          <div class="role-dropdown regular-dropdown regular-dropdown-type-1 max-height-315" data-dropdown>
+            <a href="#" class="role-dropdown-toggler" data-dropdown-toggler>
+              <strong>Burkhardt von Bürgermeter</strong>
+              <span class="company">Bürgermeister Pagar ja Koogimeister  AS Ltd</span>
+            </a>
+            
+            <div class="regular-dropdown-content" data-dropdown-content>
+              
+              <div class="sub-title">Companies</div>
+              <ul>
+                <li><a href="#" data-dropdown-close>Bürgermeister Pagar ja Koogimeister  AS Ltd</a></li>
+                <li><a href="#" data-dropdown-close>Kuke meierei</a></li>
+              </ul>
+              
+              <div class="sub-title">Branches</div>
+              
+              <div data-list-filter>
+                <div class="textbox-holder">
+                  <input type="text" class="textbox textbox-size-type-1 textbox-border-type-1" data-list-filter-opt placeholder="Start writing to filter..." />
+                </div>
+                <div class="inner inner-type-1">
+                  <ul data-list-filter-content>
+                    <li data-list-filter-id="Kuke meierei Valga branch"><a href="#" data-dropdown-close>Kuke meierei Valga branch »</a></li>
+                    <li data-list-filter-id="Kuke meierei Võru branch"><a href="#" data-dropdown-close>Kuke meierei Võru branch »</a></li>
+                    <li data-list-filter-id="Kuke meierei Tartu branch"><a href="#" data-dropdown-close>Kuke meierei Tartu branch »</a></li>
+                    <li data-list-filter-id="Tibu Talu ökopood Elva branch"><a href="#" data-dropdown-close>Tibu Talu ökopood Elva branch »</a></li>
+                    <li class="text" data-list-filter-empty>No matches found</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <a href="#" class="btn-login">Log out</a>
+          
+        </div>
+      </div>
     </div>
       
     <div class="page-wrap">
         
       <div class="page-sidebar">
-        sidebar
+        
+        <div class="inner selector-holder">
+          <div class="custom-select custom-select-block custom-select-size-type-1 custom-select-color-type-3 custom-select-font-size-1" data-dropdown>
+            <a href="#" class="custom-select-toggler" style="max-width: 120px;" data-dropdown-toggler><span data-dropdown-indicator>Purchase</span></a>
+            <div class="custom-select-content" data-dropdown-content>
+              <ul>
+                <li><a href="#" data-dropdown-option>Sales</a></li>
+                <li><a href="#" data-dropdown-option>Purchase</a></li>
+                <li><a href="#" data-dropdown-option>Something third</a></li>
+                <li><a href="#" data-dropdown-option>Something fourth</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="inner">
+          <ul class="list">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Overview</a></li>
+          </ul>
+        </div>
+        
+        <div class="inner">
+          <ul class="list">
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Despatch Advice</a></li>
+            <li><a href="#">Receiving Advice</a></li>
+            <li><a href="#">Invoice</a></li>
+            <li><a href="#">All Documents</a></li>
+          </ul>
+        </div>
+        
+        <div class="inner">
+          <ul class="list">
+            <li><a href="#">Products &amp; Prices</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+        
       </div> <!-- //page-sidebar -->
       
       <div class="page-container">
@@ -29,7 +133,91 @@
         <div class="page-topbar">
           
           <div class="page-topbar-inner">
-            topbar
+            
+            <div class="float-right">
+              
+              <div class="search">
+                <div class="textbox-holder ui-front">
+                  <input type="text" class="textbox textbox-size-type-1 textbox-bg-type-1" data-search-main data-search-main-advanced data-lang-no-results="No matches found" data-lang-documents="Documents" data-lang-company-page="Company page" data-lang-search-documents="Search from documents" data-documents-url="http://www.neti.ee" />
+                </div>
+                <input type="submit" class="btn btn-size-small btn-size-square btn-type-icon btn-icon-2" value="" /> 
+              </div>
+              
+              <a href="#" class="messages"><span>2</span></a>     
+              
+              <div class="support-dropdown regular-dropdown regular-dropdown-type-1" data-dropdown>
+                <a href="#" class="support-dropdown-toggler" data-dropdown-toggler></a>
+                <div class="regular-dropdown-content" data-dropdown-content>
+                  
+                  <div class="support">
+                    
+                    <div class="support-content">
+                      
+                      <form>
+              
+                        <div class="row">
+                          <div class="label">Subject</div>
+                          <input type="text" class="textbox textbox-border-type-1">
+                        </div>
+                        
+                        <div class="row">
+                          <div class="label">Message to customer support</div>
+                          <textarea class="textbox textbox-border-type-1" cols="30" rows="4"></textarea>
+                          <div class="attached-file">
+                            <a href="#" class="remove" data-support-attachment-clear></a>
+                            <span class="item"></span>
+                          </div>
+                        </div>
+                        
+                        <div class="row row-submit row-flex">
+                          <div class="file-input">
+                            <input type="file" name="file" data-support-attachment />
+                            <span class="btn btn-size-square btn-type-icon btn-icon-1"></span>
+                          </div>
+                          <input type="submit" class="btn btn-size-block" value="Send" />
+                        </div>
+                      </form>
+                    </div>
+                    
+                    <div class="support-success">
+                      <div class="support-success-inner">
+                        <div>
+                          Thank you!<br />
+                          Your message is sent.<br />
+                          We will contact you in 24h.
+                        </div>
+                        <a href="#" class="btn btn-padding-type-1" data-dropdown-close>OK</a>
+                      </div>
+                    </div>
+                    
+                    <div class="support-error">
+                      <div class="support-error-inner">
+                        <div>
+                          Attachment is not in the right format.<br />Allowed formats are jpg, <br />gif, png. .doc and .xls. 
+                        </div>
+                        <a href="#" class="btn btn-padding-type-1">OK</a>
+                      </div>
+                    </div>
+                    
+                  </div> <!-- //support -->
+                  
+                </div>
+              </div>
+              
+              <div class="settings-dropdown regular-dropdown regular-dropdown-type-1" data-dropdown>
+                <a href="#" class="settings-dropdown-toggler" data-dropdown-toggler></a>
+                <div class="regular-dropdown-content" data-dropdown-content>
+                  <div class="inner inner-type-2">
+                    <ul>
+                      <li><a href="#">My settings  »</a></li>
+                      <li><a href="#">User settings »</a></li>
+                      <li><a href="#">Company and branch settings »</a></li>
+                      <li><a href="#">Products and services »</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div> <!-- //page-topbar-inner -->
           
         </div> <!-- //page-topbar -->
@@ -40,7 +228,7 @@
           <div class="grid">
             <div class="grid-col grid-col-type-1">
               
-              <div class="proto-comments">
+              <div class="proto-comments proto-comments-no-top-margin">
                 <b>T1A: Simple horizontal lines</b>
               </div>
               
@@ -76,126 +264,122 @@
           </div> <!-- //grid -->
           
           
-          <div class="grid">
-            <div class="grid-col">
               
-              <div class="proto-comments">
-                <b>T1B: Horizontal lines with opening rows</b>
-              </div>
-              
-              <div class="color-box pad-box">
-                <table class="t1 wide">
-                  <tbody data-visibility-parent>
-                    <tr>
-                      <td>
-                        <h2>Kukekommimanufaktuur AS</h2>
-                        <div>Narva mnt 5, 10117 Tallinn</div>
-                        <div>
-                          Registy code 1234567 <span class="sep">:</span> 
-                          GLN 950553 <span class="sep">:</span> 
-                          VAT 54354453346 <span class="sep">:</span>
-                          <a href="#" class="color-type-2">www.kukekommimanufaktuur.eu</a>
-                        </div>
-                      </td>
-                      <td class="align-right">
-                        <b>2 of 2 branches linked</b><br />
-                        <a href="#" data-visibility-toggler>
-                          <span class="inl-el" data-visible="false">Show branches »</span>
-                          <span class="inl-el" data-visible="true">Hide branches »</span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                    <tr data-visible="true">
-                      <td colspan="2" class="bg-color-type-2">
-                        <table class="wide">
-                          <tr>
-                            <td>
-                              <div><b>Kukekommimanufaktuur AS Tartu branch</b></div> 
-                              Narva mnt 5, 10117 Tartu <span class="sep">:</span> GLN 950558  
-                            </td>
-                            <td class="align-right">
-                              <b>Linked</b>
-                              1234598
-                              $_Linkimise kast
-                              <button class="btn btn-color-type-4 btn-size-large btn-size-square btn-type-icon btn-icon-3"></button>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                    <tr data-visible="true">
-                      <td colspan="2" class="bg-color-type-2">
-                        <table class="wide">
-                          <tr>
-                            <td>
-                              <div><b>Kukekommimanufaktuur AS Tartu branch</b></div> 
-                              Narva mnt 5, 10117 Tartu <span class="sep">:</span> GLN 950558
-                            </td>
-                            <td class="align-right">
-                              <b>Linked</b>
-                              1234598
-                              $_linkimise kast
-                              <button class="btn btn-color-type-4 btn-size-large btn-size-square btn-type-icon btn-icon-3"></button>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </tbody>
-                  
-                  <tbody>
-                    <tr>
-                      <td>
-                        <h2>AS Ping-Pong</h2>
-                        <div>Narva mnt 5, 10117 Tallinn</div>
-                        Registy code 1234567 <span class="sep">:</span> 
-                        GLN 950553 <span class="sep">:</span> 
-                        VAT 54354453346 <span class="sep">:</span>
-                        <a href="#" class="color-type-2">www.pingpong.eu</a>
-                      </td>
-                      <td class="align-right">
-                        <b>Linked</b>
-                        1234598
-                        $_linkimise kast
-                        <button class="btn btn-color-type-3 btn-size-large btn-size-square btn-type-icon btn-icon-3"></button>
-                      </td>
-                    </tr>
-                  </tbody>
-                  
-                  <tbody data-visibility-parent>
-                    <tr>
-                      <td>
-                        <h2>Tiigrite Garderoob OÜ</h2>
-                        <div>Narva mnt 5, 10117 Tallinn</div>
-                        Registy code 1234567 <span class="sep">:</span> 
-                        GLN 950553 <span class="sep">:</span> 
-                        VAT 54354453346 <span class="sep">:</span>
-                        <a href="#" class="color-type-2">www.tiigritegarderoob.com</a>
-                      </td>
-                      <td class="align-right">
-                        <b>24 of 38 branches linked</b><br />
-                        <a href="#" data-visibility-toggler>
-                          <span class="inl-el" data-visible="true">Show branches »</span>
-                          <span class="inl-el" data-visible="false">Hide branches »</span>
-                        </a>
-                      </td>
-                    </tr>
-                    
-                    <tr data-visible="false">
-                      <td colspan="2" class="bg-color-type-2">
-                      </td>
-                    </tr>
-                    <tr data-visible="false">
-                      <td colspan="2" class="bg-color-type-2">          
-                      </td>
-                    </tr>
-                  </tbody>
+          <div class="proto-comments">
+            <b>T1B: Horizontal lines with opening rows</b>
+          </div>
+          
+          <div class="color-box pad-box">
+            <table class="t1 wide">
+              <tbody data-visibility-parent>
+                <tr>
+                  <td>
+                    <h2>Kukekommimanufaktuur AS</h2>
+                    <div>Narva mnt 5, 10117 Tallinn</div>
+                    <div>
+                      Registy code 1234567 <span class="sep">:</span> 
+                      GLN 950553 <span class="sep">:</span> 
+                      VAT 54354453346 <span class="sep">:</span>
+                      <a href="#" class="color-type-2">www.kukekommimanufaktuur.eu</a>
+                    </div>
+                  </td>
+                  <td class="align-right">
+                    <b>2 of 2 branches linked</b><br />
+                    <a href="#" data-visibility-toggler>
+                      <span class="inl-el" data-visible="false">Show branches »</span>
+                      <span class="inl-el" data-visible="true">Hide branches »</span>
+                    </a>
+                  </td>
+                </tr>
                 
-                </table>
-              </div>
-            </div> <!-- //grid-col -->
-          </div> <!-- //grid -->
+                <tr data-visible="true">
+                  <td colspan="2" class="bg-color-type-2">
+                    <table class="wide">
+                      <tr>
+                        <td>
+                          <div><b>Kukekommimanufaktuur AS Tartu branch</b></div> 
+                          Narva mnt 5, 10117 Tartu <span class="sep">:</span> GLN 950558  
+                        </td>
+                        <td class="align-right">
+                          <b>Linked</b>
+                          1234598
+                          $_Linkimise kast
+                          <button class="btn btn-color-type-4 btn-size-large btn-size-square btn-type-icon btn-icon-3"></button>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr data-visible="true">
+                  <td colspan="2" class="bg-color-type-2">
+                    <table class="wide">
+                      <tr>
+                        <td>
+                          <div><b>Kukekommimanufaktuur AS Tartu branch</b></div> 
+                          Narva mnt 5, 10117 Tartu <span class="sep">:</span> GLN 950558
+                        </td>
+                        <td class="align-right">
+                          <b>Linked</b>
+                          1234598
+                          $_linkimise kast
+                          <button class="btn btn-color-type-4 btn-size-large btn-size-square btn-type-icon btn-icon-3"></button>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+              
+              <tbody>
+                <tr>
+                  <td>
+                    <h2>AS Ping-Pong</h2>
+                    <div>Narva mnt 5, 10117 Tallinn</div>
+                    Registy code 1234567 <span class="sep">:</span> 
+                    GLN 950553 <span class="sep">:</span> 
+                    VAT 54354453346 <span class="sep">:</span>
+                    <a href="#" class="color-type-2">www.pingpong.eu</a>
+                  </td>
+                  <td class="align-right">
+                    <b>Linked</b>
+                    1234598
+                    $_linkimise kast
+                    <button class="btn btn-color-type-3 btn-size-large btn-size-square btn-type-icon btn-icon-3"></button>
+                  </td>
+                </tr>
+              </tbody>
+              
+              <tbody data-visibility-parent>
+                <tr>
+                  <td>
+                    <h2>Tiigrite Garderoob OÜ</h2>
+                    <div>Narva mnt 5, 10117 Tallinn</div>
+                    Registy code 1234567 <span class="sep">:</span> 
+                    GLN 950553 <span class="sep">:</span> 
+                    VAT 54354453346 <span class="sep">:</span>
+                    <a href="#" class="color-type-2">www.tiigritegarderoob.com</a>
+                  </td>
+                  <td class="align-right">
+                    <b>24 of 38 branches linked</b><br />
+                    <a href="#" data-visibility-toggler>
+                      <span class="inl-el" data-visible="true">Show branches »</span>
+                      <span class="inl-el" data-visible="false">Hide branches »</span>
+                    </a>
+                  </td>
+                </tr>
+                
+                <tr data-visible="false">
+                  <td colspan="2" class="bg-color-type-2">
+                  </td>
+                </tr>
+                <tr data-visible="false">
+                  <td colspan="2" class="bg-color-type-2">          
+                  </td>
+                </tr>
+              </tbody>
+            
+            </table>
+          </div>
           
           <div class="grid">
             <div class="grid-col grid-col-type-1">
@@ -345,1444 +529,1389 @@
           </div> <!-- //grid -->
           
           
-          <div class="grid">
-            <div class="grid-col">
-              
-              <div class="proto-comments">
-                <b>T2A: Simple horizontal lines with headings</b>
-              </div>
-              
-              <div class="color-box pad-box">
-                  
-                <table class="t1 wide">
-                  <thead>
-                    <tr>
-                      <th><b>Time</b></th>
-                      <th><b>Operation and doc no</b></th>
-                      <th><b>Partner</b></th>
-                      <th><b>Issue</b></th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>25.02.2015 6:31</td>
-                      <td>
-                        Sending invoice
-                        <div class="font-size-small color-type-2">62015058509</div>
-                      </td>
-                      <td>
-                        ...
-                        <div class="font-size-small color-type-2">PartnerID: 2135</div>
-                      </td>
-                      <td>
-                        Unknown receiver
-                      </td>
-                      <td class="align-right"><span class="bullet"></span></td>
-                    </tr>
-                    <tr>
-                      <td>25.02.2015 6:21</td>
-                      <td>
-                        Sending despatch advice
-                        <div class="font-size-small color-type-2">62015058455</div>
-                      </td>
-                      <td>
-                        ...
-                        <div class="font-size-small color-type-2">PartnerID: 2135  GLN:0000000000000</div>
-                      </td>
-                      <td>
-                        Unknown receiver
-                      </td>
-                      <td class="align-right"><span class="bullet"></span></td>
-                    </tr>
-                    <tr>
-                      <td>25.02.2015 6:21</td>
-                      <td>
-                        Sending invoice
-                        <div class="font-size-small color-type-2">62015058437</div>
-                      </td>
-                      <td>
-                        SÄM Tabasalu (Tabasalu)
-                        <div class="font-size-small color-type-2">PartnerID: 2135</div>
-                      </td>
-                      <td>
-                        Duplicate document
-                      </td>
-                      <td class="align-right"><span class="bullet bullet-color-type-1"></span></td>
-                    </tr>
-                    <tr>
-                      <td>25.02.2015 6:11</td>
-                      <td>
-                        Sending invoice
-                        <div class="font-size-small color-type-2">62015058335</div>
-                      </td>
-                      <td>
-                        Prisma Lasnamäe
-                        <div class="font-size-small color-type-2">PartnerID: 2135</div>
-                      </td>
-                      <td>
-                        Duplicate document
-                      </td>
-                      <td class="align-right"><span class="bullet bullet-color-type-1"></span></td>
-                    </tr>
-                    <tr>
-                      <td>25.02.2015 6:11</td>
-                      <td>
-                        Sending invoice
-                        <div class="font-size-small color-type-2">62015058332</div>
-                      </td>
-                      <td>
-                        Akadeemia Konsum
-                        <div class="font-size-small color-type-2">PartnerID: 2135</div>
-                      </td>
-                      <td>
-                        Document validation error
-                      </td>
-                      <td class="align-right"><span class="bullet bullet-color-type-1"></span></td>
-                    </tr>
-                  </tbody>
-                </table>
-                
-                <div class="align-right">
-                  <a href="#">More documents »</a>
-                </div>
-              
-              </div>
-              
-              <div class="proto-comments">
-                <b>T2B: Simple horizontal lines with headings and opening rows</b>
-              </div>
-              
-              <div class="color-box pad-box">
-                  
-                <table class="t1 wide">
-                  <thead>
-                    <tr>
-                      <th><b>Time</b></th>
-                      <th><b>Operation and doc no</b></th>
-                      <th><b>Partner</b></th>
-                      <th><b>Issue</b></th>
-                      <th><b>Status</b></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        25.02.2015
-                        <div class="font-size-small color-type-2">6:31</div>
-                      </td>
-                      <td>
-                        Sending invoice
-                        <div class="font-size-small color-type-2">62015058509</div>
-                      </td>
-                      <td>...</td>
-                      <td>Unknown receiver</td>
-                      <td>Unresolved</td>
-                    </tr>
-                  </tbody>
-                  <tbody  data-visibility-parent>
-                    <tr class="cursor-pointer" data-visibility-toggler>
-                      <td>
-                        25.02.2015
-                        <div class="font-size-small color-type-2">6:21</div>
-                      </td>
-                      <td>
-                        Sending despatch advice
-                        <div class="font-size-small color-type-2">62015058455</div>
-                      </td>
-                      <td>
-                        ...
-                        <div class="font-size-small color-type-2">PartnerID: 35</div>
-                      </td>
-                      <td>Unknown receiver</td>
-                      <td>Unresolved</td>
-                    </tr>
-                    <tr data-visible="true">
-                      <td colspan="5" class="bg-color-type-2">
-                        
-                        <div class="row-close">
-                          <a href="#" class="ico ico-type-17 ico-color-type-1" data-visibility-toggler></a>
-                        </div>
-                        
-                        <table class="wide">
-                          <tr>
-                            <td>
-                              
-                              <b>Description</b><br />
-                              You have tried to send despatch advice to RIMI LASNAMÄE who is not described as your partner in our system.
-                              <br /><br />
-                              <b>Solution</b><br />
-                              
-                              <ul class="bullet-list">
-                                <li>Please add RIMI LASNAMÄE as your partner here.</li>
-                                <li>And resend document from your ERP.</li>
-                              </ul>
-                              
-                              <div class="align-right">
-                                <label class="checkbox"><input type="checkbox" /><em></em>Mark resolved</label>
-                              </div>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td>
-                        25.02.2015
-                        <div class="font-size-small color-type-2">6:31</div>
-                      </td>
-                      <td>
-                        Sending invoice
-                        <div class="font-size-small color-type-2">62015058332</div>
-                      </td>
-                      <td>Prisma Lasnamäe</td>
-                      <td>Duplicate document</td>
-                      <td>
-                        Resolved
-                        <div class="font-size-small color-type-2">toomas / 25.02.2015 6:31</div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              
-            </div> <!-- //grid-col -->
-          </div> <!-- //grid -->
+          <div class="proto-comments">
+            <b>T2A: Simple horizontal lines with headings</b>
+          </div>
           
-          <div class="grid">
-            <div class="grid-col grid-col-type-1">
+          <div class="color-box pad-box">
               
-              <div class="color-box pad-box margin-box">
-                  
-                <table class="t1 wide">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th><b>Description</b></th>
-                      <th><b>Account</b></th>
-                      <th><b>Project</b></th>
-                      <th><b>Region</b></th>
-                      <th class="align-right"><b>Amount</b></th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  <tbody data-visibility-parent>
-                    <tr>
-                      <td class="thin">1.</td>
-                      <td>Office supplies</td>
-                      <td>2734</td>
-                      <td>63</td>
-                      <td>EST</td>
-                      <td class="align-right no-wrap">1 825.00</td>
-                      <td>
-                        <a href="#" data-visibility-toggler>
-                          <span class="ico ico-type-6" data-visible="true"></span>
-                          <span class="ico ico-type-7" data-visible="false"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr data-visible="false">
-                      <td colspan="7" class="bg-color-type-2">
-                      </td>
-                    </tr>
-                  </tbody>
-                  <tbody data-visibility-parent>
-                    <tr>
-                      <td class="thin">2.</td>
-                      <td>Office supplies</td>
-                      <td>2734</td>
-                      <td>457</td>
-                      <td>EST</td>
-                      <td class="align-right no-wrap">1 095.00</td>
-                      <td>
-                        <a href="#" data-visibility-toggler>
-                          <span class="ico ico-type-6" data-visible="false"></span>
-                          <span class="ico ico-type-7" data-visible="true"></span>
-                        </a>
-                      </td>
-                    </tr>
-                    <tr data-visible="true">
-                      <td colspan="7" class="bg-color-type-2">
-                        <table>
-                          <tr>
-                            <td>Department</td>
-                            <td>BDD - Business Development Department</td>
-                          </tr>
-                          <tr>
-                            <td>Person</td>
-                            <td>Nicholas Hawtrey</td>
-                          </tr>
-                          <tr>
-                            <td>Car</td>
-                            <td>345ABD</td>
-                          </tr>
-                          <tr>
-                            <td>Brand</td>
-                            <td>Brand A</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </tbody>
-                  
-                </table>
-              </div>
-              
-            </div> <!-- //grid-col -->
-          </div> <!-- //grid -->
+            <table class="t1 wide">
+              <thead>
+                <tr>
+                  <th><b>Time</b></th>
+                  <th><b>Operation and doc no</b></th>
+                  <th><b>Partner</b></th>
+                  <th><b>Issue</b></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>25.02.2015 6:31</td>
+                  <td>
+                    Sending invoice
+                    <div class="font-size-small color-type-2">62015058509</div>
+                  </td>
+                  <td>
+                    ...
+                    <div class="font-size-small color-type-2">PartnerID: 2135</div>
+                  </td>
+                  <td>
+                    Unknown receiver
+                  </td>
+                  <td class="align-right"><span class="bullet"></span></td>
+                </tr>
+                <tr>
+                  <td>25.02.2015 6:21</td>
+                  <td>
+                    Sending despatch advice
+                    <div class="font-size-small color-type-2">62015058455</div>
+                  </td>
+                  <td>
+                    ...
+                    <div class="font-size-small color-type-2">PartnerID: 2135  GLN:0000000000000</div>
+                  </td>
+                  <td>
+                    Unknown receiver
+                  </td>
+                  <td class="align-right"><span class="bullet"></span></td>
+                </tr>
+                <tr>
+                  <td>25.02.2015 6:21</td>
+                  <td>
+                    Sending invoice
+                    <div class="font-size-small color-type-2">62015058437</div>
+                  </td>
+                  <td>
+                    SÄM Tabasalu (Tabasalu)
+                    <div class="font-size-small color-type-2">PartnerID: 2135</div>
+                  </td>
+                  <td>
+                    Duplicate document
+                  </td>
+                  <td class="align-right"><span class="bullet bullet-color-type-1"></span></td>
+                </tr>
+                <tr>
+                  <td>25.02.2015 6:11</td>
+                  <td>
+                    Sending invoice
+                    <div class="font-size-small color-type-2">62015058335</div>
+                  </td>
+                  <td>
+                    Prisma Lasnamäe
+                    <div class="font-size-small color-type-2">PartnerID: 2135</div>
+                  </td>
+                  <td>
+                    Duplicate document
+                  </td>
+                  <td class="align-right"><span class="bullet bullet-color-type-1"></span></td>
+                </tr>
+                <tr>
+                  <td>25.02.2015 6:11</td>
+                  <td>
+                    Sending invoice
+                    <div class="font-size-small color-type-2">62015058332</div>
+                  </td>
+                  <td>
+                    Akadeemia Konsum
+                    <div class="font-size-small color-type-2">PartnerID: 2135</div>
+                  </td>
+                  <td>
+                    Document validation error
+                  </td>
+                  <td class="align-right"><span class="bullet bullet-color-type-1"></span></td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <div class="align-right">
+              <a href="#">More documents »</a>
+            </div>
           
+          </div>
           
-          <div class="grid">
-            <div class="grid-col">
-              
-              <div class="proto-comments">
-                <b>T3: Filter in heading</b>
-                <div>
-                  Every row must be in different <i>&lt;tbody&gt;</i> tag
-                </div>
-              </div>
-              
-              <div class="color-box pad-box">
-                  
-                <table class="t1 wide">
-                  <thead>
-                    <tr>
-                      <th><b>Invoice date</b></th>
-                      <th><b>Due date</b></th>
-                      <th data-row-filter data-row-filter-id="1">
-                        <div><b>Supplier</b></div>
-                        <div class="inl-blk" data-bubble data-bubble-hpos="right">
-                          <b><a href="#" data-bubble-toggler><span data-row-filter-indicator>Filter</span> »</a></b>
-                          <div class="bubble" data-bubble-content>
-                            <div class="bubble-inner">
-                              <label class="radio"><input type="radio" data-row-filter-attr="amserv as" data-bubble-close value="Amserv AS" name="radio-group-1"><em></em>Amserv AS</label>
-                              <label class="radio"><input type="radio" data-row-filter-attr="other supplier" data-bubble-close value="Other Suppliers" name="radio-group-1"><em></em>Other Supplier</label>
-                              <label class="radio"><input type="radio" data-row-filter-attr="" data-bubble-close value="Filter" checked="checked" name="radio-group-1"><em></em>Show all</label>
-                            </div>
-                          </div>
-                        </div>
-                      </th>
-                      <th><b>Amount</b></th>
-                      <th data-row-filter data-row-filter-id="121">
-                        <div><b>Status</b></div>
-                        <div class="inl-blk" data-bubble data-bubble-hpos="right">
-                          <b><a href="#" data-bubble-toggler><span data-row-filter-indicator>Filter</span> »</a></b>
-                          <div class="bubble" data-bubble-content>
-                            <div class="bubble-inner">
-                              <label class="radio"><input type="radio" data-row-filter-attr="discarded" data-bubble-close value="Discarded" name="radio-group-2"><em></em>Discarded</label>
-                              <label class="radio"><input type="radio" data-row-filter-attr="in approval" data-bubble-close value="In approval" name="radio-group-2"><em></em>In approval</label>
-                              <label class="radio"><input type="radio" data-row-filter-attr="on hold" data-bubble-close value="On hold" name="radio-group-2"><em></em>On hold</label>
-                              <label class="radio"><input type="radio" data-row-filter-attr="" data-bubble-close value="Filter" checked="checked" name="radio-group-2"><em></em>Show all</label>
-                            </div>
-                          </div>
-                        </div>
-                      </th>
-                      <th><b>On whose desk</b></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>25.07.15</td>
-                      <td>01.08.15</td>
-                      <td data-row-filter-id="1" data-row-filter-attr="amserv as">Amserv AS</td>
-                      <td>9 934,13</td>
-                      <td data-row-filter-id="121" data-row-filter-attr="in approval">In approval (2/4)</td>
-                      <td>Mati Mustikas (4)</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td>30.07.15</td>
-                      <td>01.08.15</td>
-                      <td data-row-filter-id="1" data-row-filter-attr="other supplier">Other Supplier</td>
-                      <td>6 665,16</td>
-                      <td data-row-filter-id="121" data-row-filter-attr="on hold">On hold</td>
-                      <td>Kalle Kullerkupp (1)</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td>01.08.15</td>
-                      <td>04.08.15</td>
-                      <td data-row-filter-id="1" data-row-filter-attr="amserv as">Amserv AS</td>
-                      <td>1 794,83</td>
-                      <td data-row-filter-id="121" data-row-filter-attr="discarded">Discarded</td>
-                      <td>Allocator (15)</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td>03.08.15</td>
-                      <td>05.08.15</td>
-                      <td data-row-filter-id="1" data-row-filter-attr="amserv as">Amserv AS</td>
-                      <td>2 546,11</td>
-                      <td data-row-filter-id="121" data-row-filter-attr="in approval">In approval (4/4)</td>
-                      <td>Kalle Kullerkupp (1)</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td>03.08.15</td>
-                      <td>05.08.15</td>
-                      <td data-row-filter-id="1" data-row-filter-attr="amserv as">Amserv AS</td>
-                      <td>2 546,11</td>
-                      <td data-row-filter-id="121" data-row-filter-attr="on hold">On hold</td>
-                      <td>Kalle Kullerkupp (1)</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div> <!-- //grid-col -->
-          </div> <!-- //grid -->
+          <div class="proto-comments">
+            <b>T2B: Simple horizontal lines with headings and opening rows</b>
+          </div>
           
-          
-          <div class="grid">
-            <div class="grid-col">
+          <div class="color-box pad-box">
               
-              <div class="proto-comments">
-                <b>T4B: First column menu</b>
-              </div>
-              
-              <div class="color-box pad-box">
-                  
-                <table class="t1 wide" data-filter-parent>
-                  <thead>
-                    <tr>
-                      <td></td>
-                      <th class="no-wrap valign-middle">
-                        <div class="inl-blk menu-dropdown" data-dropdown data-filter>
-                          <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
-                          <div class="menu-dropdown-content" data-dropdown-content>
-                            <ul>
-                              <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="buyer-code" /><em></em>Show buyer code</label></li>
-                              <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="gtin" /><em></em>Show GTIN</label></li>
-                              <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="seller-code" /><em></em>Show seller code</label></li>
-                            </ul>
-                          </div>
-                        </div>&nbsp;
-                        <b>Product name and GTIN</b>
-                      </th>
-                      <th class="align-right valign-middle"><b>Quantity</b></th>
-                      <th class="valign-middle"><b>Price</b></th>
-                      <th class="align-right valign-middle"><b>Sum</b></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>
-                        Vana Toomas vanillipl.soolakar 09kg/150ml
-                        <div class="font-size-small color-type-2">47400960564745676675</div>
-                        <div class="font-size-small color-type-2" data-filter-id="buyer-code">Buyer code: 47400960564745676675</div>
-                        <div class="font-size-small color-type-2" data-filter-id="seller-code">Seller code: 5425423624362</div>
-                        <div class="font-size-small color-type-2" data-filter-id="gtin">GTIN: 542362436262</div>
-                      </td>
-                      <td class="align-right">
-                        214.00
-                        <div class="font-size-small color-type-2">kg</div>
-                      </td>
-                      <td>
-                        <div class="color-type-2 line-through">11.47</div>
-                        11.00
-                      </td>
-                      <td class="align-right">
-                        2 354.00
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>
-                        Mango koorelikööri maasikapl.40/200ml
-                        <div class="font-size-small color-type-2">47400960564745676675</div>
-                        <div class="font-size-small color-type-2" data-filter-id="buyer-code">Buyer code: 47400960564745676675</div>
-                        <div class="font-size-small color-type-2" data-filter-id="seller-code">Seller code: 5425423624362</div>
-                        <div class="font-size-small color-type-2" data-filter-id="gtin">GTIN: 542362436262</div>
-                      </td>
-                      <td class="align-right">
-                        1 025.00
-                        <div class="font-size-small color-type-2">kg</div>
-                      </td>
-                      <td>
-                        8.25
-                      </td>
-                      <td class="align-right">8 456.25</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>
-                        Vahuveini Cinanzio gran.dolce kreekapahkli/130ml
-                        <div class="font-size-small color-type-2">47400960564745676675</div>
-                        <div class="font-size-small color-type-2" data-filter-id="buyer-code">Buyer code: 47400960564745676675</div>
-                        <div class="font-size-small color-type-2" data-filter-id="seller-code">Seller code: 5425423624362</div>
-                        <div class="font-size-small color-type-2" data-filter-id="gtin">GTIN: 542362436262</div>
-                      </td>
-                      <td class="align-right">
-                        325.25
-                        <div class="font-size-small color-type-2">kg</div>
-                      </td>
-                      <td>
-                        51.32
-                      </td>
-                      <td class="align-right">16 691.83</td>
-                    </tr>
-                    <tr>
-                      <td>4</td>
-                      <td>
-                        Vana Toomas vanillipl.soolakar09kg/150ml
-                        <div class="font-size-small color-type-2">47400960564745676675</div>
-                        <div class="font-size-small color-type-2" data-filter-id="buyer-code">Buyer code: 47400960564745676675</div>
-                        <div class="font-size-small color-type-2" data-filter-id="seller-code">Seller code: 5425423624362</div>
-                        <div class="font-size-small color-type-2" data-filter-id="gtin">GTIN: 542362436262</div>
-                      </td>
-                      <td class="align-right">
-                        2 025.00
-                        <div class="font-size-small color-type-2">kg</div>
-                      </td>
-                      <td>
-                        <div class="color-type-2 line-through">11.54</div>
-                        11.00
-                      </td>
-                      <td class="align-right">22 275.00</td>
-                    </tr>
-                    <tr>
-                      <td>5</td>
-                      <td>
-                        Mango koorelikööri maasikapl.40/200ml
-                        <div class="font-size-small color-type-2">47400960564745676675</div>
-                        <div class="font-size-small color-type-2" data-filter-id="buyer-code">Buyer code: 47400960564745676675</div>
-                        <div class="font-size-small color-type-2" data-filter-id="seller-code">Seller code: 5425423624362</div>
-                        <div class="font-size-small color-type-2" data-filter-id="gtin">GTIN: 542362436262</div>
-                      </td>
-                      <td class="align-right">
-                        100.00
-                        <div class="font-size-small color-type-2">kg</div>
-                      </td>
-                      <td>
-                        47.78
-                      </td>
-                      <td class="align-right">4 778.00</td>
-                    </tr>
-                  </tbody>
-                  
-                </table>
-              </div>
-            </div> <!-- //grid-col -->
-          </div> <!-- //grid -->
-          
-          
-          <div class="grid">
-            <div class="grid-col">
-              
-              <div class="proto-comments">
-                <b>T4B: Menu strip</b>
-              </div>
-              
-              <div class="color-box pad-box" data-filter-parent>
-                  
-                <div class="table-menu-strip" data-filter-menu>
-                  <b>Show</b> &nbsp;&nbsp;
-                  <div class="inl-blk menu-dropdown" data-dropdown data-filter>
-                    <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
-                    <div class="menu-dropdown-content" data-dropdown-content>
-                      <ul>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="buyer-code" /><em></em>Show buyer code</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="seller-code" /><em></em>Show seller code</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="gtin" /><em></em>Show GTIN</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="alc-percent" /><em></em>Show Alc %</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="volume" /><em></em>Show volume</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="packaging" /><em></em>Show packaging</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="manufacturer" /><em></em>Show manufacturer</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="origin-country" /><em></em>Show country of origin</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="item-type" /><em></em>Show item type</label></li>
-                      </ul>
-                    </div>
-                  </div>&nbsp; <b>Product info</b> &nbsp;&nbsp;&nbsp;
-                  
-                  <div class="inl-blk menu-dropdown" data-dropdown data-filter>
-                    <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
-                    <div class="menu-dropdown-content" data-dropdown-content>
-                      <ul>
-                        
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="accepted" /><em></em>Show accepted</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="received" /><em></em>Show received</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="despached" /><em></em>Show despached</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="ordered" /><em></em>Show ordered</label></li>
-                      </ul>
-                    </div>
-                  </div>&nbsp; <b>Quantity info</b> &nbsp;&nbsp;&nbsp;
-                  
-                  <div class="inl-blk menu-dropdown" data-dropdown data-filter>
-                    <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
-                    <div class="menu-dropdown-content" data-dropdown-content>
-                      <ul>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="loft-id" /><em></em>Show loft id</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="serial-nr" /><em></em>Show serial number</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="best-before" /><em></em>Show best before</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="cert-id" /><em></em>Show certificate id</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="cert-start" /><em></em>Show certificate start date</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="cert-end" /><em></em>Show certificate end date</label></li>
-                      </ul>
-                    </div>
-                  </div>&nbsp; <b>Lot info</b> &nbsp;&nbsp;&nbsp;
-                  
-                  <div class="inl-blk menu-dropdown" data-dropdown data-filter>
-                    <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
-                    <div class="menu-dropdown-content" data-dropdown-content>
-                      <ul>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="vat" /><em></em>Show VAT</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="vat-percent" /><em></em>Show VAT percent</label></li>
-                        <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="price-with-vat" /><em></em>Show price with vat</label></li>
-                      </ul>
-                    </div>
-                  </div>&nbsp; <b>VAT info</b> &nbsp;&nbsp;&nbsp;
-                </div>
-                <table class="t1 border-type-1">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th><b>Product name and codes</b></th>
-                      <th><b>Product info</b></th>
-                      <th><b>Quantity</b></th>
-                      <th><b>Lot info</b></th>
-                      <th class="align-right"><b>Price</b></th>
-                      <th class="align-right"><b>Sum</b></th>
-                      <th class="align-right"><b>VAT</b></th>
-                      <th class="align-right"><b>With VAT</b></th>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>
-                        <div>Freixenet Cordon Rosaro Seco</div>
-                        <div class="font-size-small color-type-2" data-filter-id="buyer-code">Buyer code: 47400960564745676675</div>
-                        <div class="font-size-small color-type-2" data-filter-id="seller-code">Seller code: 5425423624362</div>
-                        <div class="font-size-small color-type-2" data-filter-id="gtin">GTIN: 542362436262</div>
-                      </td>
-                      <td class="font-size-small color-type-2">
-                        <div data-filter-id="alc-percent">Alc %: 12</div>
-                        <div data-filter-id="volume">Vol: 0,75l</div>
-                        <div data-filter-id="packaging">Packaging: 5 kasti (24 tk kastis)</div>
-                        <div data-filter-id="manufacturer">Manufacturer: FREIXENET S.A</div>
-                        <div data-filter-id="origin-country">Country of Origin: France</div>
-                        <div data-filter-id="item-type">Item Type: Geograafilise tähisega lauavein</div>
-                      </td>
-                      <td>
-                        <div>Invoiced: 120 tk</div>
-                        <div class="font-size-small color-type-2" data-filter-id="accepted">Accepted: 120 tk</div>
-                        <div class="font-size-small color-type-2" data-filter-id="received">Received: 120 tk</div>
-                        <div class="font-size-small color-type-2" data-filter-id="despached">Despached: 120 tk</div>
-                        <div class="font-size-small color-type-2" data-filter-id="ordered">Ordered: 120 tk</div>
-                      </td>
-                      <td>
-                        <div class="font-size-small color-type-2" data-filter-id="loft-id">L1C523414</div>
-                        <div class="font-size-small color-type-2" data-filter-id="serial-nr">Serial no: 646789315EE</div>
-                        <div class="font-size-small color-type-2" data-filter-id="best-before">Best before: 01.03.2015</div>
-                        <div class="font-size-small color-type-2" data-filter-id="cert-id">Certificate: R14/93221/69</div>
-                        <div class="font-size-small color-type-2" data-filter-id="cert-start">Ceritificate Start Date: 30.06.2015</div>
-                        <div class="font-size-small color-type-2" data-filter-id="cert-end">Ceritificate End Date: 30.06.2019</div>
-                      </td>
-                      <td class="align-right">
-                        <div class="line-through color-type-2" data-filter-id="old-price">11.45</div>
-                        <div  data-filter-id="price">(-20%) 11.35</div>
-                      </td>
-                      <td>
-                        <div data-filter-id="sum">67.89</div>
-                      </td>
-                      <td class="align-right">
-                        <div data-filter-id="vat">7.89</div>
-                        <div class="font-size-small color-type-2" data-filter-id="vat-percent">20%</div>
-                      </td>
-                      <td class="align-right">
-                        <div data-filter-id="price-with-vat">87.89</div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                
-              </div>
-            </div> <!-- //grid-col -->
-          </div> <!-- //grid -->
-          
-          
-          <div class="grid">
-            <div class="grid-col">
-              
-              <div class="proto-comments">
-                <b>T5A: Row menu</b>
-              </div>
-              
-              <div class="color-box pad-box">
-                  
-                <table class="t1 wide">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th><b>Description</b></th>
-                      <th><b>Account</b></th>
-                      <th><b>Project</b></th>
-                      <th><b>Region</b></th>
-                      <th><b>VAT</b></th>
-                      <th><b>Amount</b></th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  
-                  <tbody data-visibility-parent>
-                    <tr>
-                      <td class="thin">1</td>
-                      <td>
-                        <div data-visible="true">Office supplies</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="Office supplies" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">2734</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="2734" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">63</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="63" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">EST</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="EST" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">20%</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="20%" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">1 825.00</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="1 825.00" data-visible="false" />
-                      </td>
-                      <td class="thin align-right">
-                        <div class="inl-blk menu-dropdown menu-dropdown-type-1" data-dropdown>
-                          <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
-                          <div class="menu-dropdown-content" data-dropdown-content>
-                            <ul>
-                              <li><a href="#" data-visibility-toggler data-dropdown-close>Change</a></li>
-                              <li><a href="#">Split row</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                  <tbody data-visibility-parent>
-                    <tr>
-                      <td class="thin">2</td>
-                      <td>
-                        <div data-visible="true">Office supplies</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="Office supplies" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">2734</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="2734" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">457</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="457" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">ENG</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="ENG" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">20%</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="20%" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">1 095.00</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="1 095.00" data-visible="false" />
-                      </td>
-                      <td class="thin align-right">
-                        <div class="inl-blk menu-dropdown menu-dropdown-type-1" data-dropdown>
-                          <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
-                          <div class="menu-dropdown-content" data-dropdown-content>
-                            <ul>
-                              <li><a href="#" data-visibility-toggler data-dropdown-close>Change</a></li>
-                              <li><a href="#">Split row</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                  <tbody data-visibility-parent>
-                    <tr>
-                      <td class="thin">3</td>
-                      <td>
-                        <div data-visible="true">Office supplies</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="Office supplies" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">2734</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="2734" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">457</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="457" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">EST</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="EST" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">20%</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="20%" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">730.00</div>
-                        <input type="text" class="textbox textbox-inline inl-blk" value="730.00" data-visible="false" />
-                      </td>
-                      <td class="thin align-right">
-                        <div class="inl-blk menu-dropdown menu-dropdown-type-1" data-dropdown>
-                          <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
-                          <div class="menu-dropdown-content" data-dropdown-content>
-                            <ul>
-                              <li><a href="#" data-visibility-toggler data-dropdown-close>Change</a></li>
-                              <li><a href="#">Split row</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                
-              </div>
-            </div> <!-- //grid-col -->
-          </div> <!-- //grid -->
-          
-          
-          <div class="grid">
-            <div class="grid-col">
-              
-              <div class="proto-comments">
-                <b>T5B: Row action + menu</b>
-              </div>
-              
-              <div class="color-box pad-box">
-                  
-                <table class="t1 wide">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th><b>Description</b></th>
-                      <th><b>Account</b></th>
-                      <th><b>Project</b></th>
-                      <th><b>Region</b></th>
-                      <th><b>Amount</b></th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  
-                  <tbody data-visibility-parent>
-                    <tr>
-                      <td class="thin">1</td>
-                      <td>
-                        <div data-visible="true">Office supplies</div>
-                        <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="Office supplies" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">2734</div>
-                        <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="2734" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">63</div>
-                        <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="63" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">EST</div>
-                        <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="EST" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">1 825.00</div>
-                        <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="1 825.00" data-visible="false" />
-                      </td>
-                      <td class="thin align-right">
-                        <a href="#" class="ico ico-type-4 inl-blk" data-visibility-toggler data-visible="true"></a>
-                        <a href="#" class="ico ico-type-1 inl-blk" data-visibility-toggler data-visible="false"></a>
-                        <div class="inl-blk menu-dropdown menu-dropdown-type-1" data-dropdown>
-                          <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
-                          <div class="menu-dropdown-content" data-dropdown-content>
-                            <ul>
-                              <li><a href="#">Additional info</a></li>
-                              <li><a href="#">Split row</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                  <tbody data-visibility-parent>
-                    <tr>
-                      <td class="thin">2</td>
-                      <td>
-                        <div data-visible="true">Office supplies</div>
-                        <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="Office supplies" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">2734</div>
-                        <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="2734" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">457</div>
-                        <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="457" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">ENG</div>
-                        <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="ENG" data-visible="false" />
-                      </td>
-                      <td>
-                        <div data-visible="true">1 095.00</div>
-                        <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="1 095.00" data-visible="false" />
-                      </td>
-                      <td class="thin align-right">
-                        <a href="#" class="ico ico-type-4 inl-blk" data-visibility-toggler data-visible="true"></a>
-                        <a href="#" class="ico ico-type-1 inl-blk" data-visibility-toggler data-visible="false"></a>
-                        <div class="inl-blk menu-dropdown menu-dropdown-type-1" data-dropdown>
-                          <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
-                          <div class="menu-dropdown-content" data-dropdown-content>
-                            <ul>
-                              <li><a href="#">Additional info</a></li>
-                              <li><a href="#">Split row</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                
-              </div>
-            </div> <!-- //grid-col -->
-          </div> <!-- //grid -->
-          
-          <div class="grid">
-            <div class="grid-col">
-              
-              <div class="proto-comments">
-                <b>T5C: Row action</b>
-              </div>
-              
-              <div class="color-box pad-box">
-                  
-                <table class="t1 wide">
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th><b>Description</b></th>
-                      <th><b>Account</b></th>
-                      <th><b>Project</b></th>
-                      <th><b>Region</b></th>
-                      <th><b>Amount</b></th>
-                      <th></th>
-                    </tr>
-                  </thead>
-                  
-                  <tbody data-visibility-parent>
-                    <tr>
-                      <td class="thin">1</td>
-                      <td>Office supplies</td>
-                      <td>2734</td>
-                      <td>63</td>
-                      <td>EST</td>
-                      <td>1 825.00</td>
-                      <td class="thin align-right">
-                        <a href="#" class="ico ico-type-4" data-visibility-toggler data-visible="true"></a>
-                        <a href="#" class="ico ico-type-1" data-visibility-toggler data-visible="false"></a>
-                      </td>
-                    </tr>
+            <table class="t1 wide">
+              <thead>
+                <tr>
+                  <th><b>Time</b></th>
+                  <th><b>Operation and doc no</b></th>
+                  <th><b>Partner</b></th>
+                  <th><b>Issue</b></th>
+                  <th><b>Status</b></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    25.02.2015
+                    <div class="font-size-small color-type-2">6:31</div>
+                  </td>
+                  <td>
+                    Sending invoice
+                    <div class="font-size-small color-type-2">62015058509</div>
+                  </td>
+                  <td>...</td>
+                  <td>Unknown receiver</td>
+                  <td>Unresolved</td>
+                </tr>
+              </tbody>
+              <tbody  data-visibility-parent>
+                <tr class="cursor-pointer" data-visibility-toggler>
+                  <td>
+                    25.02.2015
+                    <div class="font-size-small color-type-2">6:21</div>
+                  </td>
+                  <td>
+                    Sending despatch advice
+                    <div class="font-size-small color-type-2">62015058455</div>
+                  </td>
+                  <td>
+                    ...
+                    <div class="font-size-small color-type-2">PartnerID: 35</div>
+                  </td>
+                  <td>Unknown receiver</td>
+                  <td>Unresolved</td>
+                </tr>
+                <tr data-visible="true">
+                  <td colspan="5" class="bg-color-type-2">
                     
-                    <tr data-visible="false">
-                      <td colspan="7" class="bg-color-type-2">
-                        <table class="wide">
-                          <tr>
-                            <td>
-                              <table>
-                                <tr>
-                                  <td>Description</td>
-                                  <td><input type="text" class="textbox textbox-size-type-1" value="Office supplies" /></td>
-                                  <td class="thin"></td>
-                                </tr>
-                                <tr>
-                                  <td>Amount</td>
-                                  <td><input type="text" class="textbox textbox-size-type-1" value="1 095.00" /></td>
-                                  <td class="thin"></td>
-                                </tr>
-                                <tr>
-                                  <td>Account 1</td>
-                                  <td><input type="text" class="textbox textbox-size-type-1" value="2734 - Division #1, Product Line 010" /></td>
-                                  <td class="thin"></td>
-                                </tr>
-                                <tr>
-                                  <td>Account 2</td>
-                                  <td><input type="text" class="textbox textbox-size-type-1" value="54496 - Division #3, Product Line 110" /></td>
-                                  <td class="thin"></td>
-                                </tr>
-                                <tr>
-                                  <td>VAT</td>
-                                  <td><input type="text" class="textbox textbox-size-type-1" value="" /></td>
-                                  <td class="thin"></td>
-                                </tr>
-                                <tr>
-                                  <td colspan="3"><hr /></td>
-                                </tr>
-                                <tr>
-                                  <td>Project</td>
-                                  <td><input type="text" class="textbox textbox-size-type-1" value="63 - Alfa" /></td>
-                                  <td class="thin"><span class="ico ico-type-2"></td>
-                                </tr>
-                                <tr>
-                                  <td>Region</td>
-                                  <td><input type="text" class="textbox textbox-size-type-1" value="EST - Estonia" /></td>
-                                  <td class="thin"><span class="ico ico-type-2"></td>
-                                </tr>
-                                <tr>
-                                  <td>Department</td>
-                                  <td><input type="text" class="textbox textbox-size-type-1" value="BDD - Business Development Department" /></td>
-                                  <td class="thin"><span class="ico ico-type-2"></td>
-                                </tr>
-                                <tr>
-                                  <td>Person</td>
-                                  <td><input type="text" class="textbox textbox-size-type-1" value="Nicholas Hawtrey" /></td>
-                                  <td class="thin"><span class="ico ico-type-2"></td>
-                                </tr>
-                                <tr>
-                                  <td>Car</td>
-                                  <td><input type="text" class="textbox textbox-size-type-1" value="345ABD" /></td>
-                                  <td class="thin"><span class="ico ico-type-2"></td>
-                                </tr>
-                                <tr>
-                                  <td>Brand</td>
-                                  <td><input type="text" class="textbox textbox-size-type-1" value="Brand A" /></td>
-                                  <td class="thin"><span class="ico ico-type-2"></span> <span class="ico ico-type-3"></span></td>
-                                </tr>
-                              </table> 
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </tbody>
-                  
-                </table>
-                
-              </div>
-            </div> <!-- //grid-col -->
-          </div> <!-- //grid -->
-          
-          
-          <div class="grid">
-            <div class="grid-col">
-              
-              <div class="proto-comments">
-                <b>T6: vertical lines and header background</b>
-              </div>
-              
-              <div class="color-box pad-box">
-                  
-                <table class="t1 header-bg-type-1">
-                  <thead>
-                    <tr>
-                      <th class="border-right"><b>EDI buyer rights</b></th>
-                      <th><b>Editor</b></th>
-                      <th><b>Viewer</b></th>
-                      <th class="border-left"><b>Other1</b></th>
-                      <th><b>Other2</b></th>
-                      <th><b>Other3</b></th>
-                    </tr>
-                  </thead>
-                  
-                  <tbody>
-                    <tr>
-                      <td class="no-wrap border-right">All branches</td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td class="border-left"><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                    </tr>
-                    <tr>
-                      <td class="no-wrap border-right">Pagar AS Tallinn branch</td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" checked="checked" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td class="border-left"><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                    </tr>
-                    <tr>
-                      <td class="no-wrap border-right">Pagar AS Vastsekuuste branch</td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" checked="checked" /><em></em></label></td>
-                      <td  class="border-left"><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" checked="checked" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                    </tr>
-                    <tr>
-                      <td class="no-wrap border-right">Pagar AS Kukenurme branch</td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td class="border-left"><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                    </tr>
-                    <tr>
-                      <td class="no-wrap border-right">Pagar AS Võtiku branch</td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td class="border-left"><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                      <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
-                    </tr>
-                  </tbody>
-                  
-                </table>
-                
-              </div>
-            </div> <!-- //grid-col -->
-          </div> <!-- //grid -->
-          
-          <div class="grid">
-            <div class="grid-col">
-              
-              <div class="proto-comments">
-                <b>T6: vertical lines and header background</b>
-              </div>
-              
-              <div class="color-box pad-box">
-                  
-                <table class="t1 border-type-2 header-bg-type-2">
-                  <thead>
-                    <tr>
-                      <th class="border-right-none"></th>
-                      <th class="border-left-none"><b>Product name and codes</b></th>
-                      <th><b>Unit</b></th>
-                      <th><b>Current price</b></th>
-                      <th><b>New price</b></th>
-                      <th><b>Country of origin</b></th>
-                      <th><b>Quality class</b></th>
-                      <th><b>Remarks</b></th>
-                      <th><b>Package</b></th>
-                      <th><b>All suppliers</b></th>
-                    </tr>
-                  </thead>
-                  <tbody class="sub-title">
-                    <tr>
-                      <td></td>
-                      <td colspan="9"><b>Fruit / apples</b></td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td class="border-right-none">
-                        <label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" checked="checked" /><em></em></label>
-                      </td>
-                      <td class="border-left-none">
-                        Fuji
-                        <div class="font-size-small color-type-2">Seller code: 5425423624362</div>
-                        <div class="font-size-small color-type-2">GTIN: 542362436262</div>
-                      </td>
-                      <td>kg</td>
-                      <td>2.345</td>
-                      <td class="color-type-1">2.345</td>
-                      <td class="color-type-1">Hiina</td>
-                      <td>I-kat.</td>
-                      <td>70-75</td>
-                      <td>12</td>
-                      <td>Karlskroona OÜ</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td class="border-right-none">
-                        <label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label>
-                      </td>
-                      <td class="border-left-none">
-                        Golden
-                        <div class="font-size-small color-type-2">Seller code: 5425423624362</div>
-                        <div class="font-size-small color-type-2">GTIN: 542362436262</div>
-                      </td>
-                      <td>kg</td>
-                      <td>3.456</td>
-                      <td class="color-type-1">3.456</td>
-                      <td class="color-type-1">L-Aafrika</td>
-                      <td>I-kat.</td>
-                      <td>100tk</td>
-                      <td>18</td>
-                      <td>Bamboona AS</td>
-                    </tr>
-                  </tbody>
-                  <tbody class="sub-title">
-                    <tr>
-                      <td></td>
-                      <td colspan="9"><b>Fruit / pears</b></td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td class="border-right-none">
-                        <label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" checked="checked" /><em></em></label>
-                      </td>
-                      <td class="border-left-none">
-                        Fuji
-                        <div class="font-size-small color-type-2">Seller code: 5425423624362</div>
-                        <div class="font-size-small color-type-2">GTIN: 542362436262</div>
-                      </td>
-                      <td>kg</td>
-                      <td>2.345</td>
-                      <td class="color-type-1">2.345</td>
-                      <td class="color-type-1">Hiina</td>
-                      <td>I-kat.</td>
-                      <td>70-75</td>
-                      <td>12</td>
-                      <td>Karlskroona OÜ</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td class="border-right-none">
-                        <label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label>
-                      </td>
-                      <td class="border-left-none">
-                        Golden
-                        <div class="font-size-small color-type-2">Seller code: 5425423624362</div>
-                        <div class="font-size-small color-type-2">GTIN: 542362436262</div>
-                      </td>
-                      <td>kg</td>
-                      <td>3.456</td>
-                      <td class="color-type-1">3.456</td>
-                      <td class="color-type-1">L-Aafrika</td>
-                      <td>I-kat.</td>
-                      <td>100tk</td>
-                      <td>18</td>
-                      <td>Bamboona AS</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <td class="border-right-none">
-                        <label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" checked="checked" /><em></em></label>
-                      </td>
-                      <td class="border-left-none">
-                        Granny Smith
-                        <div class="font-size-small color-type-2">Seller code: 5425423624362</div>
-                        <div class="font-size-small color-type-2">GTIN: 542362436262</div>
-                      </td>
-                      <td>kg</td>
-                      <td>5.332</td>
-                      <td class="color-type-1">5.332</td>
-                      <td class="color-type-1">Tsiili</td>
-                      <td>I-kat.</td>
-                      <td>150-</td>
-                      <td>12</td>
-                      <td>Karlskroona OÜ</td>
-                    </tr>
-                  </tbody>
-                  
-                </table>
-                
-              </div>
-            </div> <!-- //grid-col -->
-          </div> <!-- //grid -->
-          
-          
-          <div class="grid">
-            <div class="grid-col">
-              
-              <div class="proto-comments">
-                <b>T8: table with distinctive </b>
-              </div>
-              
-              <div class="color-box pad-box">
-                  
-                <table class="t8">
-                  <thead>
-                    <tr>
-                      <th><div class="column-header">Orders</div></th>
-                      <th><div class="column-header">DESPATCH ADVICE</div></th>
-                      <th><div class="column-header">RECEIVING ADVICES</div></th>
-                      <th><div class="column-header">INVOICES</div></th>
-                    </tr>
-                  </thead>
-                  <tfoot>
-                    <tr>
-                      <td><a href="#">More orders »</a></td>
-                      <td><a href="#">More despatch advices »</a></td>
-                      <td><a href="#">More receiving advices »</a></td>
-                      <td><a href="#">More invoices »</a></td>
-                    </tr>
-                  </tfoot>
-                  <tbody>
-                    <tr>
-                      <td>
-                        KEILA TÜ – Treppoja kauplus
-                        <div class="font-size-xsmall color-type-2">OT002680690<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td>
-                        Selver DC
-                        <div class="font-size-xsmall color-type-2">201502251<span class="sep">I</span>ootel</td>
-                      </td>
-                      <td>
-                        SÄM Ülejõe (Pärnu)
-                        <div class="font-size-xsmall color-type-2">5025491909/2015<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td>
-                        etü arbimäe konsum
-                        <div class="font-size-xsmall color-type-2">62015058653<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Narva
-                        <div class="font-size-xsmall color-type-2">OT002680657<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td>
-                        Prisma Lansamäe
-                        <div class="font-size-xsmall color-type-2">62015058643<span class="sep">I</span>ootel</td>
-                      </td>
-                      <td>
-                        SÄM Haapsalu (Haapsalu)
-                        <div class="font-size-xsmall color-type-2">5025468328/2015<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td>
-                        STÜ Aste AO
-                        <div class="font-size-xsmall color-type-2">62015058652<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        ELVA TÜ – ELVA A&amp;O
-                        <div class="font-size-xsmall color-type-2">WEB76996572<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td>
-                        Prisma Ra Mare
-                        <div class="font-size-xsmall color-type-2">62015058642<span class="sep">I</span>ootel</td>
-                      </td>
-                      <td>
-                        Rimi SHM Norde (Tallinn)
-                        <div class="font-size-xsmall color-type-2">5025512983/2015<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td>
-                        RIM Pstimaja Supermarket
-                        <div class="font-size-xsmall color-type-2">62015058651<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Haraldi pood RR Lektus AS
-                        <div class="font-size-xsmall color-type-2">T-180228<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td>
-                        Prisma Mustamäe
-                        <div class="font-size-xsmall color-type-2">62015058641<span class="sep">I</span>ootel</td>
-                      </td>
-                      <td>
-                        SÄM Haapsalu (Haapsalu)
-                        <div class="font-size-xsmall color-type-2">5025512020/2015<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td>
-                        OG Kalevi Toidukaubad
-                        <div class="font-size-xsmall color-type-2">62015058648<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        SELVER AS – DC
-                        <div class="font-size-xsmall color-type-2">OT002679541<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td>
-                        Prisma Kristiine
-                        <div class="font-size-xsmall color-type-2">62015058640<span class="sep">I</span>ootel</td>
-                      </td>
-                      <td>
-                        Rimi SM Kaubahall (Tallinn)
-                        <div class="font-size-xsmall color-type-2">5025512982/2015<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td>
-                        Raudalu Konsum
-                        <div class="font-size-xsmall color-type-2">62015058674<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                    </tr>
+                    <div class="row-close">
+                      <a href="#" class="ico ico-type-17 ico-color-type-1" data-visibility-toggler></a>
+                    </div>
                     
-                    <tr>
-                      <td>
-                        Tallinna filiaal ladu 28,29
-                        <div class="font-size-xsmall color-type-2">116703-5LS1TLe<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td>
-                        Prisma Sikupilli
-                        <div class="font-size-xsmall color-type-2">62015058639<span class="sep">I</span>ootel</td>
-                      </td>
-                      <td rowspan="5"></td>
-                      <td>
-                        Mustakivi Konsum
-                        <div class="font-size-xsmall color-type-2">62015058646<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Prisma Mustamäe – Toit
-                        <div class="font-size-xsmall color-type-2">300234309<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td rowspan="4"></td>
+                    <table class="wide">
+                      <tr>
+                        <td>
+                          
+                          <b>Description</b><br />
+                          You have tried to send despatch advice to RIMI LASNAMÄE who is not described as your partner in our system.
+                          <br /><br />
+                          <b>Solution</b><br />
+                          
+                          <ul class="bullet-list">
+                            <li>Please add RIMI LASNAMÄE as your partner here.</li>
+                            <li>And resend document from your ERP.</li>
+                          </ul>
+                          
+                          <div class="align-right">
+                            <label class="checkbox"><input type="checkbox" /><em></em>Mark resolved</label>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>
+                    25.02.2015
+                    <div class="font-size-small color-type-2">6:31</div>
+                  </td>
+                  <td>
+                    Sending invoice
+                    <div class="font-size-small color-type-2">62015058332</div>
+                  </td>
+                  <td>Prisma Lasnamäe</td>
+                  <td>Duplicate document</td>
+                  <td>
+                    Resolved
+                    <div class="font-size-small color-type-2">toomas / 25.02.2015 6:31</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="color-box pad-box margin-box">
               
-                      <td>
-                        Akadeemia Konsum
-                        <div class="font-size-xsmall color-type-2">62015058645<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Tallinna filiaal ladu 28,29
-                        <div class="font-size-xsmall color-type-2">116702-5LS1TL<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
+            <table class="t1 wide">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th><b>Description</b></th>
+                  <th><b>Account</b></th>
+                  <th><b>Project</b></th>
+                  <th><b>Region</b></th>
+                  <th class="align-right"><b>Amount</b></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody data-visibility-parent>
+                <tr>
+                  <td class="thin">1.</td>
+                  <td>Office supplies</td>
+                  <td>2734</td>
+                  <td>63</td>
+                  <td>EST</td>
+                  <td class="align-right no-wrap">1 825.00</td>
+                  <td class="thin">
+                    <a href="#" data-visibility-toggler>
+                      <span class="ico ico-type-6" data-visible="true"></span>
+                      <span class="ico ico-type-7" data-visible="false"></span>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-visible="false">
+                  <td colspan="7" class="bg-color-type-2">
+                  </td>
+                </tr>
+              </tbody>
+              <tbody data-visibility-parent>
+                <tr>
+                  <td class="thin">2.</td>
+                  <td>Office supplies</td>
+                  <td>2734</td>
+                  <td>457</td>
+                  <td>EST</td>
+                  <td class="align-right no-wrap">1 095.00</td>
+                  <td class="thin">
+                    <a href="#" data-visibility-toggler>
+                      <span class="ico ico-type-6" data-visible="false"></span>
+                      <span class="ico ico-type-7" data-visible="true"></span>
+                    </a>
+                  </td>
+                </tr>
+                <tr data-visible="true">
+                  <td colspan="7" class="bg-color-type-2">
+                    <table>
+                      <tr>
+                        <td>Department</td>
+                        <td>BDD - Business Development Department</td>
+                      </tr>
+                      <tr>
+                        <td>Person</td>
+                        <td>Nicholas Hawtrey</td>
+                      </tr>
+                      <tr>
+                        <td>Car</td>
+                        <td>345ABD</td>
+                      </tr>
+                      <tr>
+                        <td>Brand</td>
+                        <td>Brand A</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+              
+            </table>
+          </div>
           
-                      <td>
-                        Prisma Lasnamäe
-                        <div class="font-size-xsmall color-type-2">62015058643<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Tallinna filiaal ladu 28,29
-                        <div class="font-size-xsmall color-type-2">116702-5LS1TL<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
+          <div class="proto-comments">
+            <b>T3: Filter in heading</b>
+            <div>
+              Every row must be in different <i>&lt;tbody&gt;</i> tag
+            </div>
+          </div>
           
-                      <td>
-                        Prisma Ra Mare
-                        <div class="font-size-xsmall color-type-2">62015058642<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Tapa ToKo köök
-                        <div class="font-size-xsmall color-type-2">T-24714<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                      <td>
-                        Prisma Mustamäe
-                        <div class="font-size-xsmall color-type-2">62015058641<span class="sep">I</span>18.10 &nbsp;8:23</td>
-                      </td>
-                    </tr>
+          <div class="color-box pad-box">
+              
+            <table class="t1 wide">
+              <thead>
+                <tr>
+                  <th><b>Invoice date</b></th>
+                  <th><b>Due date</b></th>
+                  <th data-row-filter data-row-filter-id="1">
+                    <div><b>Supplier</b></div>
+                    <div class="inl-blk" data-bubble data-bubble-hpos="right">
+                      <b><a href="#" data-bubble-toggler><span data-row-filter-indicator>Filter</span> »</a></b>
+                      <div class="bubble" data-bubble-content>
+                        <div class="bubble-inner">
+                          <label class="radio"><input type="radio" data-row-filter-attr="amserv as" data-bubble-close value="Amserv AS" name="radio-group-1"><em></em>Amserv AS</label>
+                          <label class="radio"><input type="radio" data-row-filter-attr="other supplier" data-bubble-close value="Other Suppliers" name="radio-group-1"><em></em>Other Supplier</label>
+                          <label class="radio"><input type="radio" data-row-filter-attr="" data-bubble-close value="Filter" checked="checked" name="radio-group-1"><em></em>Show all</label>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  <th><b>Amount</b></th>
+                  <th data-row-filter data-row-filter-id="121">
+                    <div><b>Status</b></div>
+                    <div class="inl-blk" data-bubble data-bubble-hpos="right">
+                      <b><a href="#" data-bubble-toggler><span data-row-filter-indicator>Filter</span> »</a></b>
+                      <div class="bubble" data-bubble-content>
+                        <div class="bubble-inner">
+                          <label class="radio"><input type="radio" data-row-filter-attr="discarded" data-bubble-close value="Discarded" name="radio-group-2"><em></em>Discarded</label>
+                          <label class="radio"><input type="radio" data-row-filter-attr="in approval" data-bubble-close value="In approval" name="radio-group-2"><em></em>In approval</label>
+                          <label class="radio"><input type="radio" data-row-filter-attr="on hold" data-bubble-close value="On hold" name="radio-group-2"><em></em>On hold</label>
+                          <label class="radio"><input type="radio" data-row-filter-attr="" data-bubble-close value="Filter" checked="checked" name="radio-group-2"><em></em>Show all</label>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                  <th><b>On whose desk</b></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>25.07.15</td>
+                  <td>01.08.15</td>
+                  <td data-row-filter-id="1" data-row-filter-attr="amserv as">Amserv AS</td>
+                  <td>9 934,13</td>
+                  <td data-row-filter-id="121" data-row-filter-attr="in approval">In approval (2/4)</td>
+                  <td>Mati Mustikas (4)</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>30.07.15</td>
+                  <td>01.08.15</td>
+                  <td data-row-filter-id="1" data-row-filter-attr="other supplier">Other Supplier</td>
+                  <td>6 665,16</td>
+                  <td data-row-filter-id="121" data-row-filter-attr="on hold">On hold</td>
+                  <td>Kalle Kullerkupp (1)</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>01.08.15</td>
+                  <td>04.08.15</td>
+                  <td data-row-filter-id="1" data-row-filter-attr="amserv as">Amserv AS</td>
+                  <td>1 794,83</td>
+                  <td data-row-filter-id="121" data-row-filter-attr="discarded">Discarded</td>
+                  <td>Allocator (15)</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>03.08.15</td>
+                  <td>05.08.15</td>
+                  <td data-row-filter-id="1" data-row-filter-attr="amserv as">Amserv AS</td>
+                  <td>2 546,11</td>
+                  <td data-row-filter-id="121" data-row-filter-attr="in approval">In approval (4/4)</td>
+                  <td>Kalle Kullerkupp (1)</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td>03.08.15</td>
+                  <td>05.08.15</td>
+                  <td data-row-filter-id="1" data-row-filter-attr="amserv as">Amserv AS</td>
+                  <td>2 546,11</td>
+                  <td data-row-filter-id="121" data-row-filter-attr="on hold">On hold</td>
+                  <td>Kalle Kullerkupp (1)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          
+          <div class="proto-comments">
+            <b>T4B: First column menu</b>
+          </div>
+          
+          <div class="color-box pad-box">
+              
+            <table class="t1 wide" data-filter-parent>
+              <thead>
+                <tr>
+                  <td></td>
+                  <th class="no-wrap valign-middle">
+                    <div class="inl-blk menu-dropdown" data-dropdown data-filter>
+                      <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
+                      <div class="menu-dropdown-content" data-dropdown-content>
+                        <ul>
+                          <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="buyer-code" /><em></em>Show buyer code</label></li>
+                          <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="gtin" /><em></em>Show GTIN</label></li>
+                          <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="seller-code" /><em></em>Show seller code</label></li>
+                        </ul>
+                      </div>
+                    </div>&nbsp;
+                    <b>Product name and GTIN</b>
+                  </th>
+                  <th class="align-right valign-middle"><b>Quantity</b></th>
+                  <th class="valign-middle"><b>Price</b></th>
+                  <th class="align-right valign-middle"><b>Sum</b></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="thin">1</td>
+                  <td>
+                    Vana Toomas vanillipl.soolakar 09kg/150ml
+                    <div class="font-size-small color-type-2">47400960564745676675</div>
+                    <div class="font-size-small color-type-2" data-filter-id="buyer-code">Buyer code: 47400960564745676675</div>
+                    <div class="font-size-small color-type-2" data-filter-id="seller-code">Seller code: 5425423624362</div>
+                    <div class="font-size-small color-type-2" data-filter-id="gtin">GTIN: 542362436262</div>
+                  </td>
+                  <td class="align-right">
+                    214.00
+                    <div class="font-size-small color-type-2">kg</div>
+                  </td>
+                  <td>
+                    <div class="color-type-2 line-through">11.47</div>
+                    11.00
+                  </td>
+                  <td class="align-right">
+                    2 354.00
+                  </td>
+                </tr>
+                <tr>
+                  <td class="thin">2</td>
+                  <td>
+                    Mango koorelikööri maasikapl.40/200ml
+                    <div class="font-size-small color-type-2">47400960564745676675</div>
+                    <div class="font-size-small color-type-2" data-filter-id="buyer-code">Buyer code: 47400960564745676675</div>
+                    <div class="font-size-small color-type-2" data-filter-id="seller-code">Seller code: 5425423624362</div>
+                    <div class="font-size-small color-type-2" data-filter-id="gtin">GTIN: 542362436262</div>
+                  </td>
+                  <td class="align-right">
+                    1 025.00
+                    <div class="font-size-small color-type-2">kg</div>
+                  </td>
+                  <td>
+                    8.25
+                  </td>
+                  <td class="align-right">8 456.25</td>
+                </tr>
+                <tr>
+                  <td class="thin">3</td>
+                  <td>
+                    Vahuveini Cinanzio gran.dolce kreekapahkli/130ml
+                    <div class="font-size-small color-type-2">47400960564745676675</div>
+                    <div class="font-size-small color-type-2" data-filter-id="buyer-code">Buyer code: 47400960564745676675</div>
+                    <div class="font-size-small color-type-2" data-filter-id="seller-code">Seller code: 5425423624362</div>
+                    <div class="font-size-small color-type-2" data-filter-id="gtin">GTIN: 542362436262</div>
+                  </td>
+                  <td class="align-right">
+                    325.25
+                    <div class="font-size-small color-type-2">kg</div>
+                  </td>
+                  <td>
+                    51.32
+                  </td>
+                  <td class="align-right">16 691.83</td>
+                </tr>
+                <tr>
+                  <td class="thin">4</td>
+                  <td>
+                    Vana Toomas vanillipl.soolakar09kg/150ml
+                    <div class="font-size-small color-type-2">47400960564745676675</div>
+                    <div class="font-size-small color-type-2" data-filter-id="buyer-code">Buyer code: 47400960564745676675</div>
+                    <div class="font-size-small color-type-2" data-filter-id="seller-code">Seller code: 5425423624362</div>
+                    <div class="font-size-small color-type-2" data-filter-id="gtin">GTIN: 542362436262</div>
+                  </td>
+                  <td class="align-right">
+                    2 025.00
+                    <div class="font-size-small color-type-2">kg</div>
+                  </td>
+                  <td>
+                    <div class="color-type-2 line-through">11.54</div>
+                    11.00
+                  </td>
+                  <td class="align-right">22 275.00</td>
+                </tr>
+                <tr>
+                  <td class="thin">5</td>
+                  <td>
+                    Mango koorelikööri maasikapl.40/200ml
+                    <div class="font-size-small color-type-2">47400960564745676675</div>
+                    <div class="font-size-small color-type-2" data-filter-id="buyer-code">Buyer code: 47400960564745676675</div>
+                    <div class="font-size-small color-type-2" data-filter-id="seller-code">Seller code: 5425423624362</div>
+                    <div class="font-size-small color-type-2" data-filter-id="gtin">GTIN: 542362436262</div>
+                  </td>
+                  <td class="align-right">
+                    100.00
+                    <div class="font-size-small color-type-2">kg</div>
+                  </td>
+                  <td>
+                    47.78
+                  </td>
+                  <td class="align-right">4 778.00</td>
+                </tr>
+              </tbody>
+              
+            </table>
+          </div>
+          
+          
+          <div class="proto-comments">
+            <b>T4B: Menu strip</b>
+          </div>
+          
+          <div class="color-box pad-box" data-filter-parent>
+              
+            <div class="table-menu-strip" data-filter-menu>
+              <b>Show</b> &nbsp;&nbsp;
+              <div class="inl-blk menu-dropdown" data-dropdown data-filter>
+                <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
+                <div class="menu-dropdown-content" data-dropdown-content>
+                  <ul>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="buyer-code" /><em></em>Show buyer code</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="seller-code" /><em></em>Show seller code</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="gtin" /><em></em>Show GTIN</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="alc-percent" /><em></em>Show Alc %</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="volume" /><em></em>Show volume</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="packaging" /><em></em>Show packaging</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="manufacturer" /><em></em>Show manufacturer</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="origin-country" /><em></em>Show country of origin</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="item-type" /><em></em>Show item type</label></li>
+                  </ul>
+                </div>
+              </div>&nbsp; <b>Product info</b> &nbsp;&nbsp;&nbsp;
+              
+              <div class="inl-blk menu-dropdown" data-dropdown data-filter>
+                <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
+                <div class="menu-dropdown-content" data-dropdown-content>
+                  <ul>
                     
-                  </tbody>
-                </table>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="accepted" /><em></em>Show accepted</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="received" /><em></em>Show received</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="despached" /><em></em>Show despached</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="ordered" /><em></em>Show ordered</label></li>
+                  </ul>
+                </div>
+              </div>&nbsp; <b>Quantity info</b> &nbsp;&nbsp;&nbsp;
+              
+              <div class="inl-blk menu-dropdown" data-dropdown data-filter>
+                <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
+                <div class="menu-dropdown-content" data-dropdown-content>
+                  <ul>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="loft-id" /><em></em>Show loft id</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="serial-nr" /><em></em>Show serial number</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="best-before" /><em></em>Show best before</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="cert-id" /><em></em>Show certificate id</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="cert-start" /><em></em>Show certificate start date</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="cert-end" /><em></em>Show certificate end date</label></li>
+                  </ul>
+                </div>
+              </div>&nbsp; <b>Lot info</b> &nbsp;&nbsp;&nbsp;
+              
+              <div class="inl-blk menu-dropdown" data-dropdown data-filter>
+                <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
+                <div class="menu-dropdown-content" data-dropdown-content>
+                  <ul>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="vat" /><em></em>Show VAT</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="vat-percent" /><em></em>Show VAT percent</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" data-filter-opt="price-with-vat" /><em></em>Show price with vat</label></li>
+                  </ul>
+                </div>
+              </div>&nbsp; <b>VAT info</b> &nbsp;&nbsp;&nbsp;
+            </div>
+            <table class="t1 border-type-1">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th><b>Product name and codes</b></th>
+                  <th><b>Product info</b></th>
+                  <th><b>Quantity</b></th>
+                  <th><b>Lot info</b></th>
+                  <th class="align-right"><b>Price</b></th>
+                  <th class="align-right"><b>Sum</b></th>
+                  <th class="align-right"><b>VAT</b></th>
+                  <th class="align-right"><b>With VAT</b></th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <div>Freixenet Cordon Rosaro Seco</div>
+                    <div class="font-size-small color-type-2" data-filter-id="buyer-code">Buyer code: 47400960564745676675</div>
+                    <div class="font-size-small color-type-2" data-filter-id="seller-code">Seller code: 5425423624362</div>
+                    <div class="font-size-small color-type-2" data-filter-id="gtin">GTIN: 542362436262</div>
+                  </td>
+                  <td class="font-size-small color-type-2">
+                    <div data-filter-id="alc-percent">Alc %: 12</div>
+                    <div data-filter-id="volume">Vol: 0,75l</div>
+                    <div data-filter-id="packaging">Packaging: 5 kasti (24 tk kastis)</div>
+                    <div data-filter-id="manufacturer">Manufacturer: FREIXENET S.A</div>
+                    <div data-filter-id="origin-country">Country of Origin: France</div>
+                    <div data-filter-id="item-type">Item Type: Geograafilise tähisega lauavein</div>
+                  </td>
+                  <td>
+                    <div>Invoiced: 120 tk</div>
+                    <div class="font-size-small color-type-2" data-filter-id="accepted">Accepted: 120 tk</div>
+                    <div class="font-size-small color-type-2" data-filter-id="received">Received: 120 tk</div>
+                    <div class="font-size-small color-type-2" data-filter-id="despached">Despached: 120 tk</div>
+                    <div class="font-size-small color-type-2" data-filter-id="ordered">Ordered: 120 tk</div>
+                  </td>
+                  <td>
+                    <div class="font-size-small color-type-2" data-filter-id="loft-id">L1C523414</div>
+                    <div class="font-size-small color-type-2" data-filter-id="serial-nr">Serial no: 646789315EE</div>
+                    <div class="font-size-small color-type-2" data-filter-id="best-before">Best before: 01.03.2015</div>
+                    <div class="font-size-small color-type-2" data-filter-id="cert-id">Certificate: R14/93221/69</div>
+                    <div class="font-size-small color-type-2" data-filter-id="cert-start">Ceritificate Start Date: 30.06.2015</div>
+                    <div class="font-size-small color-type-2" data-filter-id="cert-end">Ceritificate End Date: 30.06.2019</div>
+                  </td>
+                  <td class="align-right">
+                    <div class="line-through color-type-2" data-filter-id="old-price">11.45</div>
+                    <div  data-filter-id="price">(-20%) 11.35</div>
+                  </td>
+                  <td>
+                    <div data-filter-id="sum">67.89</div>
+                  </td>
+                  <td class="align-right">
+                    <div data-filter-id="vat">7.89</div>
+                    <div class="font-size-small color-type-2" data-filter-id="vat-percent">20%</div>
+                  </td>
+                  <td class="align-right">
+                    <div data-filter-id="price-with-vat">87.89</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
+          
+          
+          <div class="proto-comments">
+            <b>T5A: Row menu</b>
+          </div>
+          
+          <div class="color-box pad-box">
+              
+            <div class="table-wrapper">
+              <table class="t1 wide">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th><b>Description</b></th>
+                    <th><b>Account</b></th>
+                    <th><b>Project</b></th>
+                    <th><b>Region</b></th>
+                    <th><b>VAT</b></th>
+                    <th><b>Amount</b></th>
+                    <th></th>
+                  </tr>
+                </thead>
+              
+                <tbody data-visibility-parent>
+                  <tr>
+                    <td class="thin">1</td>
+                    <td>
+                      <div data-visible="true">Office supplies</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="Office supplies" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">2734</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="2734" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">63</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="63" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">EST</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="EST" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">20%</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="20%" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">1 825.00</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="1 825.00" data-visible="false" />
+                    </td>
+                    <td class="thin align-right">
+                      <div class="inl-blk menu-dropdown menu-dropdown-type-1" data-dropdown>
+                        <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
+                        <div class="menu-dropdown-content" data-dropdown-content>
+                          <ul>
+                            <li><a href="#" data-visibility-toggler data-dropdown-close>Change</a></li>
+                            <li><a href="#">Split row</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody data-visibility-parent>
+                  <tr>
+                    <td class="thin">2</td>
+                    <td>
+                      <div data-visible="true">Office supplies</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="Office supplies" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">2734</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="2734" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">457</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="457" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">ENG</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="ENG" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">20%</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="20%" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">1 095.00</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="1 095.00" data-visible="false" />
+                    </td>
+                    <td class="thin align-right">
+                      <div class="inl-blk menu-dropdown menu-dropdown-type-1" data-dropdown>
+                        <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
+                        <div class="menu-dropdown-content" data-dropdown-content>
+                          <ul>
+                            <li><a href="#" data-visibility-toggler data-dropdown-close>Change</a></li>
+                            <li><a href="#">Split row</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+                <tbody data-visibility-parent>
+                  <tr>
+                    <td class="thin">3</td>
+                    <td>
+                      <div data-visible="true">Office supplies</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="Office supplies" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">2734</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="2734" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">457</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="457" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">EST</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="EST" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">20%</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="20%" data-visible="false" />
+                    </td>
+                    <td>
+                      <div data-visible="true">730.00</div>
+                      <input type="text" class="textbox textbox-inline inl-blk" value="730.00" data-visible="false" />
+                    </td>
+                    <td class="thin align-right">
+                      <div class="inl-blk menu-dropdown menu-dropdown-type-1" data-dropdown>
+                        <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
+                        <div class="menu-dropdown-content" data-dropdown-content>
+                          <ul>
+                            <li><a href="#" data-visibility-toggler data-dropdown-close>Change</a></li>
+                            <li><a href="#">Split row</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+          </div>
+          
+              
+          <div class="proto-comments">
+            <b>T5B: Row action + menu</b>
+          </div>
+          
+          <div class="color-box pad-box">
+              
+            <table class="t1 wide">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th><b>Description</b></th>
+                  <th><b>Account</b></th>
+                  <th><b>Project</b></th>
+                  <th><b>Region</b></th>
+                  <th><b>Amount</b></th>
+                  <th></th>
+                </tr>
+              </thead>
+              
+              <tbody data-visibility-parent>
+                <tr>
+                  <td class="thin">1</td>
+                  <td>
+                    <div data-visible="true">Office supplies</div>
+                    <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="Office supplies" data-visible="false" />
+                  </td>
+                  <td>
+                    <div data-visible="true">2734</div>
+                    <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="2734" data-visible="false" />
+                  </td>
+                  <td>
+                    <div data-visible="true">63</div>
+                    <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="63" data-visible="false" />
+                  </td>
+                  <td>
+                    <div data-visible="true">EST</div>
+                    <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="EST" data-visible="false" />
+                  </td>
+                  <td>
+                    <div data-visible="true">1 825.00</div>
+                    <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="1 825.00" data-visible="false" />
+                  </td>
+                  <td class="thin align-right">
+                    <a href="#" class="ico ico-type-4 inl-blk" data-visibility-toggler data-visible="true"></a>
+                    <a href="#" class="ico ico-type-1 inl-blk" data-visibility-toggler data-visible="false"></a>
+                    <div class="inl-blk menu-dropdown menu-dropdown-type-1" data-dropdown>
+                      <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
+                      <div class="menu-dropdown-content" data-dropdown-content>
+                        <ul>
+                          <li><a href="#">Additional info</a></li>
+                          <li><a href="#">Split row</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody data-visibility-parent>
+                <tr>
+                  <td class="thin">2</td>
+                  <td>
+                    <div data-visible="true">Office supplies</div>
+                    <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="Office supplies" data-visible="false" />
+                  </td>
+                  <td>
+                    <div data-visible="true">2734</div>
+                    <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="2734" data-visible="false" />
+                  </td>
+                  <td>
+                    <div data-visible="true">457</div>
+                    <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="457" data-visible="false" />
+                  </td>
+                  <td>
+                    <div data-visible="true">ENG</div>
+                    <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="ENG" data-visible="false" />
+                  </td>
+                  <td>
+                    <div data-visible="true">1 095.00</div>
+                    <input type="text" class="textbox textbox-inline textbox-size-type-1 inl-blk" value="1 095.00" data-visible="false" />
+                  </td>
+                  <td class="thin align-right">
+                    <a href="#" class="ico ico-type-4 inl-blk" data-visibility-toggler data-visible="true"></a>
+                    <a href="#" class="ico ico-type-1 inl-blk" data-visibility-toggler data-visible="false"></a>
+                    <div class="inl-blk menu-dropdown menu-dropdown-type-1" data-dropdown>
+                      <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
+                      <div class="menu-dropdown-content" data-dropdown-content>
+                        <ul>
+                          <li><a href="#">Additional info</a></li>
+                          <li><a href="#">Split row</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
+          
+              
+          <div class="proto-comments">
+            <b>T5C: Row action</b>
+          </div>
+          
+          <div class="color-box pad-box">
+              
+            <table class="t1 wide">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th><b>Description</b></th>
+                  <th><b>Account</b></th>
+                  <th><b>Project</b></th>
+                  <th><b>Region</b></th>
+                  <th><b>Amount</b></th>
+                  <th></th>
+                </tr>
+              </thead>
+              
+              <tbody data-visibility-parent>
+                <tr>
+                  <td class="thin">1</td>
+                  <td>Office supplies</td>
+                  <td>2734</td>
+                  <td>63</td>
+                  <td>EST</td>
+                  <td>1 825.00</td>
+                  <td class="thin align-right">
+                    <a href="#" class="ico ico-type-4" data-visibility-toggler data-visible="true"></a>
+                    <a href="#" class="ico ico-type-1" data-visibility-toggler data-visible="false"></a>
+                  </td>
+                </tr>
                 
-              </div>
-            </div> <!-- //grid-col -->
-          </div> <!-- //grid -->
+                <tr data-visible="false">
+                  <td colspan="7" class="bg-color-type-2">
+                    <table class="wide">
+                      <tr>
+                        <td>
+                          <table>
+                            <tr>
+                              <td>Description</td>
+                              <td><input type="text" class="textbox textbox-size-type-1" value="Office supplies" /></td>
+                              <td class="thin"></td>
+                            </tr>
+                            <tr>
+                              <td>Amount</td>
+                              <td><input type="text" class="textbox textbox-size-type-1" value="1 095.00" /></td>
+                              <td class="thin"></td>
+                            </tr>
+                            <tr>
+                              <td>Account 1</td>
+                              <td><input type="text" class="textbox textbox-size-type-1" value="2734 - Division #1, Product Line 010" /></td>
+                              <td class="thin"></td>
+                            </tr>
+                            <tr>
+                              <td>Account 2</td>
+                              <td><input type="text" class="textbox textbox-size-type-1" value="54496 - Division #3, Product Line 110" /></td>
+                              <td class="thin"></td>
+                            </tr>
+                            <tr>
+                              <td>VAT</td>
+                              <td><input type="text" class="textbox textbox-size-type-1" value="" /></td>
+                              <td class="thin"></td>
+                            </tr>
+                            <tr>
+                              <td colspan="3"><hr /></td>
+                            </tr>
+                            <tr>
+                              <td>Project</td>
+                              <td><input type="text" class="textbox textbox-size-type-1" value="63 - Alfa" /></td>
+                              <td class="thin"><span class="ico ico-type-2"></td>
+                            </tr>
+                            <tr>
+                              <td>Region</td>
+                              <td><input type="text" class="textbox textbox-size-type-1" value="EST - Estonia" /></td>
+                              <td class="thin"><span class="ico ico-type-2"></td>
+                            </tr>
+                            <tr>
+                              <td>Department</td>
+                              <td><input type="text" class="textbox textbox-size-type-1" value="BDD - Business Development Department" /></td>
+                              <td class="thin"><span class="ico ico-type-2"></td>
+                            </tr>
+                            <tr>
+                              <td>Person</td>
+                              <td><input type="text" class="textbox textbox-size-type-1" value="Nicholas Hawtrey" /></td>
+                              <td class="thin"><span class="ico ico-type-2"></td>
+                            </tr>
+                            <tr>
+                              <td>Car</td>
+                              <td><input type="text" class="textbox textbox-size-type-1" value="345ABD" /></td>
+                              <td class="thin"><span class="ico ico-type-2"></td>
+                            </tr>
+                            <tr>
+                              <td>Brand</td>
+                              <td><input type="text" class="textbox textbox-size-type-1" value="Brand A" /></td>
+                              <td class="thin"><span class="ico ico-type-2"></span> <span class="ico ico-type-3"></span></td>
+                            </tr>
+                          </table> 
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+              
+            </table>   
+          </div>
+         
+              
+          <div class="proto-comments">
+            <b>T6: vertical lines and header background</b>
+          </div>
+          
+          <div class="color-box pad-box">
+              
+            <table class="t1 header-bg-type-1">
+              <thead>
+                <tr>
+                  <th class="border-right"><b>EDI buyer rights</b></th>
+                  <th><b>Editor</b></th>
+                  <th><b>Viewer</b></th>
+                  <th class="border-left"><b>Other1</b></th>
+                  <th><b>Other2</b></th>
+                  <th><b>Other3</b></th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                <tr>
+                  <td class="no-wrap border-right">All branches</td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td class="border-left"><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                </tr>
+                <tr>
+                  <td class="no-wrap border-right">Pagar AS Tallinn branch</td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" checked="checked" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td class="border-left"><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                </tr>
+                <tr>
+                  <td class="no-wrap border-right">Pagar AS Vastsekuuste branch</td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" checked="checked" /><em></em></label></td>
+                  <td  class="border-left"><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" checked="checked" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                </tr>
+                <tr>
+                  <td class="no-wrap border-right">Pagar AS Kukenurme branch</td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td class="border-left"><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                </tr>
+                <tr>
+                  <td class="no-wrap border-right">Pagar AS Võtiku branch</td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td class="border-left"><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                  <td><label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label></td>
+                </tr>
+              </tbody>
+              
+            </table>
+            
+          </div>
+          
+
+          
+          <div class="proto-comments">
+            <b>T6: vertical lines and header background</b>
+          </div>
+          
+          <div class="color-box pad-box">
+              
+            <table class="t1 border-type-2 header-bg-type-2">
+              <thead>
+                <tr>
+                  <th class="border-right-none"></th>
+                  <th class="border-left-none"><b>Product name and codes</b></th>
+                  <th><b>Unit</b></th>
+                  <th><b>Current price</b></th>
+                  <th><b>New price</b></th>
+                  <th><b>Country of origin</b></th>
+                  <th><b>Quality class</b></th>
+                  <th><b>Remarks</b></th>
+                  <th><b>Package</b></th>
+                  <th><b>All suppliers</b></th>
+                </tr>
+              </thead>
+              <tbody class="sub-title">
+                <tr>
+                  <td></td>
+                  <td colspan="9"><b>Fruit / apples</b></td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td class="border-right-none">
+                    <label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" checked="checked" /><em></em></label>
+                  </td>
+                  <td class="border-left-none">
+                    Fuji
+                    <div class="font-size-small color-type-2">Seller code: 5425423624362</div>
+                    <div class="font-size-small color-type-2">GTIN: 542362436262</div>
+                  </td>
+                  <td>kg</td>
+                  <td>2.345</td>
+                  <td class="color-type-1">2.345</td>
+                  <td class="color-type-1">Hiina</td>
+                  <td>I-kat.</td>
+                  <td>70-75</td>
+                  <td>12</td>
+                  <td>Karlskroona OÜ</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td class="border-right-none">
+                    <label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label>
+                  </td>
+                  <td class="border-left-none">
+                    Golden
+                    <div class="font-size-small color-type-2">Seller code: 5425423624362</div>
+                    <div class="font-size-small color-type-2">GTIN: 542362436262</div>
+                  </td>
+                  <td>kg</td>
+                  <td>3.456</td>
+                  <td class="color-type-1">3.456</td>
+                  <td class="color-type-1">L-Aafrika</td>
+                  <td>I-kat.</td>
+                  <td>100tk</td>
+                  <td>18</td>
+                  <td>Bamboona AS</td>
+                </tr>
+              </tbody>
+              <tbody class="sub-title">
+                <tr>
+                  <td></td>
+                  <td colspan="9"><b>Fruit / pears</b></td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td class="border-right-none">
+                    <label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" checked="checked" /><em></em></label>
+                  </td>
+                  <td class="border-left-none">
+                    Fuji
+                    <div class="font-size-small color-type-2">Seller code: 5425423624362</div>
+                    <div class="font-size-small color-type-2">GTIN: 542362436262</div>
+                  </td>
+                  <td>kg</td>
+                  <td>2.345</td>
+                  <td class="color-type-1">2.345</td>
+                  <td class="color-type-1">Hiina</td>
+                  <td>I-kat.</td>
+                  <td>70-75</td>
+                  <td>12</td>
+                  <td>Karlskroona OÜ</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td class="border-right-none">
+                    <label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label>
+                  </td>
+                  <td class="border-left-none">
+                    Golden
+                    <div class="font-size-small color-type-2">Seller code: 5425423624362</div>
+                    <div class="font-size-small color-type-2">GTIN: 542362436262</div>
+                  </td>
+                  <td>kg</td>
+                  <td>3.456</td>
+                  <td class="color-type-1">3.456</td>
+                  <td class="color-type-1">L-Aafrika</td>
+                  <td>I-kat.</td>
+                  <td>100tk</td>
+                  <td>18</td>
+                  <td>Bamboona AS</td>
+                </tr>
+              </tbody>
+              <tbody>
+                <tr>
+                  <td class="border-right-none">
+                    <label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" checked="checked" /><em></em></label>
+                  </td>
+                  <td class="border-left-none">
+                    Granny Smith
+                    <div class="font-size-small color-type-2">Seller code: 5425423624362</div>
+                    <div class="font-size-small color-type-2">GTIN: 542362436262</div>
+                  </td>
+                  <td>kg</td>
+                  <td>5.332</td>
+                  <td class="color-type-1">5.332</td>
+                  <td class="color-type-1">Tsiili</td>
+                  <td>I-kat.</td>
+                  <td>150-</td>
+                  <td>12</td>
+                  <td>Karlskroona OÜ</td>
+                </tr>
+              </tbody>
+              
+            </table>
+            
+          </div>
+          
+
+          <div class="proto-comments">
+            <b>T8: table with distinctive </b>
+          </div>
+          
+          <div class="color-box pad-box">
+              
+            <table class="t8">
+              <thead>
+                <tr>
+                  <th><div class="column-header">Orders</div></th>
+                  <th><div class="column-header">DESPATCH ADVICE</div></th>
+                  <th><div class="column-header">RECEIVING ADVICES</div></th>
+                  <th><div class="column-header">INVOICES</div></th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <td><a href="#">More orders »</a></td>
+                  <td><a href="#">More despatch advices »</a></td>
+                  <td><a href="#">More receiving advices »</a></td>
+                  <td><a href="#">More invoices »</a></td>
+                </tr>
+              </tfoot>
+              <tbody>
+                <tr>
+                  <td>
+                    KEILA TÜ – Treppoja kauplus
+                    <div class="font-size-xsmall color-type-2">OT002680690<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    Selver DC
+                    <div class="font-size-xsmall color-type-2">201502251<span class="sep">I</span>ootel</td>
+                  </td>
+                  <td>
+                    SÄM Ülejõe (Pärnu)
+                    <div class="font-size-xsmall color-type-2">5025491909/2015<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    etü arbimäe konsum
+                    <div class="font-size-xsmall color-type-2">62015058653<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Narva
+                    <div class="font-size-xsmall color-type-2">OT002680657<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    Prisma Lansamäe
+                    <div class="font-size-xsmall color-type-2">62015058643<span class="sep">I</span>ootel</td>
+                  </td>
+                  <td>
+                    SÄM Haapsalu (Haapsalu)
+                    <div class="font-size-xsmall color-type-2">5025468328/2015<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    STÜ Aste AO
+                    <div class="font-size-xsmall color-type-2">62015058652<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    ELVA TÜ – ELVA A&amp;O
+                    <div class="font-size-xsmall color-type-2">WEB76996572<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    Prisma Ra Mare
+                    <div class="font-size-xsmall color-type-2">62015058642<span class="sep">I</span>ootel</td>
+                  </td>
+                  <td>
+                    Rimi SHM Norde (Tallinn)
+                    <div class="font-size-xsmall color-type-2">5025512983/2015<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    RIM Pstimaja Supermarket
+                    <div class="font-size-xsmall color-type-2">62015058651<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Haraldi pood RR Lektus AS
+                    <div class="font-size-xsmall color-type-2">T-180228<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    Prisma Mustamäe
+                    <div class="font-size-xsmall color-type-2">62015058641<span class="sep">I</span>ootel</td>
+                  </td>
+                  <td>
+                    SÄM Haapsalu (Haapsalu)
+                    <div class="font-size-xsmall color-type-2">5025512020/2015<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    OG Kalevi Toidukaubad
+                    <div class="font-size-xsmall color-type-2">62015058648<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    SELVER AS – DC
+                    <div class="font-size-xsmall color-type-2">OT002679541<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    Prisma Kristiine
+                    <div class="font-size-xsmall color-type-2">62015058640<span class="sep">I</span>ootel</td>
+                  </td>
+                  <td>
+                    Rimi SM Kaubahall (Tallinn)
+                    <div class="font-size-xsmall color-type-2">5025512982/2015<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    Raudalu Konsum
+                    <div class="font-size-xsmall color-type-2">62015058674<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Tallinna filiaal ladu 28,29
+                    <div class="font-size-xsmall color-type-2">116703-5LS1TLe<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    Prisma Sikupilli
+                    <div class="font-size-xsmall color-type-2">62015058639<span class="sep">I</span>ootel</td>
+                  </td>
+                  <td rowspan="5"></td>
+                  <td>
+                    Mustakivi Konsum
+                    <div class="font-size-xsmall color-type-2">62015058646<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Prisma Mustamäe – Toit
+                    <div class="font-size-xsmall color-type-2">300234309<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td rowspan="4"></td>
+                  <td>
+                    Akadeemia Konsum
+                    <div class="font-size-xsmall color-type-2">62015058645<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Tallinna filiaal ladu 28,29
+                    <div class="font-size-xsmall color-type-2">116702-5LS1TL<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    Prisma Lasnamäe
+                    <div class="font-size-xsmall color-type-2">62015058643<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Tallinna filiaal ladu 28,29
+                    <div class="font-size-xsmall color-type-2">116702-5LS1TL<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    Prisma Ra Mare
+                    <div class="font-size-xsmall color-type-2">62015058642<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Tapa ToKo köök
+                    <div class="font-size-xsmall color-type-2">T-24714<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                  <td>
+                    Prisma Mustamäe
+                    <div class="font-size-xsmall color-type-2">62015058641<span class="sep">I</span>18.10 &nbsp;8:23</td>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+            
+          </div>
+           
           
         </div> <!-- //page-main -->
         
       </div> <!-- //page-container -->  
     </div> <!-- //page-wrap -->
   </div> <!-- //page-holder -->
-    
+  
+  
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="javascripts/jquery-ui.js"></script>
   <script src="javascripts/underscore-min.js"></script>
-  <script type="text/javascript" src="javascripts/scripts.js"></script>
+  <script src="javascripts/scripts.js"></script>
     
 </body>
 </html>

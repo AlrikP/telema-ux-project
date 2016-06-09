@@ -654,6 +654,10 @@ textarea.textbox {
   padding-bottom: 10px;
 }
 
+.ui-front {
+  z-index: auto;
+}
+
 .ui-menu .ui-menu-item {
   margin: 0;
   padding: 0;
@@ -663,6 +667,7 @@ textarea.textbox {
   background: #ffffff;
   display: none;
   border: 1px solid #c3c3c3;
+  z-index: 1000;
   min-width: 100%;
   max-width: 289px;
   max-height: 440px;
@@ -899,17 +904,7 @@ p {
 .page-topbar .search {
   float: left;
   padding: 5px 24px 0 0;
-}
-.page-topbar .search .textbox-holder {
-  float: left;
-  position: relative;
-}
-.page-topbar .search .textbox {
-  float: left;
-  width: 235px;
-}
-.page-topbar .search [type=submit] {
-  float: left;
+  width: 271px;
 }
 .page-topbar .messages {
   float: left;
@@ -1196,6 +1191,21 @@ p {
   background: url("../images/close3.png") no-repeat center center;
 }
 
+.search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.search .textbox-holder {
+  position: relative;
+  -webkit-flex: 1 0 auto;
+  -moz-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
 .page-sidebar .inner {
   border-bottom: 1px solid #f35765;
 }
@@ -1280,6 +1290,11 @@ p {
   -moz-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+}
+
+.table-wrapper {
+  overflow: auto;
+  max-width: 100%;
 }
 
 table {

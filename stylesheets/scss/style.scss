@@ -681,6 +681,9 @@ hr {
 //  =========================================
 //
 
+.ui-front {
+  z-index: auto;
+}
 .ui-menu {
   .ui-menu-item {
     margin: 0; padding: 0;
@@ -689,7 +692,7 @@ hr {
 
 .ui-autocomplete {
   background: $color-3; display: none;
-  border: 1px solid $color-11;
+  border: 1px solid $color-11; z-index: 1000;
   min-width: 100%;
   max-width: 289px;
   max-height: 440px; overflow: auto;
@@ -883,16 +886,7 @@ p { margin: 5px 0; }
   
   .search {
     float: left; padding: 5px 24px 0 0;
-    
-    .textbox-holder {
-      float: left; position: relative;
-    }
-    .textbox {
-      float: left; width: 235px;
-    }
-    [type=submit] {
-      float: left;
-    }
+    width: 271px;
   }
   
   .messages {
@@ -1119,6 +1113,20 @@ p { margin: 5px 0; }
 }
 
 
+//
+//   Search
+//   ========================================
+//
+
+.search {
+  @include flexbox();
+  
+  .textbox-holder {
+    position: relative;
+    @include flex(1 0 auto);
+  }
+}
+
 
 //
 //   SIDEBAR
@@ -1212,6 +1220,10 @@ p { margin: 5px 0; }
 //   TABLES
 //   ========================================
 //
+
+.table-wrapper {
+  overflow: auto; max-width: 100%;
+}
 
 table {
   border-collapse: collapse;

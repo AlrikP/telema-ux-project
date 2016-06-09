@@ -1,7 +1,6 @@
 var App = {
     init: function() {
         
-        
         // Main search
         $('[data-search-main]').autocomplete({
             source: function(request, response) {
@@ -73,7 +72,7 @@ var App = {
                 }
             },
             select: function(e, ui) {
-                // redirect ?
+                // redirect
                 window.location = ui.item.url;
             },
             create: function(e, ui) {
@@ -135,7 +134,6 @@ var App = {
                             .appendTo(ul);
                     }
                     */
-                    
                 };
                 
             }
@@ -147,7 +145,6 @@ var App = {
         
         // Dropdown widget
         $('[data-dropdown]').dropdown();
-        
         
         // Clean radio buttons and checboxes cached values
         $('input[type=radio], input[type=checkbox]').each(function(i, el) {
