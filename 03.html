@@ -224,9 +224,294 @@
               
         <div class="page-main">
           
-            
-           
           
+          <div class="proto-comments  proto-comments-no-top-margin uppercase">
+            <b>Filter block</b>
+          </div>
+          
+          <div class="color-box pad-box">
+            <h3 class="uppercase color-type-1">documents requiring attention</h3>
+            
+            <div class="filter-block">
+              <div class="column">
+                
+                <div class="column-row">
+                  <div class="row-label">&nbsp;</div>
+                  <input type="text" class="textbox textbox-bg-type-1" placeholder="Search by partner or document number" />
+                </div>
+                
+                <div class="column-row">
+                  <div class="col">
+                    <div class="custom-select custom-select-block custom-select-color-type-1" data-dropdown>
+                      <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select document type</span></a>
+                      <input type="hidden" data-dropdown-hidden-input />
+                      <div class="custom-select-content" data-dropdown-content>
+                        <ul>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="a">Type 1</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="b">Type 2</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="">All Types</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col">
+                    <div class="custom-select custom-select-block custom-select-color-type-1" data-dropdown>
+                      <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select issue type</span></a>
+                      <input type="hidden" data-dropdown-hidden-input />
+                      <div class="custom-select-content" data-dropdown-content>
+                        <ul>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="a">Type 1</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="b">Type 2</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="">All Types</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="column-row">
+                  <div class="col">
+                    <div class="custom-select custom-select-block custom-select-color-type-1" data-dropdown>
+                      <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select status</span></a>
+                      <input type="hidden" data-dropdown-hidden-input />
+                      <div class="custom-select-content" data-dropdown-content>
+                        <ul>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="a">Status 1</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="b">Status 2</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="">All</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col">
+                    <div class="custom-select custom-select-block custom-select-color-type-1" data-dropdown>
+                      <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select resolved by</span></a>
+                      <input type="hidden" data-dropdown-hidden-input />
+                      <div class="custom-select-content" data-dropdown-content>
+                        <ul>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="a">Status 1</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="b">Status 2</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="">All</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="column" data-date-selector-parent>
+                <div class="column-row">
+                  
+                  <div class="col">
+                    <div class="row-label">Start date</div>
+                    <div class="textbox-has-ico">
+                      <input type="text" class="textbox textbox-block textbox-bg-type-1" data-date-selector-start data-date-format="MM.DD.YYYY">
+                      <span class="ico ico-type-11"></span>
+                    </div>
+                  </div>
+                  
+                  <div class="col">
+                    <div class="row-label">End date</div>
+                    <div class="textbox-has-ico">
+                      <input type="text" class="textbox textbox-block textbox-bg-type-1" data-date-selector-end data-date-format="MM.DD.YYYY">
+                      <span class="ico ico-type-11"></span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="links-holder font-size-small">
+                  <a href="#" class="color-type-2" data-date-selector-marker="today">Today</a> 
+                  <span class="sep color-type-2">I</span>
+                  <a href="#" class="color-type-2" data-date-selector-marker="yesterday">Yesterday</a>
+                  <span class="sep color-type-1">I</span>
+                  <a href="#" class="color-type-1" data-date-selector-marker="last-7">Last 7 days</a>
+                  <span class="sep color-type-1">I</span>
+                  <a href="#" class="color-type-2" data-date-selector-marker="this-week">This week</a><br />
+                  <a href="#" class="color-type-2" data-date-selector-marker="last-week">Last week</a>
+                  <span class="sep color-type-2">I</span>
+                  <a href="#" class="color-type-2" data-date-selector-marker="this-month">This month
+                  <span class="sep color-type-2">I</span></a>
+                  <a href="#" class="color-type-2" data-date-selector-marker="last-30">Last 30 days</a>
+                  <span class="sep color-type-2">I</span>
+                  <div class="inl-blk" data-bubble data-bubble-disable-side-click data-bubble-hpos="left">
+                    <a href="#" class="color-type-2" data-bubble-toggler>Choose dates »</a>
+                    <div class="bubble font-size-regular" data-bubble-content>
+                      <div class="datepicker-bubble datepicker-bubble-double">
+                        <div class="calendar-holder">
+                          <div class="calendar"> 
+                            <div class="calendar-label">Pick or enter start date</div>
+                            <input type="text" class="textbox" data-date-selector-bubble-start />
+                            <div data-date-picker></div>
+                          </div>
+                          <div class="calendar"> 
+                            <div class="calendar-label">Pick or enter end date</div>
+                            <input type="text" class="textbox" data-date-selector-bubble-end />
+                            <div data-date-picker></div>
+                            <div class="align-right bubble-confirm">
+                              <a href="#" class="btn" data-date-selector-marker="bubble" data-bubble-close>Confirm dates</a>
+                            </div>
+                          </div>
+                        </div> <!-- //calendar-holder -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="column">
+                <div class="row-label">&nbsp;</div>
+                <input type="submit" class="btn btn-padding-type-1" value="Search" />
+              </div>
+            </div> <!-- //filter-block -->
+          </div>
+          
+          <div class="color-box margin-box">
+            <div class="pad-box">
+              <h3 class="uppercase color-type-1">documents requiring attention</h3>
+            
+              <div class="filter-block">
+                <div class="column">
+                  <div class="column-row">
+                    <div class="row-label">&nbsp;</div>
+                    <input type="text" class="textbox textbox-bg-type-1" placeholder="Search by partner or document number" />
+                  </div>
+                </div>
+              
+                <div class="column" data-date-selector-parent>
+                  <div class="column-row">
+                    <div class="col">
+                      <div class="row-label">Start date</div>
+                      <div class="textbox-has-ico">
+                        <input type="text" class="textbox textbox-block textbox-bg-type-1" data-date-selector-start data-date-format="MM.DD.YYYY">
+                        <span class="ico ico-type-11"></span>
+                      </div>
+                    </div>
+                  
+                    <div class="col">
+                      <div class="row-label">End date</div>
+                      <div class="textbox-has-ico">
+                        <input type="text" class="textbox textbox-block textbox-bg-type-1" data-date-selector-end data-date-format="MM.DD.YYYY">
+                        <span class="ico ico-type-11"></span>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="links-holder font-size-small">
+                    <a href="#" class="color-type-2" data-date-selector-marker="today">Today</a> 
+                    <span class="sep color-type-2">I</span>
+                    <a href="#" class="color-type-2" data-date-selector-marker="yesterday">Yesterday</a>
+                    <span class="sep color-type-1">I</span>
+                    <a href="#" class="color-type-1" data-date-selector-marker="last-7">Last 7 days</a>
+                    <span class="sep color-type-1">I</span>
+                    <a href="#" class="color-type-2" data-date-selector-marker="this-week">This week</a><br />
+                    <a href="#" class="color-type-2" data-date-selector-marker="last-week">Last week</a>
+                    <span class="sep color-type-2">I</span>
+                    <a href="#" class="color-type-2" data-date-selector-marker="this-month">This month
+                    <span class="sep color-type-2">I</span></a>
+                    <a href="#" class="color-type-2" data-date-selector-marker="last-30">Last 30 days</a>
+                    <span class="sep color-type-2">I</span>
+                    <div class="inl-blk" data-bubble data-bubble-disable-side-click data-bubble-hpos="left">
+                      <a href="#" class="color-type-2" data-bubble-toggler>Choose dates »</a>
+                      <div class="bubble font-size-regular" data-bubble-content>
+                      
+                        <div class="datepicker-bubble datepicker-bubble-double">
+                        
+                          <div class="calendar-holder">
+                            <div class="calendar"> 
+                              <div class="calendar-label">Pick or enter start date</div>
+                              <input type="text" class="textbox" data-date-selector-bubble-start />
+                              <div data-date-picker></div>
+                            </div>
+                          
+                            <div class="calendar"> 
+                              <div class="calendar-label">Pick or enter end date</div>
+                              <input type="text" class="textbox" data-date-selector-bubble-end />
+                              <div data-date-picker></div>
+                            
+                              <div class="align-right bubble-confirm">
+                                <a href="#" class="btn" data-date-selector-marker="bubble" data-bubble-close>Confirm dates</a>
+                              </div>
+                            </div>
+                          </div> <!-- //calendar-holder -->
+                      
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+              
+                <div class="column">
+                
+                  <div class="row-label">&nbsp;</div>
+                  <input type="submit" class="btn btn-padding-type-1" value="Search" />
+                </div>
+              </div> <!-- //filter-block -->
+            </div>
+          
+            <div class="pad-box-bottom">
+              <b>14 documents found</b>
+            </div>
+          </div>
+          
+          
+          <div class="proto-comments uppercase">
+            <b>MENU BLOCK</b>
+          </div>
+          
+          <div class="color-box pad-box">
+            <h1 class="uppercase">settings</h1>
+            <p>
+              Introduction to settings page, infroduction, introduction. Introduction to settings page, infroduction, 
+              introduction.  Introduction to settings page, infroduction, introduction.  Introduction to settings page, 
+              infroduction, introduction. Introduction to settings page, infroduction, introduction.  Introduction to 
+              settings page, infroduction, introduction. 
+            </p>
+            <ul class="nav-menu">
+              <li><a href="#">me &amp; other users</a></li>
+              <li><a href="#">company &amp; branch</a></li>
+              <li><a href="#" class="active">products &amp; services</a></li>
+              <li><a href="#">connection</a></li>
+              <li><a href="#">functionalit</a></li>
+            </ul>
+          </div>
+          
+          <div class="proto-comments uppercase">
+            <b>Introduction block</b>
+          </div>
+          
+          <div class="color-box pad-box">
+            <h3 class="uppercase color-type-1">Dimensions</h3>
+            
+            <div class="intro-box">
+              
+              <div class="intro-box-left">
+                <ul class="bullet-list bullet-list-type-1">
+                  <li>
+                    If you want to make any changes in your dimensions table, make changes in the 
+                    file you uploaded and upload it again. 
+                  </li>
+                  <li>
+                    You can only upload a file that uses our template. If you have lost that file, download the template 
+                    again and fill it with your info. Then upload.
+                  </li>
+                  <li>
+                    After uploading you will see your updated dimensions table right below.
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="intro-box-right">
+                <a href="#" class="btn btn-size-block">Upload template with your info</a>
+                <a href="#" class="btn btn-size-block btn-color-type-1" style="margin-top: 6px;">Download template</a>
+              </div>
+              
+            </div>
+          </div>
+            
         </div> <!-- //page-main -->
         
       </div> <!-- //page-container -->  
@@ -235,7 +520,8 @@
   
   
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="javascripts/jquery-ui.js"></script>
+  <script src="javascripts/moment-with-locales.min.js"></script>
+  <script src="javascripts/jquery-ui.min.js"></script>
   <script src="javascripts/underscore-min.js"></script>
   <script src="javascripts/scripts.js"></script>
     

@@ -1,65 +1,30 @@
 var App = {
     init: function() {
         
+        
+        //moment.locale('et');
+        moment.updateLocale('en', {
+            week : {
+                dow : 1, // Monday is the first day of the week.
+                doy : 4  // The week that contains Jan 4th is the first week of the year.
+            }
+        });
+        
         // Main search
         $('[data-search-main]').autocomplete({
             source: function(request, response) {
                 var data = [
-                    {
-                        value: 'Kuke pood',
-                        category: 'Companies',
-                        url: 'http://google.com'
-                    },
-                    {
-                        value: 'Kuke pagariäri',
-                        category: 'Companies',
-                        url: 'http://google.com'
-                    },
-                    {
-                        value: 'Kuke pood Põlva branch',
-                        category: 'Branches',
-                        url: 'http://google.com'
-                    },
-                    {
-                        value: 'Kuke pood Pärnu branch',
-                        category: 'Branches',
-                        url: 'http://google.com'
-                    },
-                    {
-                        value: 'Kuke pagariäri Viinistu branch',
-                        category: 'Branches',
-                        url: 'http://google.com'
-                    },
-                    {
-                        value: 'Kuke pagariäri Haapsalu branch',
-                        category: 'Branches',
-                        url: 'http://google.com'
-                    },
-                    {
-                        value: 'Kuke pagariäri Puhja branch',
-                        category: 'Branches',
-                        url: 'http://google.com'
-                    },
-                    {
-                        value: 'Kuke pagariäri Puka branch',
-                        category: 'Branches',
-                        url: 'http://google.com'
-                    },
-                    {
-                        value: 'Kuke pood Tartu branch',
-                        category: 'Branches',
-                        url: 'http://google.com'
-                    },
-                    {
-                        value: 'Kuke pood Tallinn branch',
-                        category: 'Branches',
-                        url: 'http://google.com'
-                    },
-                    {
-                        value: 'Kuke pood Elva branch',
-                        category: 'Branches',
-                        url: 'http://google.com'
-                    }
+                    { value: 'Kuke pood', category: 'Companies', url: 'http://google.com' },
+                    { value: 'Kuke pagariäri', category: 'Companies', url: 'http://google.com' },
+                    { value: 'Kuke pood Põlva branch', category: 'Branches', url: 'http://google.com' },
+                    { value: 'Kuke pood Pärnu branch', category: 'Branches', url: 'http://google.com' },
+                    { value: 'Kuke pagariäri Viinistu branch', category: 'Branches', url: 'http://google.com' },
+                    { value: 'Kuke pagariäri Haapsalu branch', category: 'Branches', url: 'http://google.com' },
+                    { value: 'Kuke pagariäri Puhja branch', category: 'Branches', url: 'http://google.com' },
+                    { value: 'Kuke pagariäri Puka branch', category: 'Branches', url: 'http://google.com' },
+                    { value: 'Kuke pood Tartu branch', category: 'Branches', url: 'http://google.com' },
+                    { value: 'Kuke pood Tallinn branch', category: 'Branches', url: 'http://google.com' },
+                    { value: 'Kuke pood Elva branch', category: 'Branches', url: 'http://google.com' }
                 ];
 
                 var results = $.ui.autocomplete.filter(data, request.term),
@@ -150,6 +115,70 @@ var App = {
         $('input[type=radio], input[type=checkbox]').each(function(i, el) {
             $(el).prop('checked', $(el).attr('checked') === 'checked' ? true : false);
         });
+        
+        // Date selector
+        $('[data-date-selector-marker]').click(function(e) {
+            e.preventDefault();
+            var $target = $(e.target),
+                $parent = $target.closest('[data-date-selector-parent]'),
+                $start_input = $parent.find('[data-date-selector-start]'),
+                $end_input = $parent.find('[data-date-selector-end]'),
+                format = 'DD.MM.YYYY',
+                type = $target.data('dateSelectorMarker'),
+                start_format = $start_input.data('dateFormat') || format,
+                end_format = $end_input.data('dateFormat') || format;
+                
+            
+            if (type == 'today') {
+                $start_input.val(moment().format(start_format));
+                $end_input.val(moment().format(end_format));
+            }
+            else if (type == 'yesterday') {
+                $start_input.val(moment().add(-1, 'days').format(start_format));
+                $end_input.val(moment().add(-1, 'days').format(end_format));
+            }
+            else if (type == 'last-7') {
+                $start_input.val(moment().add(-6, 'days').format(start_format));
+                $end_input.val(moment().format(end_format));
+            }
+            else if (type == 'this-week') {
+                $start_input.val(moment().startOf('week').format(start_format));
+                $end_input.val(moment().endOf('week').format(end_format));
+            }
+            else if (type == 'last-week') {
+                $start_input.val(moment().add(-1, 'weeks').startOf('week').format(start_format));
+                $end_input.val(moment().add(-1, 'weeks').endOf('week').format(end_format));
+            }
+            else if (type == 'this-month') {
+                $start_input.val(moment().startOf('month').format(start_format));
+                $end_input.val(moment().endOf('month').format(end_format));
+            }
+            else if (type == 'last-30') {
+                $start_input.val(moment().add(-29, 'days').format(start_format));
+                $end_input.val(moment().format(end_format));
+            }
+            else if (type == 'bubble') {
+                var $bubble = $target.closest('[data-bubble]'),
+                    $bubble_start = $bubble.find('[data-date-selector-bubble-start]'),
+                    $bubble_end = $bubble.find('[data-date-selector-bubble-end]');
+                    
+                if ($bubble_start.length) { $start_input.val($bubble_start.val()); }
+                if ($bubble_end.length) { $end_input.val($bubble_end.val()); }
+            }
+        });
+        
+        // Datepicker
+        $('[data-date-picker]').each(function(i, el) {
+            var $picker = $(el);
+                $altfield = $picker.prev('input[type=text]'),
+                altfield = $altfield.length ? $altfield.get(0) : '';
+            
+            $picker.datepicker({
+                altField: altfield,
+                dateFormat: 'dd.mm.yy' 
+            });
+        });
+        
         
         // Support attachment input change
         $('[data-support-attachment]').change(function(e) {
@@ -347,7 +376,7 @@ $(function() {
     var pluginName = 'bubble',
         defaults = {
             vPos : 'bottom',
-            hPos : 'right',
+            hPos : 'left',
             forceDefaultPosition : false,
             disableSideClick : false,
             arrowPos : 40, // arrow position from bubble side in pixels
@@ -370,8 +399,9 @@ $(function() {
     
     
     var handleDocumentClick = function(e) {
+        
         var target = e.target;
-        if ((!$.contains(this.$content.get(0), target) && target !== this.$content.get(0)) || ($.contains(this.$content.get(0), target) && $(target).attr('data-bubble-close') !== undefined)) {
+        if ($(target).closest('body').length && ((!$.contains(this.$content.get(0), target) && target !== this.$content.get(0)) || ($.contains(this.$content.get(0), target) && $(target).attr('data-bubble-close') !== undefined))) {
             this.$elem.attr('data-bubble-visible', false);
             this.$content.attr('data-bubble-content-visible', false);
             $(document).off('click', this.handleDocumentClick);
@@ -502,7 +532,7 @@ $(function() {
             else {
                 checkNum = Math.round(this.$area.offset().left);
             }
-            if (Math.round(this.$area.offset().left) > Math.round(this.$content.offset().left)) {
+            if (checkNum > Math.round(this.$content.offset().left)) {
                 return false;
             }
         }
@@ -649,7 +679,7 @@ $(function() {
     var handleDocumentClick = function(e) {
         var target = e.target;
         
-        if ((!$.contains(this.$content.get(0), target) && target !== this.$content.get(0)) || ($.contains(this.$content.get(0), target) && $(target).attr('data-dropdown-close') !== undefined)) {
+        if ($(target).closest('body').length && ((!$.contains(this.$content.get(0), target) && target !== this.$content.get(0)) || ($.contains(this.$content.get(0), target) && $(target).attr('data-dropdown-close') !== undefined))) {
             this.$elem.attr('data-dropdown-visible', false);
             $(document).off('click', this.handleDocumentClick);
         }
