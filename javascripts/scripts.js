@@ -826,12 +826,10 @@ $(function() {
     
 
     Plugin.prototype.init = function() {
-        console.log(this.$elem);
         this.$items = this.$elem.find('[data-sorter-item]');
         this.$holder = this.$elem.find('[data-sorter-items]');
         
-        
-        this.$elem.on('click','[data-sorter-attr]', $.proxy(function(e) {
+        this.$elem.on('click.' + this.pluginName + '-event','[data-sorter-attr]', $.proxy(function(e) {
             e.preventDefault();
             var $target = $(e.target),
                 attr = $target.data('sorterAttr'),
@@ -855,7 +853,7 @@ $(function() {
     
     Plugin.prototype.destroy = function () {
         $.data(this.elem, '_' + pluginName, null);
-        //this.$toggler.off('.' + this._name + '-event');
+        this.$$elem.off('.' + this._name + '-event');
     };
 
     $.fn[pluginName] = function(arg) {
