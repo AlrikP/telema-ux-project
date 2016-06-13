@@ -47,6 +47,12 @@
           transform: rotate($value);
 }
 
+@mixin transform($value) {
+  -webkit-transform: $value; 
+     -moz-transform: $value;
+          transform: $value;
+}
+
 @mixin query($value: $tablet-1) {
   @media screen and (max-width: $value) {
     @content;

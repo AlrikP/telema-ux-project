@@ -90,7 +90,7 @@
           <div class="custom-select custom-select-block custom-select-size-type-1 custom-select-color-type-3 custom-select-font-size-1" data-dropdown>
             <a href="#" class="custom-select-toggler" style="max-width: 120px;" data-dropdown-toggler><span data-dropdown-indicator>Purchase</span></a>
             <div class="custom-select-content" data-dropdown-content>
-              <ul>
+              <ul class="options">
                 <li><a href="#" data-dropdown-option>Sales</a></li>
                 <li><a href="#" data-dropdown-option>Purchase</a></li>
                 <li><a href="#" data-dropdown-option>Something third</a></li>
@@ -246,7 +246,7 @@
                       <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select document type</span></a>
                       <input type="hidden" data-dropdown-hidden-input />
                       <div class="custom-select-content" data-dropdown-content>
-                        <ul>
+                        <ul class="options">
                           <li><a href="#" data-dropdown-option data-dropdown-value="a">Type 1</a></li>
                           <li><a href="#" data-dropdown-option data-dropdown-value="b">Type 2</a></li>
                           <li><a href="#" data-dropdown-option data-dropdown-value="">All Types</a></li>
@@ -260,7 +260,7 @@
                       <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select issue type</span></a>
                       <input type="hidden" data-dropdown-hidden-input />
                       <div class="custom-select-content" data-dropdown-content>
-                        <ul>
+                        <ul class="options">
                           <li><a href="#" data-dropdown-option data-dropdown-value="a">Type 1</a></li>
                           <li><a href="#" data-dropdown-option data-dropdown-value="b">Type 2</a></li>
                           <li><a href="#" data-dropdown-option data-dropdown-value="">All Types</a></li>
@@ -276,7 +276,7 @@
                       <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select status</span></a>
                       <input type="hidden" data-dropdown-hidden-input />
                       <div class="custom-select-content" data-dropdown-content>
-                        <ul>
+                        <ul class="options">
                           <li><a href="#" data-dropdown-option data-dropdown-value="a">Status 1</a></li>
                           <li><a href="#" data-dropdown-option data-dropdown-value="b">Status 2</a></li>
                           <li><a href="#" data-dropdown-option data-dropdown-value="">All</a></li>
@@ -290,7 +290,7 @@
                       <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select resolved by</span></a>
                       <input type="hidden" data-dropdown-hidden-input />
                       <div class="custom-select-content" data-dropdown-content>
-                        <ul>
+                        <ul class="options">
                           <li><a href="#" data-dropdown-option data-dropdown-value="a">Status 1</a></li>
                           <li><a href="#" data-dropdown-option data-dropdown-value="b">Status 2</a></li>
                           <li><a href="#" data-dropdown-option data-dropdown-value="">All</a></li>
@@ -452,7 +452,7 @@
               </div> <!-- //filter-block -->
             </div>
           
-            <div class="pad-box-bottom">
+            <div class="pad-box pad-box-type-1 border-top">
               <b>14 documents found</b>
             </div>
           </div>
@@ -503,14 +503,318 @@
                   </li>
                 </ul>
               </div>
-              
               <div class="intro-box-right">
                 <a href="#" class="btn btn-size-block">Upload template with your info</a>
                 <a href="#" class="btn btn-size-block btn-color-type-1" style="margin-top: 6px;">Download template</a>
               </div>
-              
             </div>
           </div>
+          
+          
+          <div class="proto-comments uppercase">
+            <b>The block of list and content</b>
+          </div>
+          
+            
+          <div class="list-block">
+            <div class="list-block-side" data-sorter>
+              
+              <div class="custom-select custom-select-block custom-select-color-type-4 custom-select-has-ico" data-dropdown>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator><span class="ico ico-type-12 ico-color-type-1"></span> Sort by date (ascending)</a>
+                <div data-dropdown-content="" class="custom-select-content">
+                  <ul class="options">
+                    <li><a href="#" data-dropdown-option data-sorter-attr="date" data-sorter-type="asc"><span class="ico ico-type-12 ico-color-type-1"></span> Sort by date (ascending)</a></li>
+                    <li><a href="#" data-dropdown-option data-sorter-attr="date" data-sorter-type="desc"><span class="ico ico-type-13 ico-color-type-1"></span> Sort by date (descending)</a></li>
+                    <li><a href="#" data-dropdown-option data-sorter-attr="name" data-sorter-type="asc"><span class="ico ico-type-12 ico-color-type-1"></span> Sort by name (ascending)</a></li>
+                    <li><a href="#" data-dropdown-option data-sorter-attr="name" data-sorter-type="desc"><span class="ico ico-type-13 ico-color-type-1"></span> Sort by name (ascending)</a></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="catalog-holder" data-sorter-items>
+                <div class="catalog">
+                  <div class="item" data-sorter-item='{"date" : 911, "name": "KEILA TÜ – Treppoja kauplus"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>11.09</b></td><td><b>KEILA TÜ – Treppoja kauplus</b></td></tr>
+                        <tr class="color-type-4 font-size-small"><td>11:15</td><td>21.93€ &nbsp; OT002680690</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 1001, "name": "Narva"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>01.10</b></td><td><b>Narva</b></td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:15</td><td>216.93€ &nbsp; OT002680657</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 925, "name": "ELVA TÜ – ELVA A&amp;O"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>25.09</b></td><td>ELVA TÜ – ELVA A&amp;O</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>218.93€ &nbsp; WEB76996572</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "Haraldi pood RR Lektus AS"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td>Haraldi pood RR Lektus AS</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>51.81€ &nbsp; T-180228</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "SELVER AS – DC"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td>SELVER AS – DC</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>Torupilli Selver<br />23 451.93€ &nbsp; OT002679541</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "Tallinna filiaal ladu 28,29"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td>Tallinna filiaal ladu 28,29</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>213.93€ &nbsp; 116703-5LS1TL</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "Prisma Mustamäe – Toit"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td>Prisma Mustamäe – Toit</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>Kalamaja Prisma<br />45 621.93€ &nbsp; 300234309</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "Tallinna filiaal ladu 28,29"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td>Tallinna filiaal ladu 28,29</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>3 421.93€ &nbsp; 116702-5LS1TL</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "Tallinna filiaal ladu 28,29"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td>Tallinna filiaal ladu 28,29</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>211.93€ &nbsp; 116701-5LS1TL</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "Tapa ToKo köök"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td>Tapa ToKo köök</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>261.93€ &nbsp; T-24714</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+            <div class="list-block-content">
+            </div>
+            
+          </div> <!-- //list-block -->
+          
+          <div class="margin-box">
+            <div class="list-block">
+              <div class="list-block-side" data-search>
+              
+                <div class="sub-title">My Settings</div>
+                
+                <div class="item">
+                  <a href="#" class="item-inner color-type-3"><b>Burkhardt von Bürgermeisterr</b></a>
+                </div>
+                
+                <div class="sub-title">Other users</div>
+                
+                <div class="item item-type-1">
+                  <span class="ico ico-type-15 ico-color-type-1"></span><a href="#">Create new user</a>
+                </div>
+                
+                <div class="item catalog-filter bg-color-type-2">
+                  <span class="ico ico-type-14 ico-color-type-1"></span>
+                  <input type="text" class="textbox textbox-block textbox-bg-type-2" placeholder="Filter users" data-search-input />
+                </div>
+                
+                <div class="catalog-holder">    
+                  <div class="catalog">
+                    <div class="item" data-search-item="Rupert Scrivener">
+                      <a href="#" class="item-inner color-type-3"><b>Rupert Scrivener</b></a>
+                    </div>
+                    <div class="item marker marker-type-3" data-search-item="Nicholas Hawtrey">
+                      <a href="#" class="item-inner color-type-3"><b>Nicholas Hawtrey</b></a>
+                    </div>
+                    <div class="item marker marker-type-2" data-search-item="Royston Farrell">
+                      <a href="#" class="item-inner color-type-3">Royston Farrell</a>
+                    </div>
+                    <div class="item marker marker-type-1" data-search-item="Prentis Hancock">
+                      <a href="#" class="item-inner color-type-3">Prentis Hancock</a>
+                    </div>
+                    <div class="item marker" data-search-item="Mervyn Pinfield">
+                      <a href="#" class="item-inner color-type-3">Mervyn Pinfield</a>
+                    </div>
+                    <div class="item active" data-search-item="Fionnula Tambling-Goggin">
+                      <a href="#" class="item-inner color-type-3">Fionnula Tambling-Goggin</a>
+                    </div>
+                    <div class="item" data-search-item="Nicola Parfit">
+                      <a href="#" class="item-inner color-type-3">Nicola Parfit</a>
+                    </div>
+                    <div class="item item-border-type-1" data-search-item="St. John O’Rorke">
+                      <span href="#" class="item-inner color-type-4">St. John O’Rorke</span>
+                    </div>
+                    <div class="item" data-search-item="Alf Tramontin">
+                      <a href="#" class="item-inner color-type-4">Alf Tramontin</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="list-block-content">
+              </div>
+            
+            </div> <!-- //list-block -->
+          </div>
+
+          
+          
+          <div class="proto-comments uppercase">
+            <b>Block header</b>
+          </div>
+          
+          <div class="block-header">
+            <b>Your connection with Telema is up and running. Last sync 25.02.2015 6:41, next sync in 15 minutes.</b>
+          </div>
+          <div class="color-box pad-box">
+            <h3 class="uppercase color-type-1 margin-bottom">block title</h3>
+            <p>Content</p>
+          </div>
+          
+          <div class="block-header block-header-type-1">
+            <b>Warning! Your business software has not been syncing with Telema since 25.02.2015 6:41. <a href="#">Read more »</a></b>
+          </div>
+          <div class="color-box pad-box">
+            <h3 class="uppercase color-type-1 margin-bottom">block title</h3>
+            <p>Content</p>
+          </div>
+          
+          <div class="block-header block-header-type-2">
+            <b>Error! Your business software has not been syncing with Telema since 25.02.2015 6:40. <a href="#" class="color-type-3">Read more »</a></b>
+          </div>
+          <div class="color-box pad-box">
+            <h3 class="uppercase color-type-1 margin-bottom">block title</h3>
+            <p>Content</p>
+          </div>
+          
+          
+          <div class="proto-comments uppercase">
+            <b>Open-close row</b>
+          </div>
+          
+          <div class="color-box color-box-type-1" data-visibility-parent>
+            <div class="pad-box pad-box-type-3" data-visible="true"><a href="#" data-visibility-toggler>Open document history »</a></div>
+            <div class="pad-box pad-box-type-2" data-visible="false">
+              <table class="font-size-small">
+                <tr>
+                  <td>10.09 &nbsp;12:15</td>
+                  <td>order &nbsp;51.18€</td>
+                </tr>
+                <tr>
+                  <td>10.09 &nbsp;14:45</td>
+                  <td>despatch advice &nbsp;51.18€</td>
+                </tr>
+                <tr>
+                  <td>10.09 &nbsp;18:10</td> 
+                  <td>receiving advice &nbsp;51.18€</td>
+                </tr>
+              </table>
+              <br />
+              <a href="#" data-visibility-toggler>Close document history »</a>
+            </div>
+          </div>
+          <div class="color-box color-box-type-1 border-top" data-visibility-parent>
+            <div class="pad-box pad-box-type-3" data-visible="false"><a href="#" data-visibility-toggler>Open transfer info »</a></div>
+            <div class="pad-box pad-box-type-2" data-visible="true">
+              
+              <div class="inl-blk valign-top" style="padding-right: 70px">
+                <table class="font-size-small">
+                  <tr>
+                    <td><b>Sender ID/GLN:</b></td>
+                    <td>46235646464</td>
+                  </tr>
+                  <tr>
+                    <td><b>Sender name:</b></td>
+                    <td>SUPPLIER COMPANY LTD</td>
+                  </tr>
+                  <tr>
+                    <td><b>Receiver ID/GLN:</b></td>
+                    <td>6464964646984</td>
+                  </tr>
+                  <tr>
+                    <td><b>Receiver name:</b></td>
+                    <td>BUYER COMPANY LTD</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="inl-blk valign-top">
+                <table class="font-size-small">
+                  <tr>
+                    <td><b>Registered in Telema:</b></td>
+                    <td>30.03.2015 18:02:48</td>
+                  </tr>
+                  <tr>
+                    <td><b>Forwarded by Telema: </b></td>
+                    <td>30.03.2015 18:02:48</td>
+                  </tr>
+                  
+                </table>
+              </div>
+              <br /><br />
+              <a href="#" data-visibility-toggler>Close transfer info »</a>
+            </div>
+          </div>
+          <div class="color-box pad-box">
+            <h3 class="uppercase color-type-1 margin-bottom">block title</h3>
+            <p>Content</p>
+          </div>
+          
+          
+          
+          <div class="proto-comments uppercase">
+            <b>Modal</b>
+          </div>
+          
+          <div class="color-box pad-box">
+            
+            <a href="#" class="btn">Open modal</a>
+            <a href="#" class="btn">Open big modal</a>
+          </div>
+          
+          <div class="proto-comments uppercase">
+            <b>Open PDF</b>
+          </div>
+          
+          <div class="color-box pad-box">
+            pdf 
+          </div>
+          
+          
+          <div class="proto-comments uppercase">
+            <b>Confirmation round</b>
+          </div>
+          
+          <div class="color-box pad-box">
+            as
+          </div>
+          
+          
             
         </div> <!-- //page-main -->
         

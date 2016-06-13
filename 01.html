@@ -88,9 +88,9 @@
         
         <div class="inner selector-holder">
           <div class="custom-select custom-select-block custom-select-size-type-1 custom-select-color-type-3 custom-select-font-size-1" data-dropdown>
-            <a href="#" class="custom-select-toggler" style="max-width: 120px;" data-dropdown-toggler><span data-dropdown-indicator>Purchase</span></a>
+            <a href="#" class="custom-select-toggler" style="max-width: 120px;" data-dropdown-toggler data-dropdown-indicator>Purchase</a>
             <div class="custom-select-content" data-dropdown-content>
-              <ul>
+              <ul class="options">
                 <li><a href="#" data-dropdown-option>Sales</a></li>
                 <li><a href="#" data-dropdown-option>Purchase</a></li>
                 <li><a href="#" data-dropdown-option>Something third</a></li>
@@ -693,10 +693,10 @@
             
             
             <div class="custom-select" data-dropdown>
-              <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select dimension</span></a>
+              <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select dimension</a>
               <input type="hidden" data-dropdown-hidden-input />
               <div class="custom-select-content" data-dropdown-content>
-                <ul>
+                <ul class="options">
                   <li><a href="#" data-dropdown-option data-dropdown-value="a">Dimension 7</a></li>
                   <li><a href="#" data-dropdown-option data-dropdown-value="b">Dimension 8</a></li>
                   <li><a href="#" data-dropdown-option data-dropdown-value="c">Dimension 9</a></li>
@@ -705,10 +705,10 @@
             </div>
             
             <div class="custom-select custom-select-color-type-1" data-dropdown data-dropdown-disable-sideclick>
-              <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select status</span></a>
+              <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select status</a>
               <input type="hidden" data-dropdown-hidden-input />
               <div class="custom-select-content" data-dropdown-content>
-                <ul>
+                <ul class="options">
                   <li><a href="#" data-dropdown-option data-dropdown-value="a">Resolved</a></li>
                   <li><a href="#" data-dropdown-option data-dropdown-value="b">Unresolved</a></li>
                   <li><a href="#" data-dropdown-option data-dropdown-value="c">All statuses</a></li>
@@ -717,10 +717,10 @@
             </div>
             
             <div class="custom-select custom-select-color-type-2" data-dropdown data-dropdown-disable-select-close>
-              <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select action</span></a>
+              <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select action</a>
               <input type="hidden" data-dropdown-hidden-input />
               <div class="custom-select-content" data-dropdown-content>
-                <ul>
+                <ul class="options">
                   <li><a href="#" data-dropdown-option data-dropdown-value="a">Approve</a></li>
                   <li><a href="#" data-dropdown-option data-dropdown-value="b">Decline</a></li>
                   <li><a href="#" data-dropdown-option data-dropdown-value="c">Put on hold</a></li>
@@ -730,12 +730,14 @@
               </div>
             </div>
             
-            <div class="custom-select custom-select-color-type-3 custom-select-font-size-1" data-dropdown>
-              <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Sales</span></a>
+            <div class="custom-select custom-select-color-type-4" data-dropdown>
+              <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select dimension</a>
+              <input type="hidden" data-dropdown-hidden-input />
               <div class="custom-select-content" data-dropdown-content>
-                <ul>
-                  <li><a href="#" data-dropdown-option>Purchase</a></li>
-                  <li><a href="#" data-dropdown-option>Sales</a></li>
+                <ul class="options">
+                  <li><a href="#" data-dropdown-option data-dropdown-value="a">Dimension 7</a></li>
+                  <li><a href="#" data-dropdown-option data-dropdown-value="b">Dimension 8</a></li>
+                  <li><a href="#" data-dropdown-option data-dropdown-value="c">Dimension 9</a></li>
                 </ul>
               </div>
             </div>
@@ -743,10 +745,10 @@
             
             <div style="padding-top: 10px;">
               <div class="custom-select custom-select-size-type-1" data-dropdown>
-                <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select dimension</span></a>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select dimension</a>
                 <input type="hidden" data-dropdown-hidden-input />
                 <div class="custom-select-content" data-dropdown-content>
-                  <ul>
+                  <ul class="options">
                     <li><a href="#" data-dropdown-option data-dropdown-value="a">Dimension 7</a></li>
                     <li><a href="#" data-dropdown-option data-dropdown-value="b">Dimension 8</a></li>
                     <li><a href="#" data-dropdown-option data-dropdown-value="c">Dimension 9</a></li>
@@ -755,10 +757,10 @@
               </div>
             
               <div class="custom-select custom-select-size-type-1 custom-select-color-type-1" data-dropdown data-dropdown-disable-sideclick>
-                <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select status</span></a>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select status</a>
                 <input type="hidden" data-dropdown-hidden-input />
                 <div class="custom-select-content" data-dropdown-content>
-                  <ul>
+                  <ul class="options">
                     <li><a href="#" data-dropdown-option data-dropdown-value="a">Resolved</a></li>
                     <li><a href="#" data-dropdown-option data-dropdown-value="b">Unresolved</a></li>
                     <li><a href="#" data-dropdown-option data-dropdown-value="c">All statuses</a></li>
@@ -767,10 +769,10 @@
               </div>
             
               <div class="custom-select custom-select-size-type-1 custom-select-color-type-2" data-dropdown data-dropdown-disable-select-close>
-                <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select action</span></a>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select action</a>
                 <input type="hidden" data-dropdown-hidden-input />
                 <div class="custom-select-content" data-dropdown-content>
-                  <ul>
+                  <ul class="options">
                     <li><a href="#" data-dropdown-option data-dropdown-value="a">Approve</a></li>
                     <li><a href="#" data-dropdown-option data-dropdown-value="b">Decline</a></li>
                     <li><a href="#" data-dropdown-option data-dropdown-value="c">Put on hold</a></li>
@@ -781,9 +783,9 @@
               </div>
               
               <div class="custom-select custom-select-size-type-1 custom-select-color-type-3 custom-select-font-size-1" data-dropdown>
-                <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Sales</span></a>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Sales</a>
                 <div class="custom-select-content" data-dropdown-content>
-                  <ul>
+                  <ul class="options">
                     <li><a href="#" data-dropdown-option>Purchase</a></li>
                     <li><a href="#" data-dropdown-option>Sales</a></li>
                   </ul>
@@ -795,10 +797,10 @@
             <div style="padding-top: 10px;">
               
               <div class="custom-select custom-select-block" data-dropdown>
-                <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select dimension</span></a>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select dimension</a>
                 <input type="hidden" data-dropdown-hidden-input />
                 <div class="custom-select-content" data-dropdown-content>
-                  <ul>
+                  <ul class="options">
                     <li><a href="#" data-dropdown-option data-dropdown-value="a">Dimension 7</a></li>
                     <li><a href="#" data-dropdown-option data-dropdown-value="b">Dimension 8</a></li>
                     <li><a href="#" data-dropdown-option data-dropdown-value="c">Dimension 9</a></li>
@@ -806,6 +808,18 @@
                 </div>
               </div>
               
+            </div>
+            
+            <div style="padding-top: 10px;">
+              <div class="custom-select custom-select-color-type-4 custom-select-has-ico" data-dropdown>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator><span class="ico ico-type-12 ico-color-type-1"></span> Sort by date (ascending)</a>
+                <div data-dropdown-content="" class="custom-select-content">
+                  <ul class="options">
+                    <li><a href="#" data-dropdown-option data-dropdown-value="date-asc"><span class="ico ico-type-12 ico-color-type-1"></span> Sort by date (ascending)</a></li>
+                    <li><a href="#" data-dropdown-option data-dropdown-value="date-desc"><span class="ico ico-type-13 ico-color-type-1"></span> Sort by date (descending)</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
             
             <div style="padding-top: 25px; padding-bottom: 150px;">

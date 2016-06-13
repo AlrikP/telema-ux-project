@@ -42,7 +42,6 @@ var App = {
             },
             create: function(e, ui) {
                 
-                
                 var lang_documents = $(e.target).data('langDocuments') || 'Documents',
                     lang_company_page = $(e.target).data('langCompanyPage') || 'Company page',
                     documents_url = $(e.target).data('documentsUrl') || '#',
@@ -110,6 +109,9 @@ var App = {
         
         // Dropdown widget
         $('[data-dropdown]').dropdown();
+        
+        // Sorter
+        $('[data-sorter]').sorter();
         
         // Clean radio buttons and checboxes cached values
         $('input[type=radio], input[type=checkbox]').each(function(i, el) {
@@ -362,6 +364,34 @@ var App = {
                 
             });
         }, this));
+        
+        $('[data-search]').each(function(i, el) {
+            var $parent = $(el),
+                $input = $parent.find('[data-search-input]'),
+                $items = $parent.find('[data-search-item]');
+                
+            $input.on('keyup', function(event) {
+                //(!/(\.gif|\.jpg|\.jpeg|\.doc|\.xls)$/i.test($attachment.val())));
+                
+                var val = $input.val();
+                if ($.trim(val) !== '') {
+                    $items.hide().each(function(j, item) {
+                        var $item = $(item),
+                            item_val = $.trim($(item).data('searchItem'));
+                        
+                        var patt = new RegExp(val,'i');
+                        if (patt.test(item_val)) {
+                            $item.show();
+                        } 
+                    });
+                    
+                }
+                else {
+                    $items.show();
+                }
+            });
+            
+        });
     }
 };
 
@@ -772,4 +802,77 @@ $(function() {
             return this;
         });
     };
-})( jQuery );
+})(jQuery);
+
+
+// Sorter plugin
+;(function($) {
+
+    var pluginName = 'sorter',
+        defaults = {
+        };
+
+    function Plugin(elem, options) {
+        
+        this.elem       = elem;
+        this.$elem      = $(this.elem);
+
+        this.options    = $.extend({}, defaults, options);
+        this._defaults  = defaults;
+        this._name      = pluginName;
+        
+        this.init();
+    }
+    
+
+    Plugin.prototype.init = function() {
+        console.log(this.$elem);
+        this.$items = this.$elem.find('[data-sorter-item]');
+        this.$holder = this.$elem.find('[data-sorter-items]');
+        
+        
+        this.$elem.on('click','[data-sorter-attr]', $.proxy(function(e) {
+            e.preventDefault();
+            var $target = $(e.target),
+                attr = $target.data('sorterAttr'),
+                type = $target.data('sorterType');
+                
+            this.sort(attr, type);
+        }, this));       
+    };
+    
+    Plugin.prototype.sort = function(sortBy, type) {
+        
+        var $sorted = _.sortBy(this.$items, function(item){ 
+            return $(item).data('sorterItem')[sortBy];
+        });
+        
+        if (type == "desc") { $sorted.reverse(); }
+        
+        this.$holder.append($sorted);
+        
+    };
+    
+    Plugin.prototype.destroy = function () {
+        $.data(this.elem, '_' + pluginName, null);
+        //this.$toggler.off('.' + this._name + '-event');
+    };
+
+    $.fn[pluginName] = function(arg) {
+        
+        var args = arguments;
+        
+        return this.each(function() {
+            var d = $.data(this, '_' + pluginName);
+            
+            if (!d && (typeof arg === 'object' || typeof arg === 'undefined')) {
+                $.data(this, '_' + pluginName, 
+                new Plugin(this, arg));
+            }
+            else if (d && typeof arg === 'string' && typeof d[arg] === 'function') {
+                d[arg].apply( d, Array.prototype.slice.call(args, 1));
+            }
+            return this;
+        });
+    };
+})(jQuery);

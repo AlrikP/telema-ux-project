@@ -23,6 +23,10 @@ $color-19: #d6d3d3;
 $color-20: #d40f21;
 $color-21: #f05361;
 $color-22: #e7e4e4;
+$color-23: #f0ce78;
+$color-24: #ef868f;
+$color-25: #e0dede;
+$color-26: #ececec;
 
 
 $font-size: 14px;
@@ -238,6 +242,20 @@ hr {
           color: $color-1;
         }
       }
+      
+      &-bg-type-2 {
+        background: none; border-color: transparent;
+        color: $color-1;
+        &::-webkit-input-placeholder {
+          color: $color-1;
+        }
+        &::-moz-placeholder {
+          color: $color-1;
+        }
+        &:-ms-input-placeholder {
+          color: $color-1;
+        }
+      }
     }
     textarea#{&} {
       resize: none; padding: 9px 12px; height: auto;
@@ -433,7 +451,7 @@ hr {
     @include box-sizing(border-box);
     @include box-shadow(2px, 0px, 7px, rgba($color-1,0.17));
     
-    ul {
+    ul.options {
       margin: 0; padding: 0; list-style-type: none;
       
       li {
@@ -468,7 +486,7 @@ hr {
       margin-top: 0;
       @include box-shadow(none);
       
-      ul {
+      ul.options {
         a {
           color: $color-1;
           &:hover {
@@ -500,7 +518,7 @@ hr {
       margin-top: 0;
       @include box-shadow(none);
       
-      ul {
+      ul.options {
         a {
           color: $color-3;
           &:hover {
@@ -526,11 +544,42 @@ hr {
       margin-top: 0;
       @include box-shadow(none);
       
-      ul {
+      ul.options {
         a {
           color: $color-3;
           &:hover {
             background: $color-12;
+          }
+        }
+      }
+    }
+  }
+  
+  &-color-type-4 {
+    .custom-select-toggler {
+      background: $color-10; color: $color-1;
+      padding-right: 46px; border: 1px solid $color-10;
+      
+      &:after {
+         border-left: 1px solid $color-11;
+      }
+      &:before {
+        content: ""; display: block; position: absolute; 
+        width: 1px; height: 100%; top: 0; right: 35px;
+        background: $color-26;
+      }
+    }
+    .custom-select-content {
+      background: $color-10; color: $color-1;
+      border: none; border-top: 1px solid $color-11; 
+      margin-top: 0;
+      @include box-shadow(none);
+      
+      ul.options {
+        a {
+          color: $color-1;
+          &:hover {
+            background: $color-9;
           }
         }
       }
@@ -547,7 +596,8 @@ hr {
     }
     
     &.custom-select-color-type-1,
-    &.custom-select-color-type-2 {
+    &.custom-select-color-type-2,
+    &.custom-select-color-type-4 {
       
       .custom-select-toggler {
         padding-right: 40px;
@@ -558,7 +608,7 @@ hr {
     }
     
     .custom-select-content {
-      ul {
+      ul.options {
         a {
           padding: 6px 10px;
         }
@@ -577,6 +627,29 @@ hr {
     &.custom-select-size-type-1 {
       .custom-select-toggler {
         padding-top: 6px;
+      }
+    }
+  }
+  
+  &-has-ico {
+    .custom-select-toggler {
+      position: relative; padding-left: 45px;
+      .ico {
+        position: absolute;
+        top: 50%; left: 10px;
+        @include transform(translateY(-50%));
+      }
+    }
+    .custom-select-content {
+      ul.options {
+        a {
+          padding-left: 45px; position: relative;
+          .ico {
+            position: absolute;
+            top: 50%; left: 10px;
+            @include transform(translateY(-50%));
+          }
+        }
       }
     }
   }
@@ -736,23 +809,6 @@ hr {
         }
       }
     }
-    
-    /*
-    &.has-link {
-      padding: 0;
-      a {
-        display: block; outline: 0; color: $color-9; background: $color-11;
-        padding: 6px 10px;
-        &:hover { color: $color-9; }
-      }
-    }
-    */
-
-    /*
-    &.menu-bottom {
-      margin-top: 5px;
-    }
-    */
 
     &.ui-autocomplete-top-link {
       color: $color-4;
@@ -771,13 +827,6 @@ hr {
       color: $color-9;
       background: $color-11;
     }
-    
-
-    /*
-    .solutions-search & {
-      padding: 10px;
-    }
-    */
   }
 }
 
@@ -809,6 +858,13 @@ h4, .h4 {
 .color-type-2 {
   color: $color-12;
 }
+.color-type-3 {
+  color: $color-1;
+}
+.color-type-4 {
+  color: $color-13;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -1434,7 +1490,11 @@ table {
 
 .color-box {
   background: $color-9;
-  min-height: 50px;
+  min-height: 20px;
+  
+  &-type-1 {
+    background: $color-25;
+  }
 }
 
 .margin-box {
@@ -1445,13 +1505,14 @@ table {
   padding: 40px 35px 45px 45px;
   @include box-sizing(border-box);
   
-  + .pad-box {
-    border-top: 1px solid $color-11;
+  &-type-1 {
+    padding-top: 15px; padding-bottom: 15px;
   }
-  
-  + .pad-box-bottom {
-    padding: 15px 35px 15px 45px;
-    border-top: 1px solid $color-11;
+  &-type-2 {
+    padding-top: 25px; padding-bottom: 25px;
+  }
+  &-type-3 {
+    padding-top: 10px; padding-bottom: 10px;
   }
 }
 
@@ -1794,6 +1855,200 @@ ul.nav-menu {
 
 
 //
+//   BLOCK HEADER
+//   ========================================
+//
+
+.block-header {
+  padding: 15px 35px 15px 45px;
+  background-color: $color-10;
+  &-type-1 { background-color: $color-23; }
+  &-type-2 { background-color: $color-24; }
+}
+
+
+//
+//   LIST BLOCK
+//   ========================================
+//
+
+.list-block {
+  
+  @include flexbox();
+  @include justify-content(space-between);
+  
+  &-side {
+    width: 275px;
+    @include flexbox();
+    @include flex(0 1 275px);
+    @include flex-direction(column);
+    background: $color-3;
+    
+    .custom-select {
+      width: 275px;
+    }
+    
+    .catalog-holder {
+      
+      position: relative;
+      @include flex(1 0 auto);
+      
+      .catalog {
+        /*
+        position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+        overflow-y: auto;
+        */
+      }
+    }
+    
+    .sub-title {
+      padding: 9px 15px; font-weight: bold;
+      background: $color-4; color: $color-3;
+      text-transform: uppercase;
+    }
+    
+    .item {
+      position: relative; width: 275px; overflow: hidden;
+      border-bottom: 1px solid $color-10;
+      @include box-sizing(border-box);
+      
+      .item-inner {
+        display: block;
+        padding: 9px 15px;
+      }
+      
+      &.item-type-1 {
+        padding: 3px 15px;
+        
+        .ico {
+          margin-right: 5px;
+        }
+      }
+    }
+    
+    table {
+      line-height: 1.15;
+      
+      td {
+        padding: 0 5px;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  
+  .catalog-filter {
+    @include flexbox();
+    @include align-items(center);
+    padding: 0 15px;
+    
+    .ico {
+      @include flex(1 0 auto);
+    }
+    
+    .textbox {
+      padding-left: 5px;
+    }
+  }
+  
+  &-content {
+    width: 715px;
+    @include flex(0 1 715px);
+    min-height: 300px;
+    background: $color-9;
+  }
+  
+  
+}
+
+
+//
+//   CATALOG
+//   ========================================
+//
+
+.catalog {
+  
+  .item {
+    position: relative; width: 275px;
+    border-bottom: 1px solid $color-10;
+    
+    &:hover { background-color: $color-9; }
+    
+    &.active {
+      background-color: $color-9;
+      
+      &:after {
+        content: ""; display: block;
+        position: absolute; width: 20px; height: 100%;
+        background: $color-9; left: 100%; top: 0;
+      }
+    }
+    
+    &.item-border-type-1 {
+      border-top: 3px solid $color-10;
+    }
+    
+    &.marker {
+      &:before {
+        content: ""; position: absolute; top: 0; right: 0; width: 5px; height: 100%; z-index: 2;
+      }
+
+      &-type-1 {
+        &:before {
+          background: #f7ac43;
+        }
+      }
+      &-type-2 {
+        &:before {
+          background: #63b65d;
+        }
+      }
+      &-type-3 {
+        &:before {
+          background: $color-4;
+        }
+      }
+    }
+  }
+  
+  .item-inner {
+    display: block;
+    padding: 9px 15px;
+    
+    &:before {
+      content: ""; height: 100%; width: 30px; position: absolute; top: 0; right: 0; z-index: 1;
+      background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+      background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+      background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+      background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+      background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+    }
+  }
+  
+  .item {
+    &.active, &:hover {
+      .item-inner {
+        &:before {
+          background: -moz-linear-gradient(left, rgba(241,241,241,0) 0%, rgba(241,241,241,1) 100%);
+          background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(241,241,241,0)), color-stop(100%,rgba(241,241,241,1)));
+          background: -webkit-linear-gradient(left, rgba(241,241,241,0) 0%,rgba(241,241,241,1) 100%);
+          background: -o-linear-gradient(left, rgba(241,241,241,0) 0%,rgba(241,241,241,1) 100%);
+          background: -ms-linear-gradient(left, rgba(241,241,241,0) 0%,rgba(241,241,241,1) 100%);
+          background: linear-gradient(to right, rgba(241,241,241,0) 0%,rgba(241,241,241,1) 100%);
+        }
+      }
+    }
+  }
+}
+
+
+//
 //   BUBBLE
 //   ========================================
 //
@@ -1892,8 +2147,6 @@ ul.nav-menu {
 }
 
 
-
-
 //
 //   DATEPICKER
 //   ========================================
@@ -1983,6 +2236,15 @@ ul.nav-menu {
     }
   }
 }
+
+
+//
+//   MARGINS, PADDINGS AND BORDERS
+//   ========================================
+//
+
+.margin-bottom { margin-bottom: 1em; }
+.border-top { border-top: 1px solid $color-11; }
 
 
 //
