@@ -1994,22 +1994,22 @@ ul.nav-menu li:last-child:after {
   display: none;
 }
 
-.intro-box {
+.intro-block {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 25px 0 0;
+  margin: 0;
   padding: 0;
 }
-.intro-box-left {
+.intro-block-left {
   -webkit-flex: 1 1 auto;
   -moz-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
-.intro-box-right {
+.intro-block-right {
   width: 270px;
   padding-left: 80px;
   -webkit-flex: 1 0 auto;
@@ -2212,6 +2212,149 @@ ul.nav-menu li:last-child:after {
   background: linear-gradient(to right, rgba(241, 241, 241, 0) 0%, #f1f1f1 100%);
 }
 
+.flow-block {
+  display: table;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+.flow-block .flow-row {
+  display: table-row;
+}
+.flow-block .flow-item {
+  display: table-cell;
+  padding: 0;
+  vertical-align: top;
+  position: relative;
+  width: 4%;
+}
+.flow-block .flow-item .flow-dot {
+  height: 16px;
+  width: 16px;
+  display: block;
+  background: #c3c3c3;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  line-height: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+}
+.flow-block .flow-item .flow-name, .flow-block .flow-item .flow-desc {
+  color: #808080;
+  line-height: 1.1;
+}
+.flow-block .flow-item .flow-name {
+  font-weight: bold;
+  padding-top: 9px;
+}
+.flow-block .flow-item-type-1 .flow-dot {
+  background-color: #f7ac43;
+}
+.flow-block .flow-item-type-2 .flow-dot {
+  background-color: #ed1b2e;
+}
+.flow-block .flow-item-type-2 .flow-name {
+  color: #000810;
+}
+.flow-block .flow-item:before {
+  display: block;
+  content: "";
+  top: 8px;
+  height: 1px;
+  background: #c3c3c3;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  right: 0;
+}
+.flow-block .flow-item:last-child {
+  width: 1%;
+}
+.flow-block .flow-item:last-child:before {
+  display: none;
+}
+
+.flipper-holder {
+  position: relative;
+}
+
+.flipper {
+  position: relative;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.flipper .flipper-front, .flipper .flipper-back {
+  display: block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
+}
+.flipper .flipper-front {
+  position: relative;
+}
+.flipper .flipper-back {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.flipper .flipper-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.flipper-fixed .flipper-back {
+  height: 100%;
+}
+.flipper[data-flipper-flipped=true] .flipper-front {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.flipper[data-flipper-flipped=true] .flipper-back {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.no-csstransforms3d .flipper .flipper-back {
+  display: none;
+}
+.no-csstransforms3d .flipper[data-flipper-flipped=true] .flipper-front {
+  display: none;
+}
+.no-csstransforms3d .flipper[data-flipper-flipped=true] .flipper-back {
+  display: block;
+  position: relative;
+}
+
+/* customer-support-flipper */
+.flipper-styled .flipper-back {
+  background: #ffffff;
+}
+.flipper-styled .flipper-close {
+  display: block;
+  outline: 0;
+  position: absolute;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  z-index: 100;
+  outline: 0;
+  height: 24px;
+  width: 24px;
+  background: url("../images/dialog_close.png") no-repeat center center;
+}
+
 .bubble {
   z-index: 1000;
   position: absolute;
@@ -2395,6 +2538,10 @@ ul.nav-menu li:last-child:after {
   background: #ffffff;
 }
 
+.margin-top {
+  margin-top: 1em;
+}
+
 .margin-bottom {
   margin-bottom: 1em;
 }
@@ -2457,6 +2604,10 @@ ul.nav-menu li:last-child:after {
 
 .bg-color-type-4 {
   background-color: #c3c3c3;
+}
+
+.bg-color-type-5 {
+  background-color: #ffffff;
 }
 
 [data-visible=false] {

@@ -27,6 +27,7 @@ $color-23: #f0ce78;
 $color-24: #ef868f;
 $color-25: #e0dede;
 $color-26: #ececec;
+$color-27: #f7ac43;
 
 
 $font-size: 14px;
@@ -1835,13 +1836,13 @@ ul.nav-menu {
 
 
 //
-//   INTRO BOX
+//   INTRO BLOCK
 //   ========================================
 //
 
-.intro-box {
+.intro-block {
   @include flexbox();
-  margin: 25px 0 0; padding: 0;
+  margin: 0; padding: 0;
   
   &-left {
     @include flex(1 1 auto);
@@ -2000,7 +2001,7 @@ ul.nav-menu {
 
       &-type-1 {
         &:before {
-          background: #f7ac43;
+          background: $color-27;
         }
       }
       &-type-2 {
@@ -2046,6 +2047,152 @@ ul.nav-menu {
     }
   }
 }
+
+
+//
+//   FLOW BLOCK
+//   ========================================
+//
+
+.flow-block {
+  
+  display: table; width: 100%; margin: 0; padding: 0;
+  border-collapse: collapse;
+  
+  .flow-row {
+    display: table-row;
+  }
+  
+  .flow-item {
+    display: table-cell; padding: 0;
+    vertical-align: top; position: relative;
+    width: 4%;
+    
+    .flow-dot {
+      height: 16px; width: 16px; display: block;
+      background: $color-11; text-align: center;
+      color: $color-3; font-family: $font-family-second;
+      font-weight: bold; font-size: $font-size;
+      position: relative; z-index: 1; line-height: 16px;
+      @include border-radius(16px);
+    }
+    
+    .flow-name, .flow-desc {
+      color: $color-13; line-height: 1.1;
+    }
+    
+    .flow-name {
+      font-weight: bold; padding-top: 9px;
+    }
+    
+    &-type-1 {
+      .flow-dot {
+        background-color: $color-27;
+      }
+    }
+    &-type-2 {
+      .flow-dot {
+        background-color: $color-4;
+      }
+      .flow-name {
+        color: $color-1;
+      }
+    }
+    
+    &:before {
+      display: block; content: ""; top: 8px;
+      height: 1px; background: $color-11;
+      position: absolute; left: 0; top: 8px; right: 0;
+    }
+    &:last-child {
+      width: 1%;
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+
+//
+//   FLIPPER
+//   ========================================
+//
+
+.flipper-holder {
+  position: relative;
+}
+
+.flipper {
+  position: relative;
+  @include prefix(perspective, 800px);
+  @include prefix(transform-style, preserve-3d);
+    
+    
+  .flipper-front, .flipper-back {
+    display: block;
+    @include prefix(backface-visibility, hidden);
+    @include prefix(transition, transform 1s, true);
+  }
+
+  .flipper-front {
+    position: relative;
+  }
+
+  .flipper-back {
+    @include prefix(transform, rotateY(-180deg));
+    position: absolute;
+    width: 100%; top: 0; left: 0;
+  }
+  
+  .flipper-close {
+    position: absolute; top: 15px; right: 15px;
+  }
+
+  &-fixed {
+    .flipper-back {
+      height: 100%;
+    }
+  }
+
+  &[data-flipper-flipped=true] {
+    .flipper-front {
+      @include prefix(transform, rotateY(180deg));
+    }
+    .flipper-back {
+      @include prefix(transform, rotateY(0deg));
+    }
+  }
+  
+  .no-csstransforms3d & {
+    .flipper-back {
+      display: none;
+    }
+    &[data-flipper-flipped=true] {
+      .flipper-front {
+        display: none;
+      }
+      .flipper-back {
+        display: block;
+        position: relative;
+      }
+    }
+  }
+}
+
+/* customer-support-flipper */
+  .flipper-styled {
+    .flipper-back {
+      background: #ffffff;
+    }
+
+    .flipper-close {
+      display: block; outline: 0; position: absolute;
+      position: absolute; top: 18px; right: 18px; z-index: 100;
+      outline: 0; height: 24px; width: 24px;
+      background: url('../images/dialog_close.png') no-repeat center center;
+    }
+  }
 
 
 //
@@ -2243,6 +2390,7 @@ ul.nav-menu {
 //   ========================================
 //
 
+.margin-top { margin-top: 1em; }
 .margin-bottom { margin-bottom: 1em; }
 .border-top { border-top: 1px solid $color-11; }
 
@@ -2267,6 +2415,7 @@ ul.nav-menu {
 .bg-color-type-2 { background-color: $color-10; }
 .bg-color-type-3 { background-color: $color-4; }
 .bg-color-type-4 { background-color: $color-11; }
+.bg-color-type-5 { background-color: $color-3; }
 
 
 //

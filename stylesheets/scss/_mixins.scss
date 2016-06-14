@@ -53,6 +53,19 @@
           transform: $value;
 }
 
+
+@mixin prefix($attr, $value, $double:false) {
+  
+  @if $double == true {
+    -webkit-#{$attr}: -webkit-#{$value};
+  }
+  @else {
+    -webkit-#{$attr}: $value;
+  }
+  
+  #{$attr}: $value;
+}
+
 @mixin query($value: $tablet-1) {
   @media screen and (max-width: $value) {
     @content;

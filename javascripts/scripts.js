@@ -271,7 +271,6 @@ var App = {
             }); 
         });
         
-        
         // Row filter 
         $(document).on('change', '[data-row-filter] input[type=radio]', $.proxy(function(e) {
             var $target = $(e.target),
@@ -365,14 +364,14 @@ var App = {
             });
         }, this));
         
+        
+        // Search filter
         $('[data-search]').each(function(i, el) {
             var $parent = $(el),
                 $input = $parent.find('[data-search-input]'),
                 $items = $parent.find('[data-search-item]');
                 
             $input.on('keyup', function(event) {
-                //(!/(\.gif|\.jpg|\.jpeg|\.doc|\.xls)$/i.test($attachment.val())));
-                
                 var val = $input.val();
                 if ($.trim(val) !== '') {
                     $items.hide().each(function(j, item) {
@@ -384,14 +383,35 @@ var App = {
                             $item.show();
                         } 
                     });
-                    
                 }
                 else {
                     $items.show();
                 }
             });
-            
         });
+        
+        
+        // Flipper
+        if (!Modernizr.csstransforms3d) {
+            $('[data-flipper].fixed').each(function() {
+                $(this).find('.flipper-back').height($(this).find('.flipper-front').height());
+            });
+        }
+
+        $('[data-flipper-toggler]').on('click', function(e) {
+            e.preventDefault();
+            var $parent = $(e.target).closest('[data-flipper]');
+            
+            if ($parent.attr('data-flipper-flipped') !== 'true') { 
+                $parent.attr('data-flipper-flipped', true);
+            }
+            else {
+                $parent.attr('data-flipper-flipped', false);
+            }
+        });
+        
+        
+        
     }
 };
 
@@ -739,7 +759,7 @@ $(function() {
         this.$toggler.on('click.' + this.pluginName + '-event', $.proxy(function(e) {
             e.preventDefault();
             if (this.$content.length) {
-                if (this.$elem.attr('data-dropdown-visible') !== 'true') {    
+                if (this.$elem.attr('data-dropdown-visible') !== 'true') {
                     setTimeout($.proxy(function() {
                         this.$elem.attr('data-dropdown-visible', true);
                         
