@@ -411,6 +411,19 @@ var App = {
         });
         
         
+        // PDF Viewer
+        $('[data-pdf-open]').on('click', function(e) {
+            e.preventDefault();
+            
+            var id = $(this).data('pdfId');
+            if (id) {
+                $('.pdf-holder[data-pdf-id='+id+']').addClass('pdf-holder-visible');
+            }
+        });
+        $('[data-pdf-close]').on('click', function(e) {
+            e.preventDefault();
+            $(this).closest('.pdf-holder').removeClass('pdf-holder-visible');
+        });
         
     }
 };

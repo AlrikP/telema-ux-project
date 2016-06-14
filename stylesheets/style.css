@@ -2337,24 +2337,6 @@ ul.nav-menu li:last-child:after {
   position: relative;
 }
 
-/* customer-support-flipper */
-.flipper-styled .flipper-back {
-  background: #ffffff;
-}
-.flipper-styled .flipper-close {
-  display: block;
-  outline: 0;
-  position: absolute;
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  z-index: 100;
-  outline: 0;
-  height: 24px;
-  width: 24px;
-  background: url("../images/dialog_close.png") no-repeat center center;
-}
-
 .bubble {
   z-index: 1000;
   position: absolute;
@@ -2536,6 +2518,99 @@ ul.nav-menu li:last-child:after {
 }
 .ui-datepicker-calendar td.ui-datepicker-today {
   background: #ffffff;
+}
+
+.pdf-holder {
+  position: relative;
+  z-index: 100;
+  height: 1px;
+}
+
+.pdf-viewer {
+  display: none;
+  left: 100%;
+  top: 0;
+  position: absolute;
+  width: 600px;
+  padding: 1px 20px 20px;
+}
+.pdf-holder-visible .pdf-viewer {
+  display: block;
+}
+.pdf-viewer .pdf-content {
+  width: 600px;
+}
+
+.pdf-actions {
+  margin-top: 7px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.pdf-actions .pdf-navigation {
+  background: #3e3e3e;
+  height: 48px;
+  -webkit-flex: 1 0 auto;
+  -moz-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.pdf-actions .pdf-navigation .pdf-prev, .pdf-actions .pdf-navigation .pdf-next {
+  display: block;
+  outline: 0;
+  height: 48px;
+  width: 48px;
+}
+.pdf-actions .pdf-navigation .pdf-prev.disabled, .pdf-actions .pdf-navigation .pdf-next.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.pdf-actions .pdf-navigation .pdf-prev {
+  background: url("../images/prev.png") no-repeat center center;
+}
+.pdf-actions .pdf-navigation .pdf-next {
+  background: url("../images/next.png") no-repeat center center;
+}
+.pdf-actions .pdf-navigation .pdf-page {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 auto;
+  -moz-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 24px;
+}
+.pdf-actions .pdf-remove {
+  width: 52px;
+  height: 48px;
+  background: #3e3e3e url("../images/trashcan1.png") no-repeat center center;
+  margin-left: 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 .margin-top {
