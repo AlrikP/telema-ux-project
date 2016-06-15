@@ -2,7 +2,7 @@ var Framework = {
     init: function() {
         
         
-        //moment.locale('et');
+        // moment.locale('et');
         moment.updateLocale('en', {
             week : {
                 dow : 1, // Monday is the first day of the week.
@@ -10,98 +10,6 @@ var Framework = {
             }
         });
         
-        // Main search
-        $('[data-search-main]').autocomplete({
-            source: function(request, response) {
-                var data = [
-                    { value: 'Kuke pood', category: 'Companies', url: 'http://google.com' },
-                    { value: 'Kuke pagariäri', category: 'Companies', url: 'http://google.com' },
-                    { value: 'Kuke pood Põlva branch', category: 'Branches', url: 'http://google.com' },
-                    { value: 'Kuke pood Pärnu branch', category: 'Branches', url: 'http://google.com' },
-                    { value: 'Kuke pagariäri Viinistu branch', category: 'Branches', url: 'http://google.com' },
-                    { value: 'Kuke pagariäri Haapsalu branch', category: 'Branches', url: 'http://google.com' },
-                    { value: 'Kuke pagariäri Puhja branch', category: 'Branches', url: 'http://google.com' },
-                    { value: 'Kuke pagariäri Puka branch', category: 'Branches', url: 'http://google.com' },
-                    { value: 'Kuke pood Tartu branch', category: 'Branches', url: 'http://google.com' },
-                    { value: 'Kuke pood Tallinn branch', category: 'Branches', url: 'http://google.com' },
-                    { value: 'Kuke pood Elva branch', category: 'Branches', url: 'http://google.com' }
-                ];
-
-                var results = $.ui.autocomplete.filter(data, request.term),
-                    lang_noResults = this.element.data('langNoResults') || 'No matches found';
-                
-                if (!results.length) {
-                    response([{ category: 'Branches', value: lang_noResults, empty: true }, { category: 'Companies', value: lang_noResults, empty: true}]);
-                } else {
-                    response(results);
-                }
-            },
-            select: function(e, ui) {
-                // redirect
-                window.location = ui.item.url;
-            },
-            create: function(e, ui) {
-                
-                var lang_documents = $(e.target).data('langDocuments') || 'Documents',
-                    lang_company_page = $(e.target).data('langCompanyPage') || 'Company page',
-                    documents_url = $(e.target).data('documentsUrl') || '#',
-                    lang_search_documents = $(e.target).data('langSearchDocuments') || 'Search from documents',
-                    isAdvanced = $(e.target).data('searchMainAdvanced') !== undefined;
-                
-                $(e.target).data('ui-autocomplete')._renderItem = function( ul, item ) {
-                    if (item.empty) {
-                        return $( "<li>" )
-                            .append( item.value )
-                            .appendTo( ul );
-                    }
-                    else {
-                        var item_content = item.value;
-                        if (isAdvanced) {
-                            item_content += '<div class="meta"><a href="'+ documents_url+ '">'+ lang_documents +'</a> | <a href="'+ item.url +'">' + lang_company_page +'</a></div>';
-
-                        }
-                        return $( "<li>" )
-                            .append( item_content ).on('click', 'a', function(e) { e.stopPropagation(); })
-                            .appendTo( ul );
-                    }
-                };
-                
-                
-                $(e.target).data('ui-autocomplete')._renderMenu = function(ul, items) {
-                    var currentCategory = '';
-                
-                    $('<li class="ui-autocomplete-top-link"><a href="#">'+ lang_search_documents+'</li>')
-                        .data("ui-autocomplete-item", { value:"" })
-                        .appendTo(ul);
-                    
-                    $.each(items, $.proxy(function(index, item) {
-                        var li;
-
-                        if (item.category != currentCategory) {
-                           currentCategory = item.category;
-                            
-                            $('<li class="ui-autocomplete-category">'+ item.category+'</li>')
-                                .data("ui-autocomplete-item", { value:"" })
-                                .appendTo(ul);
-                        }
-                        li = this._renderItemData(ul, item);
-
-                        if (item.category) {
-                            li.attr('aria-label', item.category + ' : '+ item.value);
-                        }
-                    }, this));
-                    
-                    /*
-                    if (!items[0].empty) {
-                        $('<li class="ui-autocomplete-more-link"><a href="#">Show more</li>')
-                            .data("ui-autocomplete-item", { value:"" })
-                            .appendTo(ul);
-                    }
-                    */
-                };
-                
-            }
-        });
         
         $('[data-modal]').on('click', $.proxy(function(e) {
             e.preventDefault();
@@ -145,29 +53,38 @@ var Framework = {
         // Bubble widget
         $('[data-bubble]').bubble();
         
+        
         // Dropdown widget
         $('[data-dropdown]').dropdown();
         
+        
         // Sorter
         $('[data-sorter]').sorter();
+        
+        
+        // Form attachment
+        $('[data-form-attachment]').formAttachment();
+        
         
         // Clean radio buttons and checboxes cached values
         $('input[type=radio], input[type=checkbox]').each(function(i, el) {
             $(el).prop('checked', $(el).attr('checked') === 'checked' ? true : false);
         });
         
+        
         // Date selector
         $('[data-date-selector-marker]').click(function(e) {
             e.preventDefault();
             var $target = $(e.target),
                 $parent = $target.closest('[data-date-selector-parent]'),
-                $start_input = $parent.find('[data-date-selector-start]'),
-                $end_input = $parent.find('[data-date-selector-end]'),
+                $start_input = $parent.find('[data-date-selector-start]').not($parent.find('[data-date-selector-parent] [data-date-selector-start]')),
+                $end_input = $parent.find('[data-date-selector-end]').not($parent.find('[data-date-selector-parent] [data-date-selector-end]')),
                 format = 'DD.MM.YYYY',
-                type = $target.data('dateSelectorMarker'),
+                type = $target.data('dateSelectorMarker') || 'today',
                 start_format = $start_input.data('dateFormat') || format,
-                end_format = $end_input.data('dateFormat') || format;
-                
+                end_format = $end_input.data('dateFormat') || format,
+                $picker_start = $parent.find('[data-date-picker=start]'),
+                $picker_end = $parent.find('[data-date-picker=end]');
             
             if (type == 'today') {
                 $start_input.val(moment().format(start_format));
@@ -181,31 +98,54 @@ var Framework = {
                 $start_input.val(moment().add(-6, 'days').format(start_format));
                 $end_input.val(moment().format(end_format));
             }
-            else if (type == 'this-week') {
-                $start_input.val(moment().startOf('week').format(start_format));
-                $end_input.val(moment().endOf('week').format(end_format));
+            else if (type == 'last-30') {
+                $start_input.val(moment().add(-29, 'days').format(start_format));
+                $end_input.val(moment().format(end_format));
             }
             else if (type == 'last-week') {
                 $start_input.val(moment().add(-1, 'weeks').startOf('week').format(start_format));
                 $end_input.val(moment().add(-1, 'weeks').endOf('week').format(end_format));
             }
+            else if (type == 'last-month') {
+                $start_input.val(moment().add(-1, 'months').startOf('month').format(start_format));
+                $end_input.val(moment().add(-1, 'months').endOf('month').format(end_format));
+            }
+            else if (type == 'this-week') {
+                $start_input.val(moment().startOf('week').format(start_format));
+                $end_input.val(moment().endOf('week').format(end_format));
+            }
             else if (type == 'this-month') {
                 $start_input.val(moment().startOf('month').format(start_format));
                 $end_input.val(moment().endOf('month').format(end_format));
             }
-            else if (type == 'last-30') {
-                $start_input.val(moment().add(-29, 'days').format(start_format));
-                $end_input.val(moment().format(end_format));
+            else if (type == 'next-7') {
+                $start_input.val(moment().add(1, 'days').format(start_format));
+                $end_input.val(moment().add(7, 'days').format(end_format));
             }
+            
             else if (type == 'bubble') {
-                var $bubble = $target.closest('[data-bubble]'),
-                    $bubble_start = $bubble.find('[data-date-selector-bubble-start]'),
-                    $bubble_end = $bubble.find('[data-date-selector-bubble-end]');
+                var $bubble = $target.closest('[data-bubble]');
+                $bubble
+                    .closest('[data-date-selector-parent]')
+                    .find('[data-date-selector-start]')
+                    .not($bubble.find('[data-date-selector-parent] [data-date-selector-start]'))
+                    .val($start_input.val());
                     
-                if ($bubble_start.length) { $start_input.val($bubble_start.val()); }
-                if ($bubble_end.length) { $end_input.val($bubble_end.val()); }
+                $bubble
+                    .closest('[data-date-selector-parent]')
+                    .find('[data-date-selector-end]')
+                    .not($bubble.find('[data-date-selector-parent] [data-date-selector-end]'))
+                    .val($end_input.val());
+            }
+            
+            if ($picker_start.length) {
+                $picker_start.datepicker( "setDate", moment($start_input.val(), start_format).toDate());
+            }
+            if ($picker_end.length) {
+                $picker_end.datepicker( "setDate", moment($end_input.val(), end_format).toDate());
             }
         });
+        
         
         // Datepicker
         $('[data-date-picker]').each(function(i, el) {
@@ -220,67 +160,6 @@ var Framework = {
         });
         
         
-        // Support attachment input change
-        $('[data-support-attachment]').change(function(e) {
-            var $target = $(this),
-                value = $target.val(),
-                $list = $target.closest('form').find('.attached-file');
-            
-            if (value.length) {
-                $list.find('.item').text(value);
-                $list.show();
-            } 
-        });
-        
-        // Support attachment clear
-        $('[data-support-attachment-clear]').on('click', function(e) {
-            e.preventDefault();
-            
-            var $form = $(e.target).closest('form'),
-                $list = $form.find('.attached-file'),
-                $input = $form.find('[data-support-attachment]');
-                
-            if ($input.length) {
-                $input.wrap('<form>').closest('form').get(0).reset();
-                $input.unwrap();
-                $list.hide();
-            }
-        });
-        
-        // Support form submit
-        $('.support form').submit(function(e) {
-            
-            e.preventDefault();
-            var $support = $(this).closest('.support'),
-                $error = $support.find('.support-error'),
-                $success = $support.find('.support-success'),
-                $attachment = $support.find('input[type=file]'),
-                show_error = false;
-            
-            
-            if ($attachment.val() && (!/(\.gif|\.jpg|\.jpeg|\.doc|\.xls)$/i.test($attachment.val()))) {
-                show_error = true;
-            }
-            
-            if (show_error) {
-                $error.show();
-                $error.find('.btn').one('click', function(e) { 
-                    e.preventDefault(); 
-                    $error.hide(); 
-                });
-            }
-            else {
-                
-                // Make ajax send  here !
-                
-                $success.show();
-                $success.find('.btn').one('click', function(e) { 
-                    e.preventDefault(); 
-                    $success.hide(); 
-                });
-            }
-        });
-        
         // Toggle elements visibility
         $(document).on('click','[data-visibility-toggler]', function(e) {
             e.preventDefault();
@@ -293,8 +172,9 @@ var Framework = {
             $hidden.attr('data-visible','true'); 
         });
         
+        
         // Close notifications
-        $(document).on('click','.js-notification-close', function(e) {
+        $(document).on('click','[data-notification-close]', function(e) {
             e.preventDefault();
             var $notification = $(e.target).closest('.notification');
             
@@ -308,6 +188,7 @@ var Framework = {
                 $notification.removeClass('notification-visible').removeAttr('style');
             }); 
         });
+        
         
         // Row filter 
         $(document).on('change', '[data-row-filter] input[type=radio]', $.proxy(function(e) {
@@ -377,50 +258,31 @@ var Framework = {
             }
         }, this));
         
+        
         // List filter
-        $(document).on('keyup', '[data-list-filter-opt]', $.proxy(function(e) {
-            var $target = $(e.target),
-                $filter = $target.closest('[data-list-filter]'),
-                $items = $filter.find('[data-list-filter-id]'),
-                $empty = $filter.find('[data-list-filter-empty]'),
-                val = $target.val();
-                
-            
-            $items.each(function(i, el) {
-                if ($(el).data('listFilterId').toLowerCase().indexOf(val.toLowerCase()) != -1) {
-                    $(el).show();
-                    $empty.hide();
-                }
-                else {
-                    $(el).hide();
-                }
-                
-                if(!$items.filter(':visible').length) {
-                    $empty.show();
-                }
-                
-            });
-        }, this));
-        
-        
-        // Search filter
-        $('[data-search]').each(function(i, el) {
+        $('[data-list-filter]').each(function(i, el) {
             var $parent = $(el),
-                $input = $parent.find('[data-search-input]'),
-                $items = $parent.find('[data-search-item]');
-                
+                $input = $parent.find('[data-list-filter-input]'),
+                $items = $parent.find('[data-list-filter-item]'),
+                $empty = $parent.find('[data-list-filter-empty]');
+            
             $input.on('keyup', function(event) {
                 var val = $input.val();
                 if ($.trim(val) !== '') {
+                    $empty.hide();
                     $items.hide().each(function(j, item) {
                         var $item = $(item),
-                            item_val = $.trim($(item).data('searchItem'));
-                        
+                            item_val = $.trim($(item).data('listFilterItem'));
+                    
                         var patt = new RegExp(val,'i');
                         if (patt.test(item_val)) {
                             $item.show();
                         } 
                     });
+                    
+                    if(!$items.filter(':visible').length) {
+                        $empty.show();
+                    }
                 }
                 else {
                     $items.show();
@@ -920,6 +782,83 @@ $(function() {
         
         this.$holder.append($sorted);
         
+    };
+    
+    Plugin.prototype.destroy = function () {
+        $.data(this.elem, '_' + pluginName, null);
+        this.$$elem.off('.' + this._name + '-event');
+    };
+
+    $.fn[pluginName] = function(arg) {
+        
+        var args = arguments;
+        
+        return this.each(function() {
+            var d = $.data(this, '_' + pluginName);
+            
+            if (!d && (typeof arg === 'object' || typeof arg === 'undefined')) {
+                $.data(this, '_' + pluginName, 
+                new Plugin(this, arg));
+            }
+            else if (d && typeof arg === 'string' && typeof d[arg] === 'function') {
+                d[arg].apply( d, Array.prototype.slice.call(args, 1));
+            }
+            return this;
+        });
+    };
+})(jQuery);
+
+
+// Form attachment
+;(function($) {
+
+    var pluginName = 'formAttachment',
+        defaults = {
+        };
+
+    function Plugin(elem, options) {
+        
+        this.elem       = elem;
+        this.$elem      = $(this.elem);
+
+        this.options    = $.extend({}, defaults, options);
+        this._defaults  = defaults;
+        this._name      = pluginName;
+        
+        this.init();
+    }
+    
+
+    Plugin.prototype.init = function() {
+        
+        this.$input = this.$elem.find('[data-form-attachment-input]');
+        this.$list = this.$elem.find('[data-form-attachment-list]');
+        this.$item = this.$elem.find('[data-form-attachment-item]');
+        
+        this.$elem.on('change.' + this.pluginName + '-event','[data-form-attachment-input]', $.proxy(function(e) {
+            
+            var $target = $(e.target),
+                value = $target.val();
+            
+            if (value.length) {
+                this.$item.text(value);
+                this.$list.show();
+            } 
+        },this));
+        
+        this.$elem.on('click.' + this.pluginName + '-event','[data-form-attachment-clear]', $.proxy(function(e) {
+            e.preventDefault();
+            this.clear();
+        }, this));
+    };
+    
+    Plugin.prototype.clear = function() {
+        console.log('siin');
+        if (this.$input.length) {
+            this.$input.wrap('<form>').closest('form').get(0).reset();
+            this.$input.unwrap();
+            this.$list.hide();
+        }
     };
     
     Plugin.prototype.destroy = function () {

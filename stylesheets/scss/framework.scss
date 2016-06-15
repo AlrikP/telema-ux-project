@@ -261,6 +261,20 @@ hr {
           color: $color-1;
         }
       }
+      &-bg-type-3 {
+        background: $color-4;
+        border-color: $color-4;
+        color: $color-3;
+        &::-webkit-input-placeholder {
+          color: $color-3;
+        }
+        &::-moz-placeholder {
+          color: $color-3;
+        }
+        &:-ms-input-placeholder {
+          color: $color-4;
+        }
+      }
     }
     textarea#{&} {
       resize: none; padding: 9px 12px; height: auto;
@@ -405,6 +419,7 @@ hr {
   }
 }
 
+
 //
 //   CUSTOM SELECT
 //   ========================================
@@ -463,11 +478,15 @@ hr {
         margin: 0; padding: 0;
       }
       a {
-        display: block; color: $color-13; padding: 9px 10px;
+        display: block; color: $color-13; padding: 10px;
         &:hover {
           background: $color-9;
         }
       }
+    }
+    
+    .extras {
+      padding: 9px 10px;
     }
   }
   
@@ -786,29 +805,25 @@ hr {
   min-width: 100%;
   max-width: 289px;
   max-height: 440px; overflow: auto;
+  
+  width: 100%;
   @include box-sizing(border-box);
-  
-  
-  /*
-  .ui-autocomplete-has-bottom & {
-    padding: 5px 0 0;
-  }
-  */
 
   .ui-menu-item {
     margin: 0; padding: 0;
     padding: 6px 10px; color: $color-13;
     background: $color-3;
     cursor: default;
+    overflow: hidden; white-space: nowrap;
 
     span.desc { display: block; font-size: 12px;  }
 
     .meta {
       font-size: 11px;
-      color: $color-4;
+      color: $color-13;
 
       a {
-        color: inherit;
+        color: $color-4;
         &:hover {
           text-decoration: underline;
         }
@@ -829,8 +844,8 @@ hr {
       background: $color-9;
     }
     &.ui-autocomplete-more-link {
-      color: $color-9;
-      background: $color-11;
+      color: $color-13; cursor: pointer;
+      background: $color-10;
     }
   }
 }
@@ -1199,7 +1214,11 @@ p { margin: 1em 0; }
   
   .textbox-holder {
     position: relative;
-    @include flex(1 0 auto);
+    @include flex(1 1 auto);
+  }
+  
+  &-has-space {
+    .btn { margin-left: 8px; }
   }
 }
 

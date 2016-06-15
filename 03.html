@@ -13,18 +13,15 @@
 </head>
   
 <body>
-    
   <div class="page-holder">
+    
     <div class="page-header">
-      
       <a href="#" class="logo"></a>
-      
       <div class="header-menu">
         <a href="#" class="btn-header active">EDI</a>
         <a href="#" class="btn-header">E-invoice</a>
         <a href="#" class="btn-header">VMI</a>
         <a href="#" class="btn-header">MMT</a>
-        
         <div class="regular-dropdown float-left" data-dropdown>
           <a href="#" class="btn-header btn-header-type-1" data-dropdown-toggler>More</a>
           <div class="regular-dropdown-content " data-dropdown-content>
@@ -40,45 +37,37 @@
           </div>
         </div>
       </div>
-      
       <div class="header-inner">
         <div class="float-right">
-          
           <div class="role-dropdown regular-dropdown regular-dropdown-type-1 max-height-315" data-dropdown>
             <a href="#" class="role-dropdown-toggler" data-dropdown-toggler>
               <strong>Burkhardt von Bürgermeter</strong>
               <span class="company">Bürgermeister Pagar ja Koogimeister  AS Ltd</span>
             </a>
-            
             <div class="regular-dropdown-content" data-dropdown-content>
-              
               <div class="sub-title">Companies</div>
               <ul>
                 <li><a href="#" data-dropdown-close>Bürgermeister Pagar ja Koogimeister  AS Ltd</a></li>
                 <li><a href="#" data-dropdown-close>Kuke meierei</a></li>
               </ul>
-              
               <div class="sub-title">Branches</div>
-              
               <div data-list-filter>
                 <div class="textbox-holder">
-                  <input type="text" class="textbox textbox-size-type-1 textbox-border-type-1" data-list-filter-opt placeholder="Start writing to filter..." />
+                  <input type="text" class="textbox textbox-size-type-1 textbox-border-type-1" data-list-filter-input placeholder="Start writing to filter..." />
                 </div>
                 <div class="inner inner-type-1">
                   <ul data-list-filter-content>
-                    <li data-list-filter-id="Kuke meierei Valga branch"><a href="#" data-dropdown-close>Kuke meierei Valga branch »</a></li>
-                    <li data-list-filter-id="Kuke meierei Võru branch"><a href="#" data-dropdown-close>Kuke meierei Võru branch »</a></li>
-                    <li data-list-filter-id="Kuke meierei Tartu branch"><a href="#" data-dropdown-close>Kuke meierei Tartu branch »</a></li>
-                    <li data-list-filter-id="Tibu Talu ökopood Elva branch"><a href="#" data-dropdown-close>Tibu Talu ökopood Elva branch »</a></li>
+                    <li data-list-filter-item="Kuke meierei Valga branch"><a href="#" data-dropdown-close>Kuke meierei Valga branch »</a></li>
+                    <li data-list-filter-item="Kuke meierei Võru branch"><a href="#" data-dropdown-close>Kuke meierei Võru branch »</a></li>
+                    <li data-list-filter-item="Kuke meierei Tartu branch"><a href="#" data-dropdown-close>Kuke meierei Tartu branch »</a></li>
+                    <li data-list-filter-item="Tibu Talu ökopood Elva branch"><a href="#" data-dropdown-close>Tibu Talu ökopood Elva branch »</a></li>
                     <li class="text" data-list-filter-empty>No matches found</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          
           <a href="#" class="btn-login">Log out</a>
-          
         </div>
       </div>
     </div>
@@ -86,10 +75,9 @@
     <div class="page-wrap">
         
       <div class="page-sidebar">
-        
         <div class="inner selector-holder">
           <div class="custom-select custom-select-block custom-select-size-type-1 custom-select-color-type-3 custom-select-font-size-1" data-dropdown>
-            <a href="#" class="custom-select-toggler" style="max-width: 120px;" data-dropdown-toggler><span data-dropdown-indicator>Purchase</span></a>
+            <a href="#" class="custom-select-toggler" style="max-width: 120px;" data-dropdown-toggler data-dropdown-indicator>Purchase</a>
             <div class="custom-select-content" data-dropdown-content>
               <ul class="options">
                 <li><a href="#" data-dropdown-option>Sales</a></li>
@@ -100,14 +88,12 @@
             </div>
           </div>
         </div>
-        
         <div class="inner">
           <ul class="list">
             <li><a href="#" class="active">Home</a></li>
             <li><a href="#">Overview</a></li>
           </ul>
         </div>
-        
         <div class="inner">
           <ul class="list">
             <li><a href="#">Order</a></li>
@@ -117,7 +103,6 @@
             <li><a href="#">All Documents</a></li>
           </ul>
         </div>
-        
         <div class="inner">
           <ul class="list">
             <li><a href="#">Products &amp; Prices</a></li>
@@ -126,8 +111,7 @@
             <li><a href="#">Support</a></li>
           </ul>
         </div>
-        
-      </div> <!-- //page-sidebar -->
+      </div>
       
       <div class="page-container">
           
@@ -149,37 +133,30 @@
               <div class="support-dropdown regular-dropdown regular-dropdown-type-1" data-dropdown>
                 <a href="#" class="support-dropdown-toggler" data-dropdown-toggler></a>
                 <div class="regular-dropdown-content" data-dropdown-content>
-                  
                   <div class="support">
-                    
                     <div class="support-content">
-                      
-                      <form>
-              
+                      <form data-form-attachment>
                         <div class="row">
                           <div class="label">Subject</div>
                           <input type="text" class="textbox textbox-border-type-1">
                         </div>
-                        
                         <div class="row">
                           <div class="label">Message to customer support</div>
                           <textarea class="textbox textbox-border-type-1" cols="30" rows="4"></textarea>
-                          <div class="attached-file">
-                            <a href="#" class="remove" data-support-attachment-clear></a>
-                            <span class="item"></span>
+                          <div class="attached-file" data-form-attachment-list>
+                            <a href="#" class="remove" data-form-attachment-clear></a>
+                            <span class="item" data-form-attachment-item></span>
                           </div>
                         </div>
-                        
                         <div class="row row-submit row-flex">
                           <div class="file-input">
-                            <input type="file" name="file" data-support-attachment />
+                            <input type="file" name="file" data-form-attachment-input />
                             <span class="btn btn-size-square btn-type-icon btn-icon-1"></span>
                           </div>
                           <input type="submit" class="btn btn-size-block" value="Send" />
                         </div>
                       </form>
                     </div>
-                    
                     <div class="support-success">
                       <div class="support-success-inner">
                         <div>
@@ -190,18 +167,18 @@
                         <a href="#" class="btn btn-padding-type-1" data-dropdown-close>OK</a>
                       </div>
                     </div>
-                    
                     <div class="support-error">
                       <div class="support-error-inner">
-                        <div>
-                          Attachment is not in the right format.<br />Allowed formats are jpg, <br />gif, png. .doc and .xls. 
+                        <div data-support-error="1">
+                          Attachment is not in the right format.<br />Allowed formats are .jpg, <br />.gif, .doc and .xls. 
+                        </div>
+                        <div data-support-error="2">
+                          File size too big
                         </div>
                         <a href="#" class="btn btn-padding-type-1">OK</a>
                       </div>
                     </div>
-                    
                   </div> <!-- //support -->
-                  
                 </div>
               </div>
               
@@ -308,7 +285,7 @@
                   <div class="col">
                     <div class="row-label">Start date</div>
                     <div class="textbox-has-ico">
-                      <input type="text" class="textbox textbox-block textbox-bg-type-1" data-date-selector-start data-date-format="MM.DD.YYYY">
+                      <input type="text" class="textbox textbox-block textbox-bg-type-1" data-date-selector-start data-date-format="DD.MM.YYYY">
                       <span class="ico ico-type-11"></span>
                     </div>
                   </div>
@@ -316,7 +293,7 @@
                   <div class="col">
                     <div class="row-label">End date</div>
                     <div class="textbox-has-ico">
-                      <input type="text" class="textbox textbox-block textbox-bg-type-1" data-date-selector-end data-date-format="MM.DD.YYYY">
+                      <input type="text" class="textbox textbox-block textbox-bg-type-1" data-date-selector-end data-date-format="DD.MM.YYYY">
                       <span class="ico ico-type-11"></span>
                     </div>
                   </div>
@@ -336,25 +313,34 @@
                   <span class="sep color-type-2">I</span></a>
                   <a href="#" class="color-type-2" data-date-selector-marker="last-30">Last 30 days</a>
                   <span class="sep color-type-2">I</span>
+                  
                   <div class="inl-blk" data-bubble data-bubble-disable-side-click data-bubble-hpos="left">
                     <a href="#" class="color-type-2" data-bubble-toggler>Choose dates »</a>
                     <div class="bubble font-size-regular" data-bubble-content>
                       <div class="datepicker-bubble datepicker-bubble-double">
-                        <div class="calendar-holder">
-                          <div class="calendar"> 
-                            <div class="calendar-label">Pick or enter start date</div>
-                            <input type="text" class="textbox" data-date-selector-bubble-start />
-                            <div data-date-picker></div>
+                        <div class="calendar-holder" data-date-selector-parent>
+                          <div class="calendar">
+                            <div class="cfx">
+                              <a href="#" class="btn btn-padding-type-1 float-left" data-date-selector-marker="last-7">Last 7 days</a>
+                              <a href="#" class="btn btn-padding-type-1 float-right" data-date-selector-marker="next-7">Next 7 days</a>
+                            </div>
+                            <div class="calendar-label margin-top">Pick or enter start date</div>
+                            <input type="text" class="textbox" data-date-selector-start />
+                            <div data-date-picker="start"></div>
                           </div>
-                          <div class="calendar"> 
-                            <div class="calendar-label">Pick or enter end date</div>
-                            <input type="text" class="textbox" data-date-selector-bubble-end />
-                            <div data-date-picker></div>
+                          <div class="calendar">
+                            <div class="cfx">
+                              <a href="#" class="btn btn-padding-type-1 float-left" data-date-selector-marker="this-month">This month</a>
+                              <a href="#" class="btn btn-padding-type-1 float-right" data-date-selector-marker="last-month">Last month</a>
+                            </div>
+                            <div class="calendar-label margin-top">Pick or enter end date</div>
+                            <input type="text" class="textbox" data-date-selector-end />
+                            <div data-date-picker="end"></div>
                             <div class="align-right bubble-confirm">
                               <a href="#" class="btn" data-date-selector-marker="bubble" data-bubble-close>Confirm dates</a>
                             </div>
                           </div>
-                        </div> <!-- //calendar-holder -->
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -626,7 +612,7 @@
           
           <div class="margin-box">
             <div class="list-block">
-              <div class="list-block-side" data-search>
+              <div class="list-block-side" data-list-filter>
               
                 <div class="sub-title">My Settings</div>
                 
@@ -642,36 +628,36 @@
                 
                 <div class="item catalog-filter bg-color-type-2">
                   <span class="ico ico-type-14 ico-color-type-1"></span>
-                  <input type="text" class="textbox textbox-block textbox-bg-type-2" placeholder="Filter users" data-search-input />
+                  <input type="text" class="textbox textbox-block textbox-bg-type-2" placeholder="Filter users" data-list-filter-input />
                 </div>
                 
                 <div class="catalog-holder">    
                   <div class="catalog">
-                    <div class="item" data-search-item="Rupert Scrivener">
+                    <div class="item" data-list-filter-item="Rupert Scrivener">
                       <a href="#" class="item-inner color-type-3"><b>Rupert Scrivener</b></a>
                     </div>
-                    <div class="item marker marker-type-3" data-search-item="Nicholas Hawtrey">
+                    <div class="item marker marker-type-3" data-list-filter-item="Nicholas Hawtrey">
                       <a href="#" class="item-inner color-type-3"><b>Nicholas Hawtrey</b></a>
                     </div>
-                    <div class="item marker marker-type-2" data-search-item="Royston Farrell">
+                    <div class="item marker marker-type-2" data-list-filter-item="Royston Farrell">
                       <a href="#" class="item-inner color-type-3">Royston Farrell</a>
                     </div>
-                    <div class="item marker marker-type-1" data-search-item="Prentis Hancock">
+                    <div class="item marker marker-type-1" data-list-filter-item="Prentis Hancock">
                       <a href="#" class="item-inner color-type-3">Prentis Hancock</a>
                     </div>
-                    <div class="item marker" data-search-item="Mervyn Pinfield">
+                    <div class="item marker" data-list-filter-item="Mervyn Pinfield">
                       <a href="#" class="item-inner color-type-3">Mervyn Pinfield</a>
                     </div>
-                    <div class="item active" data-search-item="Fionnula Tambling-Goggin">
+                    <div class="item active" data-list-filter-item="Fionnula Tambling-Goggin">
                       <a href="#" class="item-inner color-type-3">Fionnula Tambling-Goggin</a>
                     </div>
-                    <div class="item" data-search-item="Nicola Parfit">
+                    <div class="item" data-list-filter-item="Nicola Parfit">
                       <a href="#" class="item-inner color-type-3">Nicola Parfit</a>
                     </div>
-                    <div class="item item-border-type-1" data-search-item="St. John O’Rorke">
+                    <div class="item item-border-type-1" data-list-filter-item="St. John O’Rorke">
                       <span class="item-inner color-type-4">St. John O’Rorke</span>
                     </div>
-                    <div class="item" data-search-item="Alf Tramontin">
+                    <div class="item" data-list-filter-item="Alf Tramontin">
                       <span class="item-inner color-type-4">Alf Tramontin</span>
                     </div>
                   </div>
@@ -960,6 +946,7 @@
   <script src="javascripts/underscore-min.js"></script>
   <script src="javascripts/jquery.modal.js"></script>
   <script src="javascripts/framework.js"></script>
+  <script src="javascripts/app.js"></script>
     
 </body>
 </html>

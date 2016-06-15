@@ -229,6 +229,20 @@ input[type=text].textbox-bg-type-2::-moz-placeholder, input[type=email].textbox-
 input[type=text].textbox-bg-type-2:-ms-input-placeholder, input[type=email].textbox-bg-type-2:-ms-input-placeholder, input[type=search].textbox-bg-type-2:-ms-input-placeholder, textarea.textbox-bg-type-2:-ms-input-placeholder {
   color: #000810;
 }
+input[type=text].textbox-bg-type-3, input[type=email].textbox-bg-type-3, input[type=search].textbox-bg-type-3, textarea.textbox-bg-type-3 {
+  background: #ed1b2e;
+  border-color: #ed1b2e;
+  color: #ffffff;
+}
+input[type=text].textbox-bg-type-3::-webkit-input-placeholder, input[type=email].textbox-bg-type-3::-webkit-input-placeholder, input[type=search].textbox-bg-type-3::-webkit-input-placeholder, textarea.textbox-bg-type-3::-webkit-input-placeholder {
+  color: #ffffff;
+}
+input[type=text].textbox-bg-type-3::-moz-placeholder, input[type=email].textbox-bg-type-3::-moz-placeholder, input[type=search].textbox-bg-type-3::-moz-placeholder, textarea.textbox-bg-type-3::-moz-placeholder {
+  color: #ffffff;
+}
+input[type=text].textbox-bg-type-3:-ms-input-placeholder, input[type=email].textbox-bg-type-3:-ms-input-placeholder, input[type=search].textbox-bg-type-3:-ms-input-placeholder, textarea.textbox-bg-type-3:-ms-input-placeholder {
+  color: #ed1b2e;
+}
 
 textarea.textbox {
   resize: none;
@@ -457,10 +471,13 @@ textarea.textbox {
 .custom-select-content ul.options a {
   display: block;
   color: #808080;
-  padding: 9px 10px;
+  padding: 10px;
 }
 .custom-select-content ul.options a:hover {
   background: #f1f1f1;
+}
+.custom-select-content .extras {
+  padding: 9px 10px;
 }
 .custom-select-color-type-1 .custom-select-toggler {
   background: #c3c3c3;
@@ -759,14 +776,10 @@ textarea.textbox {
   max-width: 289px;
   max-height: 440px;
   overflow: auto;
+  width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  /*
-  .ui-autocomplete-has-bottom & {
-    padding: 5px 0 0;
-  }
-  */
 }
 .ui-autocomplete .ui-menu-item {
   margin: 0;
@@ -775,6 +788,8 @@ textarea.textbox {
   color: #808080;
   background: #ffffff;
   cursor: default;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .ui-autocomplete .ui-menu-item span.desc {
   display: block;
@@ -782,10 +797,10 @@ textarea.textbox {
 }
 .ui-autocomplete .ui-menu-item .meta {
   font-size: 11px;
-  color: #ed1b2e;
+  color: #808080;
 }
 .ui-autocomplete .ui-menu-item .meta a {
-  color: inherit;
+  color: #ed1b2e;
 }
 .ui-autocomplete .ui-menu-item .meta a:hover {
   text-decoration: underline;
@@ -804,8 +819,9 @@ textarea.textbox {
   background: #f1f1f1;
 }
 .ui-autocomplete .ui-menu-item.ui-autocomplete-more-link {
-  color: #f1f1f1;
-  background: #c3c3c3;
+  color: #808080;
+  cursor: pointer;
+  background: #e0e0e0;
 }
 
 h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
@@ -1279,10 +1295,13 @@ p {
 }
 .search .textbox-holder {
   position: relative;
-  -webkit-flex: 1 0 auto;
-  -moz-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.search-has-space .btn {
+  margin-left: 8px;
 }
 
 .page-sidebar .inner {
