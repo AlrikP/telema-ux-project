@@ -8,7 +8,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
   <link href="stylesheets/jquery-ui.structure.css" type="text/css" rel="stylesheet" media="all">
-  <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="all">
+  <link href="stylesheets/framework.css" type="text/css" rel="stylesheet" media="all">
   <script src="javascripts/modernizr.js"></script>
 </head>
   
@@ -790,9 +790,8 @@
           </div>
           
           <div class="color-box pad-box">
-            
-            <a href="#" class="btn">Open modal</a>
-            <a href="#" class="btn">Open big modal</a>
+            <a href="#" class="btn" data-modal data-modal-tpl="some-modal-tpl" data-modal-id="12345" data-modal-remove="true">Open modal</a>
+            <a href="#" class="btn" data-modal data-modal-tpl="some-modal-tpl" data-modal-type="2">Open big modal</a>
           </div>
           
           <div class="proto-comments uppercase">
@@ -935,8 +934,6 @@
             </div> <!-- //flipper-holder -->
 
           </div>
-          
-          
             
         </div> <!-- //page-main -->
         
@@ -945,11 +942,24 @@
   </div> <!-- //page-holder -->
   
   
+  <script type="text/html" id="some-modal-tpl">
+    <div class="modal-dialog">
+      <div class="pad-box">
+        <h3 class="uppercase color-type-1">Some modal title</h3>
+        <p>
+          Some modal content
+        </p>
+      </div>
+    </div>
+  </script>
+  
+  
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="javascripts/moment-with-locales.min.js"></script>
   <script src="javascripts/jquery-ui.min.js"></script>
   <script src="javascripts/underscore-min.js"></script>
-  <script src="javascripts/scripts.js"></script>
+  <script src="javascripts/jquery.modal.js"></script>
+  <script src="javascripts/framework.js"></script>
     
 </body>
 </html>

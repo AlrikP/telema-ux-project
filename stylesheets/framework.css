@@ -2613,6 +2613,105 @@ ul.nav-menu li:last-child:after {
   border-radius: 3px;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(106, 107, 109, 0.9);
+  z-index: 10000;
+  /*
+  &.modal--content-centered {
+    .modal-popup {
+      left: $sidebar-width + $space-size !important;
+      margin-left: 0 !important;
+      width: $wrap-width - $space-size;
+    }
+  }
+  */
+}
+.modal.modal-is-visible {
+  display: block;
+}
+.modal .modal-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
+.modal .modal-popup {
+  visibility: visible;
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+}
+.modal .modal-popup.modal-popup-hidden {
+  visibility: hidden;
+}
+.modal.modal-is-static {
+  overflow: auto;
+}
+.modal.modal-is-static .modal-inner {
+  overflow: visible;
+  padding-left: 190px;
+  padding-right: 190px;
+  width: 1010px;
+  text-align: center;
+}
+.modal.modal-is-static .modal-popup {
+  position: relative !important;
+  left: auto !important;
+  display: inline-block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.modal .modal-header {
+  display: none;
+  z-index: 100;
+}
+.modal .modal-header-type-1 {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.modal .modal-header-type-2 {
+  height: 40px;
+  position: relative;
+  background: #9c9c9c;
+  color: #ffffff;
+  text-align: right;
+  padding: 6px 6px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.modal .modal-header-type-2 a {
+  color: #ffffff;
+}
+.modal[data-modal-type="1"] .modal-header-type-1 {
+  display: block;
+}
+.modal[data-modal-type="2"] .modal-header-type-2 {
+  display: block;
+}
+
+/* dialogs */
+.modal-dialog {
+  background: #f1f1f1;
+  margin: 0 auto;
+  position: relative;
+  min-height: 40px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .margin-top {
   margin-top: 1em;
 }

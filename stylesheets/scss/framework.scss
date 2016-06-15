@@ -31,6 +31,9 @@ $color-27: #f7ac43;
 $color-28: #3e3e3e;
 
 
+$overlay-bg: #6a6b6d;
+
+
 $font-size: 14px;
 $line-height: 1.3;
 $font-family-main: 'Roboto', sans-serif;
@@ -2440,6 +2443,102 @@ ul.nav-menu {
     @include border-radius(3px);
   }
 }
+
+
+//
+//   MODAL
+//   ========================================
+//
+
+$popup-padding: 20px;
+
+.modal {
+  display: none; position: fixed; top: 0; left: 0; bottom: 0; right: 0;
+  background: rgba($overlay-bg, 0.9); z-index: 10000; 
+  
+  &.modal-is-visible {
+    display: block;
+  }
+  
+  .modal-inner {
+    position: absolute; top: 0; left: 0; bottom: 0; right: 0; overflow: auto;  
+  }
+  
+  .modal-popup {
+    visibility: visible; text-align: left;
+    position: absolute; top: 50%; left: 50%;
+    padding: $popup-padding;
+    
+    &.modal-popup-hidden {
+      visibility: hidden;
+    }
+  }
+  
+  &.modal-is-static {
+    overflow: auto;
+    
+    .modal-inner {
+      overflow: visible;
+      padding-left: $sidebar-width + 30px;
+      padding-right: $sidebar-width + 30px;
+      width: $page-width - $sidebar-width - 30px;
+      text-align: center;
+    }
+    .modal-popup {
+      position: relative !important; left: auto !important;
+      display: inline-block;
+      margin-left: auto !important; margin-right: auto !important;
+    }
+  }
+  
+  .modal-header {
+    display: none; z-index: 100;
+    
+    &-type-1 {
+      position: absolute; top: 10px + $popup-padding; right: 10px + $popup-padding;
+    }
+    &-type-2 {
+      height: 40px; position: relative;
+      background: $color-12; color: $color-3;
+      text-align: right; padding: 6px 6px 0;
+      @include box-sizing(border-box);
+      
+      a { color: $color-3; }
+    }
+  }
+  
+  &[data-modal-type="1"] {
+    .modal-header-type-1 {
+      display: block;
+    }
+  }
+  
+  &[data-modal-type="2"] {
+    .modal-header-type-2 {
+      display: block;
+    }
+  }
+  
+  
+  
+  /*
+  &.modal--content-centered {
+    .modal-popup {
+      left: $sidebar-width + $space-size !important;
+      margin-left: 0 !important;
+      width: $wrap-width - $space-size;
+    }
+  }
+  */
+}
+
+/* dialogs */
+.modal-dialog {
+  background: $color-9; margin: 0 auto;
+  position: relative; min-height: 40px;
+  @include box-sizing(border-box);
+}
+
 
 
 //

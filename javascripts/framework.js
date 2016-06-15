@@ -1,4 +1,4 @@
-var App = {
+var Framework = {
     init: function() {
         
         
@@ -102,6 +102,44 @@ var App = {
                 
             }
         });
+        
+        $('[data-modal]').on('click', $.proxy(function(e) {
+            e.preventDefault();
+            
+            var $target = $(e.target),
+                tpl = $target.data('modalTpl'),
+                id = $target.data('modalId'),
+                type = $target.data('modalType') || 1,
+                removeOnClose = $target.data('modalRemove') || undefined,
+                modal, $container;
+            
+            if (!this.modals) { this.modals = {}; } 
+            
+            if (id) {
+                if (!this.modals[id]) {
+                    this.modals[id] = new $.modal();
+                }
+                modal = this.modals[id];
+            }
+            else {
+                modal = new $.modal();
+                modal.setOption('removeOnClose', true);
+            }
+            
+            if (removeOnClose !== undefined) {
+                modal.setOption('removeOnClose', removeOnClose);
+            }
+            
+            $container = modal.getContainer().attr('data-modal-type', type);
+            
+            $container.on('beforeRemove', $.proxy(function() {
+                if (this.modals[id]) { delete this.modals[id]; }
+            }, this));
+
+            modal.setContent($('#' + tpl).html());
+            modal.show();
+            
+        }, this));
         
         
         // Bubble widget
@@ -429,7 +467,7 @@ var App = {
 };
 
 $(function() {
-    App.init();
+    Framework.init();
 });
 
 
