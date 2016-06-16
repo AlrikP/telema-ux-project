@@ -217,6 +217,7 @@ hr {
       padding: 0px 10px; height: 36px; 
       background-color: $color-3;
       border: 1px solid $color-11;
+      min-width: 40px;
       
       @include box-sizing(border-box);
     
@@ -264,6 +265,7 @@ hr {
           color: $color-1;
         }
       }
+      
       &-bg-type-3 {
         background: $color-4;
         border-color: $color-4;
@@ -277,6 +279,9 @@ hr {
         &:-ms-input-placeholder {
           color: $color-4;
         }
+      }
+      &-color-type-1 {
+        color: $color-1;
       }
     }
     textarea#{&} {
@@ -1795,6 +1800,11 @@ table {
         + .textbox {
           margin-left: 8px;
         }
+        
+        + .btn {
+          margin-left: 8px;
+          @include flex(1 1 auto);
+        }
       }
     }
   }
@@ -2244,7 +2254,7 @@ ul.nav-menu {
   $arrow-width : 10px;
   $arrow-pos : 40px;
   
-  z-index: 1000;
+  z-index: 1000; text-align: left; 
   position: absolute;
   background: $color-11;
   display: none; visibility: hidden;
@@ -2294,6 +2304,9 @@ ul.nav-menu {
   
   &-inner {
     padding: 20px;
+    &-type-1 {
+      padding: 25px 25px 35px;
+    }
   }
 }
 
@@ -2567,18 +2580,6 @@ $popup-padding: 20px;
       display: block;
     }
   }
-  
-  
-  
-  /*
-  &.modal--content-centered {
-    .modal-popup {
-      left: $sidebar-width + $space-size !important;
-      margin-left: 0 !important;
-      width: $wrap-width - $space-size;
-    }
-  }
-  */
 }
 
 /* dialogs */
@@ -2595,7 +2596,12 @@ $popup-padding: 20px;
 //   ========================================
 //
 
-.margin-top { margin-top: 1em; }
+.margin-top { 
+  margin-top: 1em; 
+  &-small {
+    margin-top: 0.5em;
+  }
+}
 .margin-bottom { margin-bottom: 1em; }
 .border-top { border-top: 1px solid $color-11; }
 

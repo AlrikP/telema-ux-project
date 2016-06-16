@@ -187,6 +187,7 @@ input[type=text].textbox, input[type=email].textbox, input[type=search].textbox,
   height: 36px;
   background-color: #ffffff;
   border: 1px solid #c3c3c3;
+  min-width: 40px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -245,6 +246,9 @@ input[type=text].textbox-bg-type-3::-moz-placeholder, input[type=email].textbox-
 }
 input[type=text].textbox-bg-type-3:-ms-input-placeholder, input[type=email].textbox-bg-type-3:-ms-input-placeholder, input[type=search].textbox-bg-type-3:-ms-input-placeholder, textarea.textbox-bg-type-3:-ms-input-placeholder {
   color: #ed1b2e;
+}
+input[type=text].textbox-color-type-1, input[type=email].textbox-color-type-1, input[type=search].textbox-color-type-1, textarea.textbox-color-type-1 {
+  color: #000810;
 }
 
 textarea.textbox {
@@ -1956,6 +1960,13 @@ table.t8 tfoot td {
 .form-row-flex .textbox + .textbox {
   margin-left: 8px;
 }
+.form-row-flex .textbox + .btn {
+  margin-left: 8px;
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
 
 .filter-block {
   padding-top: 5px;
@@ -2392,6 +2403,7 @@ ul.nav-menu li:last-child:after {
 
 .bubble {
   z-index: 1000;
+  text-align: left;
   position: absolute;
   background: #c3c3c3;
   display: none;
@@ -2438,6 +2450,9 @@ ul.nav-menu li:last-child:after {
 }
 .bubble-inner {
   padding: 20px;
+}
+.bubble-inner-type-1 {
+  padding: 25px 25px 35px;
 }
 
 .datepicker-bubble {
@@ -2675,15 +2690,6 @@ ul.nav-menu li:last-child:after {
   right: 0;
   background: rgba(106, 107, 109, 0.9);
   z-index: 10000;
-  /*
-  &.modal--content-centered {
-    .modal-popup {
-      left: $sidebar-width + $space-size !important;
-      margin-left: 0 !important;
-      width: $wrap-width - $space-size;
-    }
-  }
-  */
 }
 .modal.modal-is-visible {
   display: block;
@@ -2767,6 +2773,9 @@ ul.nav-menu li:last-child:after {
 
 .margin-top {
   margin-top: 1em;
+}
+.margin-top-small {
+  margin-top: 0.5em;
 }
 
 .margin-bottom {
