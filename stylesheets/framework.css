@@ -194,6 +194,9 @@ input[type=text].textbox, input[type=email].textbox, input[type=search].textbox,
 input[type=text].textbox-border-type-1, input[type=email].textbox-border-type-1, input[type=search].textbox-border-type-1, textarea.textbox-border-type-1 {
   border-color: #ffffff;
 }
+input[type=text].textbox-border-type-2, input[type=email].textbox-border-type-2, input[type=search].textbox-border-type-2, textarea.textbox-border-type-2 {
+  border-color: #e0e0e0;
+}
 input[type=text].textbox-inline, input[type=email].textbox-inline, input[type=search].textbox-inline, textarea.textbox-inline {
   width: auto;
   display: inline-block;
@@ -254,14 +257,45 @@ textarea.textbox {
   padding-right: 40px !important;
 }
 
+.draggable-textbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.draggable-textbox .draggable-handle {
+  width: 38px;
+  cursor: move;
+  background: #e0e0e0 url("../images/move.png") no-repeat center center;
+}
+.draggable-textbox .textbox-holder {
+  -webkit-flex: 1 1 auto;
+  -moz-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  position: relative;
+}
+.draggable-textbox .textbox-holder .textbox {
+  color: #000810;
+}
+
+.sortable-textboxes .draggable-textbox {
+  margin-bottom: 15px;
+}
+.sortable-textboxes .draggable-textbox:last-child {
+  margin-bottom: 0;
+}
+
 .textbox-has-ico {
   position: relative;
 }
 .textbox-has-ico .ico {
   position: absolute;
   top: 50%;
-  margin-top: -14px;
-  right: 2px;
+  margin-top: -15px;
+  right: 3px;
 }
 
 .radio {

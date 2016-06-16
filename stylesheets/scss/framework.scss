@@ -223,6 +223,9 @@ hr {
       &-border-type-1 {
         border-color: $color-3;
       }
+      &-border-type-2 {
+        border-color: $color-10;
+      }
       
       &-inline {
         width: auto; display: inline-block;
@@ -286,11 +289,38 @@ hr {
   }
 }
 
+.draggable-textbox {
+  @include flexbox();
+  width: 100%;
+  
+  .draggable-handle {
+    width: 38px; cursor: move;
+    background: $color-10 url('../images/move.png') no-repeat center center;
+  }
+  .textbox-holder {
+    @include flex(1 1 auto);
+    position: relative;
+    
+    .textbox {
+      color: $color-1;
+    }
+  }
+}
+
+.sortable-textboxes {
+  .draggable-textbox {
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .textbox-has-ico {
   position: relative;
   .ico {
     position: absolute;
-    top: 50%; margin-top: -14px; right: 2px;
+    top: 50%; margin-top: -15px; right: 3px;
   }
 }
 

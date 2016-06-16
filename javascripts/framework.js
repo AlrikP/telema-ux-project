@@ -72,6 +72,14 @@ var Framework = {
         });
         
         
+        // Sortble
+        $('[data-sortable]').sortable({
+            axis: 'y',
+            handle: '[data-sortable-handle]',
+            items: '[data-sortable-item]'
+        });
+        
+        
         // Date selector
         $('[data-date-selector-marker]').click(function(e) {
             e.preventDefault();

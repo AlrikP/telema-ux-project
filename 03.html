@@ -303,9 +303,9 @@
                   <a href="#" class="color-type-2" data-date-selector-marker="today">Today</a> 
                   <span class="sep color-type-2">I</span>
                   <a href="#" class="color-type-2" data-date-selector-marker="yesterday">Yesterday</a>
-                  <span class="sep color-type-1">I</span>
+                  <span class="sep color-type-2">I</span>
                   <a href="#" class="color-type-1" data-date-selector-marker="last-7">Last 7 days</a>
-                  <span class="sep color-type-1">I</span>
+                  <span class="sep color-type-2">I</span>
                   <a href="#" class="color-type-2" data-date-selector-marker="this-week">This week</a><br />
                   <a href="#" class="color-type-2" data-date-selector-marker="last-week">Last week</a>
                   <span class="sep color-type-2">I</span>
@@ -405,16 +405,16 @@
                       
                         <div class="datepicker-bubble datepicker-bubble-double">
                         
-                          <div class="calendar-holder">
+                          <div class="calendar-holder" data-date-selector-parent>
                             <div class="calendar"> 
                               <div class="calendar-label">Pick or enter start date</div>
-                              <input type="text" class="textbox" data-date-selector-bubble-start />
+                              <input type="text" class="textbox" data-date-selector-start />
                               <div data-date-picker></div>
                             </div>
                           
                             <div class="calendar"> 
                               <div class="calendar-label">Pick or enter end date</div>
-                              <input type="text" class="textbox" data-date-selector-bubble-end />
+                              <input type="text" class="textbox" data-date-selector-end />
                               <div data-date-picker></div>
                             
                               <div class="align-right bubble-confirm">
@@ -893,7 +893,7 @@
                         <span class="emoticon emoticon-type-2"></span>
                         You have service A. If you want to expand<br>
                         your options, take service B or even<br>
-                        service C. <a class="color-type-2" href="#">Read more »</a>
+                        service C. <a class="color-type-2" href="#" data-flipper-toggler>Read more »</a>
                       </li>
                     </ul>
             

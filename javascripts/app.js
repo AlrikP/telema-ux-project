@@ -243,6 +243,22 @@ var App = {
                 };
             }
         });
+        
+        
+        $('[data-people-autocomplete]').autocomplete({
+            source: function(request, response) {
+                var data = [
+                    { value: 'Fionnula Tambling-Goggin / Product manager' },
+                    { value: 'Arthur Nightingale / Project manager' },
+                    { value: 'Cordelia Ditton / Project manager' },
+                    { value: 'Derek Honeybun / Product manager' },
+                    { value: 'Fionnula Tambling-Goggin / Product manager' }
+                ];
+                
+                var results = $.ui.autocomplete.filter(data, request.term);
+                response(results);
+            }
+        });
     }
 };
 
