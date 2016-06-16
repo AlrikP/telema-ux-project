@@ -259,6 +259,12 @@ var App = {
                 response(results);
             }
         });
+        
+        
+        $(document).on('change', '[data-resolver-toggler]', function() {
+            var val = $(this).prop('checked');
+            $(this).closest('[data-resolver]').toggleClass('resolved', val);
+        });
     }
 };
 

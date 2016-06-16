@@ -6,10 +6,16 @@
   @include flexbox();
   @include justify-content(flex-end);
   @include align-items(center);
-  &-button {
-    margin-left: 8px;
-  }
-  &-bubble {
-    width: 250px;
+  &-button { margin-left: 8px; }
+  &-bubble { width: 250px; }
+}
+
+// resolver
+[data-resolver] {
+  .unresolved { display: inline; }
+  .resolved { display: none; }
+  &.resolved {
+    .resolved { display: inline; }
+    .unresolved { display: none; }
   }
 }

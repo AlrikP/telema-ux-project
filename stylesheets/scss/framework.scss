@@ -1368,6 +1368,8 @@ table {
       > td {
         border-top: 1px solid $color-11;
         border-bottom: 1px solid $color-11;
+        
+        /*
         padding: 5px 20px;
         &:first-child {
           padding-left: 0;
@@ -1375,6 +1377,7 @@ table {
         &:last-child {
           padding-right: 0;
         }
+        */
       }
     }
     
@@ -1382,6 +1385,7 @@ table {
       > th {
         border-bottom: 1px solid $color-11;
         font-weight: normal;
+        /*
         padding: 5px 20px;
         &:first-child {
           padding-left: 0;
@@ -1389,15 +1393,70 @@ table {
         &:last-child {
           padding-right: 0;
         }
+        */
       }
     }
     
     td, th {
       vertical-align: top; position: relative;
-      
+      background-clip: padding-box;
       
       &.valign-middle {
         vertical-align: middle;
+      }
+    }
+    
+    &-sub {
+      >tbody>tr, >tr {
+        > td {
+          &:first-child {
+            padding-left: 40px;
+          }
+          &:last-child {
+            padding-right: 40px;
+          }
+        }
+      }
+    }
+  }
+  
+  &.pad-v {
+    $paddings: (0,2,5,10,15,20,25,30,45);
+    @each $p in $paddings {
+      &-#{$p} {
+        > thead > tr, >tbody >tr, > tr {
+          > th, > td {
+            padding-top: #{$p}px;
+            padding-bottom: #{$p}px;
+          }
+        }
+      }
+    }
+  }
+  
+  &.pad-h {
+    $paddings: (0,5,10,15,20,25,30,45);
+    @each $p in $paddings {
+      &-#{$p} {
+        > thead > tr, >tbody >tr, > tr {
+          > th, > td {
+            padding-left: #{$p}px;
+            padding-right: #{$p}px;
+          }
+        }
+      }
+    }
+  }
+  
+  &.pad-clear {
+    > thead > tr, >tbody >tr, > tr {
+      > th, > td {
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
       }
     }
   }
@@ -2604,6 +2663,9 @@ $popup-padding: 20px;
 }
 .margin-bottom { margin-bottom: 1em; }
 .border-top { border-top: 1px solid $color-11; }
+.pad-0 {
+  padding: 0 !important;
+}
 
 
 //

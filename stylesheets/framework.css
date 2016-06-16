@@ -1443,31 +1443,116 @@ table.wide {
 table.t1 > tbody > tr > td, table.t1 > tr > td {
   border-top: 1px solid #c3c3c3;
   border-bottom: 1px solid #c3c3c3;
+  /*
   padding: 5px 20px;
-}
-table.t1 > tbody > tr > td:first-child, table.t1 > tr > td:first-child {
-  padding-left: 0;
-}
-table.t1 > tbody > tr > td:last-child, table.t1 > tr > td:last-child {
-  padding-right: 0;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+  */
 }
 table.t1 > thead > tr > th, table.t1 > tr > th {
   border-bottom: 1px solid #c3c3c3;
   font-weight: normal;
+  /*
   padding: 5px 20px;
-}
-table.t1 > thead > tr > th:first-child, table.t1 > tr > th:first-child {
-  padding-left: 0;
-}
-table.t1 > thead > tr > th:last-child, table.t1 > tr > th:last-child {
-  padding-right: 0;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+  */
 }
 table.t1 td, table.t1 th {
   vertical-align: top;
   position: relative;
+  background-clip: padding-box;
 }
 table.t1 td.valign-middle, table.t1 th.valign-middle {
   vertical-align: middle;
+}
+table.t1-sub > tbody > tr > td:first-child, table.t1-sub > tr > td:first-child {
+  padding-left: 40px;
+}
+table.t1-sub > tbody > tr > td:last-child, table.t1-sub > tr > td:last-child {
+  padding-right: 40px;
+}
+table.pad-v-0 > thead > tr > th, table.pad-v-0 > thead > tr > td, table.pad-v-0 > tbody > tr > th, table.pad-v-0 > tbody > tr > td, table.pad-v-0 > tr > th, table.pad-v-0 > tr > td {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+table.pad-v-2 > thead > tr > th, table.pad-v-2 > thead > tr > td, table.pad-v-2 > tbody > tr > th, table.pad-v-2 > tbody > tr > td, table.pad-v-2 > tr > th, table.pad-v-2 > tr > td {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+table.pad-v-5 > thead > tr > th, table.pad-v-5 > thead > tr > td, table.pad-v-5 > tbody > tr > th, table.pad-v-5 > tbody > tr > td, table.pad-v-5 > tr > th, table.pad-v-5 > tr > td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+table.pad-v-10 > thead > tr > th, table.pad-v-10 > thead > tr > td, table.pad-v-10 > tbody > tr > th, table.pad-v-10 > tbody > tr > td, table.pad-v-10 > tr > th, table.pad-v-10 > tr > td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+table.pad-v-15 > thead > tr > th, table.pad-v-15 > thead > tr > td, table.pad-v-15 > tbody > tr > th, table.pad-v-15 > tbody > tr > td, table.pad-v-15 > tr > th, table.pad-v-15 > tr > td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+table.pad-v-20 > thead > tr > th, table.pad-v-20 > thead > tr > td, table.pad-v-20 > tbody > tr > th, table.pad-v-20 > tbody > tr > td, table.pad-v-20 > tr > th, table.pad-v-20 > tr > td {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+table.pad-v-25 > thead > tr > th, table.pad-v-25 > thead > tr > td, table.pad-v-25 > tbody > tr > th, table.pad-v-25 > tbody > tr > td, table.pad-v-25 > tr > th, table.pad-v-25 > tr > td {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+table.pad-v-30 > thead > tr > th, table.pad-v-30 > thead > tr > td, table.pad-v-30 > tbody > tr > th, table.pad-v-30 > tbody > tr > td, table.pad-v-30 > tr > th, table.pad-v-30 > tr > td {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+table.pad-v-45 > thead > tr > th, table.pad-v-45 > thead > tr > td, table.pad-v-45 > tbody > tr > th, table.pad-v-45 > tbody > tr > td, table.pad-v-45 > tr > th, table.pad-v-45 > tr > td {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+table.pad-h-0 > thead > tr > th, table.pad-h-0 > thead > tr > td, table.pad-h-0 > tbody > tr > th, table.pad-h-0 > tbody > tr > td, table.pad-h-0 > tr > th, table.pad-h-0 > tr > td {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+table.pad-h-5 > thead > tr > th, table.pad-h-5 > thead > tr > td, table.pad-h-5 > tbody > tr > th, table.pad-h-5 > tbody > tr > td, table.pad-h-5 > tr > th, table.pad-h-5 > tr > td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+table.pad-h-10 > thead > tr > th, table.pad-h-10 > thead > tr > td, table.pad-h-10 > tbody > tr > th, table.pad-h-10 > tbody > tr > td, table.pad-h-10 > tr > th, table.pad-h-10 > tr > td {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+table.pad-h-15 > thead > tr > th, table.pad-h-15 > thead > tr > td, table.pad-h-15 > tbody > tr > th, table.pad-h-15 > tbody > tr > td, table.pad-h-15 > tr > th, table.pad-h-15 > tr > td {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+table.pad-h-20 > thead > tr > th, table.pad-h-20 > thead > tr > td, table.pad-h-20 > tbody > tr > th, table.pad-h-20 > tbody > tr > td, table.pad-h-20 > tr > th, table.pad-h-20 > tr > td {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+table.pad-h-25 > thead > tr > th, table.pad-h-25 > thead > tr > td, table.pad-h-25 > tbody > tr > th, table.pad-h-25 > tbody > tr > td, table.pad-h-25 > tr > th, table.pad-h-25 > tr > td {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+table.pad-h-30 > thead > tr > th, table.pad-h-30 > thead > tr > td, table.pad-h-30 > tbody > tr > th, table.pad-h-30 > tbody > tr > td, table.pad-h-30 > tr > th, table.pad-h-30 > tr > td {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+table.pad-h-45 > thead > tr > th, table.pad-h-45 > thead > tr > td, table.pad-h-45 > tbody > tr > th, table.pad-h-45 > tbody > tr > td, table.pad-h-45 > tr > th, table.pad-h-45 > tr > td {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+table.pad-clear > thead > tr > th:first-child, table.pad-clear > thead > tr > td:first-child, table.pad-clear > tbody > tr > th:first-child, table.pad-clear > tbody > tr > td:first-child, table.pad-clear > tr > th:first-child, table.pad-clear > tr > td:first-child {
+  padding-left: 0;
+}
+table.pad-clear > thead > tr > th:last-child, table.pad-clear > thead > tr > td:last-child, table.pad-clear > tbody > tr > th:last-child, table.pad-clear > tbody > tr > td:last-child, table.pad-clear > tr > th:last-child, table.pad-clear > tr > td:last-child {
+  padding-right: 0;
 }
 table.border-type-1 > tbody > tr > td, table.border-type-1 > tbody > tr > th, table.border-type-1 > thead > tr > td, table.border-type-1 > thead > tr > th, table.border-type-1 > tr > td, table.border-type-1 > tr > th {
   border-left: 1px solid #c3c3c3;
@@ -2784,6 +2869,10 @@ ul.nav-menu li:last-child:after {
 
 .border-top {
   border-top: 1px solid #c3c3c3;
+}
+
+.pad-0 {
+  padding: 0 !important;
 }
 
 .sep {
