@@ -1443,28 +1443,10 @@ table.wide {
 table.t1 > tbody > tr > td, table.t1 > tr > td {
   border-top: 1px solid #c3c3c3;
   border-bottom: 1px solid #c3c3c3;
-  /*
-  padding: 5px 20px;
-  &:first-child {
-    padding-left: 0;
-  }
-  &:last-child {
-    padding-right: 0;
-  }
-  */
 }
 table.t1 > thead > tr > th, table.t1 > tr > th {
   border-bottom: 1px solid #c3c3c3;
   font-weight: normal;
-  /*
-  padding: 5px 20px;
-  &:first-child {
-    padding-left: 0;
-  }
-  &:last-child {
-    padding-right: 0;
-  }
-  */
 }
 table.t1 td, table.t1 th {
   vertical-align: top;
@@ -1553,6 +1535,10 @@ table.pad-clear > thead > tr > th:first-child, table.pad-clear > thead > tr > td
 }
 table.pad-clear > thead > tr > th:last-child, table.pad-clear > thead > tr > td:last-child, table.pad-clear > tbody > tr > th:last-child, table.pad-clear > tbody > tr > td:last-child, table.pad-clear > tr > th:last-child, table.pad-clear > tr > td:last-child {
   padding-right: 0;
+}
+table.pad-clear-first > thead > tr > th:first-child, table.pad-clear-first > thead > tr > td:first-child, table.pad-clear-first > tbody > tr > th:first-child, table.pad-clear-first > tbody > tr > td:first-child, table.pad-clear-first > tr > th:first-child, table.pad-clear-first > tr > td:first-child {
+  padding-right: 0;
+  padding-left: 0;
 }
 table.border-type-1 > tbody > tr > td, table.border-type-1 > tbody > tr > th, table.border-type-1 > thead > tr > td, table.border-type-1 > thead > tr > th, table.border-type-1 > tr > td, table.border-type-1 > tr > th {
   border-left: 1px solid #c3c3c3;

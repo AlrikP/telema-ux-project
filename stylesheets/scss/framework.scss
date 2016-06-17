@@ -1368,16 +1368,6 @@ table {
       > td {
         border-top: 1px solid $color-11;
         border-bottom: 1px solid $color-11;
-        
-        /*
-        padding: 5px 20px;
-        &:first-child {
-          padding-left: 0;
-        }
-        &:last-child {
-          padding-right: 0;
-        }
-        */
       }
     }
     
@@ -1385,15 +1375,6 @@ table {
       > th {
         border-bottom: 1px solid $color-11;
         font-weight: normal;
-        /*
-        padding: 5px 20px;
-        &:first-child {
-          padding-left: 0;
-        }
-        &:last-child {
-          padding-right: 0;
-        }
-        */
       }
     }
     
@@ -1456,6 +1437,17 @@ table {
         }
         &:last-child {
           padding-right: 0;
+        }
+      }
+    }
+  }
+  
+  &.pad-clear-first {
+    > thead > tr, >tbody >tr, > tr {
+      > th, > td {
+        &:first-child {
+          padding-right: 0; 
+          padding-left: 0;
         }
       }
     }
