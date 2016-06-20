@@ -1335,19 +1335,50 @@ p { margin: 1em 0; }
     @include flex-direction(column);
     word-break: break-all;
     
-    +.grid-col {
-      margin-left: $space-size;
-    }
+  }
+  
+  &.grid-columns {
+    @include justify-content(space-between);
     
-    
-    &-type-1 {
+    .grid-col {
+      width: 495px;
+      max-width: 495px;
+      min-width: 495px;
+      @include flex(0 1 495px);
       
-      @include flex(0 1 590px);
+      &-type-1 {
+        width: 590px;
+        min-width: 590px;
+        max-width: 590px;
+        @include flex(0 1 590px);
+        
+        + .grid-col {
+          width: 400px;
+          min-width: 400px;
+          max-width: 400px;
+          @include flex(0 1 400px);
+        }
+      }
+      
+      &-type-2 {
+        width: 400px;
+        min-width: 400px;
+        max-width: 400px;
+        @include flex(0 1 400px);
+        
+        + .grid-col {
+          width: 590px;
+          min-width: 590px;
+          max-width: 590px;
+          @include flex(0 1 590px);
+        }
+      }
+      
     }
-    
-    > .color-box {
-      @include flex(1 1 auto);
-    }
+  }
+  
+  .flex {
+    @include flex(1 1 auto);
   }
 }
 
