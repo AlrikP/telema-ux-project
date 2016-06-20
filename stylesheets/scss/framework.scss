@@ -58,6 +58,7 @@ body {
   -webkit-text-size-adjust: none;
   background: $color-3;
   text-align: left;
+  @include flexbox();
 }
 
 a { 
@@ -951,6 +952,7 @@ p { margin: 1em 0; }
 
 .page-holder {
   min-height: 100vh;
+  min-width: 100%;
   @include flexbox();
   @include flex-direction(column);
 }
@@ -990,13 +992,13 @@ p { margin: 1em 0; }
 
 .page-sidebar {
   width: $sidebar-width; background: $color-4;
-  @include flex(0 1 160px);
+  max-width: $sidebar-width;
+  min-width: $sidebar-width;
+  
 }
 
 .page-container {
   @include flex(1 1 auto);
-  @include flexbox();
-  @include flex-direction(column);
   background: $color-11 url("../images/bg.jpg") no-repeat fixed center top;
   background-size: cover; 
 }
@@ -1065,9 +1067,13 @@ p { margin: 1em 0; }
 }
 
 .page-main {
-  width: $page-width - $sidebar-width;
+  width: $page-width - $sidebar-width + 30px;
   @include box-sizing(border-box);
-  padding: 30px 0 30px 30px;
+  padding: 30px;
+  /*
+  @include flexbox();
+  @include flex-direction(column);
+  */
 }
 
 
@@ -1994,6 +2000,7 @@ ul.nav-menu {
   
   &-side {
     width: 275px;
+    max-width: 275px; margin-right: 20px;
     @include flexbox();
     @include flex(0 1 275px);
     @include flex-direction(column);
@@ -2071,8 +2078,7 @@ ul.nav-menu {
   }
   
   &-content {
-    width: 715px;
-    @include flex(0 1 715px);
+    @include flex(1 1 auto);
     min-height: 300px;
     background: $color-9;
   }
