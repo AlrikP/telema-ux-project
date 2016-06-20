@@ -1447,6 +1447,7 @@ table.t1 > tbody > tr > td, table.t1 > tr > td {
 table.t1 > thead > tr > th, table.t1 > tr > th {
   border-bottom: 1px solid #c3c3c3;
   font-weight: normal;
+  text-align: left;
 }
 table.t1 td, table.t1 th {
   vertical-align: top;
@@ -1553,6 +1554,9 @@ table.border-type-1 > tbody > tr > td:first-child, table.border-type-1 > tbody >
 }
 table.border-type-1 > tbody > tr > td:last-child, table.border-type-1 > tbody > tr > th:last-child, table.border-type-1 > thead > tr > td:last-child, table.border-type-1 > thead > tr > th:last-child, table.border-type-1 > tr > td:last-child, table.border-type-1 > tr > th:last-child, table.border-type-2 > tbody > tr > td:last-child, table.border-type-2 > tbody > tr > th:last-child, table.border-type-2 > thead > tr > td:last-child, table.border-type-2 > thead > tr > th:last-child, table.border-type-2 > tr > td:last-child, table.border-type-2 > tr > th:last-child {
   border-right: none;
+}
+table.valign-middle > thead > tr > th, table.valign-middle > thead > tr > td, table.valign-middle > tbody > tr > th, table.valign-middle > tbody > tr > td, table.valign-middle > tr > th, table.valign-middle > tr > td {
+  vertical-align: middle;
 }
 table .thin {
   width: 1%;
@@ -2811,7 +2815,7 @@ ul.nav-menu li:last-child:after {
   top: 30px;
   right: 30px;
 }
-.modal .modal-header-type-2 {
+.modal .modal-header-type-2, .modal .modal-header-type-3 {
   height: 40px;
   position: relative;
   background: #9c9c9c;
@@ -2822,14 +2826,26 @@ ul.nav-menu li:last-child:after {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.modal .modal-header-type-2 a {
+.modal .modal-header-type-2 a, .modal .modal-header-type-3 a {
   color: #ffffff;
 }
 .modal[data-modal-type="1"] .modal-header-type-1 {
   display: block;
 }
-.modal[data-modal-type="2"] .modal-header-type-2 {
+.modal[data-modal-type="2"] .modal-header-type-2, .modal[data-modal-type="3"] .modal-header-type-2 {
   display: block;
+}
+.modal[data-modal-type="3"] .modal-popup {
+  top: 0 !important;
+  left: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100vh;
+  width: 100vw;
+}
+.modal[data-modal-type="3"] .modal-popup .modal-dialog {
+  min-height: calc(100vh - 40px);
+  overflow: auto;
 }
 
 /* dialogs */
