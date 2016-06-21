@@ -1329,11 +1329,7 @@ p { margin: 1em 0; }
   @include flexbox();
   @include justify-content(space-between);
   
-  
-    
-    
   .grid-col {
-    
     width: 495px;
     max-width: 495px;
     min-width: 495px;
@@ -2034,13 +2030,17 @@ ul.nav-menu {
   @include justify-content(space-between);
   
   &-side {
-    width: 275px;
-    max-width: 275px; margin-right: 20px;
+    width: 295px;
+    max-width: 295px;
     @include flexbox();
-    @include flex(0 1 275px);
+    @include flex(0 1 295px);
     @include flex-direction(column);
-    background: $color-3;
     
+    
+    &-inner {
+      width: 275px;
+      background: $color-3;
+    }
     .custom-select {
       width: 275px;
     }
@@ -2051,10 +2051,8 @@ ul.nav-menu {
       @include flex(1 0 auto);
       
       .catalog {
-        /*
         position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-        overflow-y: auto;
-        */
+        overflow: hidden;
       }
     }
     
@@ -2065,13 +2063,15 @@ ul.nav-menu {
     }
     
     .item {
-      position: relative; width: 275px; overflow: hidden;
+      position: relative; width: 275px; 
       border-bottom: 1px solid $color-10;
+      background: $color-3;
       @include box-sizing(border-box);
       
       .item-inner {
         display: block;
         padding: 9px 15px;
+        overflow: hidden;
       }
       
       &.item-type-1 {
@@ -2783,6 +2783,32 @@ $popup-padding: 20px;
   display: none;
 }
 
+
+//
+//   GM SCROLLBAR
+//   ========================================
+//
+
+.gm-scrollbar {
+  left: 0px;
+  bottom: 0px;
+  @include border-radius(0)
+}
+
+.gm-scrollbar.-vertical {
+  width: 6px;
+  top: 0px;
+}
+.gm-scrollbar.-horizontal {
+  display: none;
+}
+.gm-scrollbar .thumb {
+  background-color: $color-13;
+}
+.gm-scrollbar .thumb:hover,
+.gm-scrollbar .thumb:active {
+  background-color: $color-13;
+}
 
 //
 //   PROTOTYPE RELATED

@@ -2214,21 +2214,23 @@ ul.nav-menu li:last-child:after {
   justify-content: space-between;
 }
 .list-block-side {
-  width: 275px;
-  max-width: 275px;
-  margin-right: 20px;
+  width: 295px;
+  max-width: 295px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 1 275px;
-  -moz-flex: 0 1 275px;
-  -ms-flex: 0 1 275px;
-  flex: 0 1 275px;
+  -webkit-flex: 0 1 295px;
+  -moz-flex: 0 1 295px;
+  -ms-flex: 0 1 295px;
+  flex: 0 1 295px;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+.list-block-side-inner {
+  width: 275px;
   background: #ffffff;
 }
 .list-block-side .custom-select {
@@ -2242,10 +2244,12 @@ ul.nav-menu li:last-child:after {
   flex: 1 0 auto;
 }
 .list-block-side .catalog-holder .catalog {
-  /*
-  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-  overflow-y: auto;
-  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
 }
 .list-block-side .sub-title {
   padding: 9px 15px;
@@ -2257,8 +2261,8 @@ ul.nav-menu li:last-child:after {
 .list-block-side .item {
   position: relative;
   width: 275px;
-  overflow: hidden;
   border-bottom: 1px solid #e0e0e0;
+  background: #ffffff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2266,6 +2270,7 @@ ul.nav-menu li:last-child:after {
 .list-block-side .item .item-inner {
   display: block;
   padding: 9px 15px;
+  overflow: hidden;
 }
 .list-block-side .item.item-type-1 {
   padding: 3px 15px;
@@ -3016,6 +3021,32 @@ tr[data-visible=true] {
 
 [data-list-filter-empty] {
   display: none;
+}
+
+.gm-scrollbar {
+  left: 0px;
+  bottom: 0px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+.gm-scrollbar.-vertical {
+  width: 6px;
+  top: 0px;
+}
+
+.gm-scrollbar.-horizontal {
+  display: none;
+}
+
+.gm-scrollbar .thumb {
+  background-color: #808080;
+}
+
+.gm-scrollbar .thumb:hover,
+.gm-scrollbar .thumb:active {
+  background-color: #808080;
 }
 
 .proto-comments {

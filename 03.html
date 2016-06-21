@@ -8,6 +8,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
   <link href="stylesheets/jquery-ui.structure.css" type="text/css" rel="stylesheet" media="all">
+  <link href="stylesheets/gemini-scrollbar.css" type="text/css" rel="stylesheet" media="all">
   <link href="stylesheets/framework.css" type="text/css" rel="stylesheet" media="all">
   <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="all">
   <script src="javascripts/modernizr.js"></script>
@@ -507,15 +508,17 @@
           <div class="list-block">
             <div class="list-block-side" data-sorter>
               
-              <div class="custom-select custom-select-block custom-select-color-type-4 custom-select-has-ico" data-dropdown>
-                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator><span class="ico ico-type-12 ico-color-type-1"></span> Sort by date (ascending)</a>
-                <div data-dropdown-content="" class="custom-select-content">
-                  <ul class="options">
-                    <li><a href="#" data-dropdown-option data-sorter-attr="date" data-sorter-type="asc"><span class="ico ico-type-12 ico-color-type-1"></span> Sort by date (ascending)</a></li>
-                    <li><a href="#" data-dropdown-option data-sorter-attr="date" data-sorter-type="desc"><span class="ico ico-type-13 ico-color-type-1"></span> Sort by date (descending)</a></li>
-                    <li><a href="#" data-dropdown-option data-sorter-attr="name" data-sorter-type="asc"><span class="ico ico-type-12 ico-color-type-1"></span> Sort by name (ascending)</a></li>
-                    <li><a href="#" data-dropdown-option data-sorter-attr="name" data-sorter-type="desc"><span class="ico ico-type-13 ico-color-type-1"></span> Sort by name (ascending)</a></li>
-                  </ul>
+              <div class="list-block-side-inner">
+                <div class="custom-select custom-select-block custom-select-color-type-4 custom-select-has-ico" data-dropdown>
+                  <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator><span class="ico ico-type-12 ico-color-type-1"></span> Sort by date (ascending)</a>
+                  <div data-dropdown-content="" class="custom-select-content">
+                    <ul class="options">
+                      <li><a href="#" data-dropdown-option data-sorter-attr="date" data-sorter-type="asc"><span class="ico ico-type-12 ico-color-type-1"></span> Sort by date (ascending)</a></li>
+                      <li><a href="#" data-dropdown-option data-sorter-attr="date" data-sorter-type="desc"><span class="ico ico-type-13 ico-color-type-1"></span> Sort by date (descending)</a></li>
+                      <li><a href="#" data-dropdown-option data-sorter-attr="name" data-sorter-type="asc"><span class="ico ico-type-12 ico-color-type-1"></span> Sort by name (ascending)</a></li>
+                      <li><a href="#" data-dropdown-option data-sorter-attr="name" data-sorter-type="desc"><span class="ico ico-type-13 ico-color-type-1"></span> Sort by name (ascending)</a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
               
@@ -614,26 +617,28 @@
           <div class="margin-box">
             <div class="list-block">
               <div class="list-block-side" data-list-filter>
-              
-                <div class="sub-title">My Settings</div>
                 
-                <div class="item">
-                  <a href="#" class="item-inner color-type-3"><b>Burkhardt von Bürgermeisterr</b></a>
-                </div>
+                <div class="list-block-side-inner">
+                  <div class="sub-title">My Settings</div>
                 
-                <div class="sub-title">Other users</div>
+                  <div class="item">
+                    <a href="#" class="item-inner color-type-3"><b>Burkhardt von Bürgermeisterr</b></a>
+                  </div>
                 
-                <div class="item item-type-1">
-                  <span class="ico ico-type-15 ico-color-type-1"></span><a href="#">Create new user</a>
-                </div>
+                  <div class="sub-title">Other users</div>
                 
-                <div class="item catalog-filter bg-color-type-2">
-                  <span class="ico ico-type-14 ico-color-type-1"></span>
-                  <input type="text" class="textbox textbox-block textbox-bg-type-2" placeholder="Filter users" data-list-filter-input />
+                  <div class="item item-type-1">
+                    <span class="ico ico-type-15 ico-color-type-1"></span><a href="#">Create new user</a>
+                  </div>
+                
+                  <div class="item catalog-filter bg-color-type-2">
+                    <span class="ico ico-type-14 ico-color-type-1"></span>
+                    <input type="text" class="textbox textbox-block textbox-bg-type-2" placeholder="Filter users" data-list-filter-input />
+                  </div>
                 </div>
                 
                 <div class="catalog-holder">    
-                  <div class="catalog">
+                  <div class="catalog" id="catalog">
                     <div class="item" data-list-filter-item="Rupert Scrivener">
                       <a href="#" class="item-inner color-type-3"><b>Rupert Scrivener</b></a>
                     </div>
@@ -947,8 +952,8 @@
   <script src="javascripts/jquery-ui.min.js"></script>
   <script src="javascripts/underscore-min.js"></script>
   <script src="javascripts/jquery.modal.js"></script>
+  <script src="javascripts/gemini-scrollbar.js"></script>
   <script src="javascripts/framework.js"></script>
   <script src="javascripts/app.js"></script>
-    
 </body>
 </html>

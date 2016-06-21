@@ -333,6 +333,18 @@ var Framework = {
             $(this).closest('.pdf-holder').removeClass('pdf-holder-visible');
         });
         
+        
+        // List block custom scrollbars
+        
+        this.customScrollbars = [];
+        $('.list-block .catalog').each($.proxy(function(i, el) {
+            var s = new GeminiScrollbar({
+                element: el
+            }).create();
+            this.customScrollbars.push(s);
+        }, this));
+        
+        
     }
 };
 
