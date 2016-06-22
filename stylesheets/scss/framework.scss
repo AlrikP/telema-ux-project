@@ -920,6 +920,9 @@ h4, .h4 {
 .color-type-4 {
   color: $color-13;
 }
+.color-type-5 {
+  color: $color-3;
+}
 
 .uppercase {
   text-transform: uppercase;
@@ -1070,10 +1073,6 @@ p { margin: 1em 0; }
   width: $page-width - $sidebar-width + 30px;
   @include box-sizing(border-box);
   padding: 30px;
-  /*
-  @include flexbox();
-  @include flex-direction(column);
-  */
 }
 
 
@@ -1638,6 +1637,7 @@ table {
 .color-box {
   background: $color-9;
   min-height: 20px;
+  display: inline-block; min-width: 100%;
   
   &-type-1 {
     background: $color-25;
@@ -2736,7 +2736,7 @@ $popup-padding: 20px;
 .bg-color-type-2 { background-color: $color-10; }
 .bg-color-type-3 { background-color: $color-4; }
 .bg-color-type-4 { background-color: $color-11; }
-.bg-color-type-5 { background-color: $color-3; }
+.bg-color-type-5 { background-color: $color-3; } 
 
 
 //

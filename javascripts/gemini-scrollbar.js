@@ -62,7 +62,7 @@
       this[propertyName] = config[propertyName];
     }, this);
 
-    SCROLLBAR_WIDTH = getScrollbarWidth();
+    SCROLLBAR_WIDTH = getScrollbarWidth() + 1;
     DONT_CREATE_GEMINI = ((SCROLLBAR_WIDTH === 0) && (this.forceGemini === false));
 
     this._cache = {events: {}};

@@ -902,6 +902,10 @@ h4, .h4 {
   color: #808080;
 }
 
+.color-type-5 {
+  color: #ffffff;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -1097,10 +1101,6 @@ p {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 30px;
-  /*
-  @include flexbox();
-  @include flex-direction(column);
-  */
 }
 
 .header-menu {
@@ -1697,6 +1697,8 @@ table.t8 tfoot td {
 .color-box {
   background: #f1f1f1;
   min-height: 20px;
+  display: inline-block;
+  min-width: 100%;
 }
 .color-box-type-1 {
   background: #e0dede;
