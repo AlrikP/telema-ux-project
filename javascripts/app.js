@@ -265,6 +265,16 @@ var App = {
             var val = $(this).prop('checked');
             $(this).closest('[data-resolver]').toggleClass('resolved', val);
         });
+        
+        
+        // example of binding event to modal element
+        $('[data-modal]').on('click', function(e) {
+            var modal = $(e.target).data('modal'),
+                $container = modal.getContainer();
+            $container.find('.some-custom-event-class').on('click', function() {
+                alert('Input value: ' + $container.find('.textbox').val());
+            });
+        });
     }
 };
 

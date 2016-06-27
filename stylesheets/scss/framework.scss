@@ -58,6 +58,8 @@ body {
   -webkit-text-size-adjust: none;
   background: $color-3;
   text-align: left;
+  background: $color-11 url("../images/bg.jpg") no-repeat fixed center top;
+  background-size: cover; 
   @include flexbox();
 }
 
@@ -1002,8 +1004,6 @@ p { margin: 1em 0; }
 
 .page-container {
   @include flex(1 1 auto);
-  background: $color-11 url("../images/bg.jpg") no-repeat fixed center top;
-  background-size: cover; 
 }
 
 .page-topbar {
@@ -1409,10 +1409,6 @@ table {
     td, th {
       vertical-align: top; position: relative;
       background-clip: padding-box;
-      
-      &.valign-middle {
-        vertical-align: middle;
-      }
     }
     
     &-sub {
@@ -1520,9 +1516,7 @@ table {
     }
   }
   
-  .thin {
-    width: 1%; white-space: nowrap;
-  }
+  
   
   .row-close {
     position: absolute; top: 0; right: 0; z-index: 10;
@@ -1554,10 +1548,11 @@ table {
   }
   
   th, td {
+    &.valign-middle { vertical-align: middle; }
+    &.thin { width: 1%; white-space: nowrap; }
     &.border { border: 1px solid $color-11; }
     &.border-left { border-left: 1px solid $color-11; }
     &.border-right { border-right: 1px solid $color-11; }
-    
     &.border-left-none { border-left: none !important; }
     &.border-right-none { border-right: none !important; }
   }
@@ -1637,7 +1632,6 @@ table {
 .color-box {
   background: $color-9;
   min-height: 20px;
-  display: inline-block; min-width: 100%;
   
   &-type-1 {
     background: $color-25;

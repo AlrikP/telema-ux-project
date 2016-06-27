@@ -204,11 +204,50 @@
               
         <div class="page-main">
           
+          <div class="color-box pad-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              
+              <div style="padding-bottom: 20px;">
+                <div style="padding-bottom: 10px;"><b>Table classes:</b></div>
+                <b>.t1</b> - most common class for table element. It adds horizontal lines between rows, 
+                formats table header elements and aligns cells vertically top. (T1)<br />
+                <b>.t1-sub</b> - sub class for <b>.t1</b> tables. Mainly used for tables with opening rows. Defines right and left paddings of the opening rows (T1B)<br />
+                <b>.wide</b> - the .wide class specifies the width of a table. Makes table 100% wide.<br />
+                <b>.border-type-1</b>, <b>.border-type-2</b> - adds vertical lines between columns (T6, T7)<br />
+                <b>.pad-v-​*</b>, <b>.pad-h-*</b>​ - using those classes you can add as much padding as needed for cell. 
+                Different padding sizes are 0,5,10,15,20,25,30,45.<br />
+                &nbsp;&nbsp;1) .pad-v- adds top and bottom padding<br />
+                &nbsp;&nbsp;2) .pad-h- adds left and right padding<br />
+                <b>.pad-clear</b> - sets left padding of the first cell and right padding of the last cell to 0<br />
+                <b>.pad-clear-first</b> - sets left and right padding of the first cell to 0. 
+                Useful if you need first cell to be very tight. (numbering, checkboxes etc.) (T7)<br />
+                <b>.valign-middle</b> - aligns all cells vertically middle<br />
+                <b>.header-bg-type-1</b>, <b>.header-bg-type-2</b> - different header styles (T6 and T7)<br />
+                <b>.t8</b> - headings with distinctive styles (T8)
+              </div>
+              
+              <div style="padding-bottom: 20px;">
+                <div style="padding-bottom: 10px;"><b>Cell classes:</b></div>
+                <b>.valign-middle</b> - aligns cell vertically middle<br />
+                <b>.thin</b> - forces cell to take as few space as needed. Text is not allowed to wrap to the next line<br />
+                <b>.border</b> - adds border around cell<br />
+                <b>.border-left</b> - adds left border to the cell<br />
+                <b>.border-right</b> - adds right border to the cell<br />
+                <b>.border-left-none</b> - removes left border from the cell. Sometimes you have to remove right border of previous cell also.<br />
+                <b>.border-right-none</b> - removes right border of the cell. Sometimes you have to remove left border of the next cell also.<br />
+              </div>
+              
+              
+              <div style="padding-bottom: 10px;"><b>Row classes:</b></div>
+              <b>.sub-title</b> - add this class to <i>tbody</i> or <i>tr</i> element for subtitle between table rows (T7)
+              
+            </div>
+          </div>
             
           <div class="grid">
             <div class="grid-col grid-col-type-1">
               
-              <div class="proto-comments proto-comments-no-top-margin">
+              <div class="proto-comments">
                 <b>T1A: Simple horizontal lines</b>
               </div>
               
@@ -1625,7 +1664,7 @@
 
           
           <div class="proto-comments">
-            <b>T6: vertical lines and header background</b>
+            <b>T7: table with subtitles</b>
           </div>
           
           <div class="color-box pad-box">

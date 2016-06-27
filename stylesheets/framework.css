@@ -16,6 +16,8 @@ body {
   -webkit-text-size-adjust: none;
   background: #ffffff;
   text-align: left;
+  background: #c3c3c3 url("../images/bg.jpg") no-repeat fixed center top;
+  background-size: cover;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -1019,8 +1021,6 @@ p {
   -moz-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  background: #c3c3c3 url("../images/bg.jpg") no-repeat fixed center top;
-  background-size: cover;
 }
 
 .page-topbar {
@@ -1488,9 +1488,6 @@ table.t1 td, table.t1 th {
   position: relative;
   background-clip: padding-box;
 }
-table.t1 td.valign-middle, table.t1 th.valign-middle {
-  vertical-align: middle;
-}
 table.t1-sub > tbody > tr > td:first-child, table.t1-sub > tr > td:first-child {
   padding-left: 40px;
 }
@@ -1592,10 +1589,6 @@ table.border-type-1 > tbody > tr > td:last-child, table.border-type-1 > tbody > 
 table.valign-middle > thead > tr > th, table.valign-middle > thead > tr > td, table.valign-middle > tbody > tr > th, table.valign-middle > tbody > tr > td, table.valign-middle > tr > th, table.valign-middle > tr > td {
   vertical-align: middle;
 }
-table .thin {
-  width: 1%;
-  white-space: nowrap;
-}
 table .row-close {
   position: absolute;
   top: 0;
@@ -1614,6 +1607,13 @@ table tbody.sub-title td, table tr.sub-title td {
   background-color: #e0e0e0;
   border-left: none !important;
   border-right: none !important;
+}
+table th.valign-middle, table td.valign-middle {
+  vertical-align: middle;
+}
+table th.thin, table td.thin {
+  width: 1%;
+  white-space: nowrap;
 }
 table th.border, table td.border {
   border: 1px solid #c3c3c3;
@@ -1697,8 +1697,6 @@ table.t8 tfoot td {
 .color-box {
   background: #f1f1f1;
   min-height: 20px;
-  display: inline-block;
-  min-width: 100%;
 }
 .color-box-type-1 {
   background: #e0dede;

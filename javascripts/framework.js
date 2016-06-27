@@ -26,13 +26,17 @@ var Framework = {
             if (id) {
                 if (!this.modals[id]) {
                     this.modals[id] = new $.modal();
+                    this.modals[id].getContainer().trigger('created');
                 }
                 modal = this.modals[id];
             }
             else {
                 modal = new $.modal();
+                modal.getContainer().trigger('created');
                 modal.setOption('removeOnClose', true);
             }
+            
+            $target.data('modal', modal);
             
             if (removeOnClose !== undefined) {
                 modal.setOption('removeOnClose', removeOnClose);
@@ -40,12 +44,20 @@ var Framework = {
             
             $container = modal.getContainer().attr('data-modal-type', type);
             
+            
+            $container.on('beforeHide', $.proxy(function() {
+                $target.removeData('modal');
+            }, this));
+            
             $container.on('beforeRemove', $.proxy(function() {
-                if (this.modals[id]) { delete this.modals[id]; }
+                if (this.modals[id]) { 
+                    delete this.modals[id]; 
+                }
             }, this));
 
             modal.setContent($('#' + tpl).html());
             modal.show();
+            
             
         }, this));
         
@@ -72,7 +84,7 @@ var Framework = {
         });
         
         
-        // Sortble
+        // Sortable
         $('[data-sortable]').sortable({
             axis: 'y',
             handle: '[data-sortable-handle]',
@@ -295,6 +307,8 @@ var Framework = {
                 else {
                     $items.show();
                 }
+                
+                $parent.trigger('listfilter:change');
             });
         });
         
@@ -335,16 +349,23 @@ var Framework = {
         
         
         // List block custom scrollbars
-        
         this.customScrollbars = [];
         $('.list-block .catalog').each($.proxy(function(i, el) {
             var s = new GeminiScrollbar({
                 element: el
             }).create();
+            
+            $(el).data('geminiScrollbar', s);
+            
             this.customScrollbars.push(s);
+            
+            if ($(el).closest('[data-list-filter]')) {
+                $(el).closest('[data-list-filter]').on('listfilter:change', function() {
+                    s.update();
+                });
+            }
+            
         }, this));
-        
-        
     }
 };
 
@@ -780,7 +801,6 @@ $(function() {
 
     Plugin.prototype.init = function() {
         this.$items = this.$elem.find('[data-sorter-item]');
-        this.$holder = this.$elem.find('[data-sorter-items]');
         
         this.$elem.on('click.' + this.pluginName + '-event','[data-sorter-attr]', $.proxy(function(e) {
             e.preventDefault();
@@ -800,7 +820,7 @@ $(function() {
         
         if (type == "desc") { $sorted.reverse(); }
         
-        this.$holder.append($sorted);
+        this.$items.first().parent().append($sorted);
         
     };
     
@@ -873,7 +893,6 @@ $(function() {
     };
     
     Plugin.prototype.clear = function() {
-        console.log('siin');
         if (this.$input.length) {
             this.$input.wrap('<form>').closest('form').get(0).reset();
             this.$input.unwrap();

@@ -464,7 +464,7 @@
               <li><a href="#">company &amp; branch</a></li>
               <li><a href="#" class="active">products &amp; services</a></li>
               <li><a href="#">connection</a></li>
-              <li><a href="#">functionalit</a></li>
+              <li><a href="#">functionality</a></li>
             </ul>
           </div>
           
@@ -500,8 +500,13 @@
           </div>
           
           
-          <div class="proto-comments uppercase">
-            <b>The block of list and content</b>
+          <div class="proto-comments">
+            <b class="uppercase">The block of list and content</b><br /><br />
+            Custom scrollbar must be updated when adding/removing items to/from catalog dynamically.
+            <br /> 
+            You can update all custom scrollbars by calling 
+            <i>$('.gm-scrollbar-container').data('geminiScrollbar').update()</i><br />
+            Specific catalog update is strongly suggested instead of updating all together
           </div>
           
             
@@ -522,7 +527,7 @@
                 </div>
               </div>
               
-              <div class="catalog-holder" data-sorter-items>
+              <div class="catalog-holder">
                 <div class="catalog">
                   <div class="item" data-sorter-item='{"date" : 910, "name": "KEILA TÜ – Treppoja kauplus"}'>
                     <a href="#" class="item-inner color-type-3">
@@ -777,12 +782,64 @@
           </div>
           
           
-          <div class="proto-comments uppercase">
-            <b>Modal</b>
+          <div class="proto-comments ">
+            <b class="uppercase">Modal</b><br />
           </div>
           
           <div class="color-box pad-box">
-            <a href="#" class="btn" data-modal data-modal-tpl="some-modal-tpl" data-modal-id="12345" data-modal-remove="true">Open modal</a>
+            <div class="proto-comments proto-comments-no-top-margin">
+            
+              <div style="padding-bottom: 5px;">
+                <b>data-modal</b> <i>(required)</i><br />
+                Defines modal
+              </div>
+            
+              <div style="padding-bottom: 5px;">
+                <b>data-modal-tpl</b> <i>(required)</i><br />
+                Defines which template modal should use
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-modal-type</b> <br />
+                Defines modal appearance.<br />
+                1 - classic modal with closing X on top right<br />
+                2 - closing icon has an accompanying text and darker background in the width of the layer<br />
+                3 - same as type 2 but modal has viewport height and width
+                
+              </div>
+            
+              <div style="padding-bottom: 5px;">
+                <b>data-modal-id</b><br />
+                Modal ID should be defined to use same modal instance. 
+                If modal ID is defined then modal stays in DOM, otherwise modal is removed from DOM<br >
+              </div>
+            
+              <div style="padding-bottom: 5px;">
+                <b>data-modal-remove</b><br />
+                If this attribute is defined then modal is removed from DOM even if ID is defined
+              </div>
+            
+              <div style="padding-bottom: 15px;">
+                <b>data-modal-close</b><br />
+                Modal child element attribute. Binds click event on element to hide/remove modal
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>Example of binding event to modal content elements:</b><br />
+                <i>
+                  
+                  $('[data-modal]').on('click', function(e) {<br />
+                  &nbsp; &nbsp; var modal = $(e.target).data('modal'),<br />
+                  &nbsp; &nbsp; $container = modal.getContainer();<br />
+                  &nbsp; &nbsp; $container.find('.some-custom-event-class').on('click', function() {<br />
+                  &nbsp; &nbsp; &nbsp; &nbsp; alert('Input value: ' + $container.find('.textbox').val());<br />
+                  &nbsp; &nbsp; });<br />
+                  });<br />
+              
+                </i>
+              </div>
+            </div>
+            <a href="#" class="btn" data-modal data-modal-tpl="some-modal-tpl" data-modal-id="12345">Open modal</a>
             <a href="#" class="btn" data-modal data-modal-tpl="some-modal-tpl" data-modal-type="2">Open modal with header</a>
             <a href="#" class="btn" data-modal data-modal-tpl="some-modal-tpl" data-modal-type="3">Open modal full screen</a>
           </div>
@@ -940,7 +997,12 @@
       <div class="pad-box">
         <h3 class="uppercase color-type-1">Some modal title</h3>
         <p>
-          Some modal content
+          Some modal content<br /><br /><br />
+          
+          <div style="padding-bottom: 5px">
+            <input type="text" class="textbox" >
+          </div>
+          <a href="#" class="btn btn-color-type-1 some-custom-event-class" data-modal-close>Close modal with custom event</a>
         </p>
       </div>
     </div>

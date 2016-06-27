@@ -202,7 +202,7 @@
         <div class="page-main">
           
           <div class="proto-comments">
-            <b>EXAMPLES OF GRID BOXES</b>
+            <b>GRID BOXES</b><br />
           </div>
           
           <div class="color-box"></div>  
@@ -210,18 +210,18 @@
           <div class="grid">
             <div class="grid-col color-box margin-box">
             </div> <!-- //grid-col -->
-            
             <div class="grid-col color-box margin-box">
             </div> <!-- //grid-col -->
           </div> <!-- //grid -->
           
           <div class="grid">
             <div class="grid-col grid-col-type-1">
-              <div class="color-box margin-box flex"></div>
+              <div class="color-box margin-box pad-box flex">
+                Adding <i>.flex</i> class to child element stretches it vertically
+              </div>
             </div> <!-- //grid-col -->
-            
             <div class="grid-col">
-              <div class="color-box margin-box flex"></div>
+              <div class="color-box margin-box"></div>
               <div class="color-box margin-box flex"></div>
             </div> <!-- //grid-col -->
           </div> <!-- //grid -->
@@ -229,7 +229,6 @@
           <div class="grid">
             <div class="grid-col grid-col-type-2 color-box margin-box">
             </div> <!-- //grid-col -->
-            
             <div class="grid-col color-box margin-box">
             </div> <!-- //grid-col -->
           </div> <!-- //grid -->
@@ -242,7 +241,7 @@
           <div class="color-box pad-box margin-box">
             
             <div class="proto-comments proto-comments-no-top-margin">
-              Examples of different font styles, sizes and colors.<br />Instead of using heading tags we can use CSS classes .h1, .h2, .h3, .h4
+              Examples of different font styles, sizes and colors.<br />You can use classes .h1, .h2, .h3, .h4 instead of heading tags
             </div>
             <h1>Roboto Condensed Bold 36</h1>
             <h1 class="uppercase">Roboto Condensed Bold 36</h1>
@@ -288,7 +287,8 @@
           
           <div class="color-box pad-box margin-box">
             <div class="proto-comments proto-comments-no-top-margin">
-              Examples of different button styles: Classes can be use for &lt;a&gt;, &lt;button&gt;, &lt;input&gt;
+              Examples of different button styles.<br />
+              Classes can be added to <i>&lt;a&gt;</i>, <i>&lt;button&gt;</i> or <i>&lt;input&gt;</i>
             </div>
             
 
@@ -553,9 +553,7 @@
             <div class="proto-comments proto-comments-no-top-margin">
               <span class="uppercase"><b>Bubbles</b></span>
               <br /><br />
-              <div style="padding-bottom: 5px;">
-                Activate: <i>$('[data-bubble]').bubble();</i>
-              </div>
+              
               <div style="padding-bottom: 5px;">
                 <b>data-bubble</b> <i>(required)</i><br />
                 Required attribute to define bubble element
@@ -581,7 +579,7 @@
               
               <div style="padding-bottom: 15px;">
                 <b>data-bubble-force-position</b><br />
-                Defines if bubble sets its position to fit in area or viewport<br />
+                If set then bubble is always positioned as defined<br />
                 Values: true, false (default: false)
               </div>
               
@@ -604,7 +602,7 @@
               <div style="padding-bottom: 5px;">
                 <b>data-bubble-close</b><br />
                 Clicking on bubble doesn't close it<br />
-                If target element has this attribute then bubble is closed
+                If child element has this attribute then bubble is closed when clicking that element
               </div>
             </div>
             
@@ -681,10 +679,7 @@
             <div class="proto-comments proto-comments-no-top-margin">
               <span class="uppercase"><b>Custom selects, dropdowns and autocompletes</b></span>
               <br /><br />
-              <b>Dropdowns</b>
-              <div style="padding-bottom: 5px;">
-                Activate: <i>$('[data-dropdown]').dropdown();</i>
-              </div>
+
               <div style="padding-bottom: 5px;">
                 <b>data-dropdown</b> <i>(required)</i><br />
                 Required attribute to define dropdown element
@@ -732,16 +727,16 @@
               <div style="padding-bottom: 5px;">
                 <b>data-dropdown-close</b><br />
                 Clicking on dropdown doesn't close dropdown (except if element is option element)<br />
-                If target element has this attribute then dropdown is closed
+                If child element has this attribute then dropdown is closed when clicking that element
               </div>
               
               <div style="padding-bottom: 15px;">
                 <b>data-dropdown-hidden-input</b><br />
-                Defines hidden input element. This is useful if custom select is used inside form
+                Defines hidden input element. Clicking option element changes input value. This is useful if custom select is used inside form
               </div>
               
               <div style="padding-bottom: 5px;">
-                Option click triggers <i>change:dropdown</i> event on <i>data-dropdown</i> element<br />
+                Option element click triggers <i>change:dropdown</i> event on <i>data-dropdown</i> element<br />
                 If some action is needed on select change then you can use something like this:<br />
                 <i>
                   $('[data-dropdown]').on('change:dropdown', function() { console.log(attributes) });
