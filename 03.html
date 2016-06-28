@@ -1,0 +1,1021 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Telema UI</title>
+  <meta name="author" content="Fraktal">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+  <link href="stylesheets/jquery-ui.structure.css" type="text/css" rel="stylesheet" media="all">
+  <link href="stylesheets/gemini-scrollbar.css" type="text/css" rel="stylesheet" media="all">
+  <link href="stylesheets/framework.css" type="text/css" rel="stylesheet" media="all">
+  <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="all">
+  <script src="javascripts/modernizr.js"></script>
+</head>
+  
+<body>
+  <div class="page-holder">
+    
+    <div class="page-header">
+      <a href="#" class="logo"></a>
+      <div class="header-menu">
+        <a href="#" class="btn-header active">EDI</a>
+        <a href="#" class="btn-header">E-invoice</a>
+        <a href="#" class="btn-header">VMI</a>
+        <a href="#" class="btn-header">MMT</a>
+        <div class="regular-dropdown float-left" data-dropdown>
+          <a href="#" class="btn-header btn-header-type-1" data-dropdown-toggler>More</a>
+          <div class="regular-dropdown-content " data-dropdown-content>
+            <div class="inner">
+              <ul>
+                <li><a href="#">WebShop »</a></li>
+                <li><a href="#">TeleSales »</a></li>
+                <li><a href="#">eFactoring »</a></li>
+                <li><a href="#">eAuction »</a></li>
+                <li><a href="#">Archive »</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-inner">
+        <div class="float-right">
+          <div class="role-dropdown regular-dropdown regular-dropdown-type-1 max-height-315" data-dropdown>
+            <a href="#" class="role-dropdown-toggler" data-dropdown-toggler>
+              <strong>Burkhardt von Bürgermeter</strong>
+              <span class="company">Bürgermeister Pagar ja Koogimeister  AS Ltd</span>
+            </a>
+            <div class="regular-dropdown-content" data-dropdown-content>
+              <div class="sub-title">Companies</div>
+              <ul>
+                <li><a href="#" data-dropdown-close>Bürgermeister Pagar ja Koogimeister  AS Ltd</a></li>
+                <li><a href="#" data-dropdown-close>Kuke meierei</a></li>
+              </ul>
+              <div class="sub-title">Branches</div>
+              <div data-list-filter>
+                <div class="textbox-holder">
+                  <input type="text" class="textbox textbox-size-type-1 textbox-border-type-1" data-list-filter-input placeholder="Start writing to filter..." />
+                </div>
+                <div class="inner inner-type-1">
+                  <ul data-list-filter-content>
+                    <li data-list-filter-item="Kuke meierei Valga branch"><a href="#" data-dropdown-close>Kuke meierei Valga branch »</a></li>
+                    <li data-list-filter-item="Kuke meierei Võru branch"><a href="#" data-dropdown-close>Kuke meierei Võru branch »</a></li>
+                    <li data-list-filter-item="Kuke meierei Tartu branch"><a href="#" data-dropdown-close>Kuke meierei Tartu branch »</a></li>
+                    <li data-list-filter-item="Tibu Talu ökopood Elva branch"><a href="#" data-dropdown-close>Tibu Talu ökopood Elva branch »</a></li>
+                    <li class="text" data-list-filter-empty>No matches found</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn-login">Log out</a>
+        </div>
+      </div>
+    </div>
+      
+    <div class="page-wrap">
+        
+      <div class="page-sidebar">
+        <div class="inner selector-holder">
+          <div class="custom-select custom-select-block custom-select-size-type-1 custom-select-color-type-3 custom-select-font-size-1" data-dropdown>
+            <a href="#" class="custom-select-toggler" style="max-width: 120px;" data-dropdown-toggler data-dropdown-indicator>Purchase</a>
+            <div class="custom-select-content" data-dropdown-content>
+              <ul class="options">
+                <li><a href="#" data-dropdown-option>Sales</a></li>
+                <li><a href="#" data-dropdown-option>Purchase</a></li>
+                <li><a href="#" data-dropdown-option>Something third</a></li>
+                <li><a href="#" data-dropdown-option>Something fourth</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="inner">
+          <ul class="list">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Overview</a></li>
+          </ul>
+        </div>
+        <div class="inner">
+          <ul class="list">
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Despatch Advice</a></li>
+            <li><a href="#">Receiving Advice</a></li>
+            <li><a href="#">Invoice</a></li>
+            <li><a href="#">All Documents</a></li>
+          </ul>
+        </div>
+        <div class="inner">
+          <ul class="list">
+            <li><a href="#">Products &amp; Prices</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="page-container">
+          
+        <div class="page-topbar">
+          
+          <div class="page-topbar-inner">
+            
+            <div class="float-right">
+              
+              <div class="search">
+                <div class="textbox-holder ui-front">
+                  <input type="text" class="textbox textbox-size-type-1 textbox-bg-type-1" data-search-main />
+                </div>
+                <input type="submit" class="btn btn-size-small btn-size-square btn-type-icon btn-icon-2" value="" /> 
+              </div>
+              
+              <a href="#" class="messages"><span>2</span></a>     
+              
+              <div class="support-dropdown regular-dropdown regular-dropdown-type-1" data-dropdown>
+                <a href="#" class="support-dropdown-toggler" data-dropdown-toggler></a>
+                <div class="regular-dropdown-content" data-dropdown-content>
+                  <div class="support">
+                    <div class="support-content">
+                      <form data-form-attachment>
+                        <div class="row">
+                          <div class="label">Subject</div>
+                          <input type="text" class="textbox textbox-border-type-1">
+                        </div>
+                        <div class="row">
+                          <div class="label">Message to customer support</div>
+                          <textarea class="textbox textbox-border-type-1" cols="30" rows="4"></textarea>
+                          <div class="attached-file" data-form-attachment-list>
+                            <a href="#" class="remove" data-form-attachment-clear></a>
+                            <span class="item" data-form-attachment-item></span>
+                          </div>
+                        </div>
+                        <div class="row row-submit row-flex">
+                          <div class="file-input">
+                            <input type="file" name="file" data-form-attachment-input />
+                            <span class="btn btn-size-square btn-type-icon btn-icon-1"></span>
+                          </div>
+                          <input type="submit" class="btn btn-size-block" value="Send" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="support-success">
+                      <div class="support-success-inner">
+                        <div>
+                          Thank you!<br />
+                          Your message is sent.<br />
+                          We will contact you in 24h.
+                        </div>
+                        <a href="#" class="btn btn-padding-type-1" data-dropdown-close>OK</a>
+                      </div>
+                    </div>
+                    <div class="support-error">
+                      <div class="support-error-inner">
+                        <div data-support-error="1">
+                          Attachment is not in the right format.<br />Allowed formats are .jpg, <br />.gif, .doc and .xls. 
+                        </div>
+                        <div data-support-error="2">
+                          File size too big
+                        </div>
+                        <a href="#" class="btn btn-padding-type-1">OK</a>
+                      </div>
+                    </div>
+                  </div> <!-- //support -->
+                </div>
+              </div>
+              
+              <div class="settings-dropdown regular-dropdown regular-dropdown-type-1" data-dropdown>
+                <a href="#" class="settings-dropdown-toggler" data-dropdown-toggler></a>
+                <div class="regular-dropdown-content" data-dropdown-content>
+                  <div class="inner inner-type-2">
+                    <ul>
+                      <li><a href="#">My settings  »</a></li>
+                      <li><a href="#">User settings »</a></li>
+                      <li><a href="#">Company and branch settings »</a></li>
+                      <li><a href="#">Products and services »</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- //page-topbar-inner -->
+          
+        </div> <!-- //page-topbar -->
+              
+        <div class="page-main">
+          
+          
+          <div class="proto-comments  proto-comments-no-top-margin uppercase">
+            <b>Filter block</b>
+          </div>
+          
+          <div class="color-box pad-box">
+            <h3 class="uppercase color-type-1">documents requiring attention</h3>
+            
+            <div class="filter-block">
+              <div class="column">
+                
+                <div class="column-row">
+                  <div class="row-label">&nbsp;</div>
+                  <input type="text" class="textbox textbox-bg-type-1" placeholder="Search by partner or document number" />
+                </div>
+                
+                <div class="column-row">
+                  <div class="col">
+                    <div class="custom-select custom-select-block custom-select-color-type-1" data-dropdown>
+                      <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select document type</span></a>
+                      <input type="hidden" data-dropdown-hidden-input />
+                      <div class="custom-select-content" data-dropdown-content>
+                        <ul class="options">
+                          <li><a href="#" data-dropdown-option data-dropdown-value="a">Type 1</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="b">Type 2</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="">All Types</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col">
+                    <div class="custom-select custom-select-block custom-select-color-type-1" data-dropdown>
+                      <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select issue type</span></a>
+                      <input type="hidden" data-dropdown-hidden-input />
+                      <div class="custom-select-content" data-dropdown-content>
+                        <ul class="options">
+                          <li><a href="#" data-dropdown-option data-dropdown-value="a">Type 1</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="b">Type 2</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="">All Types</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="column-row">
+                  <div class="col">
+                    <div class="custom-select custom-select-block custom-select-color-type-1" data-dropdown>
+                      <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select status</span></a>
+                      <input type="hidden" data-dropdown-hidden-input />
+                      <div class="custom-select-content" data-dropdown-content>
+                        <ul class="options">
+                          <li><a href="#" data-dropdown-option data-dropdown-value="a">Status 1</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="b">Status 2</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="">All</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col">
+                    <div class="custom-select custom-select-block custom-select-color-type-1" data-dropdown>
+                      <a href="#" class="custom-select-toggler" data-dropdown-toggler><span data-dropdown-indicator>Select resolved by</span></a>
+                      <input type="hidden" data-dropdown-hidden-input />
+                      <div class="custom-select-content" data-dropdown-content>
+                        <ul class="options">
+                          <li><a href="#" data-dropdown-option data-dropdown-value="a">Status 1</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="b">Status 2</a></li>
+                          <li><a href="#" data-dropdown-option data-dropdown-value="">All</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="column" data-date-selector-parent>
+                <div class="column-row">
+                  
+                  <div class="col">
+                    <div class="row-label">Start date</div>
+                    <div class="textbox-has-ico">
+                      <input type="text" class="textbox textbox-block textbox-bg-type-1" data-date-selector-start data-date-format="DD.MM.YYYY">
+                      <span class="ico ico-type-11"></span>
+                    </div>
+                  </div>
+                  
+                  <div class="col">
+                    <div class="row-label">End date</div>
+                    <div class="textbox-has-ico">
+                      <input type="text" class="textbox textbox-block textbox-bg-type-1" data-date-selector-end data-date-format="DD.MM.YYYY">
+                      <span class="ico ico-type-11"></span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="links-holder font-size-small">
+                  <a href="#" class="color-type-2" data-date-selector-marker="today">Today</a> 
+                  <span class="sep color-type-2">I</span>
+                  <a href="#" class="color-type-2" data-date-selector-marker="yesterday">Yesterday</a>
+                  <span class="sep color-type-2">I</span>
+                  <a href="#" class="color-type-1" data-date-selector-marker="last-7">Last 7 days</a>
+                  <span class="sep color-type-2">I</span>
+                  <a href="#" class="color-type-2" data-date-selector-marker="this-week">This week</a><br />
+                  <a href="#" class="color-type-2" data-date-selector-marker="last-week">Last week</a>
+                  <span class="sep color-type-2">I</span>
+                  <a href="#" class="color-type-2" data-date-selector-marker="this-month">This month
+                  <span class="sep color-type-2">I</span></a>
+                  <a href="#" class="color-type-2" data-date-selector-marker="last-30">Last 30 days</a>
+                  <span class="sep color-type-2">I</span>
+                  
+                  <div class="inl-blk" data-bubble data-bubble-disable-side-click data-bubble-hpos="left">
+                    <a href="#" class="color-type-2" data-bubble-toggler>Choose dates »</a>
+                    <div class="bubble font-size-regular" data-bubble-content>
+                      <div class="datepicker-bubble datepicker-bubble-double">
+                        <div class="calendar-holder" data-date-selector-parent>
+                          <div class="calendar">
+                            <div class="cfx">
+                              <a href="#" class="btn btn-padding-type-1 float-left" data-date-selector-marker="last-7">Last 7 days</a>
+                              <a href="#" class="btn btn-padding-type-1 float-right" data-date-selector-marker="next-7">Next 7 days</a>
+                            </div>
+                            <div class="calendar-label margin-top">Pick or enter start date</div>
+                            <input type="text" class="textbox" data-date-selector-start />
+                            <div data-date-picker="start"></div>
+                          </div>
+                          <div class="calendar">
+                            <div class="cfx">
+                              <a href="#" class="btn btn-padding-type-1 float-left" data-date-selector-marker="this-month">This month</a>
+                              <a href="#" class="btn btn-padding-type-1 float-right" data-date-selector-marker="last-month">Last month</a>
+                            </div>
+                            <div class="calendar-label margin-top">Pick or enter end date</div>
+                            <input type="text" class="textbox" data-date-selector-end />
+                            <div data-date-picker="end"></div>
+                            <div class="align-right bubble-confirm">
+                              <a href="#" class="btn" data-date-selector-marker="bubble" data-bubble-close>Confirm dates</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="column">
+                <div class="row-label">&nbsp;</div>
+                <input type="submit" class="btn btn-padding-type-1" value="Search" />
+              </div>
+            </div> <!-- //filter-block -->
+          </div>
+          
+          <div class="color-box margin-box">
+            <div class="pad-box">
+              <h3 class="uppercase color-type-1">documents requiring attention</h3>
+            
+              <div class="filter-block">
+                <div class="column">
+                  <div class="column-row">
+                    <div class="row-label">&nbsp;</div>
+                    <input type="text" class="textbox textbox-bg-type-1" placeholder="Search by partner or document number" />
+                  </div>
+                </div>
+              
+                <div class="column" data-date-selector-parent>
+                  <div class="column-row">
+                    <div class="col">
+                      <div class="row-label">Start date</div>
+                      <div class="textbox-has-ico">
+                        <input type="text" class="textbox textbox-block textbox-bg-type-1" data-date-selector-start data-date-format="MM.DD.YYYY">
+                        <span class="ico ico-type-11"></span>
+                      </div>
+                    </div>
+                  
+                    <div class="col">
+                      <div class="row-label">End date</div>
+                      <div class="textbox-has-ico">
+                        <input type="text" class="textbox textbox-block textbox-bg-type-1" data-date-selector-end data-date-format="MM.DD.YYYY">
+                        <span class="ico ico-type-11"></span>
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="links-holder font-size-small">
+                    <a href="#" class="color-type-2" data-date-selector-marker="today">Today</a> 
+                    <span class="sep color-type-2">I</span>
+                    <a href="#" class="color-type-2" data-date-selector-marker="yesterday">Yesterday</a>
+                    <span class="sep color-type-2">I</span>
+                    <a href="#" class="color-type-1" data-date-selector-marker="last-7">Last 7 days</a>
+                    <span class="sep color-type-2">I</span>
+                    <a href="#" class="color-type-2" data-date-selector-marker="this-week">This week</a><br />
+                    <a href="#" class="color-type-2" data-date-selector-marker="last-week">Last week</a>
+                    <span class="sep color-type-2">I</span>
+                    <a href="#" class="color-type-2" data-date-selector-marker="this-month">This month
+                    <span class="sep color-type-2">I</span></a>
+                    <a href="#" class="color-type-2" data-date-selector-marker="last-30">Last 30 days</a>
+                    <span class="sep color-type-2">I</span>
+                    <div class="inl-blk" data-bubble data-bubble-disable-side-click data-bubble-hpos="left">
+                      <a href="#" class="color-type-2" data-bubble-toggler>Choose dates »</a>
+                      <div class="bubble font-size-regular" data-bubble-content>
+                      
+                        <div class="datepicker-bubble datepicker-bubble-double">
+                        
+                          <div class="calendar-holder" data-date-selector-parent>
+                            <div class="calendar"> 
+                              <div class="calendar-label">Pick or enter start date</div>
+                              <input type="text" class="textbox" data-date-selector-start />
+                              <div data-date-picker></div>
+                            </div>
+                          
+                            <div class="calendar"> 
+                              <div class="calendar-label">Pick or enter end date</div>
+                              <input type="text" class="textbox" data-date-selector-end />
+                              <div data-date-picker></div>
+                            
+                              <div class="align-right bubble-confirm">
+                                <a href="#" class="btn" data-date-selector-marker="bubble" data-bubble-close>Confirm dates</a>
+                              </div>
+                            </div>
+                          </div> <!-- //calendar-holder -->
+                      
+                        </div>
+                      
+                      </div>
+                    </div>
+                  </div>
+                
+                </div>
+              
+                <div class="column">
+                
+                  <div class="row-label">&nbsp;</div>
+                  <input type="submit" class="btn btn-padding-type-1" value="Search" />
+                </div>
+              </div> <!-- //filter-block -->
+            </div>
+          
+            <div class="pad-box pad-box-type-1 border-top">
+              <b>14 documents found</b>
+            </div>
+          </div>
+          
+          
+          <div class="proto-comments uppercase">
+            <b>MENU BLOCK</b>
+          </div>
+          
+          <div class="color-box pad-box">
+            <h1 class="uppercase">settings</h1>
+            <p>
+              Introduction to settings page, infroduction, introduction. Introduction to settings page, infroduction, 
+              introduction.  Introduction to settings page, infroduction, introduction.  Introduction to settings page, 
+              infroduction, introduction. Introduction to settings page, infroduction, introduction.  Introduction to 
+              settings page, infroduction, introduction. 
+            </p>
+            <ul class="nav-menu">
+              <li><a href="#">me &amp; other users</a></li>
+              <li><a href="#">company &amp; branch</a></li>
+              <li><a href="#" class="active">products &amp; services</a></li>
+              <li><a href="#">connection</a></li>
+              <li><a href="#">functionality</a></li>
+            </ul>
+          </div>
+          
+          <div class="proto-comments uppercase">
+            <b>Introduction block</b>
+          </div>
+          
+          <div class="color-box pad-box">
+            <h3 class="uppercase color-type-1 margin-bottom">Dimensions</h3>
+            
+            <div class="intro-block">
+              
+              <div class="intro-block-left">
+                <ul class="bullet-list bullet-list-type-1">
+                  <li>
+                    If you want to make any changes in your dimensions table, make changes in the 
+                    file you uploaded and upload it again. 
+                  </li>
+                  <li>
+                    You can only upload a file that uses our template. If you have lost that file, download the template 
+                    again and fill it with your info. Then upload.
+                  </li>
+                  <li>
+                    After uploading you will see your updated dimensions table right below.
+                  </li>
+                </ul>
+              </div>
+              <div class="intro-block-right">
+                <a href="#" class="btn btn-size-block">Upload template with your info</a>
+                <a href="#" class="btn btn-size-block btn-color-type-1" style="margin-top: 6px;">Download template</a>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="proto-comments">
+            <b class="uppercase">The block of list and content</b><br /><br />
+            Custom scrollbar must be updated when adding/removing items to/from catalog dynamically.
+            <br /> 
+            You can update all custom scrollbars by calling 
+            <i>$('.gm-scrollbar-container').data('geminiScrollbar').update()</i><br />
+            Specific catalog update is strongly suggested instead of updating all together
+          </div>
+          
+            
+          <div class="list-block">
+            <div class="list-block-side" data-sorter>
+              
+              <div class="list-block-side-inner">
+                <div class="custom-select custom-select-block custom-select-color-type-4 custom-select-has-ico" data-dropdown>
+                  <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator><span class="ico ico-type-12 ico-color-type-1"></span> Sort by date (ascending)</a>
+                  <div data-dropdown-content="" class="custom-select-content">
+                    <ul class="options">
+                      <li><a href="#" data-dropdown-option data-sorter-attr="date" data-sorter-type="asc"><span class="ico ico-type-12 ico-color-type-1"></span> Sort by date (ascending)</a></li>
+                      <li><a href="#" data-dropdown-option data-sorter-attr="date" data-sorter-type="desc"><span class="ico ico-type-13 ico-color-type-1"></span> Sort by date (descending)</a></li>
+                      <li><a href="#" data-dropdown-option data-sorter-attr="name" data-sorter-type="asc"><span class="ico ico-type-12 ico-color-type-1"></span> Sort by name (ascending)</a></li>
+                      <li><a href="#" data-dropdown-option data-sorter-attr="name" data-sorter-type="desc"><span class="ico ico-type-13 ico-color-type-1"></span> Sort by name (ascending)</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="catalog-holder">
+                <div class="catalog">
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "KEILA TÜ – Treppoja kauplus"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td><b>KEILA TÜ – Treppoja kauplus</b></td></tr>
+                        <tr class="color-type-4 font-size-small"><td>11:15</td><td>21.93€ &nbsp; OT002680690</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "Narva"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td><b>Narva</b></td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:15</td><td>216.93€ &nbsp; OT002680657</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "ELVA TÜ – ELVA A&amp;O"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td>ELVA TÜ – ELVA A&amp;O</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>218.93€ &nbsp; WEB76996572</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "Haraldi pood RR Lektus AS"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td>Haraldi pood RR Lektus AS</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>51.81€ &nbsp; T-180228</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "SELVER AS – DC"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td>SELVER AS – DC</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>Torupilli Selver<br />23 451.93€ &nbsp; OT002679541</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "Tallinna filiaal ladu 28,29"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td>Tallinna filiaal ladu 28,29</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>213.93€ &nbsp; 116703-5LS1TL</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 910, "name": "Prisma Mustamäe – Toit"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>10.09</b></td><td>Prisma Mustamäe – Toit</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>Kalamaja Prisma<br />45 621.93€ &nbsp; 300234309</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 911, "name": "Tallinna filiaal ladu 28,29"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>11.09</b></td><td>Tallinna filiaal ladu 28,29</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>3 421.93€ &nbsp; 116702-5LS1TL</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 925, "name": "Tallinna filiaal ladu 28,29"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>25.09</b></td><td>Tallinna filiaal ladu 28,29</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>211.93€ &nbsp; 116701-5LS1TL</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  <div class="item" data-sorter-item='{"date" : 1001, "name": "Tapa ToKo köök"}'>
+                    <a href="#" class="item-inner color-type-3">
+                      <table class="no-wrap">
+                        <tr><td><b>01.10</b></td><td>Tapa ToKo köök</td></tr>
+                        <tr class="color-type-4 font-size-small"><td>10:10</td><td>261.93€ &nbsp; T-24714</td></tr>
+                      </table>
+                    </a>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            
+            <div class="list-block-content">
+            </div>
+            
+          </div> <!-- //list-block -->
+          
+          <div class="margin-box">
+            <div class="list-block">
+              <div class="list-block-side" data-list-filter>
+                
+                <div class="list-block-side-inner">
+                  <div class="sub-title">My Settings</div>
+                
+                  <div class="item">
+                    <a href="#" class="item-inner color-type-3"><b>Burkhardt von Bürgermeisterr</b></a>
+                  </div>
+                
+                  <div class="sub-title">Other users</div>
+                
+                  <div class="item item-type-1">
+                    <span class="ico ico-type-15 ico-color-type-1"></span><a href="#">Create new user</a>
+                  </div>
+                
+                  <div class="item catalog-filter bg-color-type-2">
+                    <span class="ico ico-type-14 ico-color-type-1"></span>
+                    <input type="text" class="textbox textbox-block textbox-bg-type-2" placeholder="Filter users" data-list-filter-input />
+                  </div>
+                </div>
+                
+                <div class="catalog-holder">    
+                  <div class="catalog" id="catalog">
+                    <div class="item" data-list-filter-item="Rupert Scrivener">
+                      <a href="#" class="item-inner color-type-3"><b>Rupert Scrivener</b></a>
+                    </div>
+                    <div class="item marker marker-type-3" data-list-filter-item="Nicholas Hawtrey">
+                      <a href="#" class="item-inner color-type-3"><b>Nicholas Hawtrey</b></a>
+                    </div>
+                    <div class="item marker marker-type-2" data-list-filter-item="Royston Farrell">
+                      <a href="#" class="item-inner color-type-3">Royston Farrell</a>
+                    </div>
+                    <div class="item marker marker-type-1" data-list-filter-item="Prentis Hancock">
+                      <a href="#" class="item-inner color-type-3">Prentis Hancock</a>
+                    </div>
+                    <div class="item marker" data-list-filter-item="Mervyn Pinfield">
+                      <a href="#" class="item-inner color-type-3">Mervyn Pinfield</a>
+                    </div>
+                    <div class="item active" data-list-filter-item="Fionnula Tambling-Goggin">
+                      <a href="#" class="item-inner color-type-3">Fionnula Tambling-Goggin</a>
+                    </div>
+                    <div class="item" data-list-filter-item="Nicola Parfit">
+                      <a href="#" class="item-inner color-type-3">Nicola Parfit</a>
+                    </div>
+                    <div class="item item-border-type-1" data-list-filter-item="St. John O’Rorke">
+                      <span class="item-inner color-type-4">St. John O’Rorke</span>
+                    </div>
+                    <div class="item" data-list-filter-item="Alf Tramontin">
+                      <span class="item-inner color-type-4">Alf Tramontin</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="list-block-content">
+              </div>
+            
+            </div> <!-- //list-block -->
+          </div>
+          
+          <div class="proto-comments uppercase">
+            <b>Block header</b>
+          </div>
+          
+          <div class="block-header">
+            <b>Your connection with Telema is up and running. Last sync 25.02.2015 6:41, next sync in 15 minutes.</b>
+          </div>
+          <div class="color-box pad-box">
+            <h3 class="uppercase color-type-1 margin-bottom">block title</h3>
+            <p>Content</p>
+          </div>
+          
+          <div class="block-header block-header-type-1">
+            <b>Warning! Your business software has not been syncing with Telema since 25.02.2015 6:41. <a href="#">Read more »</a></b>
+          </div>
+          <div class="color-box pad-box">
+            <h3 class="uppercase color-type-1 margin-bottom">block title</h3>
+            <p>Content</p>
+          </div>
+          
+          <div class="block-header block-header-type-2">
+            <b>Error! Your business software has not been syncing with Telema since 25.02.2015 6:40. <a href="#" class="color-type-3">Read more »</a></b>
+          </div>
+          <div class="color-box pad-box">
+            <h3 class="uppercase color-type-1 margin-bottom">block title</h3>
+            <p>Content</p>
+          </div>
+          
+          
+          <div class="proto-comments uppercase">
+            <b>Open-close row</b>
+          </div>
+          
+          <div class="color-box color-box-type-1" data-visibility-parent>
+            <div class="pad-box pad-box-type-3" data-visible="true"><a href="#" data-visibility-toggler>Open document history »</a></div>
+            <div class="pad-box pad-box-type-2" data-visible="false">
+              <table class="font-size-small pad-v-2 pad-h-10 pad-clear">
+                <tr>
+                  <td>10.09 &nbsp;12:15</td>
+                  <td>order &nbsp;51.18€</td>
+                </tr>
+                <tr>
+                  <td>10.09 &nbsp;14:45</td>
+                  <td>despatch advice &nbsp;51.18€</td>
+                </tr>
+                <tr>
+                  <td>10.09 &nbsp;18:10</td> 
+                  <td>receiving advice &nbsp;51.18€</td>
+                </tr>
+              </table>
+              <br />
+              <a href="#" data-visibility-toggler>Close document history »</a>
+            </div>
+          </div>
+          <div class="color-box color-box-type-1 border-top" data-visibility-parent>
+            <div class="pad-box pad-box-type-3" data-visible="false"><a href="#" data-visibility-toggler>Open transfer info »</a></div>
+            <div class="pad-box pad-box-type-2" data-visible="true">
+              
+              <div class="inl-blk valign-top" style="padding-right: 70px">
+                <table class="font-size-small pad-v-2 pad-h-10 pad-clear">
+                  <tr>
+                    <td><b>Sender ID/GLN:</b></td>
+                    <td>46235646464</td>
+                  </tr>
+                  <tr>
+                    <td><b>Sender name:</b></td>
+                    <td>SUPPLIER COMPANY LTD</td>
+                  </tr>
+                  <tr>
+                    <td><b>Receiver ID/GLN:</b></td>
+                    <td>6464964646984</td>
+                  </tr>
+                  <tr>
+                    <td><b>Receiver name:</b></td>
+                    <td>BUYER COMPANY LTD</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="inl-blk valign-top">
+                <table class="font-size-small pad-v-2 pad-h-10 pad-clear">
+                  <tr>
+                    <td><b>Registered in Telema:</b></td>
+                    <td>30.03.2015 18:02:48</td>
+                  </tr>
+                  <tr>
+                    <td><b>Forwarded by Telema: </b></td>
+                    <td>30.03.2015 18:02:48</td>
+                  </tr>
+                  
+                </table>
+              </div>
+              <br /><br />
+              <a href="#" data-visibility-toggler>Close transfer info »</a>
+            </div>
+          </div>
+          <div class="color-box pad-box">
+            <h3 class="uppercase color-type-1 margin-bottom">block title</h3>
+            <p>Content</p>
+          </div>
+          
+          
+          <div class="proto-comments ">
+            <b class="uppercase">Modal</b><br />
+          </div>
+          
+          <div class="color-box pad-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+            
+              <div style="padding-bottom: 5px;">
+                <b>data-modal</b> <i>(required)</i><br />
+                Defines modal
+              </div>
+            
+              <div style="padding-bottom: 5px;">
+                <b>data-modal-tpl</b> <i>(required)</i><br />
+                Defines which template modal should use
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-modal-type</b> <br />
+                Defines modal appearance.<br />
+                1 - classic modal with closing X on top right<br />
+                2 - closing icon has an accompanying text and darker background in the width of the layer<br />
+                3 - same as type 2 but modal has viewport height and width
+                
+              </div>
+            
+              <div style="padding-bottom: 5px;">
+                <b>data-modal-id</b><br />
+                Modal ID should be defined to use same modal instance. 
+                If modal ID is defined then modal stays in DOM, otherwise modal is removed from DOM<br >
+              </div>
+            
+              <div style="padding-bottom: 5px;">
+                <b>data-modal-remove</b><br />
+                If this attribute is defined then modal is removed from DOM even if ID is defined
+              </div>
+            
+              <div style="padding-bottom: 15px;">
+                <b>data-modal-close</b><br />
+                Modal child element attribute. Binds click event on element to hide/remove modal
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>Example of binding event to modal content elements:</b><br />
+                <i>
+                  
+                  $('[data-modal]').on('click', function(e) {<br />
+                  &nbsp; &nbsp; var modal = $(e.target).data('modal'),<br />
+                  &nbsp; &nbsp; $container = modal.getContainer();<br />
+                  &nbsp; &nbsp; $container.find('.some-custom-event-class').on('click', function() {<br />
+                  &nbsp; &nbsp; &nbsp; &nbsp; alert('Input value: ' + $container.find('.textbox').val());<br />
+                  &nbsp; &nbsp; });<br />
+                  });<br />
+              
+                </i>
+              </div>
+            </div>
+            <a href="#" class="btn" data-modal data-modal-tpl="some-modal-tpl" data-modal-id="12345">Open modal</a>
+            <a href="#" class="btn" data-modal data-modal-tpl="some-modal-tpl" data-modal-type="2">Open modal with header</a>
+            <a href="#" class="btn" data-modal data-modal-tpl="some-modal-tpl" data-modal-type="3">Open modal full screen</a>
+          </div>
+          
+          <div class="proto-comments uppercase">
+            <b>Open PDF</b>
+          </div>
+          
+          
+          <div class="pdf-holder" data-pdf-id="1">
+            <div class="pdf-viewer">
+              
+              <div class="pdf-content">
+                <img src="content/pdf.jpg" alt="">
+              </div>
+              
+              <div class="pdf-actions">
+                <div class="pdf-navigation">
+                  <a href="#" class="pdf-prev disabled"></a>
+                  <div class="pdf-page">1/2</div>
+                  <a href="#" class="pdf-next"></a>
+                </div>
+                
+                <a href="#" class="pdf-remove" data-pdf-close></a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="color-box pad-box">
+            <a href="#" class="btn" data-pdf-open data-pdf-id="1">Open PDF</a>
+          </div>
+          
+          
+          <div class="proto-comments uppercase">
+            <b>Confirmation round</b>
+          </div>
+          
+          <div class="color-box pad-box">
+            <div class="flow-block" data-bubble-area>
+              <div class="flow-row">
+                <div class="flow-item flow-item-type-1">
+                  <div class="inl-blk" data-bubble>
+                    <span class="flow-dot cursor-pointer" data-bubble-toggler>!</span>
+                    <div class="bubble" data-bubble-content style="width: 260px">
+                      <div class="bubble-inner">
+                        <b>Nicholas Hawtrey</b><br />
+                        Buyer description field can not be empty. Write something or copy from seller description.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flow-name">N.H.</div>
+                  <div class="flow-desc">27.01</div>
+                </div>
+                
+                <div class="flow-item">
+                  <span class="flow-dot"></span>
+                  <div class="flow-name">F.T.</div>
+                  <div class="flow-desc">19.03</div>
+                </div>
+                
+                <div class="flow-item">
+                  <span class="flow-dot"></span>
+                  <div class="flow-name">R.S.</div>
+                  <div class="flow-desc">28.03</div>
+                </div>
+                
+                <div class="flow-item flow-item-type-1">
+                  <div class="inl-blk" data-bubble>
+                    <span class="flow-dot cursor-pointer" data-bubble-toggler>!</span>
+                    <div class="bubble" data-bubble-content style="width: 260px">
+                      <div class="bubble-inner">
+                        <b>Nicholas Hawtrey</b><br />
+                        Buyer description field can not be empty. Write something or copy from seller description.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flow-name">N.H.</div>
+                  <div class="flow-desc">28.03</div>
+                </div>
+                
+                <div class="flow-item flow-item-type-2">
+                  <span class="flow-dot"></span>
+                  <div class="flow-name">F.T.</div>
+                </div>
+                
+                <div class="flow-item flow-item-type-2">
+                  <span class="flow-dot"></span>
+                  <div class="flow-name">A.G.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="proto-comments uppercase">
+            <b>Turning blocks</b>
+          </div>
+          
+          <div class="margin-box" style="width: 400px;">
+            
+            <div class="flipper-holder" style="z-index: 5">
+              <div class="flipper flipper-fixed" data-flipper>
+                <div class="flipper-front color-box">
+                  
+                  <div class="pad-box">
+                    <h3 class="uppercase color-type-1 margin-bottom">Did you know</h3>
+                    
+                    <ul class="emoticon-list">
+                      <li>
+                        <span class="emoticon emoticon-type-1"></span>
+                        You have service A. If you want to expand<br>
+                        your options, take service B or even<br>
+                        service C. <a class="color-type-2" href="#" data-flipper-toggler>Read more »</a>
+                      </li>
+                      <li>
+                        <span class="emoticon emoticon-type-2"></span>
+                        You have service A. If you want to expand<br>
+                        your options, take service B or even<br>
+                        service C. <a class="color-type-2" href="#" data-flipper-toggler>Read more »</a>
+                      </li>
+                    </ul>
+            
+                  </div>
+                  
+                </div> <!-- //flipper-front -->
+                <div class="flipper-back color-box bg-color-type-5">
+                  <a href="#" class="ico ico-type-18 ico-color-type-1 flipper-close" data-flipper-toggler></a>
+                  <div class="pad-box">
+                    <h3 class="uppercase color-type-1 margin-bottom">Did you know?</h3>
+                    <p>
+                      <b>In the Baltics there are over 1100 shops technically able and willing to share 
+                      POS information with their suppliers.</b>
+                    </p>
+                    
+                    <p>
+                      Transparency of the supply chain is a good start to Vendor Managed Inventory (VMI) - 
+                      efficient supply model that helps to avoid out of stock situations in the shops.
+                    </p>
+                  </div>
+                  
+                </div> <!-- //flipper-back -->
+              </div>
+            </div> <!-- //flipper-holder -->
+
+          </div>
+            
+        </div> <!-- //page-main -->
+        
+      </div> <!-- //page-container -->  
+    </div> <!-- //page-wrap -->
+  </div> <!-- //page-holder -->
+  
+  
+  <script type="text/html" id="some-modal-tpl">
+    <div class="modal-dialog">
+      <div class="pad-box">
+        <h3 class="uppercase color-type-1">Some modal title</h3>
+        <p>
+          Some modal content<br /><br /><br />
+          
+          <div style="padding-bottom: 5px">
+            <input type="text" class="textbox" >
+          </div>
+          <a href="#" class="btn btn-color-type-1 some-custom-event-class" data-modal-close>Close modal with custom event</a>
+        </p>
+      </div>
+    </div>
+  </script>
+  
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="javascripts/moment-with-locales.min.js"></script>
+  <script src="javascripts/jquery-ui.min.js"></script>
+  <script src="javascripts/underscore-min.js"></script>
+  <script src="javascripts/jquery.modal.js"></script>
+  <script src="javascripts/gemini-scrollbar.js"></script>
+  <script src="javascripts/framework.js"></script>
+  <script src="javascripts/app.js"></script>
+</body>
+</html>

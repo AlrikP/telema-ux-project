@@ -1,0 +1,1070 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Telema UI</title>
+  <meta name="author" content="Fraktal">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+  <link href="stylesheets/jquery-ui.structure.css" type="text/css" rel="stylesheet" media="all">
+  <link href="stylesheets/gemini-scrollbar.css" type="text/css" rel="stylesheet" media="all">
+  <link href="stylesheets/framework.css" type="text/css" rel="stylesheet" media="all">
+  <link href="stylesheets/style.css" type="text/css" rel="stylesheet" media="all">
+  <script src="javascripts/modernizr.js"></script>
+</head>
+  
+<body>
+  <div class="page-holder">
+    
+    <div class="page-header">
+      <a href="#" class="logo"></a>
+      <div class="header-menu">
+        <a href="#" class="btn-header active">EDI</a>
+        <a href="#" class="btn-header">E-invoice</a>
+        <a href="#" class="btn-header">VMI</a>
+        <a href="#" class="btn-header">MMT</a>
+        <div class="regular-dropdown float-left" data-dropdown>
+          <a href="#" class="btn-header btn-header-type-1" data-dropdown-toggler>More</a>
+          <div class="regular-dropdown-content " data-dropdown-content>
+            <div class="inner">
+              <ul>
+                <li><a href="#">WebShop »</a></li>
+                <li><a href="#">TeleSales »</a></li>
+                <li><a href="#">eFactoring »</a></li>
+                <li><a href="#">eAuction »</a></li>
+                <li><a href="#">Archive »</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-inner">
+        <div class="float-right">
+          <div class="role-dropdown regular-dropdown regular-dropdown-type-1 max-height-315" data-dropdown>
+            <a href="#" class="role-dropdown-toggler" data-dropdown-toggler>
+              <strong>Burkhardt von Bürgermeter</strong>
+              <span class="company">Bürgermeister Pagar ja Koogimeister  AS Ltd</span>
+            </a>
+            <div class="regular-dropdown-content" data-dropdown-content>
+              <div class="sub-title">Companies</div>
+              <ul>
+                <li><a href="#" data-dropdown-close>Bürgermeister Pagar ja Koogimeister  AS Ltd</a></li>
+                <li><a href="#" data-dropdown-close>Kuke meierei</a></li>
+              </ul>
+              <div class="sub-title">Branches</div>
+              <div data-list-filter>
+                <div class="textbox-holder">
+                  <input type="text" class="textbox textbox-size-type-1 textbox-border-type-1" data-list-filter-input placeholder="Start writing to filter..." />
+                </div>
+                <div class="inner inner-type-1">
+                  <ul data-list-filter-content>
+                    <li data-list-filter-item="Kuke meierei Valga branch"><a href="#" data-dropdown-close>Kuke meierei Valga branch »</a></li>
+                    <li data-list-filter-item="Kuke meierei Võru branch"><a href="#" data-dropdown-close>Kuke meierei Võru branch »</a></li>
+                    <li data-list-filter-item="Kuke meierei Tartu branch"><a href="#" data-dropdown-close>Kuke meierei Tartu branch »</a></li>
+                    <li data-list-filter-item="Tibu Talu ökopood Elva branch"><a href="#" data-dropdown-close>Tibu Talu ökopood Elva branch »</a></li>
+                    <li class="text" data-list-filter-empty>No matches found</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn-login">Log out</a>
+        </div>
+      </div>
+    </div>
+      
+    <div class="page-wrap">
+        
+      <div class="page-sidebar">
+        <div class="inner selector-holder">
+          <div class="custom-select custom-select-block custom-select-size-type-1 custom-select-color-type-3 custom-select-font-size-1" data-dropdown>
+            <a href="#" class="custom-select-toggler" style="max-width: 120px;" data-dropdown-toggler data-dropdown-indicator>Purchase</a>
+            <div class="custom-select-content" data-dropdown-content>
+              <ul class="options">
+                <li><a href="#" data-dropdown-option>Sales</a></li>
+                <li><a href="#" data-dropdown-option>Purchase</a></li>
+                <li><a href="#" data-dropdown-option>Something third</a></li>
+                <li><a href="#" data-dropdown-option>Something fourth</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="inner">
+          <ul class="list">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Overview</a></li>
+          </ul>
+        </div>
+        <div class="inner">
+          <ul class="list">
+            <li><a href="#">Order</a></li>
+            <li><a href="#">Despatch Advice</a></li>
+            <li><a href="#">Receiving Advice</a></li>
+            <li><a href="#">Invoice</a></li>
+            <li><a href="#">All Documents</a></li>
+          </ul>
+        </div>
+        <div class="inner">
+          <ul class="list">
+            <li><a href="#">Products &amp; Prices</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="page-container">
+          
+        <div class="page-topbar">
+          <div class="page-topbar-inner">
+            <div class="float-right">
+              <div class="search">
+                <div class="textbox-holder ui-front">
+                  <input type="text" class="textbox textbox-size-type-1 textbox-bg-type-1" data-search-main data-search-main-advanced data-documents-url="http://www.neti.ee" />
+                </div>
+                <input type="submit" class="btn btn-size-small btn-size-square btn-type-icon btn-icon-2" value="" /> 
+              </div>
+              
+              <a href="#" class="messages"><span>2</span></a>     
+              
+              <div class="support-dropdown regular-dropdown regular-dropdown-type-1" data-dropdown>
+                <a href="#" class="support-dropdown-toggler" data-dropdown-toggler></a>
+                <div class="regular-dropdown-content" data-dropdown-content>
+                  <div class="support">
+                    <div class="support-content">
+                      <form data-form-attachment>
+                        <div class="row">
+                          <div class="label">Subject</div>
+                          <input type="text" class="textbox textbox-border-type-1">
+                        </div>
+                        <div class="row">
+                          <div class="label">Message to customer support</div>
+                          <textarea class="textbox textbox-border-type-1" cols="30" rows="4"></textarea>
+                          <div class="attached-file" data-form-attachment-list>
+                            <a href="#" class="remove" data-form-attachment-clear></a>
+                            <span class="item" data-form-attachment-item></span>
+                          </div>
+                        </div>
+                        <div class="row row-submit row-flex">
+                          <div class="file-input">
+                            <input type="file" name="file" data-form-attachment-input />
+                            <span class="btn btn-size-square btn-type-icon btn-icon-1"></span>
+                          </div>
+                          <input type="submit" class="btn btn-size-block" value="Send" />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="support-success">
+                      <div class="support-success-inner">
+                        <div>
+                          Thank you!<br />
+                          Your message is sent.<br />
+                          We will contact you in 24h.
+                        </div>
+                        <a href="#" class="btn btn-padding-type-1" data-dropdown-close>OK</a>
+                      </div>
+                    </div>
+                    <div class="support-error">
+                      <div class="support-error-inner">
+                        <div data-support-error="1">
+                          Attachment is not in the right format.<br />Allowed formats are .jpg, <br />.gif, .doc and .xls. 
+                        </div>
+                        <div data-support-error="2">
+                          File size too big
+                        </div>
+                        <a href="#" class="btn btn-padding-type-1">OK</a>
+                      </div>
+                    </div>
+                  </div> <!-- //support -->
+                </div>
+              </div>
+              
+              <div class="settings-dropdown regular-dropdown regular-dropdown-type-1" data-dropdown>
+                <a href="#" class="settings-dropdown-toggler" data-dropdown-toggler></a>
+                <div class="regular-dropdown-content" data-dropdown-content>
+                  <div class="inner inner-type-2">
+                    <ul>
+                      <li><a href="#">My settings  »</a></li>
+                      <li><a href="#">User settings »</a></li>
+                      <li><a href="#">Company and branch settings »</a></li>
+                      <li><a href="#">Products and services »</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- //page-topbar-inner -->
+          
+        </div> <!-- //page-topbar -->
+              
+        <div class="page-main">
+          
+          <div class="proto-comments">
+            <b>GRID BOXES</b><br />
+          </div>
+          
+          <div class="color-box"></div>  
+            
+          <div class="grid">
+            <div class="grid-col color-box margin-box">
+            </div> <!-- //grid-col -->
+            <div class="grid-col color-box margin-box">
+            </div> <!-- //grid-col -->
+          </div> <!-- //grid -->
+          
+          <div class="grid">
+            <div class="grid-col grid-col-type-1">
+              <div class="color-box margin-box pad-box flex">
+                Adding <i>.flex</i> class to child element stretches it vertically
+              </div>
+            </div> <!-- //grid-col -->
+            <div class="grid-col">
+              <div class="color-box margin-box"></div>
+              <div class="color-box margin-box flex"></div>
+            </div> <!-- //grid-col -->
+          </div> <!-- //grid -->
+          
+          <div class="grid">
+            <div class="grid-col grid-col-type-2 color-box margin-box">
+            </div> <!-- //grid-col -->
+            <div class="grid-col color-box margin-box">
+            </div> <!-- //grid-col -->
+          </div> <!-- //grid -->
+          
+          
+          <div class="proto-comments">
+            <b>ELEMENTS OF VISUAL STYLE</b>
+          </div>
+          
+          <div class="color-box pad-box margin-box">
+            
+            <div class="proto-comments proto-comments-no-top-margin">
+              Examples of different font styles, sizes and colors.<br />You can use classes .h1, .h2, .h3, .h4 instead of heading tags
+            </div>
+            <h1>Roboto Condensed Bold 36</h1>
+            <h1 class="uppercase">Roboto Condensed Bold 36</h1>
+            <h1 class="uppercase color-type-1">Roboto Condensed Bold 36</h1>
+            <h1 class="uppercase color-type-2">Roboto Condensed Bold 36</h1><br />
+            
+            <h2>Roboto Condensed Bold 24</h2>
+            <h2 class="uppercase">Roboto Condensed Bold 24</h2>
+            <h2 class="uppercase color-type-1">Roboto Condensed Bold 24</h2>
+            <h2 class="uppercase color-type-2">Roboto Condensed Bold 24</h2><br />
+            
+            <h3>Roboto Condensed Bold 18</h3>
+            <h3 class="uppercase">Roboto Condensed Bold 18</h3>
+            <h3 class="uppercase color-type-1">Roboto Condensed Bold 18</h3>
+            <h3 class="uppercase color-type-2">Roboto Condensed Bold 18</h3><br />
+            
+            <h4>Roboto Bold 18</h4>
+            <h4 class="uppercase">Roboto Bold 18</h4>
+            <h4 class="uppercase color-type-1">Roboto Bold 18</h4>
+            <h4 class="uppercase color-type-2">Roboto Bold 18</h4><br />
+            
+            Normal body text (Roboto 14)<br />
+            <span class="color-type-1">Normal body text (Roboto 14)</span><br />
+            <span class="color-type-2">Normal body text (Roboto 14)</span><br /><br />
+            
+            <span class="font-size-small">Small subsidiary text (Roboto 12)</span><br />
+            <span class="font-size-small color-type-1">Small subsidiary text (Roboto 12)</span><br />
+            <span class="font-size-small color-type-2">Small subsidiary text (Roboto 12)</span><br /><br />
+            
+            <span class="font-size-xsmall">Extra Small subsidiary text (Roboto 11)</span><br />
+            <span class="font-size-xsmall color-type-1">Extra Small subsidiary text (Roboto 11)</span><br />
+            <span class="font-size-xsmall color-type-2">Extra Small subsidiary text (Roboto 11)</span><br />
+          
+          </div>
+          
+          <div class="color-box bg-color-type-3 pad-box margin-box color-type-5">
+            <h3 class="uppercase color-type-5">distinctive table heading</h3>
+            Roboto Condensed  Bold 18, #ffffff
+            <br /><br />
+            Roboto 14, #ffffff, regular or bold<br />
+          </div>
+          
+          
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              Examples of different button styles.<br />
+              Classes can be added to <i>&lt;a&gt;</i>, <i>&lt;button&gt;</i> or <i>&lt;input&gt;</i>
+            </div>
+            
+
+            <button class="btn">Primary action</button>
+            <button class="btn btn-color-type-1">Less important</button>
+            <button class="btn btn-color-type-2" disabled>Inactive</button>
+            
+            
+            <br /><br />
+            <button class="btn btn-size-large">Large button</button>
+            <button class="btn btn-color-type-1 btn-size-large">Large button</button>
+            <button class="btn btn-color-type-2 btn-size-large" disabled>Large button</button>
+            
+            <div class="proto-comments">
+              Square buttons
+            </div>
+            
+            <button class="btn btn-size-square">Yes</button>
+            <button class="btn btn-color-type-1 btn-size-square">No</button>
+            
+            <br /><br />
+            
+            <button class="btn btn-size-large btn-size-square">YES</button>
+            <button class="btn btn-color-type-1 btn-size-large btn-size-square">NO</button>
+            
+            <div class="proto-comments">
+              Block buttons (100% available width)
+            </div>
+            
+            <button class="btn btn-size-block">Primary action</button><br />
+            <button class="btn btn-color-type-1 btn-size-block">Less important</button><br />
+            <button class="btn btn-color-type-2 btn-size-block" disabled>Inactive</button>
+            
+            
+            <div class="proto-comments">
+              Buttons with icons
+            </div>
+            
+            <button class="btn btn-size-square btn-type-icon btn-icon-1"></button> 
+            <button class="btn btn-size-square btn-type-icon btn-icon-2"></button>
+            <button class="btn btn-size-small btn-size-square btn-type-icon btn-icon-2"></button>
+            <br /><br />
+            <button class="btn btn-color-type-3 btn-size-large btn-size-square btn-type-icon btn-icon-3"></button>
+            <button class="btn btn-color-type-4 btn-size-large btn-size-square btn-type-icon btn-icon-3"></button>
+            
+          </div>
+          
+          
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              <span class="uppercase"><b>Functional icons and buttons</b></span>
+            </div>    
+            
+            <span class="ico ico-type-1"></span>
+            <span class="ico ico-type-2"></span>
+            <span class="ico ico-type-3"></span>
+            <span class="ico ico-type-4"></span>
+            <span class="ico ico-type-5"></span>
+            <span class="ico ico-type-6"></span>
+            <span class="ico ico-type-7"></span>
+            <span class="ico ico-type-8"></span>
+            <span class="ico ico-type-9"></span>
+            <span class="ico ico-type-10"></span>
+            <span class="ico ico-type-11"></span>
+            
+            <br /><br />
+            
+            <span class="ico ico-type-12 ico-color-type-1"></span>
+            <span class="ico ico-type-13 ico-color-type-1"></span>
+            <span class="ico ico-type-14 ico-color-type-1"></span>
+            <span class="ico ico-type-15 ico-color-type-1"></span>
+            
+            <br /><br />
+            
+            <span class="ico ico-type-16 ico-color-type-2 cursor-pointer"></span>
+            <span class="ico ico-type-16 ico-color-type-3 cursor-pointer"></span>
+            <span class="ico ico-type-16 ico-color-type-4 cursor-pointer"></span>
+            <span class="ico ico-type-16 ico-color-type-5 cursor-pointer"></span>
+            <span class="ico ico-type-17 ico-color-type-1 cursor-pointer"></span>
+            <span class="ico ico-type-18 ico-color-type-1 cursor-pointer"></span>
+            
+          </div>
+          
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              <span class="uppercase"><b>Search results</b></span>
+            </div>
+            
+            
+            <div class="inl-blk" style="width: 270px;">
+              Advanced:
+              <div class="search">
+                <div class="textbox-holder ui-front">
+                  <input type="text" class="textbox textbox-size-type-1 textbox-bg-type-1" data-search-main data-search-main-advanced data-documents-url="http://www.neti.ee" />
+                </div>
+                <input type="submit" class="btn btn-size-small btn-size-square btn-type-icon btn-icon-2" value="" /> 
+              </div>
+            </div>
+            
+            <div class="inl-blk" style="margin-left: 20px; width: 270px;">
+              Regular:
+              <div class="search">
+                <div class="textbox-holder ui-front">
+                  <input type="text" class="textbox textbox-size-type-1 textbox-bg-type-1" data-search-main />
+                </div>
+                <input type="submit" class="btn btn-size-small btn-size-square btn-type-icon btn-icon-2" value="" /> 
+              </div>
+            </div>
+            
+            <div style="margin-top: 15px;">
+              <div>Other examples</div>
+              <div class="inl-blk" style="width: 270px">
+                <div class="search search-has-space">
+                  <div class="textbox-holder ui-front">
+                    <input type="text" class="textbox textbox-bg-type-1" data-search-1 />
+                  </div>
+                  <input type="submit" class="btn btn-padding-type-1" value="Search" >
+                </div>
+              </div>
+            
+              <div class="inl-blk" style="margin-left: 20px; width: 270px">
+                <div class="search search-has-space">
+                  <div class="textbox-holder ui-front">
+                    <input type="text" class="textbox textbox-bg-type-1" data-search-2 />
+                  </div>
+                  <input type="submit" class="btn btn-padding-type-1" value="Search" >
+                </div>
+              </div>
+            
+              <div class="inl-blk" style="margin-left: 20px; width: 270px">
+                <div class="search search-has-space">
+                  <div class="textbox-holder ui-front">
+                    <input type="text" class="textbox textbox-bg-type-1" data-search-3 />
+                  </div>
+                  <input type="submit" class="btn btn-padding-type-1" value="Search" >
+                </div>
+              </div>
+            </div>
+          </div>
+          
+            
+            
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              <span class="uppercase"><b>Bullets and numbering</b></span>
+            </div>
+            
+
+            <ul class="nr-list">
+              <li>
+                <b>Cant find a document</b><br />
+                A few lines to explain, what to do, when this problem emerges. 
+              </li>
+              <li>
+                <b>Can not connect</b><br />
+                A few lines to explain, what to do, when this problem emerges. 
+              </li>
+              <li>
+                <b>Another problem</b><br />
+                A few lines to explain, what to do, when this problem emerges.
+              </li>
+            </ul>
+            
+            <br />
+            
+            <ul class="bullet-list">
+              <li>Some kind of text, some kind of text</li>
+              <li>A few lines to explain, what to do, when this problem emerges.</li>
+              <li>Did you know you can manage the users yourself, without having to notify Telma?</li>
+              <li>You have service A.</li>
+            </ul>
+            
+            <br />
+            
+            <span class="bullet"></span> &nbsp; <span class="bullet bullet-color-type-1"></span> &nbsp; <span class="bullet bullet-color-type-2"></span>
+            
+          </div>
+          
+          
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              <span class="uppercase"><b>Emoticons</b></span>
+            </div>
+            
+            <span class="emoticon emoticon-type-1"></span> &nbsp; 
+            <span class="emoticon emoticon-type-2"></span> &nbsp; 
+            <span class="emoticon emoticon-type-3"></span> &nbsp; 
+            <span class="emoticon emoticon-type-4"></span> &nbsp; 
+            <span class="emoticon emoticon-type-5"></span> &nbsp; 
+            <span class="emoticon emoticon-type-6"></span> &nbsp; 
+            <span class="emoticon emoticon-type-7"></span> &nbsp; 
+            <span class="emoticon emoticon-type-8"></span> &nbsp; 
+            <span class="emoticon emoticon-type-9"></span>
+            
+            <br /><br /><br />
+            
+            <ul class="emoticon-list">
+              <li>
+                <span class="emoticon emoticon-type-1"></span>
+                You have service A. If you want to expand<br />
+                your options, take service B or even<br />
+                service C. <a href="#" class="color-type-2">Read more »</a>
+              </li>
+              
+              <li>
+                <span class="emoticon emoticon-type-2"></span>
+                You have service A. If you want to expand<br />
+                your options, take service B or even<br />
+                service C. <a href="#" class="color-type-2">Read more »</a>
+              </li>
+            </ul>
+          </div>
+          
+          
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              <span class="uppercase"><b>Notifications</b></span>
+            </div>
+            
+            <div class="inl-blk valign-top">
+              <div class="notification notification-visible">
+                <a href="#" class="notification-close ico ico-type-16 ico-color-type-1" data-notification-close></a>
+                <div class="notification-content">
+                  <b>Gateway connection problem</b>
+                  <p>
+                    Info about gateway connection  problem. Info about gateway connection  problem.
+                  </p>
+                  <a href="#"><b>Read more »</b></a>
+                </div>
+              </div>
+            </div>
+            <div class="inl-blk valign-top">
+              <div class="notification notification-type-1 notification-visible">
+                <a href="#" class="notification-close ico ico-type-16 ico-color-type-1" data-notification-close></a>
+                <div class="notification-content">
+                  <b>NPS questionaire</b>
+                  <p>
+                    Info about NPS questionaire. Info about NPS questionaire. Info about questionaire.
+                  </p>
+                  <a href="#"><b>Fill in the questionnaire »</b></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="inl-blk valign-top">
+              <div class="notification notification-type-2 notification-visible">
+                <a href="#" class="notification-close ico ico-type-16 ico-color-type-1" data-notification-close></a>
+                <div class="notification-content">
+                  <b>Great success!</b>
+                  <p>
+                    Your upload was successful and you can see the information you 
+                    uploaded on the left below.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          
+          <div class="color-box pad-box margin-box" data-bubble-area>
+            <div class="proto-comments proto-comments-no-top-margin">
+              <span class="uppercase"><b>Bubbles</b></span>
+              <br /><br />
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-bubble</b> <i>(required)</i><br />
+                Required attribute to define bubble element
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-bubble-vpos</b><br />
+                Defines bubble vertical position<br />
+                Values: bottom, top (default: bottom)
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-bubble-hpos</b><br />
+                Defines bubble horizontal position<br />
+                Values: left, right (default: left)
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-bubble-disable-sideclick</b><br />
+                Defines if bubble stays visible on document click<br />
+                Values: true, false (default: false)
+              </div>
+              
+              <div style="padding-bottom: 15px;">
+                <b>data-bubble-force-position</b><br />
+                If set then bubble is always positioned as defined<br />
+                Values: true, false (default: false)
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-bubble-area</b><br />
+                Defines area element. If not set then viewport is used.<br />
+                Bubble automatically sets its position not to appear outside the content area
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-bubble-toggler</b> <i>(required)</i><br />
+                Required attribute to define bubble toggler element
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-bubble-content</b> <i>(required)</i><br />
+                Required attribute to define bubble content element
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-bubble-close</b><br />
+                Clicking on bubble doesn't close it<br />
+                If child element has this attribute then bubble is closed when clicking that element
+              </div>
+            </div>
+            
+            
+            <div class="inl-blk" data-bubble>
+              <button class="btn" data-bubble-toggler>Bubble</button>
+              <div class="bubble" data-bubble-content>
+                <div style="width: 200px; height: 100px; padding: 20px;">
+                </div>
+              </div>
+            </div>
+            
+            <div class="inl-blk" data-bubble data-bubble-disable-sideclick>
+              <button class="btn" data-bubble-toggler>Bubble with disabled side click</button>
+              <div class="bubble" data-bubble-content>
+                <div style="width: 200px; height: 100px; padding: 20px;">
+                </div>
+              </div>
+            </div>
+            
+            <div class="inl-blk" data-bubble>
+              <button class="btn" data-bubble-toggler>Datepicker bubble</button>
+              <div class="bubble" data-bubble-content>
+                <div class="datepicker-bubble">
+                  <div class="calendar-holder">
+                    <div class="calendar"> 
+                      <div class="calendar-label">Pick or enter date</div>
+                      <input type="text" class="textbox" />
+                      <div data-date-picker></div>
+                      <div class="align-right bubble-confirm">
+                        <a href="#" class="btn" data-date-selector-marker="bubble" data-bubble-close>Confirm date</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="inl-blk" data-bubble>
+              <button class="btn" data-bubble-toggler>Double datepicker bubble</button>
+              <div class="bubble" data-bubble-content>
+                <div class="datepicker-bubble datepicker-bubble-double">
+                  <div class="calendar-holder" data-date-selector-parent>
+                    <div class="calendar">
+                      
+                      <div class="cfx">
+                        <a href="#" class="btn btn-padding-type-1 float-left" data-date-selector-marker="last-7">Last 7 days</a>
+                        <a href="#" class="btn btn-padding-type-1 float-right" data-date-selector-marker="next-7">Next 7 days</a>
+                      </div>
+                      
+                      <div class="calendar-label margin-top">Pick or enter start date</div>
+                      <input type="text" class="textbox" data-date-selector-start />
+                      <div data-date-picker="start"></div>
+                    </div>
+                    <div class="calendar">
+                      <div class="cfx">
+                        <a href="#" class="btn btn-padding-type-1 float-left" data-date-selector-marker="this-month">This month</a>
+                        <a href="#" class="btn btn-padding-type-1 float-right" data-date-selector-marker="last-month">Last month</a>
+                      </div>
+                      <div class="calendar-label margin-top">Pick or enter end date</div>
+                      <input type="text" class="textbox" data-date-selector-end />
+                      <div data-date-picker="end"></div>
+                      <div class="align-right bubble-confirm">
+                        <a href="#" class="btn" data-date-selector-marker="bubble" data-bubble-close>Confirm dates</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              <span class="uppercase"><b>Custom selects, dropdowns and autocompletes</b></span>
+              <br /><br />
+
+              <div style="padding-bottom: 5px;">
+                <b>data-dropdown</b> <i>(required)</i><br />
+                Required attribute to define dropdown element
+              </div>
+              <div style="padding-bottom: 5px;">
+                <b>data-dropdown-disable-sideclick</b><br />
+                Defines if dropdown stays visible on document click<br />
+                Values: true, false (default: false)
+              </div>
+              
+              <div style="padding-bottom: 15px;">
+                <b>data-dropdown-disable-select-close</b><br />
+                Defines if dropdown stays visible on option click<br />
+                Values: true, false (default: false)
+              </div>
+              
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-dropdown-toggler</b> <i>(required)</i><br />
+                Required attribute to define dropdown toggler element
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-dropdown-content</b> <i>(required)</i><br />
+                Required attribute to define dropdown content element
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-dropdown-indicator</b><br />
+                Defines indicator element. Indicator changes its value on option element click.<br />
+                Mainly used for custom selects
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-dropdown-option</b><br />
+                Defines dropdown option element.
+                Mainly used for custom selects. 
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-dropdown-value</b><br />
+                Defines dropdown option element value. This value is set to hidden input element.
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                <b>data-dropdown-close</b><br />
+                Clicking on dropdown doesn't close dropdown (except if element is option element)<br />
+                If child element has this attribute then dropdown is closed when clicking that element
+              </div>
+              
+              <div style="padding-bottom: 15px;">
+                <b>data-dropdown-hidden-input</b><br />
+                Defines hidden input element. Clicking option element changes input value. This is useful if custom select is used inside form
+              </div>
+              
+              <div style="padding-bottom: 5px;">
+                Option element click triggers <i>change:dropdown</i> event on <i>data-dropdown</i> element<br />
+                If some action is needed on select change then you can use something like this:<br />
+                <i>
+                  $('[data-dropdown]').on('change:dropdown', function() { console.log(attributes) });
+                </i>
+              </div>
+              
+            </div>
+            
+            
+            <div class="custom-select" data-dropdown>
+              <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select dimension</a>
+              <input type="hidden" data-dropdown-hidden-input />
+              <div class="custom-select-content" data-dropdown-content>
+                <ul class="options">
+                  <li><a href="#" data-dropdown-option data-dropdown-value="a">Dimension 7</a></li>
+                  <li><a href="#" data-dropdown-option data-dropdown-value="b">Dimension 8</a></li>
+                  <li><a href="#" data-dropdown-option data-dropdown-value="c">Dimension 9</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="custom-select custom-select-color-type-1" data-dropdown data-dropdown-disable-sideclick>
+              <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select status</a>
+              <input type="hidden" data-dropdown-hidden-input />
+              <div class="custom-select-content" data-dropdown-content>
+                <ul class="options">
+                  <li><a href="#" data-dropdown-option data-dropdown-value="a">Resolved</a></li>
+                  <li><a href="#" data-dropdown-option data-dropdown-value="b">Unresolved</a></li>
+                  <li><a href="#" data-dropdown-option data-dropdown-value="c">All statuses</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="custom-select custom-select-color-type-2" data-dropdown data-dropdown-disable-select-close>
+              <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select action</a>
+              <input type="hidden" data-dropdown-hidden-input />
+              <div class="custom-select-content" data-dropdown-content>
+                <ul class="options">
+                  <li><a href="#" data-dropdown-option data-dropdown-value="a">Approve</a></li>
+                  <li><a href="#" data-dropdown-option data-dropdown-value="b">Decline</a></li>
+                  <li><a href="#" data-dropdown-option data-dropdown-value="c">Put on hold</a></li>
+                  <li><a href="#" data-dropdown-option data-dropdown-value="c">Sidestep</a></li>
+                  <li><a href="#" data-dropdown-option data-dropdown-value="c">Send back to supplier</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="custom-select custom-select-color-type-4" data-dropdown>
+              <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select dimension</a>
+              <input type="hidden" data-dropdown-hidden-input />
+              <div class="custom-select-content" data-dropdown-content>
+                <ul class="options">
+                  <li><a href="#" data-dropdown-option data-dropdown-value="a">Dimension 7</a></li>
+                  <li><a href="#" data-dropdown-option data-dropdown-value="b">Dimension 8</a></li>
+                  <li><a href="#" data-dropdown-option data-dropdown-value="c">Dimension 9</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            
+            <div style="padding-top: 10px;">
+              <div class="custom-select custom-select-size-type-1" data-dropdown>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select dimension</a>
+                <input type="hidden" data-dropdown-hidden-input />
+                <div class="custom-select-content" data-dropdown-content>
+                  <ul class="options">
+                    <li><a href="#" data-dropdown-option data-dropdown-value="a">Dimension 7</a></li>
+                    <li><a href="#" data-dropdown-option data-dropdown-value="b">Dimension 8</a></li>
+                    <li><a href="#" data-dropdown-option data-dropdown-value="c">Dimension 9</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+              <div class="custom-select custom-select-size-type-1 custom-select-color-type-1" data-dropdown data-dropdown-disable-sideclick>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select status</a>
+                <input type="hidden" data-dropdown-hidden-input />
+                <div class="custom-select-content" data-dropdown-content>
+                  <ul class="options">
+                    <li><a href="#" data-dropdown-option data-dropdown-value="a">Resolved</a></li>
+                    <li><a href="#" data-dropdown-option data-dropdown-value="b">Unresolved</a></li>
+                    <li><a href="#" data-dropdown-option data-dropdown-value="c">All statuses</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+              <div class="custom-select custom-select-size-type-1 custom-select-color-type-2" data-dropdown data-dropdown-disable-select-close>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select action</a>
+                <input type="hidden" data-dropdown-hidden-input />
+                <div class="custom-select-content" data-dropdown-content>
+                  <ul class="options">
+                    <li><a href="#" data-dropdown-option data-dropdown-value="a">Approve</a></li>
+                    <li><a href="#" data-dropdown-option data-dropdown-value="b">Decline</a></li>
+                    <li><a href="#" data-dropdown-option data-dropdown-value="c">Put on hold</a></li>
+                    <li><a href="#" data-dropdown-option data-dropdown-value="c">Sidestep</a></li>
+                    <li><a href="#" data-dropdown-option data-dropdown-value="c">Send back to supplier</a></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="custom-select custom-select-size-type-1 custom-select-color-type-3 custom-select-font-size-1" data-dropdown>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Sales</a>
+                <div class="custom-select-content" data-dropdown-content>
+                  <ul class="options">
+                    <li><a href="#" data-dropdown-option>Purchase</a></li>
+                    <li><a href="#" data-dropdown-option>Sales</a></li>
+                  </ul>
+                </div>
+              </div>
+            
+            </div>
+            
+            <div style="padding-top: 10px;">
+              
+              <div class="custom-select custom-select-block" data-dropdown>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator>Select dimension</a>
+                <input type="hidden" data-dropdown-hidden-input />
+                <div class="custom-select-content" data-dropdown-content>
+                  <ul class="options">
+                    <li><a href="#" data-dropdown-option data-dropdown-value="a">Dimension 7</a></li>
+                    <li><a href="#" data-dropdown-option data-dropdown-value="b">Dimension 8</a></li>
+                    <li><a href="#" data-dropdown-option data-dropdown-value="c">Dimension 9</a></li>
+                  </ul>
+                </div>
+              </div>
+              
+            </div>
+            
+            
+            <div style="padding-top: 25px; padding-bottom: 150px;">
+              <b>Menu dropdown</b><br /><br />
+              <div class="inl-blk menu-dropdown" data-dropdown data-dropdown-visible="true">
+                <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
+                <div class="menu-dropdown-content" data-dropdown-content>
+                  <ul>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" /><em></em>Show buyer code</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" /><em></em>Show GTIN</label></li>
+                    <li><label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" /><em></em>Show seller code</label></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="inl-blk menu-dropdown menu-dropdown-type-1" style="margin-left: 250px" data-dropdown data-dropdown-visible="true">
+                <a href="#" class="ico ico-type-5" data-dropdown-toggler></a>
+                <div class="menu-dropdown-content" data-dropdown-content>
+                  <ul>
+                    <li><a href="#">Change</a></li>
+                    <li><a href="#">Additional info</a></li>
+                    <li><a href="#">Split row</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            
+            
+            <div style="padding-top: 10px;">
+              <b>Functional select</b><br /><br />
+              
+              <div class="custom-select custom-select-color-type-4 custom-select-has-ico" data-dropdown>
+                <a href="#" class="custom-select-toggler" data-dropdown-toggler data-dropdown-indicator><span class="ico ico-type-12 ico-color-type-1"></span> Sort by date (ascending)</a>
+                <div data-dropdown-content="" class="custom-select-content">
+                  <ul class="options">
+                    <li><a href="#" data-dropdown-option data-dropdown-value="date-asc"><span class="ico ico-type-12 ico-color-type-1"></span> Sort by date (ascending)</a></li>
+                    <li><a href="#" data-dropdown-option data-dropdown-value="date-desc"><span class="ico ico-type-13 ico-color-type-1"></span> Sort by date (descending)</a></li>
+                  </ul>
+                  
+                  <div class="extras border-top">
+                    <label class="radio"><input type="radio" checked="checked" name="radio-group-f"><em></em>Show order date</label>
+                    <label class="radio"><input type="radio" name="radio-group-f"><em></em>Show delivery date</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div style="padding-top: 25px;">
+              <b>Draggable dropdowns</b><br /><br />
+              
+              <div class="sortable-textboxes" data-sortable>
+                
+                <div class="draggable-textbox" data-sortable-item>
+                  <span class="draggable-handle" data-sortable-handle></span>
+                  <div class="textbox-holder ui-front">
+                    <input type="text" class="textbox textbox-size-type-1 textbox-border-type-2" data-people-autocomplete />
+                  </div>
+                </div>
+                
+                <div class="draggable-textbox" data-sortable-item>
+                  <span class="draggable-handle" data-sortable-handle></span>
+                  <div class="textbox-holder ui-front">
+                    <input type="text" class="textbox textbox-size-type-1 textbox-border-type-2" data-people-autocomplete />
+                  </div>
+                </div>
+                
+                <div class="draggable-textbox" data-sortable-item>
+                  <span class="draggable-handle" data-sortable-handle></span>
+                  <div class="textbox-holder ui-front">
+                    <input type="text" class="textbox textbox-size-type-1 textbox-border-type-2" data-people-autocomplete />
+                  </div>
+                </div>
+                
+                <div class="draggable-textbox" data-sortable-item>
+                  <span class="draggable-handle" data-sortable-handle></span>
+                  <div class="textbox-holder ui-front">
+                    <input type="text" class="textbox textbox-size-type-1 textbox-border-type-2" data-people-autocomplete />
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="grid">
+            <div class="grid-col grid-col-type-1">
+              
+              <div class="color-box pad-box margin-box">
+                
+                <div class="proto-comments proto-comments-no-top-margin">
+                  <span class="uppercase"><b>Fields</b></span>
+                </div>
+                
+                
+                <input type="text" class="textbox textbox-inline textbox-border-type-1" placeholder="12345" />
+                <input type="text" class="textbox textbox-inline textbox-bg-type-1" placeholder="12345" />
+                
+                
+                <div style="padding-top: 10px;">
+                  <input type="text" class="textbox textbox-inline textbox-bg-type-3" placeholder="12345" />
+                  <input type="text" class="textbox textbox-inline textbox-bg-type-2" placeholder="transparent" />
+                </div>
+                
+                <div style="padding-top: 10px;">
+                  <input type="text" class="textbox textbox-inline" placeholder="12345" />
+                </div>
+                <div style="padding-top: 10px;">
+                  <input type="text" class="textbox textbox-size-type-1" placeholder="12345" />
+                </div>
+                
+                <div style="padding-top: 10px;">
+                  <input type="text" class="textbox" placeholder="12345" />
+                </div>
+                
+                
+                
+                <br /><br />
+                
+                <div class="form">
+              
+                  <div class="form-row form-row-flex">
+                    <label class="label"><b>Name</b></label>
+                    <input type="text" class="textbox" value="Burkhardt">
+                  </div>
+                  
+                  <div class="form-row form-row-flex">
+                    <label class="label"><b>Surname</b></label>
+                    <input type="text" class="textbox" value="von Bürgermeister">
+                  </div>
+                  
+                  <div class="form-row form-row-flex">
+                    <label class="label"><b>Phone</b></label>
+                    <input type="text" class="textbox" value="+372" style="width: 90px">
+                    <input type="text" class="textbox" value="5589 6541">
+                  </div>
+                  
+                  <div class="form-row form-row-flex">
+                    <label class="label"><b>Email</b></label>
+                    <input type="email" class="textbox" value="burkhardt.vonbyrgermeister@tere.ee">
+                  </div>
+                
+                </div>
+                
+              </div>
+            </div> <!-- //grid-col -->
+          </div> <!-- //grid -->
+          
+          
+          <div class="color-box pad-box margin-box">
+            <div class="proto-comments proto-comments-no-top-margin">
+              <span class="uppercase"><b>Checkboxes and radio buttons</b></span>
+            </div>
+            
+          
+            <label class="radio"><input type="radio" checked="checked" name="radio-group-1"><em></em>Radio button block</label>
+            <label class="radio radio-inline"><input type="radio" name="radio-group-1"><em></em>Radio button inline</label> &nbsp; 
+            <label class="radio radio-inline"><input type="radio" name="radio-group-1"><em></em>Radio button inline</label>
+            <br />
+            <label class="radio radio-inline radio-no-text"><input type="radio" name="radio-group-1"><em></em></label> &nbsp;Radio button without text 
+            
+            <div style="margin-top: 20px;">
+              
+              <label class="checkbox"><input type="checkbox" checked="checked" /><em></em>Checbox block</label>
+              <label class="checkbox checkbox-inline"><input type="checkbox" checked="checked" /><em></em>Checkbox inline</label>
+              <label class="checkbox checkbox-inline"><input type="checkbox" /><em></em>Checkbox inline</label>
+              <br />
+              <label class="checkbox checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label> &nbsp;Checkbox without text 
+            </div>
+            
+            <div style="margin-top: 20px;">
+              <label class="checkbox checkbox-type-1"><input type="checkbox" checked="checked" /><em></em>Checbox block</label>
+              <label class="checkbox checkbox-type-1 checkbox-inline"><input type="checkbox" checked="checked" /><em></em>Checkbox inline</label>
+              <label class="checkbox checkbox-type-1 checkbox-inline"><input type="checkbox" /><em></em>Checkbox inline</label>
+              <br />
+              <label class="checkbox checkbox-type-1 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label> &nbsp;Checkbox without text
+            </div>
+            
+            <div style="margin-top: 20px;">
+              <label class="checkbox checkbox-type-2"><input type="checkbox" checked="checked" /><em></em>Checbox block</label>
+              <label class="checkbox checkbox-type-2 checkbox-inline"><input type="checkbox" checked="checked" /><em></em>Checkbox inline</label>
+              <label class="checkbox checkbox-type-2 checkbox-inline"><input type="checkbox" /><em></em>Checkbox inline</label>
+              <br />
+              <label class="checkbox checkbox-type-2 checkbox-inline checkbox-no-text"><input type="checkbox" /><em></em></label> &nbsp;Checkbox without text
+            </div>
+            
+          </div>
+          
+        </div> <!-- //page-main -->
+        
+      </div> <!-- //page-container -->  
+    </div> <!-- //page-wrap -->
+  </div> <!-- //page-holder -->
+    
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="javascripts/moment-with-locales.min.js"></script>
+  <script src="javascripts/jquery-ui.min.js"></script>
+  <script src="javascripts/underscore-min.js"></script>
+  <script src="javascripts/jquery.modal.js"></script>
+  <script src="javascripts/gemini-scrollbar.js"></script>
+  <script src="javascripts/framework.js"></script>
+  <script src="javascripts/app.js"></script>
+    
+</body>
+</html>
